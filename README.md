@@ -1,7 +1,7 @@
 # o
 
 ### Syntax
-o(source: any)
+o(target: any)
 
 ### Methods
 - **.empty(): boolean** check if the object is empty
@@ -20,7 +20,7 @@ o(source: any)
 - **.size(): number** the size of the array
 - **.keys([follow: boolean = false]): array** an array of the object keys (if follow is true it will follow objects and return the path in dot notation)
 - **.values(): array** an array of values
-- **.merge(source: object, ...targets): object** merge all the provided objects into one with the most right having the most priority
+- **.merge(...sources): object** merge all the provided objects into one with the most right having the most priority
 - **.clone(): object** clone the object
 - **.flip([follow: boolean = false]): object** flip the values for the keys (where possible)
 - **.keyOf(value: any[, follow: boolean = false]): string** get the key (in dot notation) to the specified value (if follow is true follow objects)
