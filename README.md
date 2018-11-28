@@ -20,8 +20,15 @@ o(source: any)
 - **.size(): number** the size of the array
 - **.keys([follow: boolean = false]): array** an array of the object keys (if follow is true it will follow objects and return the path in dot notation)
 - **.values(): array** an array of values
-- **.merge(source: object[, ...targets]): object** merge all the provided objects into one with the most right having the most priority
+- **.merge(source: object, ...targets): object** merge all the provided objects into one with the most right having the most priority
 - **.clone(): object** clone the object
+- **.flip([follow: boolean = false]): object** flip the values for the keys (where possible)
+- **.keyOf(value: any[, follow: boolean = false]): string** get the key (in dot notation) to the specified value (if follow is true follow objects)
+- **.prepend(key: string, value: any): object** prepend a new key (can be dot notation) value to the start of an object (similar to array.push)
+- **.append(key: string, value: any): object** append a new key (can be dot notation) value to the end of an object
+- **.del(keyOrIndex: string|number): object** delete the specified key (can be dot notation)
+- **.slice(start: number[, end: number = o.size()]): object** slice the object with the specified indexes
+- **.clean([follow: boolean = false]): object** remove all null and undefined values (if follow is true follow objects)
 
 ### Example
 ```javascript
