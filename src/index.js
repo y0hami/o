@@ -5,6 +5,7 @@ import get from './get';
 import has from './has';
 import is from './is';
 import keys from './keys';
+import merge from './merge';
 import size from './size';
 
 export {
@@ -14,6 +15,7 @@ export {
   has,
   is,
   keys,
+  merge,
   size,
 };
 
