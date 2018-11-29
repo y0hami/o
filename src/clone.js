@@ -26,7 +26,7 @@ function clone(object) {
   }
 
   // if the object isn't an object or is empty return
-  // an empty object
+  // an empty object this will keep the return immutable
   return {};
 }
 
