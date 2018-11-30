@@ -2,6 +2,7 @@
 import clean from './clean';
 import clone from './clone';
 import del from './del';
+import each from './each';
 import empty from './empty';
 import flattenKeys from './flattenKeys';
 import get from './get';
@@ -17,6 +18,7 @@ export {
   clean,
   clone,
   del,
+  each,
   empty,
   flattenKeys,
   get,
