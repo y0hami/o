@@ -11,6 +11,7 @@ import keys from './keys';
 import merge from './merge';
 import set from './set';
 import size from './size';
+import values from './values';
 
 export {
   clean,
@@ -25,6 +26,7 @@ export {
   merge,
   set,
   size,
+  values,
 };
 
 /*
