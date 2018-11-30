@@ -47,7 +47,7 @@ export {
   / empty
   / every
   / filter
-  find
+  / find
   / deflate (flattenKeys)
   flip
   / get
