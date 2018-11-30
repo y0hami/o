@@ -34,29 +34,29 @@ export {
 /*
   All methods in alphabetical order
 
-  clean
-  clone
-  del
-  each
-  empty
+  / clean
+  / clone
+  / del
+  / each
+  / empty
   every
   filter
   find
-  flattenKeys
+  / flattenKeys
   flip
-  get
-  has
+  / get
+  / has
   includes
-  is
+  / is
   keyOf
-  keys
+  / keys
   map
-  merge
+  / merge
   prepend
-  set
-  size
+  / set
+  / size
   slice
   some
   sort
-  values
+  / values
  */
