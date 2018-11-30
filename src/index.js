@@ -4,6 +4,7 @@ import clone from './clone';
 import del from './del';
 import each from './each';
 import empty from './empty';
+import every from './every';
 import flattenKeys from './flattenKeys';
 import get from './get';
 import has from './has';
@@ -20,6 +21,7 @@ export {
   del,
   each,
   empty,
+  every,
   flattenKeys,
   get,
   has,
