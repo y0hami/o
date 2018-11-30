@@ -21,9 +21,9 @@ function clean(object, follow = false) {
     // so it is immutable
     let result = clone(object);
 
-    // if follow is true flatten the keys of the
-    // object so its easy to get the path to delete
-    // and so its easy to check if values are null/undefined
+    // if follow is true flatten the object keys so
+    // its easy to get the path to delete and so
+    // it's easy to check if values are null/undefined
     // if follow is false it will just be the base
     // object therefore it will only check the base keys
     const keysObject = follow
