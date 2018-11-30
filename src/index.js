@@ -2,6 +2,7 @@
 import clone from './clone';
 import del from './del';
 import empty from './empty';
+import flattenKeys from './flattenKeys';
 import get from './get';
 import has from './has';
 import is from './is';
@@ -34,6 +35,7 @@ export {
   every
   filter
   find
+  flattenKeys
   flip
   get
   has
