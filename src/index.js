@@ -8,6 +8,7 @@ import empty from './empty';
 import every from './every';
 import filter from './filter';
 import find from './find';
+import flip from './flip';
 import get from './get';
 import has from './has';
 import is from './is';
@@ -20,13 +21,14 @@ import values from './values';
 export {
   clean,
   clone,
+  deflate,
   del,
   each,
   empty,
   every,
   filter,
   find,
-  deflate,
+  flip,
   get,
   has,
   is,
