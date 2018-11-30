@@ -41,7 +41,7 @@ export {
   / del
   / each
   / empty
-  every
+  / every
   filter
   find
   / deflate (flattenKeys)
@@ -49,6 +49,7 @@ export {
   / get
   / has
   includes
+  inflate
   / is
   keyOf
   / keys
