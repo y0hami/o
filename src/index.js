@@ -5,7 +5,7 @@ import del from './del';
 import each from './each';
 import empty from './empty';
 import every from './every';
-import flattenKeys from './flattenKeys';
+import deflate from './deflate';
 import get from './get';
 import has from './has';
 import is from './is';
@@ -22,7 +22,7 @@ export {
   each,
   empty,
   every,
-  flattenKeys,
+  deflate,
   get,
   has,
   is,
@@ -44,7 +44,7 @@ export {
   every
   filter
   find
-  / flattenKeys
+  / deflate (flattenKeys)
   flip
   / get
   / has
