@@ -3,13 +3,14 @@ import is from './is';
 import empty from './empty';
 
 /**
- * Flatten the object keys into dot notation
+ * Deflate the object (convert an object into a single depth
+ * object with the keys in dot notation)
  *
- * @param {object} object The object to flatten
+ * @param {object} object The object to defalte
  *
  * @returns {object} The result object
  */
-function flattenKeys(object) {
+function deflate(object) {
   // check if the object is an object and isn't empty
   if (is(object) && !empty(object)) {
     // create a new object for the result
@@ -52,4 +53,4 @@ function flattenKeys(object) {
   return {};
 }
 
-export default flattenKeys;
+export default deflate;
