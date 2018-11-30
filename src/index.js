@@ -6,6 +6,7 @@ import each from './each';
 import empty from './empty';
 import every from './every';
 import filter from './filter';
+import find from './find';
 import deflate from './deflate';
 import get from './get';
 import has from './has';
@@ -24,6 +25,7 @@ export {
   empty,
   every,
   filter,
+  find,
   deflate,
   get,
   has,
