@@ -2,7 +2,7 @@
 // o
 import is from './is';
 import empty from './empty';
-import flattenKeys from './flattenKeys';
+import deflate from './deflate';
 import del from './del';
 import clone from './clone';
 
@@ -27,7 +27,7 @@ function clean(object, follow = false) {
     // if follow is false it will just be the base
     // object therefore it will only check the base keys
     const keysObject = follow
-      ? flattenKeys(object)
+      ? deflate(object)
       : object;
 
     // loop over the keys of the object

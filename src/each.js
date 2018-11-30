@@ -1,7 +1,7 @@
 // o
 import is from './is';
 import empty from './empty';
-import flattenKeys from './flattenKeys';
+import deflate from './deflate';
 
 /**
  * Foreach over the object
@@ -19,7 +19,7 @@ function each(object, iterator, follow = false) {
     // is false it will just be the base object
     // therefore it will only use the base keys
     const flattenedObject = follow
-      ? flattenKeys(object)
+      ? deflate(object)
       : object;
 
     // loop over the keys of the object
