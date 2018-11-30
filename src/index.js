@@ -1,4 +1,5 @@
 // methods
+import clean from './clean';
 import clone from './clone';
 import del from './del';
 import empty from './empty';
@@ -12,6 +13,7 @@ import set from './set';
 import size from './size';
 
 export {
+  clean,
   clone,
   del,
   empty,
