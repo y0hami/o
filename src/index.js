@@ -17,6 +17,7 @@ export {
   clone,
   del,
   empty,
+  flattenKeys,
   get,
   has,
   is,
