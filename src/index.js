@@ -51,7 +51,7 @@ export {
   / every
   / filter
   / find
-  flip
+  / flip
   / get
   / has
   includes
