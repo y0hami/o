@@ -1,5 +1,6 @@
 // methods
 import clone from './clone';
+import del from './del';
 import empty from './empty';
 import get from './get';
 import has from './has';
@@ -11,6 +12,7 @@ import size from './size';
 
 export {
   clone,
+  del,
   empty,
   get,
   has,
@@ -26,6 +28,7 @@ export {
 
   clean
   clone
+  del
   each
   empty
   every
