@@ -1,13 +1,13 @@
 // methods
 import clean from './clean';
 import clone from './clone';
+import deflate from './deflate';
 import del from './del';
 import each from './each';
 import empty from './empty';
 import every from './every';
 import filter from './filter';
 import find from './find';
-import deflate from './deflate';
 import get from './get';
 import has from './has';
 import is from './is';
@@ -42,13 +42,13 @@ export {
 
   / clean
   / clone
+  / deflate (flattenKeys)
   / del
   / each
   / empty
   / every
   / filter
   / find
-  / deflate (flattenKeys)
   flip
   / get
   / has
