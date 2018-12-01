@@ -56,7 +56,7 @@ export {
   / flip
   / get
   / has
-  includes
+  / includes
   inflate
   / is
   keyOf
