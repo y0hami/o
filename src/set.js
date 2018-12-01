@@ -1,6 +1,5 @@
 // o
 import is from './is';
-import empty from './empty';
 import clone from './clone';
 import { getPathParts } from './internals';
 
@@ -14,8 +13,8 @@ import { getPathParts } from './internals';
  * @return {object} The object with the new set value
  */
 function set(object, path, value) {
-  // check if the object is an object and isn't empty
-  if (is(object) && !empty(object)) {
+  // check if the object is an object
+  if (is(object)) {
     // clone the object
     let cloned = clone(object);
 
@@ -51,8 +50,8 @@ function set(object, path, value) {
     return result;
   }
 
-  // if the object isn't an object or is empty return
-  // an empty object this will keep the return immutable
+  // if the object isn't an object return an empty
+  // object this will keep the return immutable
   return {};
 }
 
