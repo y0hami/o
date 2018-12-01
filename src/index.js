@@ -12,6 +12,7 @@ import flip from './flip';
 import get from './get';
 import has from './has';
 import includes from './includes';
+import inflate from './inflate';
 import is from './is';
 import keys from './keys';
 import merge from './merge';
@@ -33,6 +34,7 @@ export {
   get,
   has,
   includes,
+  inflate,
   is,
   keys,
   merge,
@@ -57,7 +59,7 @@ export {
   / get
   / has
   / includes
-  inflate
+  / inflate
   / is
   keyOf
   / keys
