@@ -11,6 +11,7 @@ import find from './find';
 import flip from './flip';
 import get from './get';
 import has from './has';
+import includes from './includes';
 import is from './is';
 import keys from './keys';
 import merge from './merge';
@@ -31,6 +32,7 @@ export {
   flip,
   get,
   has,
+  includes,
   is,
   keys,
   merge,
