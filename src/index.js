@@ -14,6 +14,7 @@ import has from './has';
 import includes from './includes';
 import inflate from './inflate';
 import is from './is';
+import keyOf from './keyOf';
 import keys from './keys';
 import merge from './merge';
 import set from './set';
@@ -36,6 +37,7 @@ export {
   includes,
   inflate,
   is,
+  keyOf,
   keys,
   merge,
   set,
@@ -61,7 +63,7 @@ export {
   / includes
   / inflate
   / is
-  keyOf
+  / keyOf
   / keys
   map
   / merge
