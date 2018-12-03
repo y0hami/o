@@ -16,7 +16,7 @@ import empty from './empty';
  * @version 1.0.0
  *
  * @param {object} object The object to clone
- * 
+ *
  * @returns {object} The cloned object
  */
 function clone(object) {
