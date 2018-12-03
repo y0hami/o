@@ -21,6 +21,7 @@ import merge from './merge';
 import set from './set';
 import size from './size';
 import slice from './slice';
+import some from './some';
 import values from './values';
 
 export {
@@ -46,6 +47,7 @@ export {
   set,
   size,
   slice,
+  some,
   values,
 };
 
