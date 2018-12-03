@@ -39,7 +39,13 @@ function each(object, iterator, follow = false) {
       // run the iterator with the key and value
       iterator(key, value);
     });
+
+    // return true because the iterator was ran
+    return true;
   }
+
+  // return false because the iterator couldn't of been ran
+  return false;
 }
 
 export default each;
