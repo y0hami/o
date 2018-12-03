@@ -6,7 +6,14 @@ import empty from './empty';
  * Deflate the object (convert an object into a single depth
  * object with the keys in dot notation)
  *
- * @param {object} object The object to defalte
+ * @example
+ * const a = { a: 1, b: { c: 2 } };
+ * deflate(a); // => { a: 1, 'b.c': 2 }
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
+ * @param {object} object The object to deflate
  *
  * @returns {object} The result object
  */

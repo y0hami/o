@@ -8,6 +8,17 @@ import set from './set';
 /**
  * Sort an object via the iterator evaluation
  *
+ * @example
+ * const a = { a: 4, b: 7, c: 3 };
+ * sort(a, (a, b) => {
+ *  if (a.value < b.value) return -1;
+ *  if (a.value > b.value) return 1;
+ *  return 0;
+ * }); // => { c: 3, a: 4, b: 7 }
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to sort
  * @param {function(a: object, b: object)} iterator The function to evaluate
  * @param {boolean} [follow=false] Whether to follow objects

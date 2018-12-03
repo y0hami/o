@@ -8,6 +8,13 @@ import set from './set';
  * Loop over an object and return a new object with the values
  * computed from the specified iterator
  *
+ * @example
+ * const a = { a: 1, b: 2, c: 3 };
+ * map(a, (key, value) => value * 2); // => { a: 2, b: 4, c: 6 }
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to map
  * @param {function(key: string, value: *)} iterator The function used to compute the value
  * @param {boolean} [follow=false] Whether or not to follow objects

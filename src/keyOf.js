@@ -6,6 +6,13 @@ import each from './each';
 /**
  * Get the key of the specified value in dot notation
  *
+ * @example
+ * const a = { a: 1, b: 2, c: 3 };
+ * keyOf(a, 2); // => 'b'
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to search
  * @param {*} value The value to look for
  * @param {boolean} [follow=false] Whether to follow objects

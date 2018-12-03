@@ -6,8 +6,18 @@ import { getPathParts } from './internals';
 /**
  * Check if an object has the specified paths
  *
+ * @example
+ * const a = { a: 1, b: 2, c: 3 };
+ * has(a, 'a'); // => true
+ * has(a, 'd'); // => false
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to check
  * @param {...string} paths The paths to check for
+ *
+ * @returns {boolean} Whether the object contains the specified path
  */
 function has(object, ...paths) {
   // check if object is an object

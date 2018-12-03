@@ -6,6 +6,14 @@ import each from './each';
 /**
  * Check if the object includes the specified object
  *
+ * @example
+ * const a = { a: 1, b: 2, c: 3 };
+ * includes(a, 1); // => true
+ * includes(a, 5); // => false
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to check
  * @param {*} value The value to check for
  * @param {boolean} follow Whether to follow objects

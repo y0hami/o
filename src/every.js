@@ -6,6 +6,15 @@ import each from './each';
 /**
  * Check every element in an object evaluate to the iterator
  *
+ * @example
+ * const a = { a: 1, b: 2 };
+ * const b = { a: 1, b: 'test' }
+ * every(a, (key, value) => typeof value === 'number'); // => true
+ * every(b, (key, value) => typeof value === 'number'); // => false
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to check
  * @param {function(key: string, value: *)} iterator The function to evaluate
  * @param {boolean} follow Whether to follow objects

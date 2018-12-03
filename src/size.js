@@ -4,6 +4,13 @@ import is from './is';
 /**
  * Get the size of the specified object
  *
+ * @example
+ * const a = { a: 1, b: 2, c: 3 };
+ * size(a); // => 3
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to get the size of
  *
  * @returns {number} The size of the object (-1 when provided value isn't an object)

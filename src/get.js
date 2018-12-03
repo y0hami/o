@@ -7,6 +7,13 @@ import { getPathParts } from './internals';
 /**
  * Get the value from the specified path
  *
+ * @example
+ * const a = { a: 1, b: 2, c: 3 };
+ * get(a, 'b'); // => 2
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object the get from
  * @param {string} path The path to get
  * @param {*} [defaultValue=undefined] The default value to return if the path doesn't exist

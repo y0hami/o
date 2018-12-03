@@ -8,6 +8,13 @@ import del from './del';
 /**
  * Filter the object keys/values depending on the iterator evaluation
  *
+ * @example
+ * const a = { a: 1, b: 2, c: 3 };
+ * filter(a, (key, value) => value > 2); // => { c: 3 }
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to filter
  * @param {function(key: string, value: *)} iterator The function to evaluate
  * @param {boolean} follow Whether to follow objects

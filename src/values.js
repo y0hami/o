@@ -6,9 +6,17 @@ import deflate from './deflate';
 /**
  * Get an array of values from the specified object
  *
+ * @example
+ * const a = { a: 1, b: 2, c: 3 };
+ * values(a); // => [1, 2, 3]
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to get the values from
  * @param {boolean} [follow=false] Whether to follow objects
- * @returns {Array}
+ *
+ * @returns {array} An array of all the values from the object
  */
 function values(object, follow) {
   // check if object is an object

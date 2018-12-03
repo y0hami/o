@@ -5,6 +5,13 @@ import empty from './empty';
 /**
  * Get the keys of the specified object
  *
+ * @example
+ * const a = { a: 1, b: 2, c: 3 };
+ * keys(a); // => ['a', 'b', 'c']
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to get the keys from
  * @param {boolean} follow Whether to follow objects
  *

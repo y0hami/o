@@ -5,6 +5,15 @@ import size from './size';
 /**
  * Check if an object is empty (has no keys)
  *
+ * @example
+ * const a = { a: 1 };
+ * const b = {};
+ * empty(a); // => false
+ * empty(b); // => true
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to check
  *
  * @returns {boolean} Whether it is empty

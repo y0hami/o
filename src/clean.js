@@ -9,6 +9,13 @@ import clone from './clone';
 /**
  * Remove `null` and `undefined` values from the specified object
  *
+ * @example
+ * const a = { a: 1, b: undefined, c: null };
+ * clean(a); // => { a: 1 }
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to clean
  * @param {boolean} [follow=false] Whether to follow objects
  *

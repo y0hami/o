@@ -6,6 +6,13 @@ import { getPathParts } from './internals';
 /**
  * Set the specified path with the specified value
  *
+ * @example
+ * const a = { a: 1, b: 2 };
+ * set(a, 'c', 3); // => { a: 1, b: 2, c: 3 }
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to set the value on
  * @param {string} path The path to set the value as
  * @param {*} value The value to set

@@ -6,6 +6,15 @@ import deflate from './deflate';
 /**
  * Foreach over the object
  *
+ * @example
+ * const a = { a: 1, b: 2 };
+ * each(a, (key, value) => { console.log(`${key}:`, value) });
+ * // => a: 1
+ * // => b: 2
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to iterate over
  * @param {function(key: string, value: *)} iterator The iterator function
  * @param {boolean} [follow=false] Whether to follow objects

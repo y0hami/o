@@ -5,7 +5,18 @@ import empty from './empty';
 /**
  * Clone the specified object
  *
+ * @example
+ * const a = { a: 1 };
+ * const b = clone(a); // => { a: 1 }
+ * b.a = 2;
+ * console.log(a); // => { a: 1 }
+ * console.log(b); // => { a: 2 }
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to clone
+ * 
  * @returns {object} The cloned object
  */
 function clone(object) {

@@ -6,6 +6,14 @@ import each from './each';
 /**
  * Check that some element in an object evaluate to the iterator
  *
+ * @example
+ * const a = { a: 1, b: 2, c: 3 };
+ * some(a, (key, value) => value === 2); // => true
+ * some(a, (key, value) => value === 5); // => false
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to check
  * @param {function(key: string, value: *)} iterator The function to evaluate
  * @param {boolean} follow Whether to follow objects

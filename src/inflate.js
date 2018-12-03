@@ -6,6 +6,13 @@ import set from './set';
 /**
  * Inflate an object (reverse deflate)
  *
+ * * @example
+ * const a = { a: 1, 'b.c': 2 };
+ * inflate(a); // => { a: 1, b: { c: 2 } }
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to inflate
  *
  * @returns {object} The inflated object

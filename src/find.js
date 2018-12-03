@@ -6,6 +6,13 @@ import each from './each';
 /**
  * Find the key matching the iterator evaluation
  *
+ * @example
+ * const a = { a: 1, b: 2, c: 3 };
+ * find(a, (key, value) => value === 3); // => 'c'
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to search
  * @param {function(key: string, value: *)} iterator The function to evaluate
  * @param {boolean} [follow=false] Whether to follow objects

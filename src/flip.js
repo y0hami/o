@@ -6,9 +6,18 @@ import each from './each';
 /**
  * Flip an objects keys for values and values for keys
  *
+ * @example
+ * const a = { a: 1, b: 2, c: 3 };
+ * flip(a); // => { 1: 'a', 2: 'b', 3: 'c' }
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to flip
  * @param {boolean} [follow=false] Whether to follow objects
  * @param {boolean} [useToString=false] Whether to use toString on incompatible values
+ *
+ * @returns {object} The flipped object
  */
 function flip(object, follow = false, useToString = false) {
   // if the object is an object and is not empty

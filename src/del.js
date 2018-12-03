@@ -7,6 +7,13 @@ import { getPathParts } from './internals';
 /**
  * Delete the specified path from the object
  *
+ * @example
+ * const a = { a: 1, b: 2 };
+ * del(a, 'b'); // => { a: 1 }
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ *
  * @param {object} object The object to delete from
  * @param {string} path The path to delete
  *
