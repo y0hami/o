@@ -69,7 +69,6 @@ export {
   / keys
   / map
   / merge
-  prepend
   / set
   / size
   slice
