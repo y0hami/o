@@ -14,7 +14,7 @@ import each from './each';
  */
 function find(object, iterator, follow) {
   // if the object is an object and is not empty
-  if (is(object) && !empty(object)) {
+  if (is(object) && !empty(object) && typeof iterator === 'function') {
     // create an result variable as undefined
     let found = false;
     let result = '';

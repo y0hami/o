@@ -13,7 +13,7 @@ import deflate from './deflate';
 function each(object, iterator, follow = false) {
   // check if the object is an object and isn't empty
   // if it is it would be pointless running the forEach
-  if (is(object) && !empty(object)) {
+  if (is(object) && !empty(object) && typeof iterator === 'function') {
     // if follow is true flatten the object keys so
     // its easy to get the path and values if follow
     // is false it will just be the base object
@@ -27,12 +27,8 @@ function each(object, iterator, follow = false) {
       // get the value of the current key
       const value = flattenedObject[key];
 
-      // check if the iterator is a function
-      if (typeof iterator === 'function') {
-        // if it is run the iterator with the
-        // key and value
-        iterator(key, value);
-      }
+      // run the iterator with the key and value
+      iterator(key, value);
     });
   }
 }

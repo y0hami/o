@@ -14,7 +14,7 @@ import each from './each';
  */
 function every(object, iterator, follow = false) {
   // if the object is an object and is not empty
-  if (is(object) && !empty(object)) {
+  if (is(object) && !empty(object) && typeof iterator === 'function') {
     // set the result to true so we can change it
     // to false if the iterator fails
     let result = true;
