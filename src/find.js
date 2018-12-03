@@ -4,13 +4,13 @@ import empty from './empty';
 import each from './each';
 
 /**
- * Find the value matching the iterator evaluation
+ * Find the key matching the iterator evaluation
  *
  * @param {object} object The object to search
  * @param {function(key: string, value: *)} iterator The function to evaluate
  * @param {boolean} [follow=false] Whether to follow objects
  *
- * @returns {*}
+ * @returns {string} The key which evaluates to the iterator
  */
 function find(object, iterator, follow) {
   // if the object is an object and is not empty
@@ -38,7 +38,7 @@ function find(object, iterator, follow) {
           // is false then delete that key from the object
           if (iterator(key, value) === true) {
             found = true;
-            result = value;
+            result = key;
           }
         }
       }
