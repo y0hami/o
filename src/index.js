@@ -52,33 +52,3 @@ export {
   sort,
   values,
 };
-
-/*
-  All methods in alphabetical order
-
-  / clean
-  / clone
-  / deflate (flattenKeys)
-  / del
-  / each
-  / empty
-  / every
-  / filter
-  / find
-  / flip
-  / get
-  / has
-  / includes
-  / inflate
-  / is
-  / keyOf
-  / keys
-  / map
-  / merge
-  / set
-  / size
-  / slice
-  / some
-  / sort
-  / values
- */
