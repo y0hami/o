@@ -16,6 +16,7 @@ import inflate from './inflate';
 import is from './is';
 import keyOf from './keyOf';
 import keys from './keys';
+import map from './map';
 import merge from './merge';
 import set from './set';
 import size from './size';
@@ -39,6 +40,7 @@ export {
   is,
   keyOf,
   keys,
+  map,
   merge,
   set,
   size,
@@ -65,7 +67,7 @@ export {
   / is
   / keyOf
   / keys
-  map
+  / map
   / merge
   prepend
   / set
