@@ -32,20 +32,11 @@ function filter(object, iterator, follow = false) {
     // each function works out whether to follow
     // the objects
     each(object, (key, value) => {
-      // if its not following objects or its
-      // following but the value isn't an object
-      // this will skip any value which is an object
-      // when following allow us to run the iterator
-      // on the key/values within the objects which
-      // generates the filter effect throughout the
-      // whole object
-      if (!follow || (follow && !is(value))) {
-        // check if the iterator is false if it
-        // is false then delete that key from the object
-        if (iterator(key, value) === false) {
-          // delete the key/value
-          result = del(result, key);
-        }
+      // check if the iterator is false if it
+      // is false then delete that key from the object
+      if (iterator(key, value) === false) {
+        // delete the key/value
+        result = del(result, key);
       }
     }, follow);
 
