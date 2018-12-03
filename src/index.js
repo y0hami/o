@@ -22,6 +22,7 @@ import set from './set';
 import size from './size';
 import slice from './slice';
 import some from './some';
+import sort from './sort';
 import values from './values';
 
 export {
@@ -48,6 +49,7 @@ export {
   size,
   slice,
   some,
+  sort,
   values,
 };
 
@@ -77,6 +79,6 @@ export {
   / size
   / slice
   / some
-  sort
+  / sort
   / values
  */
