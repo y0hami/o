@@ -11,6 +11,7 @@
     "build:uglify": "npx uglifyjs dist/o.js -o dist/o.min.js",
     "build": "npm-run-all clean build:rollup build:uglify",
     "test:jest": "jest --coverage --verbose --runInBand --no-cache",
+    "test:watch": "jest --verbose --runInBand --no-cache --watch",
     "test:eslint": "eslint src",
     "test": "npm-run-all test:eslint test:jest"
   },
