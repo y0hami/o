@@ -20,6 +20,7 @@ import map from './map';
 import merge from './merge';
 import set from './set';
 import size from './size';
+import slice from './slice';
 import values from './values';
 
 export {
@@ -44,6 +45,7 @@ export {
   merge,
   set,
   size,
+  slice,
   values,
 };
 
@@ -71,7 +73,7 @@ export {
   / merge
   / set
   / size
-  slice
+  / slice
   some
   sort
   / values
