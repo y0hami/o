@@ -76,7 +76,7 @@ export {
   / set
   / size
   / slice
-  some
+  / some
   sort
   / values
  */
