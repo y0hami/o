@@ -8,7 +8,7 @@
     "clean": "rm -rf ./dist",
     "build:rollup": "rollup -c",
     "build:watch": "rollup -c -w",
-    "build:uglify": "npx uglifyjs dist/ov.js -o dist/ov.min.js",
+    "build:uglify": "npx uglifyjs dist/o.js -o dist/o.min.js",
     "build": "npm-run-all clean build:rollup build:uglify",
     "test:jest": "jest --coverage --verbose",
     "test:eslint": "eslint src",
