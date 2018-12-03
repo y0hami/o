@@ -2,7 +2,7 @@
 import is from './is';
 import empty from './empty';
 import has from './has';
-import { getPathParts } from './internals';
+import getPathParts from './pathParts';
 
 /**
  * Get the value from the specified path

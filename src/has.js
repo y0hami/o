@@ -1,7 +1,7 @@
 // o
 import is from './is';
 import empty from './empty';
-import { getPathParts } from './internals';
+import getPathParts from './pathParts';
 
 /**
  * Check if an object has the specified paths

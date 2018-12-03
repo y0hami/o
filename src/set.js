@@ -1,7 +1,7 @@
 // o
 import is from './is';
 import clone from './clone';
-import { getPathParts } from './internals';
+import getPathParts from './pathParts';
 
 /**
  * Set the specified path with the specified value

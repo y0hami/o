@@ -51,6 +51,4 @@ function getPathParts(path) {
   return parts;
 }
 
-export {
-  getPathParts,
-};
+export default getPathParts;

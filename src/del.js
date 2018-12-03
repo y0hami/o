@@ -2,7 +2,7 @@
 import is from './is';
 import empty from './empty';
 import clone from './clone';
-import { getPathParts } from './internals';
+import getPathParts from './pathParts';
 
 /**
  * Delete the specified path from the object
