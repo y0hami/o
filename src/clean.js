@@ -1,4 +1,3 @@
-
 // o
 import is from './is';
 import empty from './empty';
