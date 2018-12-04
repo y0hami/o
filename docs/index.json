@@ -1,0 +1,2407 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/clean.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport deflate from './deflate';\nimport del from './del';\nimport clone from './clone';\n\n/**\n * Remove `null` and `undefined` values from the specified object\n *\n * @example\n * const a = { a: 1, b: undefined, c: null };\n * clean(a); // => { a: 1 }\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to clean\n * @param {boolean} [follow=false] Whether to follow objects\n *\n * @returns {object} The clean object\n */\nfunction clean(object, follow = false) {\n  // check if object is an object\n  if (is(object) && !empty(object)) {\n    // clone the object to use as the result and\n    // so it is immutable\n    let result = clone(object);\n\n    // if follow is true flatten the object keys so\n    // its easy to get the path to delete and so\n    // it's easy to check if values are null/undefined\n    // if follow is false it will just be the base\n    // object therefore it will only check the base keys\n    const keysObject = follow\n      ? deflate(object)\n      : object;\n\n    // loop over the keys of the object\n    Object.keys(keysObject).forEach((key) => {\n      // get the value of the current key\n      const value = keysObject[key];\n\n      // if the value is undefined or null\n      if (value === undefined || value === null) {\n        // delete the key/value from the object\n        result = del(result, key);\n      }\n    });\n\n    // return the result\n    return result;\n  }\n\n  // if the object isn't an object or is empty return\n  // an empty object this will keep the return immutable\n  return {};\n}\n\nexport default clean;\n",
+    "static": true,
+    "longname": "G:/o/src/clean.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "function",
+    "name": "clean",
+    "memberof": "src/clean.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/clean.js~clean",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/clean.js",
+    "importStyle": "clean",
+    "description": "Remove `null` and `undefined` values from the specified object",
+    "examples": [
+      "const a = { a: 1, b: undefined, c: null };\nclean(a); // => { a: 1 }"
+    ],
+    "lineNumber": 23,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{object} The clean object"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to clean"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "follow",
+        "description": "Whether to follow objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "The clean object"
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "file",
+    "name": "src/clone.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\n\n/**\n * Clone the specified object\n *\n * @example\n * const a = { a: 1 };\n * const b = clone(a); // => { a: 1 }\n * b.a = 2;\n * console.log(a); // => { a: 1 }\n * console.log(b); // => { a: 2 }\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to clone\n *\n * @returns {object} The cloned object\n */\nfunction clone(object) {\n  // check if the object is an object and isn't empty\n  if (is(object) && !empty(object)) {\n    // create a new object for the result\n    const result = {};\n\n    // for each key in the specified object add it\n    // to the new result with the value from the\n    // original object\n    Object.keys(object).forEach((key) => {\n      result[key] = object[key];\n    });\n\n    // return the result object\n    return result;\n  }\n\n  // if the object isn't an object or is empty return\n  // an empty object this will keep the return immutable\n  return {};\n}\n\nexport default clone;\n",
+    "static": true,
+    "longname": "G:/o/src/clone.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 51,
+    "kind": "function",
+    "name": "clone",
+    "memberof": "src/clone.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/clone.js~clone",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/clone.js",
+    "importStyle": "clone",
+    "description": "Clone the specified object",
+    "examples": [
+      "const a = { a: 1 };\nconst b = clone(a); // => { a: 1 }\nb.a = 2;\nconsole.log(a); // => { a: 1 }\nconsole.log(b); // => { a: 2 }"
+    ],
+    "lineNumber": 22,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{object} The cloned object"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to clone"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "The cloned object"
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "name": "src/deflate.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\n\n/**\n * Deflate the object (convert an object into a single depth\n * object with the keys in dot notation)\n *\n * @example\n * const a = { a: 1, b: { c: 2 } };\n * deflate(a); // => { a: 1, 'b.c': 2 }\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to deflate\n *\n * @returns {object} The result object\n */\nfunction deflate(object) {\n  // check if the object is an object and isn't empty\n  if (is(object) && !empty(object)) {\n    // create a new object for the result\n    const result = {};\n\n    // create a function to loop over the keys\n    // and build the results\n    const keyValue = (obj, currentPath) => {\n      // loop over the keys of the current object\n      Object.keys(obj).forEach((key) => {\n        // build an array of the new path with the\n        // current path and the new key\n        const newPath = [...currentPath, key];\n\n        // get the value of the current key\n        const value = obj[key];\n\n        // if the value is an array and isn't empty\n        if (is(value) && !empty(value)) {\n          // run this function again and get all the keys\n          keyValue(value, newPath);\n        } else {\n          // if it isn't an object or is empty set the\n          // result as the key in dot notation with the value\n          result[newPath.join('.')] = value;\n        }\n      });\n    };\n\n    // run the function to get the keys for the base object\n    // this also starts the recursiveness\n    keyValue(object, []);\n\n    // return the result\n    return result;\n  }\n\n  // if the object isn't an object or is empty return\n  // an empty object this will keep the return immutable\n  return {};\n}\n\nexport default deflate;\n",
+    "static": true,
+    "longname": "G:/o/src/deflate.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 53,
+    "kind": "function",
+    "name": "deflate",
+    "memberof": "src/deflate.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/deflate.js~deflate",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/deflate.js",
+    "importStyle": "deflate",
+    "description": "Deflate the object (convert an object into a single depth\nobject with the keys in dot notation)",
+    "examples": [
+      "const a = { a: 1, b: { c: 2 } };\ndeflate(a); // => { a: 1, 'b.c': 2 }"
+    ],
+    "lineNumber": 20,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{object} The result object"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to deflate"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "The result object"
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "name": "src/del.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport clone from './clone';\nimport getPathParts from './pathParts';\n\n/**\n * Delete the specified path from the object\n *\n * @example\n * const a = { a: 1, b: 2 };\n * del(a, 'b'); // => { a: 1 }\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to delete from\n * @param {string} path The path to delete\n *\n * @returns {object} The result object\n */\nfunction del(object, path) {\n  // check if the object is an object and isn't empty\n  if (is(object) && !empty(object)) {\n    // clone the object\n    let cloned = clone(object);\n\n    // set the new value for the cloned object so we\n    // can manipulate it\n    const result = cloned;\n\n    // get the path parts\n    const pathParts = getPathParts(path);\n\n    // loop over all the path parts\n    for (let index = 0; index < pathParts.length; index += 1) {\n      // get the current key\n      const key = pathParts[index];\n\n      // check if the current path is the last key\n      if (index === pathParts.length - 1) {\n        // if it is the last key delete the value from the object\n        delete cloned[key];\n      }\n\n      // set the modified values to the object\n      cloned = cloned[key];\n    }\n\n    // return the result\n    return result;\n  }\n\n  // if the object isn't an object or is empty return\n  // an empty object this will keep the return immutable\n  return {};\n}\n\nexport default del;\n",
+    "static": true,
+    "longname": "G:/o/src/del.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "function",
+    "name": "del",
+    "memberof": "src/del.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/del.js~del",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/del.js",
+    "importStyle": "del",
+    "description": "Delete the specified path from the object",
+    "examples": [
+      "const a = { a: 1, b: 2 };\ndel(a, 'b'); // => { a: 1 }"
+    ],
+    "lineNumber": 22,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{object} The result object"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to delete from"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "The path to delete"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "The result object"
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "file",
+    "name": "src/each.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport deflate from './deflate';\n\n/**\n * Foreach over the object\n *\n * @example\n * const a = { a: 1, b: 2 };\n * each(a, (key, value) => { console.log(`${key}:`, value) });\n * // => a: 1\n * // => b: 2\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to iterate over\n * @param {function(key: string, value: *)} iterator The iterator function\n * @param {boolean} [follow=false] Whether to follow objects\n */\nfunction each(object, iterator, follow = false) {\n  // check if the object is an object and isn't empty\n  // if it is it would be pointless running the forEach\n  if (is(object) && !empty(object) && typeof iterator === 'function') {\n    // if follow is true flatten the object keys so\n    // its easy to get the path and values if follow\n    // is false it will just be the base object\n    // therefore it will only use the base keys\n    const flattenedObject = follow\n      ? deflate(object)\n      : object;\n\n    // loop over the keys of the object\n    Object.keys(flattenedObject).forEach((key) => {\n      // get the value of the current key\n      const value = flattenedObject[key];\n\n      // run the iterator with the key and value\n      iterator(key, value);\n    });\n\n    // return true because the iterator was ran\n    return true;\n  }\n\n  // return false because the iterator couldn't of been ran\n  return false;\n}\n\nexport default each;\n",
+    "static": true,
+    "longname": "G:/o/src/each.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 57,
+    "kind": "function",
+    "name": "each",
+    "memberof": "src/each.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/each.js~each",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/each.js",
+    "importStyle": "each",
+    "description": "Foreach over the object",
+    "examples": [
+      "const a = { a: 1, b: 2 };\neach(a, (key, value) => { console.log(`${key}:`, value) });\n// => a: 1\n// => b: 2"
+    ],
+    "lineNumber": 22,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to iterate over"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(key: string, value: *)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "iterator",
+        "description": "The iterator function"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "follow",
+        "description": "Whether to follow objects"
+      }
+    ],
+    "return": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "file",
+    "name": "src/empty.js",
+    "content": "// o\nimport is from './is';\nimport size from './size';\n\n/**\n * Check if an object is empty (has no keys)\n *\n * @example\n * const a = { a: 1 };\n * const b = {};\n * empty(a); // => false\n * empty(b); // => true\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to check\n *\n * @returns {boolean} Whether it is empty\n */\nfunction empty(object) {\n  // check if the object specified is an object\n  if (is(object)) {\n    // if it is get the size of the object and return true if it\n    // is larger then 0 meaning it isn't empty\n    return !(size(object) > 0);\n  }\n\n  // return false if the object isn't an object\n  return false;\n}\n\nexport default empty;\n",
+    "static": true,
+    "longname": "G:/o/src/empty.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 59,
+    "kind": "function",
+    "name": "empty",
+    "memberof": "src/empty.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/empty.js~empty",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/empty.js",
+    "importStyle": "empty",
+    "description": "Check if an object is empty (has no keys)",
+    "examples": [
+      "const a = { a: 1 };\nconst b = {};\nempty(a); // => false\nempty(b); // => true"
+    ],
+    "lineNumber": 21,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean} Whether it is empty"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to check"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Whether it is empty"
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "file",
+    "name": "src/every.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport each from './each';\n\n/**\n * Check every element in an object evaluate to the iterator\n *\n * @example\n * const a = { a: 1, b: 2 };\n * const b = { a: 1, b: 'test' }\n * every(a, (key, value) => typeof value === 'number'); // => true\n * every(b, (key, value) => typeof value === 'number'); // => false\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to check\n * @param {function(key: string, value: *)} iterator The function to evaluate\n * @param {boolean} follow Whether to follow objects\n *\n * @returns {boolean} Whether all objects evaluate to the iterator\n */\nfunction every(object, iterator, follow = false) {\n  // if the object is an object and is not empty\n  if (is(object) && !empty(object) && typeof iterator === 'function') {\n    // set the result to true so we can change it\n    // to false if the iterator fails\n    let result = true;\n\n    // for each over the object keys and values\n    // follow is passed into each therefore the\n    // each function works out whether to follow\n    // the objects\n    each(object, (key, value) => {\n      // run the iterator function on the key and\n      // value and if it evaluates to false set\n      // the result to false\n      if (iterator(key, value) === false) {\n        // set the result to false\n        result = false;\n      }\n    }, follow);\n\n    // return the result\n    return result;\n  }\n\n  // if the object isn't an object or is empty return false\n  // because the iterator can't be ran to make a check\n  return false;\n}\n\nexport default every;\n",
+    "static": true,
+    "longname": "G:/o/src/every.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 61,
+    "kind": "function",
+    "name": "every",
+    "memberof": "src/every.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/every.js~every",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/every.js",
+    "importStyle": "every",
+    "description": "Check every element in an object evaluate to the iterator",
+    "examples": [
+      "const a = { a: 1, b: 2 };\nconst b = { a: 1, b: 'test' }\nevery(a, (key, value) => typeof value === 'number'); // => true\nevery(b, (key, value) => typeof value === 'number'); // => false"
+    ],
+    "lineNumber": 24,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean} Whether all objects evaluate to the iterator"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to check"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(key: string, value: *)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "iterator",
+        "description": "The function to evaluate"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "follow",
+        "description": "Whether to follow objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Whether all objects evaluate to the iterator"
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "file",
+    "name": "src/filter.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport each from './each';\nimport clone from './clone';\nimport del from './del';\n\n/**\n * Filter the object keys/values depending on the iterator evaluation\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * filter(a, (key, value) => value > 2); // => { c: 3 }\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to filter\n * @param {function(key: string, value: *)} iterator The function to evaluate\n * @param {boolean} follow Whether to follow objects\n *\n * @returns {object} The filtered object\n */\nfunction filter(object, iterator, follow = false) {\n  // if the object is an object and is not empty\n  if (is(object) && !empty(object) && typeof iterator === 'function') {\n    // create a clone of the object to manipulate\n    let result = clone(object);\n\n    // for each key/value in the object\n    // follow is passed into each therefore the\n    // each function works out whether to follow\n    // the objects\n    each(object, (key, value) => {\n      // check if the iterator is false if it\n      // is false then delete that key from the object\n      if (iterator(key, value) === false) {\n        // delete the key/value\n        result = del(result, key);\n      }\n    }, follow);\n\n    // return the result\n    return result;\n  }\n\n  // if the object isn't an object or is empty return an\n  // empty object because the iterator can't be ran to\n  // make a check\n  return {};\n}\n\nexport default filter;\n",
+    "static": true,
+    "longname": "G:/o/src/filter.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 63,
+    "kind": "function",
+    "name": "filter",
+    "memberof": "src/filter.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/filter.js~filter",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/filter.js",
+    "importStyle": "filter",
+    "description": "Filter the object keys/values depending on the iterator evaluation",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nfilter(a, (key, value) => value > 2); // => { c: 3 }"
+    ],
+    "lineNumber": 24,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{object} The filtered object"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to filter"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(key: string, value: *)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "iterator",
+        "description": "The function to evaluate"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "follow",
+        "description": "Whether to follow objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "The filtered object"
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "file",
+    "name": "src/find.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport each from './each';\n\n/**\n * Find the key matching the iterator evaluation\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * find(a, (key, value) => value === 3); // => 'c'\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to search\n * @param {function(key: string, value: *)} iterator The function to evaluate\n * @param {boolean} [follow=false] Whether to follow objects\n *\n * @returns {string} The key which evaluates to the iterator\n */\nfunction find(object, iterator, follow) {\n  // if the object is an object and is not empty\n  if (is(object) && !empty(object) && typeof iterator === 'function') {\n    // create an result variable as undefined\n    let found = false;\n    let result = '';\n\n    // for each key/value in the object\n    // follow is passed into each therefore the\n    // each function works out whether to follow\n    // the objects\n    each(object, (key, value) => {\n      // if the value hasn't already been found\n      if (!found) {\n        // if its not following objects or its\n        // following but the value isn't an object\n        // this will skip any value which is an object\n        // when following allow us to run the iterator\n        // on the key/values within the objects which\n        // generates the filter effect throughout the\n        // whole object\n        if (!follow || (follow && !is(value))) {\n          // check if the iterator is false if it\n          // is false then delete that key from the object\n          if (iterator(key, value) === true) {\n            found = true;\n            result = key;\n          }\n        }\n      }\n    }, follow);\n\n    // return the result unless the value wasn't found\n    // then return undefined\n    return found\n      ? result\n      : undefined;\n  }\n\n  // if the object isn't an object or is empty return\n  // undefined because the iterator can't be ran to\n  // make a check\n  return undefined;\n}\n\nexport default find;\n",
+    "static": true,
+    "longname": "G:/o/src/find.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 65,
+    "kind": "function",
+    "name": "find",
+    "memberof": "src/find.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/find.js~find",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/find.js",
+    "importStyle": "find",
+    "description": "Find the key matching the iterator evaluation",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nfind(a, (key, value) => value === 3); // => 'c'"
+    ],
+    "lineNumber": 22,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string} The key which evaluates to the iterator"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to search"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(key: string, value: *)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "iterator",
+        "description": "The function to evaluate"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "follow",
+        "description": "Whether to follow objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "The key which evaluates to the iterator"
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "file",
+    "name": "src/flip.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport each from './each';\n\n/**\n * Flip an objects keys for values and values for keys\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * flip(a); // => { 1: 'a', 2: 'b', 3: 'c' }\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to flip\n * @param {boolean} [follow=false] Whether to follow objects\n * @param {boolean} [useToString=false] Whether to use toString on incompatible values\n *\n * @returns {object} The flipped object\n */\nfunction flip(object, follow = false, useToString = false) {\n  // if the object is an object and is not empty\n  if (is(object) && !empty(object)) {\n    // create an empty object for the result\n    const result = {};\n\n    // for each key/value in the object\n    each(object, (key, value) => {\n      // if the value is a string it can be used as\n      // the new key\n      if (typeof value === 'string') {\n        // set the new key/value to the result\n        result[value] = key;\n      } else if (typeof value !== 'string' && useToString) {\n        // if the value isn't a string but useToString is true\n        // toString the value\n        result[String(value).toString()] = key;\n      }\n    }, follow);\n\n    // return the result object\n    return result;\n  }\n\n  // if the object isn't an object or is empty return\n  // an empty object\n  return {};\n}\n\nexport default flip;\n",
+    "static": true,
+    "longname": "G:/o/src/flip.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 67,
+    "kind": "function",
+    "name": "flip",
+    "memberof": "src/flip.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/flip.js~flip",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/flip.js",
+    "importStyle": "flip",
+    "description": "Flip an objects keys for values and values for keys",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nflip(a); // => { 1: 'a', 2: 'b', 3: 'c' }"
+    ],
+    "lineNumber": 22,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{object} The flipped object"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to flip"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "follow",
+        "description": "Whether to follow objects"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "useToString",
+        "description": "Whether to use toString on incompatible values"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "The flipped object"
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "file",
+    "name": "src/get.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport has from './has';\nimport getPathParts from './pathParts';\n\n/**\n * Get the value from the specified path\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * get(a, 'b'); // => 2\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object the get from\n * @param {string} path The path to get\n * @param {*} [defaultValue=undefined] The default value to return if the path doesn't exist\n *\n * @returns {*} The value from the path or the default value\n */\nfunction get(object, path, defaultValue = undefined) {\n  // check if the object is an object and is not empty\n  // and it has the path specified\n  if (is(object) && !empty(object) && has(object, path)) {\n    // set the currentValue to the object so its easier to\n    // iterate over the objects\n    let currentValue = object;\n\n    // for each path parts from the parsed path\n    getPathParts(path).forEach((key) => {\n      // if the current value is an object and it isn't empty\n      if (is(currentValue) && !empty(currentValue)) {\n        // set the currentValue as the value from the key\n        currentValue = currentValue[key];\n      }\n    });\n\n    // if the currentValue is undefined after getting the new\n    // value from the paths return the default value\n    if (currentValue === undefined) {\n      return defaultValue;\n    }\n\n    // if it isn't undefined return the value\n    return currentValue;\n  }\n\n  // if the object isn't an object or it is empty or\n  // it doesn't have the specified path return the\n  // default value\n  return defaultValue;\n}\n\nexport default get;\n",
+    "static": true,
+    "longname": "G:/o/src/get.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 69,
+    "kind": "function",
+    "name": "get",
+    "memberof": "src/get.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/get.js~get",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/get.js",
+    "importStyle": "get",
+    "description": "Get the value from the specified path",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nget(a, 'b'); // => 2"
+    ],
+    "lineNumber": 23,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{*} The value from the path or the default value"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object the get from"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "The path to get"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "undefined",
+        "defaultRaw": "undefined",
+        "name": "defaultValue",
+        "description": "The default value to return if the path doesn't exist"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*"
+      ],
+      "spread": false,
+      "description": "The value from the path or the default value"
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "file",
+    "name": "src/has.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport getPathParts from './pathParts';\n\n/**\n * Check if an object has the specified paths\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * has(a, 'a'); // => true\n * has(a, 'd'); // => false\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to check\n * @param {...string} paths The paths to check for\n *\n * @returns {boolean} Whether the object contains the specified path\n */\nfunction has(object, ...paths) {\n  // check if object is an object\n  if (is(object) && !empty(object)) {\n    // set the result to true by default\n    let hasPaths = true;\n\n    // for each path specified\n    paths.forEach((path) => {\n      // get the parsed path parts\n      const parts = getPathParts(path);\n\n      // set the current value so its easier to iterate over\n      let currentValue = object;\n\n      // for each part in the path\n      parts.forEach((key) => {\n        // check if the currentValue is an object\n        if (is(currentValue) && !empty(currentValue)) {\n          // if it is set the currentValue to the corresponding key from\n          // that object\n          currentValue = currentValue[key];\n        }\n        // if the currentValue isn't an object then the value will stay\n        // as the last currentValue this should leave the last value as\n        // any value which is fetch from the object path. If the value\n        // fetched turns out to be undefined we can then tell the path\n        // doesn't exist in the next step\n      });\n\n      // check if the currentValue is undefined meaning that the path\n      // doesn't exist\n      if (currentValue === undefined) {\n        // if the currentValue is undefined set hasPaths to false\n        // this will lead to the function returning false because\n        // the object specified doesn't have all the paths specified\n        hasPaths = false;\n      }\n    });\n\n    // return whether or not all the paths exist in the specified object\n    return hasPaths;\n  }\n\n  // return false because the object specified isn't an object\n  return false;\n}\n\nexport default has;\n",
+    "static": true,
+    "longname": "G:/o/src/has.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 71,
+    "kind": "function",
+    "name": "has",
+    "memberof": "src/has.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/has.js~has",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/has.js",
+    "importStyle": "has",
+    "description": "Check if an object has the specified paths",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nhas(a, 'a'); // => true\nhas(a, 'd'); // => false"
+    ],
+    "lineNumber": 22,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean} Whether the object contains the specified path"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to check"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "...string"
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "paths",
+        "description": "The paths to check for"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Whether the object contains the specified path"
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "file",
+    "name": "src/includes.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport each from './each';\n\n/**\n * Check if the object includes the specified object\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * includes(a, 1); // => true\n * includes(a, 5); // => false\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to check\n * @param {*} value The value to check for\n * @param {boolean} follow Whether to follow objects\n *\n * @returns {boolean} Whether the object contains the specified value\n */\nfunction includes(object, value, follow = false) {\n  // if the object is an object and is not empty\n  if (is(object) && !empty(object)) {\n    // create an result variable as false\n    let result = false;\n\n    // for each key/value in the object\n    // follow is passed into each therefore the\n    // each function works out whether to follow\n    // the objects\n    each(object, (key, objValue) => {\n      // if the result isn't already true\n      if (!result) {\n        // follow is false or follow is true but the\n        // object value isn't an object\n        if (!follow || (follow && !is(value))) {\n          // check if the object value is equal to\n          // the specified value\n          if (objValue === value) {\n            // if they are the same set the result\n            // to true\n            result = true;\n          }\n        }\n      }\n    }, follow);\n\n    // return the result\n    return result;\n  }\n\n  // if the object isn't an object or is empty return\n  // false because the object can't be checked\n  return false;\n}\n\nexport default includes;\n",
+    "static": true,
+    "longname": "G:/o/src/includes.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 73,
+    "kind": "function",
+    "name": "includes",
+    "memberof": "src/includes.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/includes.js~includes",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/includes.js",
+    "importStyle": "includes",
+    "description": "Check if the object includes the specified object",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nincludes(a, 1); // => true\nincludes(a, 5); // => false"
+    ],
+    "lineNumber": 23,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean} Whether the object contains the specified value"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to check"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": "The value to check for"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "follow",
+        "description": "Whether to follow objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Whether the object contains the specified value"
+    }
+  },
+  {
+    "__docId__": 74,
+    "kind": "file",
+    "name": "src/inflate.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport set from './set';\n\n/**\n * Inflate an object (reverse deflate)\n *\n * * @example\n * const a = { a: 1, 'b.c': 2 };\n * inflate(a); // => { a: 1, b: { c: 2 } }\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to inflate\n *\n * @returns {object} The inflated object\n */\nfunction inflate(object) {\n  // check if the object is an object and isn't empty\n  if (is(object) && !empty(object)) {\n    // create a new object for the result\n    let result = {};\n\n    // for each key in the object\n    Object.keys(object).forEach((path) => {\n      // get value from the object\n      const value = object[path];\n\n      // set the value on the result according to\n      // the dot notation path (if the key is a dot\n      // notation path)\n      result = set(result, path, value);\n    });\n\n    // returned the result\n    return result;\n  }\n\n  // if the object isn't an object or is empty return\n  // an empty object this will keep the return immutable\n  return {};\n}\n\nexport default inflate;\n",
+    "static": true,
+    "longname": "G:/o/src/inflate.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 75,
+    "kind": "function",
+    "name": "inflate",
+    "memberof": "src/inflate.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/inflate.js~inflate",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/inflate.js",
+    "importStyle": "inflate",
+    "description": "Inflate an object (reverse deflate)\n\n* @example\nconst a = { a: 1, 'b.c': 2 };\ninflate(a); // => { a: 1, b: { c: 2 } }",
+    "lineNumber": 20,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{object} The inflated object"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to inflate"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "The inflated object"
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "file",
+    "name": "src/is.js",
+    "content": "/**\n * Check if the specified value is an object\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * const b = 'string';\n * is(a); // => true\n * is(b); // => false\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {*} value The value to check\n *\n * @returns {boolean} Whether it is an object\n */\nfunction is(value) {\n  // check if the value is an instance of Object\n  return value instanceof Object\n    // check if the value constructor is Object\n    && value.constructor === Object;\n  // if both match the value is truly an object\n}\n\nexport default is;\n",
+    "static": true,
+    "longname": "G:/o/src/is.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 77,
+    "kind": "function",
+    "name": "is",
+    "memberof": "src/is.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/is.js~is",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/is.js",
+    "importStyle": "is",
+    "description": "Check if the specified value is an object",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nconst b = 'string';\nis(a); // => true\nis(b); // => false"
+    ],
+    "lineNumber": 17,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean} Whether it is an object"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": "The value to check"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Whether it is an object"
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "file",
+    "name": "src/keyOf.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport each from './each';\n\n/**\n * Get the key of the specified value in dot notation\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * keyOf(a, 2); // => 'b'\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to search\n * @param {*} value The value to look for\n * @param {boolean} [follow=false] Whether to follow objects\n *\n * @returns {string} The key when found else undefined\n */\nfunction keyOf(object, value, follow = false) {\n  // if the object is an object and is not empty\n  if (is(object) && !empty(object)) {\n    // create a found boolean so we can skip\n    // over keys once we have found the correct\n    // key\n    let found = false;\n    // create an result variable as false\n    let result = '';\n\n    // for each key/value in the object\n    // follow is passed into each therefore the\n    // each function works out whether to follow\n    // the objects\n    each(object, (key, objValue) => {\n      // if the result isn't already found\n      if (!found) {\n        // follow is false or follow is true but the\n        // object value isn't an object\n        if (!follow || (follow && !is(value))) {\n          // check if the object value is equal to\n          // the specified value\n          if (objValue === value) {\n            // set found to true since the key was found\n            found = true;\n\n            // if the values are the same set the result\n            // to the key\n            result = key;\n          }\n        }\n      }\n    }, follow);\n\n    // return the result if it was found else return\n    // undefined\n    return found\n      ? result\n      : undefined;\n  }\n\n  // if the object isn't an object or is empty return\n  // false because the object can't be checked\n  return undefined;\n}\n\nexport default keyOf;\n",
+    "static": true,
+    "longname": "G:/o/src/keyOf.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 79,
+    "kind": "function",
+    "name": "keyOf",
+    "memberof": "src/keyOf.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/keyOf.js~keyOf",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/keyOf.js",
+    "importStyle": "keyOf",
+    "description": "Get the key of the specified value in dot notation",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nkeyOf(a, 2); // => 'b'"
+    ],
+    "lineNumber": 22,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string} The key when found else undefined"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to search"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": "The value to look for"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "follow",
+        "description": "Whether to follow objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "The key when found else undefined"
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "file",
+    "name": "src/keys.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\n\n/**\n * Get the keys of the specified object\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * keys(a); // => ['a', 'b', 'c']\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to get the keys from\n * @param {boolean} follow Whether to follow objects\n *\n * @returns {string[]} An array of object keys\n */\nfunction keys(object, follow = false) {\n  // check if the object is an object and it's not empty\n  if (is(object) && !empty(object)) {\n    // create an empty array for the result\n    let result = [];\n\n    // if follow is enabled\n    if (follow) {\n      // create a new function which gets the keys and\n      // adds them with dot notation to the results array\n      const followKeys = (obj, currentPath) => {\n        // get all the keys for the inner object\n        Object.keys(obj).forEach((key) => {\n          // parse the dot notation path\n          const followPath = `${currentPath}.${key}`;\n          // if the result is an object run the function again\n          // for that object\n          if (is(obj[key]) && !empty(obj[key])) {\n            // the value is an object so run the function again\n            // for that object but with the new path\n            followKeys(obj[key], followPath);\n          }\n          // add the new parsed path to the result object\n          result.push(followPath);\n        });\n      };\n\n      // for each key in the specified object\n      Object.keys(object).forEach((key) => {\n        // add the key to the results array\n        result.push(key);\n        // if the value of the key is an object add all them keys\n        // to the results array\n        if (is(object[key]) && !empty(object[key])) {\n          // the value is an object so add all them keys also\n          // to the results array\n          followKeys(object[key], key);\n        }\n      });\n    } else {\n      // if follow isn't enabled just add all the base object keys\n      // to the results array\n      result = Object.keys(object);\n    }\n\n    // return the results array\n    return result;\n  }\n\n  // if the object isn't an object or its empty return an empty array\n  return [];\n}\n\nexport default keys;\n",
+    "static": true,
+    "longname": "G:/o/src/keys.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 81,
+    "kind": "function",
+    "name": "keys",
+    "memberof": "src/keys.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/keys.js~keys",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/keys.js",
+    "importStyle": "keys",
+    "description": "Get the keys of the specified object",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nkeys(a); // => ['a', 'b', 'c']"
+    ],
+    "lineNumber": 20,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string[]} An array of object keys"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to get the keys from"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "follow",
+        "description": "Whether to follow objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string[]"
+      ],
+      "spread": false,
+      "description": "An array of object keys"
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "file",
+    "name": "src/map.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport each from './each';\nimport set from './set';\n\n/**\n * Loop over an object and return a new object with the values\n * computed from the specified iterator\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * map(a, (key, value) => value * 2); // => { a: 2, b: 4, c: 6 }\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to map\n * @param {function(key: string, value: *)} iterator The function used to compute the value\n * @param {boolean} [follow=false] Whether or not to follow objects\n *\n * @returns {object} The result object with the computed values\n */\nfunction map(object, iterator, follow = false) {\n  // if the object is an object and is not empty\n  if (is(object) && !empty(object) && typeof iterator === 'function') {\n    // create an empty object for the result\n    let result = {};\n\n    // for each key/value in the object\n    // follow is passed into each therefore the\n    // each function works out whether to follow\n    // the objects\n    each(object, (key, value) => {\n      // set the result to the object with the key/value computed\n      // from the specified iterator\n      result = set(result, key, iterator(key, value));\n    }, follow);\n\n    // return the result\n    return result;\n  }\n\n  // if the object isn't an object or is empty return an\n  // empty object because the iterator can't be ran to\n  // compute the values\n  return {};\n}\n\nexport default map;\n",
+    "static": true,
+    "longname": "G:/o/src/map.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 83,
+    "kind": "function",
+    "name": "map",
+    "memberof": "src/map.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/map.js~map",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/map.js",
+    "importStyle": "map",
+    "description": "Loop over an object and return a new object with the values\ncomputed from the specified iterator",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nmap(a, (key, value) => value * 2); // => { a: 2, b: 4, c: 6 }"
+    ],
+    "lineNumber": 24,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{object} The result object with the computed values"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to map"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(key: string, value: *)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "iterator",
+        "description": "The function used to compute the value"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "follow",
+        "description": "Whether or not to follow objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "The result object with the computed values"
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "file",
+    "name": "src/merge.js",
+    "content": "// npm\nimport circleAssign from 'circle-assign';\n\n\n/**\n * Merge all sources into the target with the most right source\n * having the most priority\n *\n * Uses circle-assign\n * @see https://www.npmjs.com/package/circle-assign\n *\n * * @example\n * const a = { a: 1 };\n * const b = { b: 2, c: 3 };\n * merge(a, b); // => { a: 1, b: 2, c: 3 }\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} target The target object\n * @param {...object} sources The sources\n *\n * @returns {object} The merged object\n */\nfunction merge(target, ...sources) {\n  return circleAssign.apply(null, [target, ...sources]);\n}\n\nexport default merge;\n",
+    "static": true,
+    "longname": "G:/o/src/merge.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 85,
+    "kind": "function",
+    "name": "merge",
+    "memberof": "src/merge.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/merge.js~merge",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/merge.js",
+    "importStyle": "merge",
+    "description": "Merge all sources into the target with the most right source\nhaving the most priority\n\nUses circle-assign",
+    "see": [
+      "https://www.npmjs.com/package/circle-assign\n\n* @example\nconst a = { a: 1 };\nconst b = { b: 2, c: 3 };\nmerge(a, b); // => { a: 1, b: 2, c: 3 }"
+    ],
+    "lineNumber": 25,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{object} The merged object"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target",
+        "description": "The target object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "...object"
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "sources",
+        "description": "The sources"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "The merged object"
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "file",
+    "name": "src/pathParts.js",
+    "content": "/**\n * Parse the path into an array of parts (object keys)\n *\n * @param {string} path The path to parse\n *\n * @returns {string[]} An array of parts\n */\nfunction getPathParts(path) {\n  // split the path specified into an array on `.`\n  const pathParts = path.split('.');\n\n  // create an empty array which will be the result\n  const parts = [];\n\n  // create an index variable so we can skip indexes if\n  // need be when parsing the paths\n  let index = 0;\n\n  // while the index is smaller then the parts array length\n  while (index < pathParts.length) {\n    // get the part from the parts array\n    let parsedPart = pathParts[index];\n\n    // while (if) the part starts with `\\` remove it and\n    // append `.` and then next part from the array to it\n    // this should result in `test\\\\.test` being parsed\n    // into `test.test`. This is done so users can escape\n    // dots from the dot notation\n    while (parsedPart[parsedPart.length - 1] === '\\\\'\n    && pathParts[index + 1] !== undefined\n    && pathParts[index + 1] !== null) {\n      // remove `\\` and append the `.`\n      parsedPart = `${parsedPart.slice(0, -1)}.`;\n      // increase the index so next iteration it will skip\n      // the next path which is about to be added to this path\n      index += 1;\n      // add the next path to the current one because they are\n      // apart of the same object key\n      parsedPart += pathParts[index];\n    }\n\n    // increase the index so we can continue to the next path\n    // in the array\n    index += 1;\n\n    // append the parsed path to the results array\n    parts.push(parsedPart);\n  }\n\n  // return all the parsed paths\n  return parts;\n}\n\nexport default getPathParts;\n",
+    "static": true,
+    "longname": "G:/o/src/pathParts.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 87,
+    "kind": "function",
+    "name": "getPathParts",
+    "memberof": "src/pathParts.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/pathParts.js~getPathParts",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/pathParts.js",
+    "importStyle": "getPathParts",
+    "description": "Parse the path into an array of parts (object keys)",
+    "lineNumber": 8,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string[]} An array of parts"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "The path to parse"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string[]"
+      ],
+      "spread": false,
+      "description": "An array of parts"
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "file",
+    "name": "src/set.js",
+    "content": "// o\nimport is from './is';\nimport clone from './clone';\nimport getPathParts from './pathParts';\n\n/**\n * Set the specified path with the specified value\n *\n * @example\n * const a = { a: 1, b: 2 };\n * set(a, 'c', 3); // => { a: 1, b: 2, c: 3 }\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to set the value on\n * @param {string} path The path to set the value as\n * @param {*} value The value to set\n *\n * @return {object} The object with the new set value\n */\nfunction set(object, path, value) {\n  // check if the object is an object\n  if (is(object)) {\n    // clone the object\n    let cloned = clone(object);\n\n    // set a new value for the cloned object so we\n    // can manipulate it\n    const result = cloned;\n\n    // get the path parts\n    const pathParts = getPathParts(path);\n\n    // loop over all the path parts\n    for (let index = 0; index < pathParts.length; index += 1) {\n      // get the current key\n      const key = pathParts[index];\n\n      // check if the value is an object\n      if (!is(cloned[key])) {\n        // if it isn't an object set it to an empty object\n        cloned[key] = {};\n      }\n\n      // check if the current path is the last key\n      if (index === pathParts.length - 1) {\n        // if it is the last key set it as the value\n        cloned[key] = value;\n      }\n\n      // set the modified values to the object\n      cloned = cloned[key];\n    }\n\n    // returned the result\n    return result;\n  }\n\n  // if the object isn't an object return an empty\n  // object this will keep the return immutable\n  return {};\n}\n\nexport default set;\n",
+    "static": true,
+    "longname": "G:/o/src/set.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 89,
+    "kind": "function",
+    "name": "set",
+    "memberof": "src/set.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/set.js~set",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/set.js",
+    "importStyle": "set",
+    "description": "Set the specified path with the specified value",
+    "examples": [
+      "const a = { a: 1, b: 2 };\nset(a, 'c', 3); // => { a: 1, b: 2, c: 3 }"
+    ],
+    "lineNumber": 22,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to set the value on"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "path",
+        "description": "The path to set the value as"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": "The value to set"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "The object with the new set value"
+    }
+  },
+  {
+    "__docId__": 90,
+    "kind": "file",
+    "name": "src/size.js",
+    "content": "// o\nimport is from './is';\n\n/**\n * Get the size of the specified object\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * size(a); // => 3\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to get the size of\n *\n * @returns {number} The size of the object (-1 when provided value isn't an object)\n */\nfunction size(object) {\n  // check if the object is an object\n  if (is(object)) {\n    // get the object keys and return the length\n    return Object.keys(object).length;\n  }\n\n  // if the object isn't an object return -1 so that it is still\n  // a number but it is distinguishable that it isn't an object\n  // since objects can't have minus key lengths\n  return -1;\n}\n\nexport default size;\n",
+    "static": true,
+    "longname": "G:/o/src/size.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 91,
+    "kind": "function",
+    "name": "size",
+    "memberof": "src/size.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/size.js~size",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/size.js",
+    "importStyle": "size",
+    "description": "Get the size of the specified object",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nsize(a); // => 3"
+    ],
+    "lineNumber": 18,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{number} The size of the object (-1 when provided value isn't an object)"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to get the size of"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": "The size of the object (-1 when provided value isn't an object)"
+    }
+  },
+  {
+    "__docId__": 92,
+    "kind": "file",
+    "name": "src/slice.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport keys from './keys';\n\n/**\n * Get a portion of the specified object\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * slice(a, 0, 1); // => { a: 1 }\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to slice\n * @param {number} start The start index\n * @param {number} [end] The end index (defaults to object keys length)\n *\n * @returns {object} The sliced object\n */\nfunction slice(object, start, end = Object.keys(object).length) {\n  // if the object is an object and is not empty\n  if (is(object) && !empty(object)) {\n    // get the keys from the object\n    const objKeys = keys(object);\n\n    // create an empty object for the result\n    const result = {};\n\n    // slice the object keys to the specified start and end\n    // and for each key returned\n    objKeys.slice(start, end).forEach((key) => {\n      // set the result object key to the value\n      result[key] = object[key];\n    });\n\n    // return the result\n    return result;\n  }\n\n  // if the object isn't an object or is empty return an\n  // empty object because slicing won't return anything anyway\n  return {};\n}\n\nexport default slice;\n",
+    "static": true,
+    "longname": "G:/o/src/slice.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 93,
+    "kind": "function",
+    "name": "slice",
+    "memberof": "src/slice.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/slice.js~slice",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/slice.js",
+    "importStyle": "slice",
+    "description": "Get a portion of the specified object",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nslice(a, 0, 1); // => { a: 1 }"
+    ],
+    "lineNumber": 22,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{object} The sliced object"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to slice"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "start",
+        "description": "The start index"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "end",
+        "description": "The end index (defaults to object keys length)"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "The sliced object"
+    }
+  },
+  {
+    "__docId__": 94,
+    "kind": "file",
+    "name": "src/some.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport each from './each';\n\n/**\n * Check that some element in an object evaluate to the iterator\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * some(a, (key, value) => value === 2); // => true\n * some(a, (key, value) => value === 5); // => false\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to check\n * @param {function(key: string, value: *)} iterator The function to evaluate\n * @param {boolean} follow Whether to follow objects\n *\n * @returns {boolean} Whether some object values evaluate to the iterator\n */\nfunction some(object, iterator, follow = false) {\n  // if the object is an object and is not empty\n  if (is(object) && !empty(object) && typeof iterator === 'function') {\n    // set the result to false so we can change it\n    // to true if one of the iterations is true\n    let result = false;\n\n    // for each over the object keys and values\n    // follow is passed into each therefore the\n    // each function works out whether to follow\n    // the objects\n    each(object, (key, value) => {\n      // run the iterator function on the key and\n      // value and if it evaluates to true set\n      // the result to true\n      if (iterator(key, value) === true) {\n        // set the result to true\n        result = true;\n      }\n    }, follow);\n\n    // return the result\n    return result;\n  }\n\n  // if the object isn't an object or is empty return false\n  // because the iterator can't be ran to make a check\n  return false;\n}\n\nexport default some;\n",
+    "static": true,
+    "longname": "G:/o/src/some.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 95,
+    "kind": "function",
+    "name": "some",
+    "memberof": "src/some.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/some.js~some",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/some.js",
+    "importStyle": "some",
+    "description": "Check that some element in an object evaluate to the iterator",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nsome(a, (key, value) => value === 2); // => true\nsome(a, (key, value) => value === 5); // => false"
+    ],
+    "lineNumber": 23,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean} Whether some object values evaluate to the iterator"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to check"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(key: string, value: *)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "iterator",
+        "description": "The function to evaluate"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "follow",
+        "description": "Whether to follow objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "Whether some object values evaluate to the iterator"
+    }
+  },
+  {
+    "__docId__": 96,
+    "kind": "file",
+    "name": "src/sort.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport keys from './keys';\nimport get from './get';\nimport set from './set';\n\n/**\n * Sort an object via the iterator evaluation\n *\n * @example\n * const a = { a: 4, b: 7, c: 3 };\n * sort(a, (a, b) => {\n *  if (a.value < b.value) return -1;\n *  if (a.value > b.value) return 1;\n *  return 0;\n * }); // => { c: 3, a: 4, b: 7 }\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to sort\n * @param {function(a: object, b: object)} iterator The function to evaluate\n * @param {boolean} [follow=false] Whether to follow objects\n *\n * @returns {object} The sorted object\n */\nfunction sort(object, iterator, follow = false) {\n  // check if the object is an object and isn't empty\n  if (is(object) && !empty(object) && typeof iterator === 'function') {\n    // get all the keys and pass following so keys\n    // can work out whether to follow\n    const objKeys = keys(object, follow);\n\n    // create an empty array so we can add all the sort objects\n    const sortingValues = [];\n\n    // for each key\n    objKeys.forEach((key) => {\n      // get the value of the key\n      const value = get(object, key);\n\n      // if following and the value is an object skip it\n      if (follow && is(value)) {\n        return;\n      }\n\n      // add the key and value as an object to the\n      // sorting values array\n      sortingValues.push({\n        key,\n        value,\n      });\n    });\n\n    // sort the sorting values array using the\n    // specified iterator\n    const sorted = sortingValues.sort(iterator);\n\n    // create an empty object for the result\n    let result = {};\n\n    // go through all the sorted values and\n    // build the object from them in the sorted\n    // order\n    sorted.forEach((sortObj) => {\n      // get the key and value\n      const {\n        key,\n        value,\n      } = sortObj;\n\n      // set the key/value on the result object\n      result = set(result, key, value);\n    });\n\n    // return the result\n    return result;\n  }\n\n  // if the object isn't an object or is empty return\n  // an empty object this will keep the return immutable\n  return {};\n}\n\nexport default sort;\n",
+    "static": true,
+    "longname": "G:/o/src/sort.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 97,
+    "kind": "function",
+    "name": "sort",
+    "memberof": "src/sort.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/sort.js~sort",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/sort.js",
+    "importStyle": "sort",
+    "description": "Sort an object via the iterator evaluation",
+    "examples": [
+      "const a = { a: 4, b: 7, c: 3 };\nsort(a, (a, b) => {\n if (a.value < b.value) return -1;\n if (a.value > b.value) return 1;\n return 0;\n}); // => { c: 3, a: 4, b: 7 }"
+    ],
+    "lineNumber": 28,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{object} The sorted object"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to sort"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(a: object, b: object)"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "iterator",
+        "description": "The function to evaluate"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "follow",
+        "description": "Whether to follow objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "object"
+      ],
+      "spread": false,
+      "description": "The sorted object"
+    }
+  },
+  {
+    "__docId__": 98,
+    "kind": "file",
+    "name": "src/values.js",
+    "content": "// o\nimport is from './is';\nimport empty from './empty';\nimport deflate from './deflate';\n\n/**\n * Get an array of values from the specified object\n *\n * @example\n * const a = { a: 1, b: 2, c: 3 };\n * values(a); // => [1, 2, 3]\n *\n * @since 1.0.0\n * @version 1.0.0\n *\n * @param {object} object The object to get the values from\n * @param {boolean} [follow=false] Whether to follow objects\n *\n * @returns {array} An array of all the values from the object\n */\nfunction values(object, follow) {\n  // check if object is an object\n  if (is(object) && !empty(object)) {\n    // create an empty array for the result\n    const result = [];\n\n    // if follow is true flatten the object keys so\n    // its easy to get the path to get the value\n    // if follow is false it will just be the base\n    // object therefore it will only need to base keys\n    const keysObject = follow\n      ? deflate(object)\n      : object;\n\n    // loop over the keys of the object\n    Object.keys(keysObject).forEach((key) => {\n      // get the current key value\n      const value = keysObject[key];\n\n      // add it to the result array\n      result.push(value);\n    });\n\n    // return the result\n    return result;\n  }\n\n  // if the object isn't an object or is empty return\n  // an empty array because it won't contain any values\n  return [];\n}\n\nexport default values;\n",
+    "static": true,
+    "longname": "G:/o/src/values.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 99,
+    "kind": "function",
+    "name": "values",
+    "memberof": "src/values.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/values.js~values",
+    "access": "public",
+    "export": true,
+    "importPath": "o/src/values.js",
+    "importStyle": "values",
+    "description": "Get an array of values from the specified object",
+    "examples": [
+      "const a = { a: 1, b: 2, c: 3 };\nvalues(a); // => [1, 2, 3]"
+    ],
+    "lineNumber": 21,
+    "since": "1.0.0",
+    "version": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{array} An array of all the values from the object"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "object",
+        "description": "The object to get the values from"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "follow",
+        "description": "Whether to follow objects"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "array"
+      ],
+      "spread": false,
+      "description": "An array of all the values from the object"
+    }
+  },
+  {
+    "kind": "index",
+    "content": "# o\ncommon object helper functions which can be used in [NodeJS](https://nodejs.org/en/) and the browser (supports ES6).\n\n[![Build Status](https://travis-ci.org/hammy2899/o.svg?branch=master)](https://travis-ci.org/hammy2899/o)\n[![Coverage Status](https://coveralls.io/repos/github/hammy2899/o/badge.svg?branch=master)](https://coveralls.io/github/hammy2899/o?branch=master)\n[![npm version](https://img.shields.io/npm/v/o.svg)](https://www.npmjs.com/package/o)\n[![license](https://img.shields.io/github/license/hammy2899/o.svg)](https://github.com/hammy2899/o/blob/master/LICENSE.md)\n\n\n### Installation\n```\n$ npm install --save o\n```\n\n### Usage\n\n#### NodeJS\n```javascript\nconst o = require('o');\nconst { /* require specific functions */ is, empty, has, set, get } = require('o');\n```\n\n#### Browser (ES6)\n```javascript\nimport * as o from 'o';\nimport { /* require specific functions */ is, empty, has, set, get } from 'o';\n```\n\n#### Browser (CDN)\n```html\n<script\n  type=\"application/javascript\"\n  src=\"https://cdn.jsdelivr.net/npm/o@1.0.0/dist/o.min.js\"\n/>\n```\n\n### Example usage\n\n```javascript\nconst a = {\n  a: 1,\n  b: 2,\n  c: {\n    d: 3,\n    e: 4,\n  },\n};\n\nis(a); // => true\nempty(a); // => false\nhas(a, 'a'); // => true\nhas(a, 'd'); // => false\nhas(a, 'c.d'); // => true\na = set(a, 'f', 5);\nget(a, 'f'); // => 5\n```\n\nFor more examples and a list of all functions view the [documentation page]().\n\n### Documentation\n\nDocs are generated by [ESDoc](https://esdoc.org), all functions are documented via esdoc syntax.\n\n### Contributing\n\nAll functions are documented with [ESDoc](https://esdoc.org) and are fully commented explaining how it works. If you want to\ncontribute feel free to open a PR. When you open a PR please set the base branch as [`develop`](https://github.com/hammy2899/o/tree/develop) and please make sure `npm run test` passes\nwith no errors and if any tests fail please fix or add new tests accordingly.\n",
+    "longname": "G:\\o\\README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"o\",\n  \"version\": \"1.0.0\",\n  \"description\": \"common object helper functions\",\n  \"main\": \"dist/o.js\",\n  \"scripts\": {\n    \"coveralls\": \"cat ./coverage/lcov.info | coveralls\",\n    \"clean\": \"rm -rf ./dist\",\n    \"build:rollup\": \"rollup -c\",\n    \"build:watch\": \"rollup -c -w\",\n    \"build:uglify\": \"npx uglifyjs dist/o.js -o dist/o.min.js\",\n    \"build\": \"npm-run-all clean build:rollup build:uglify\",\n    \"test:jest\": \"jest --coverage --verbose --runInBand --no-cache\",\n    \"test:watch\": \"jest --verbose --runInBand --no-cache --watch\",\n    \"test:eslint\": \"eslint src\",\n    \"test\": \"npm-run-all test:eslint test:jest\",\n    \"docs:build\": \"esdoc -c .esdoc.json\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/hammy2899/o.git\"\n  },\n  \"keywords\": [\n    \"object\",\n    \"helper\"\n  ],\n  \"author\": \"hammy2899\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/hammy2899/o/issues\"\n  },\n  \"homepage\": \"https://github.com/hammy2899/o#readme\",\n  \"devDependencies\": {\n    \"@babel/cli\": \"^7.1.5\",\n    \"@babel/core\": \"^7.1.6\",\n    \"@babel/preset-env\": \"^7.1.6\",\n    \"babel-core\": \"^7.0.0-bridge.0\",\n    \"babel-jest\": \"^23.6.0\",\n    \"coveralls\": \"^3.0.2\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^5.9.0\",\n    \"eslint-config-airbnb-base\": \"^13.1.0\",\n    \"eslint-plugin-import\": \"^2.14.0\",\n    \"eslint-plugin-jest\": \"^22.1.0\",\n    \"jest\": \"^23.6.0\",\n    \"npm-run-all\": \"^4.1.5\",\n    \"regenerator-runtime\": \"^0.13.1\",\n    \"rollup\": \"^0.67.4\",\n    \"rollup-plugin-babel\": \"^4.0.3\",\n    \"rollup-plugin-commonjs\": \"^9.2.0\",\n    \"rollup-plugin-node-resolve\": \"^3.4.0\",\n    \"uglify-js\": \"^3.4.9\"\n  },\n  \"dependencies\": {\n    \"circle-assign\": \"^2.0.0\"\n  }\n}\n",
+    "longname": "G:\\o\\package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]
