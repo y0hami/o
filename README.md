@@ -17,12 +17,14 @@ $ npm install --save o
 #### NodeJS
 ```javascript
 const o = require('o');
+// or
 const { /* require specific functions */ is, empty, has, set, get } = require('o');
 ```
 
 #### Browser (ES6)
 ```javascript
 import * as o from 'o';
+// or
 import { /* require specific functions */ is, empty, has, set, get } from 'o';
 ```
 
