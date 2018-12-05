@@ -33,16 +33,12 @@ function includes(object, value, follow = false) {
     each(object, (key, objValue) => {
       // if the result isn't already true
       if (!result) {
-        // follow is false or follow is true but the
-        // object value isn't an object
-        if (!follow || (follow && !is(value))) {
-          // check if the object value is equal to
-          // the specified value
-          if (objValue === value) {
-            // if they are the same set the result
-            // to true
-            result = true;
-          }
+        // check if the object value is equal to
+        // the specified value
+        if (objValue === value) {
+          // if they are the same set the result
+          // to true
+          result = true;
         }
       }
     }, follow);
