@@ -54,5 +54,10 @@
   },
   "dependencies": {
     "circle-assign": "^2.0.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/*.js"
+    ]
   }
 }
