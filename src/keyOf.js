@@ -36,19 +36,15 @@ function keyOf(object, value, follow = false) {
     each(object, (key, objValue) => {
       // if the result isn't already found
       if (!found) {
-        // follow is false or follow is true but the
-        // object value isn't an object
-        if (!follow || (follow && !is(value))) {
-          // check if the object value is equal to
-          // the specified value
-          if (objValue === value) {
-            // set found to true since the key was found
-            found = true;
+        // check if the object value is equal to
+        // the specified value
+        if (objValue === value) {
+          // set found to true since the key was found
+          found = true;
 
-            // if the values are the same set the result
-            // to the key
-            result = key;
-          }
+          // if the values are the same set the result
+          // to the key
+          result = key;
         }
       }
     }, follow);
