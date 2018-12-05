@@ -35,17 +35,7 @@ function has(object, ...paths) {
 
       // for each part in the path
       parts.forEach((key) => {
-        // check if the currentValue is an object
-        if (is(currentValue) && !empty(currentValue)) {
-          // if it is set the currentValue to the corresponding key from
-          // that object
-          currentValue = currentValue[key];
-        }
-        // if the currentValue isn't an object then the value will stay
-        // as the last currentValue this should leave the last value as
-        // any value which is fetch from the object path. If the value
-        // fetched turns out to be undefined we can then tell the path
-        // doesn't exist in the next step
+        currentValue = currentValue[key];
       });
 
       // check if the currentValue is undefined meaning that the path
