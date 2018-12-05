@@ -30,18 +30,8 @@ function get(object, path, defaultValue = undefined) {
 
     // for each path parts from the parsed path
     getPathParts(path).forEach((key) => {
-      // if the current value is an object and it isn't empty
-      if (is(currentValue) && !empty(currentValue)) {
-        // set the currentValue as the value from the key
-        currentValue = currentValue[key];
-      }
+      currentValue = currentValue[key];
     });
-
-    // if the currentValue is undefined after getting the new
-    // value from the paths return the default value
-    if (currentValue === undefined) {
-      return defaultValue;
-    }
 
     // if it isn't undefined return the value
     return currentValue;
