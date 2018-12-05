@@ -33,20 +33,11 @@ function find(object, iterator, follow) {
     each(object, (key, value) => {
       // if the value hasn't already been found
       if (!found) {
-        // if its not following objects or its
-        // following but the value isn't an object
-        // this will skip any value which is an object
-        // when following allow us to run the iterator
-        // on the key/values within the objects which
-        // generates the filter effect throughout the
-        // whole object
-        if (!follow || (follow && !is(value))) {
-          // check if the iterator is false if it
-          // is false then delete that key from the object
-          if (iterator(key, value) === true) {
-            found = true;
-            result = key;
-          }
+        // check if the iterator is false if it
+        // is false then delete that key from the object
+        if (iterator(key, value) === true) {
+          found = true;
+          result = key;
         }
       }
     }, follow);
