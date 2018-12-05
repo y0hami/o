@@ -1,7 +1,6 @@
 // npm
 import circleAssign from 'circle-assign';
 
-
 /**
  * Merge all sources into the target with the most right source
  * having the most priority
@@ -22,8 +21,4 @@ import circleAssign from 'circle-assign';
  *
  * @returns {object} The merged object
  */
-function merge(target, ...sources) {
-  return circleAssign.apply(null, [target, ...sources]);
-}
-
-export default merge;
+export default circleAssign;
