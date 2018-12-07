@@ -1,8 +1,6 @@
 // o
 import is from './is';
 import empty from './empty';
-import keys from './keys';
-import get from './get';
 import set from './set';
 import each from './each';
 
