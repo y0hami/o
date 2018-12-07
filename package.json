@@ -14,7 +14,8 @@
     "test:watch": "jest --coverage --verbose --runInBand --no-cache --watch",
     "test:eslint": "eslint src",
     "test": "npm-run-all test:eslint test:jest",
-    "docs:build": "esdoc -c .esdoc.json"
+    "docs:build": "esdoc -c .esdoc.json",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
