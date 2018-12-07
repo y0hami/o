@@ -16,7 +16,8 @@
     "test": "npm-run-all test:eslint test:jest",
     "docs:clean": "rm -rf docs",
     "docs:esdoc": "esdoc -c .esdoc.json",
-    "docs": "npm-run-all docs:clean docs:esdoc",
+    "docs:cname": "echo o.hammy2899.xyz >> docs/CNAME",
+    "docs": "npm-run-all docs:clean docs:esdoc docs:cname",
     "release": "standard-version"
   },
   "repository": {
