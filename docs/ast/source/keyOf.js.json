@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1828,
+  "end": 1658,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 69,
+      "line": 65,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1828,
+    "end": 1658,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 69,
+        "line": 65,
         "column": 0
       }
     },
@@ -276,14 +276,14 @@
       {
         "type": "Identifier",
         "start": 471,
-        "end": 1804,
+        "end": 1634,
         "loc": {
           "start": {
             "line": 22,
             "column": 0
           },
           "end": {
-            "line": 66,
+            "line": 62,
             "column": 1
           }
         },
@@ -395,14 +395,14 @@
         "body": {
           "type": "BlockStatement",
           "start": 517,
-          "end": 1804,
+          "end": 1634,
           "loc": {
             "start": {
               "line": 22,
               "column": 46
             },
             "end": {
-              "line": 66,
+              "line": 62,
               "column": 1
             }
           },
@@ -410,14 +410,14 @@
             {
               "type": "IfStatement",
               "start": 570,
-              "end": 1680,
+              "end": 1510,
               "loc": {
                 "start": {
                   "line": 24,
                   "column": 2
                 },
                 "end": {
-                  "line": 61,
+                  "line": 57,
                   "column": 3
                 }
               },
@@ -565,14 +565,14 @@
               "consequent": {
                 "type": "BlockStatement",
                 "start": 604,
-                "end": 1680,
+                "end": 1510,
                 "loc": {
                   "start": {
                     "line": 24,
                     "column": 36
                   },
                   "end": {
-                    "line": 61,
+                    "line": 57,
                     "column": 3
                   }
                 },
@@ -872,28 +872,28 @@
                   {
                     "type": "ExpressionStatement",
                     "start": 957,
-                    "end": 1554,
+                    "end": 1384,
                     "loc": {
                       "start": {
                         "line": 36,
                         "column": 4
                       },
                       "end": {
-                        "line": 54,
+                        "line": 50,
                         "column": 15
                       }
                     },
                     "expression": {
                       "type": "CallExpression",
                       "start": 957,
-                      "end": 1553,
+                      "end": 1383,
                       "loc": {
                         "start": {
                           "line": 36,
                           "column": 4
                         },
                         "end": {
-                          "line": 54,
+                          "line": 50,
                           "column": 14
                         }
                       },
@@ -936,14 +936,14 @@
                         {
                           "type": "ArrowFunctionExpression",
                           "start": 970,
-                          "end": 1544,
+                          "end": 1374,
                           "loc": {
                             "start": {
                               "line": 36,
                               "column": 17
                             },
                             "end": {
-                              "line": 54,
+                              "line": 50,
                               "column": 5
                             }
                           },
@@ -990,14 +990,14 @@
                           "body": {
                             "type": "BlockStatement",
                             "start": 989,
-                            "end": 1544,
+                            "end": 1374,
                             "loc": {
                               "start": {
                                 "line": 36,
                                 "column": 36
                               },
                               "end": {
-                                "line": 54,
+                                "line": 50,
                                 "column": 5
                               }
                             },
@@ -1005,14 +1005,14 @@
                               {
                                 "type": "IfStatement",
                                 "start": 1040,
-                                "end": 1538,
+                                "end": 1368,
                                 "loc": {
                                   "start": {
                                     "line": 38,
                                     "column": 6
                                   },
                                   "end": {
-                                    "line": 53,
+                                    "line": 49,
                                     "column": 7
                                   }
                                 },
@@ -1058,36 +1058,36 @@
                                 "consequent": {
                                   "type": "BlockStatement",
                                   "start": 1052,
-                                  "end": 1538,
+                                  "end": 1368,
                                   "loc": {
                                     "start": {
                                       "line": 38,
                                       "column": 18
                                     },
                                     "end": {
-                                      "line": 53,
+                                      "line": 49,
                                       "column": 7
                                     }
                                   },
                                   "body": [
                                     {
                                       "type": "IfStatement",
-                                      "start": 1155,
-                                      "end": 1530,
+                                      "start": 1142,
+                                      "end": 1360,
                                       "loc": {
                                         "start": {
                                           "line": 41,
                                           "column": 8
                                         },
                                         "end": {
-                                          "line": 52,
+                                          "line": 48,
                                           "column": 9
                                         }
                                       },
                                       "test": {
-                                        "type": "LogicalExpression",
-                                        "start": 1159,
-                                        "end": 1192,
+                                        "type": "BinaryExpression",
+                                        "start": 1146,
+                                        "end": 1164,
                                         "loc": {
                                           "start": {
                                             "line": 41,
@@ -1095,13 +1095,13 @@
                                           },
                                           "end": {
                                             "line": 41,
-                                            "column": 45
+                                            "column": 30
                                           }
                                         },
                                         "left": {
-                                          "type": "UnaryExpression",
-                                          "start": 1159,
-                                          "end": 1166,
+                                          "type": "Identifier",
+                                          "start": 1146,
+                                          "end": 1154,
                                           "loc": {
                                             "start": {
                                               "line": 41,
@@ -1109,470 +1109,119 @@
                                             },
                                             "end": {
                                               "line": 41,
-                                              "column": 19
-                                            }
-                                          },
-                                          "operator": "!",
-                                          "prefix": true,
-                                          "argument": {
-                                            "type": "Identifier",
-                                            "start": 1160,
-                                            "end": 1166,
-                                            "loc": {
-                                              "start": {
-                                                "line": 41,
-                                                "column": 13
-                                              },
-                                              "end": {
-                                                "line": 41,
-                                                "column": 19
-                                              },
-                                              "identifierName": "follow"
+                                              "column": 20
                                             },
-                                            "name": "follow",
-                                            "leadingComments": null
+                                            "identifierName": "objValue"
                                           },
-                                          "extra": {
-                                            "parenthesizedArgument": false
-                                          },
+                                          "name": "objValue",
                                           "leadingComments": null
                                         },
-                                        "operator": "||",
+                                        "operator": "===",
                                         "right": {
-                                          "type": "LogicalExpression",
-                                          "start": 1171,
-                                          "end": 1191,
+                                          "type": "Identifier",
+                                          "start": 1159,
+                                          "end": 1164,
                                           "loc": {
                                             "start": {
                                               "line": 41,
-                                              "column": 24
+                                              "column": 25
                                             },
                                             "end": {
                                               "line": 41,
-                                              "column": 44
-                                            }
-                                          },
-                                          "left": {
-                                            "type": "Identifier",
-                                            "start": 1171,
-                                            "end": 1177,
-                                            "loc": {
-                                              "start": {
-                                                "line": 41,
-                                                "column": 24
-                                              },
-                                              "end": {
-                                                "line": 41,
-                                                "column": 30
-                                              },
-                                              "identifierName": "follow"
+                                              "column": 30
                                             },
-                                            "name": "follow"
+                                            "identifierName": "value"
                                           },
-                                          "operator": "&&",
-                                          "right": {
-                                            "type": "UnaryExpression",
-                                            "start": 1181,
-                                            "end": 1191,
-                                            "loc": {
-                                              "start": {
-                                                "line": 41,
-                                                "column": 34
-                                              },
-                                              "end": {
-                                                "line": 41,
-                                                "column": 44
-                                              }
-                                            },
-                                            "operator": "!",
-                                            "prefix": true,
-                                            "argument": {
-                                              "type": "CallExpression",
-                                              "start": 1182,
-                                              "end": 1191,
-                                              "loc": {
-                                                "start": {
-                                                  "line": 41,
-                                                  "column": 35
-                                                },
-                                                "end": {
-                                                  "line": 41,
-                                                  "column": 44
-                                                }
-                                              },
-                                              "callee": {
-                                                "type": "Identifier",
-                                                "start": 1182,
-                                                "end": 1184,
-                                                "loc": {
-                                                  "start": {
-                                                    "line": 41,
-                                                    "column": 35
-                                                  },
-                                                  "end": {
-                                                    "line": 41,
-                                                    "column": 37
-                                                  },
-                                                  "identifierName": "is"
-                                                },
-                                                "name": "is"
-                                              },
-                                              "arguments": [
-                                                {
-                                                  "type": "Identifier",
-                                                  "start": 1185,
-                                                  "end": 1190,
-                                                  "loc": {
-                                                    "start": {
-                                                      "line": 41,
-                                                      "column": 38
-                                                    },
-                                                    "end": {
-                                                      "line": 41,
-                                                      "column": 43
-                                                    },
-                                                    "identifierName": "value"
-                                                  },
-                                                  "name": "value"
-                                                }
-                                              ]
-                                            },
-                                            "extra": {
-                                              "parenthesizedArgument": false
-                                            }
-                                          },
-                                          "extra": {
-                                            "parenthesized": true,
-                                            "parenStart": 1170
-                                          }
+                                          "name": "value"
                                         },
                                         "leadingComments": null
                                       },
                                       "consequent": {
                                         "type": "BlockStatement",
-                                        "start": 1194,
-                                        "end": 1530,
+                                        "start": 1166,
+                                        "end": 1360,
                                         "loc": {
                                           "start": {
                                             "line": 41,
-                                            "column": 47
+                                            "column": 32
                                           },
                                           "end": {
-                                            "line": 52,
+                                            "line": 48,
                                             "column": 9
                                           }
                                         },
                                         "body": [
                                           {
-                                            "type": "IfStatement",
-                                            "start": 1290,
-                                            "end": 1520,
+                                            "type": "ExpressionStatement",
+                                            "start": 1233,
+                                            "end": 1246,
                                             "loc": {
                                               "start": {
-                                                "line": 44,
+                                                "line": 43,
                                                 "column": 10
                                               },
                                               "end": {
-                                                "line": 51,
-                                                "column": 11
+                                                "line": 43,
+                                                "column": 23
                                               }
                                             },
-                                            "test": {
-                                              "type": "BinaryExpression",
-                                              "start": 1294,
-                                              "end": 1312,
+                                            "expression": {
+                                              "type": "AssignmentExpression",
+                                              "start": 1233,
+                                              "end": 1245,
                                               "loc": {
                                                 "start": {
-                                                  "line": 44,
-                                                  "column": 14
+                                                  "line": 43,
+                                                  "column": 10
                                                 },
                                                 "end": {
-                                                  "line": 44,
-                                                  "column": 32
+                                                  "line": 43,
+                                                  "column": 22
                                                 }
                                               },
+                                              "operator": "=",
                                               "left": {
                                                 "type": "Identifier",
-                                                "start": 1294,
-                                                "end": 1302,
+                                                "start": 1233,
+                                                "end": 1238,
                                                 "loc": {
                                                   "start": {
-                                                    "line": 44,
-                                                    "column": 14
+                                                    "line": 43,
+                                                    "column": 10
                                                   },
                                                   "end": {
-                                                    "line": 44,
-                                                    "column": 22
+                                                    "line": 43,
+                                                    "column": 15
                                                   },
-                                                  "identifierName": "objValue"
+                                                  "identifierName": "found"
                                                 },
-                                                "name": "objValue",
+                                                "name": "found",
                                                 "leadingComments": null
                                               },
-                                              "operator": "===",
                                               "right": {
-                                                "type": "Identifier",
-                                                "start": 1307,
-                                                "end": 1312,
+                                                "type": "BooleanLiteral",
+                                                "start": 1241,
+                                                "end": 1245,
                                                 "loc": {
                                                   "start": {
-                                                    "line": 44,
-                                                    "column": 27
+                                                    "line": 43,
+                                                    "column": 18
                                                   },
                                                   "end": {
-                                                    "line": 44,
-                                                    "column": 32
-                                                  },
-                                                  "identifierName": "value"
+                                                    "line": 43,
+                                                    "column": 22
+                                                  }
                                                 },
-                                                "name": "value"
+                                                "value": true
                                               },
                                               "leadingComments": null
                                             },
-                                            "consequent": {
-                                              "type": "BlockStatement",
-                                              "start": 1314,
-                                              "end": 1520,
-                                              "loc": {
-                                                "start": {
-                                                  "line": 44,
-                                                  "column": 34
-                                                },
-                                                "end": {
-                                                  "line": 51,
-                                                  "column": 11
-                                                }
-                                              },
-                                              "body": [
-                                                {
-                                                  "type": "ExpressionStatement",
-                                                  "start": 1385,
-                                                  "end": 1398,
-                                                  "loc": {
-                                                    "start": {
-                                                      "line": 46,
-                                                      "column": 12
-                                                    },
-                                                    "end": {
-                                                      "line": 46,
-                                                      "column": 25
-                                                    }
-                                                  },
-                                                  "expression": {
-                                                    "type": "AssignmentExpression",
-                                                    "start": 1385,
-                                                    "end": 1397,
-                                                    "loc": {
-                                                      "start": {
-                                                        "line": 46,
-                                                        "column": 12
-                                                      },
-                                                      "end": {
-                                                        "line": 46,
-                                                        "column": 24
-                                                      }
-                                                    },
-                                                    "operator": "=",
-                                                    "left": {
-                                                      "type": "Identifier",
-                                                      "start": 1385,
-                                                      "end": 1390,
-                                                      "loc": {
-                                                        "start": {
-                                                          "line": 46,
-                                                          "column": 12
-                                                        },
-                                                        "end": {
-                                                          "line": 46,
-                                                          "column": 17
-                                                        },
-                                                        "identifierName": "found"
-                                                      },
-                                                      "name": "found",
-                                                      "leadingComments": null
-                                                    },
-                                                    "right": {
-                                                      "type": "BooleanLiteral",
-                                                      "start": 1393,
-                                                      "end": 1397,
-                                                      "loc": {
-                                                        "start": {
-                                                          "line": 46,
-                                                          "column": 20
-                                                        },
-                                                        "end": {
-                                                          "line": 46,
-                                                          "column": 24
-                                                        }
-                                                      },
-                                                      "value": true
-                                                    },
-                                                    "leadingComments": null
-                                                  },
-                                                  "leadingComments": [
-                                                    {
-                                                      "type": "CommentLine",
-                                                      "value": " set found to true since the key was found",
-                                                      "start": 1328,
-                                                      "end": 1372,
-                                                      "loc": {
-                                                        "start": {
-                                                          "line": 45,
-                                                          "column": 12
-                                                        },
-                                                        "end": {
-                                                          "line": 45,
-                                                          "column": 56
-                                                        }
-                                                      }
-                                                    }
-                                                  ],
-                                                  "trailingComments": [
-                                                    {
-                                                      "type": "CommentLine",
-                                                      "value": " if the values are the same set the result",
-                                                      "start": 1412,
-                                                      "end": 1456,
-                                                      "loc": {
-                                                        "start": {
-                                                          "line": 48,
-                                                          "column": 12
-                                                        },
-                                                        "end": {
-                                                          "line": 48,
-                                                          "column": 56
-                                                        }
-                                                      }
-                                                    },
-                                                    {
-                                                      "type": "CommentLine",
-                                                      "value": " to the key",
-                                                      "start": 1469,
-                                                      "end": 1482,
-                                                      "loc": {
-                                                        "start": {
-                                                          "line": 49,
-                                                          "column": 12
-                                                        },
-                                                        "end": {
-                                                          "line": 49,
-                                                          "column": 25
-                                                        }
-                                                      }
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "ExpressionStatement",
-                                                  "start": 1495,
-                                                  "end": 1508,
-                                                  "loc": {
-                                                    "start": {
-                                                      "line": 50,
-                                                      "column": 12
-                                                    },
-                                                    "end": {
-                                                      "line": 50,
-                                                      "column": 25
-                                                    }
-                                                  },
-                                                  "expression": {
-                                                    "type": "AssignmentExpression",
-                                                    "start": 1495,
-                                                    "end": 1507,
-                                                    "loc": {
-                                                      "start": {
-                                                        "line": 50,
-                                                        "column": 12
-                                                      },
-                                                      "end": {
-                                                        "line": 50,
-                                                        "column": 24
-                                                      }
-                                                    },
-                                                    "operator": "=",
-                                                    "left": {
-                                                      "type": "Identifier",
-                                                      "start": 1495,
-                                                      "end": 1501,
-                                                      "loc": {
-                                                        "start": {
-                                                          "line": 50,
-                                                          "column": 12
-                                                        },
-                                                        "end": {
-                                                          "line": 50,
-                                                          "column": 18
-                                                        },
-                                                        "identifierName": "result"
-                                                      },
-                                                      "name": "result",
-                                                      "leadingComments": null
-                                                    },
-                                                    "right": {
-                                                      "type": "Identifier",
-                                                      "start": 1504,
-                                                      "end": 1507,
-                                                      "loc": {
-                                                        "start": {
-                                                          "line": 50,
-                                                          "column": 21
-                                                        },
-                                                        "end": {
-                                                          "line": 50,
-                                                          "column": 24
-                                                        },
-                                                        "identifierName": "key"
-                                                      },
-                                                      "name": "key"
-                                                    },
-                                                    "leadingComments": null
-                                                  },
-                                                  "leadingComments": [
-                                                    {
-                                                      "type": "CommentLine",
-                                                      "value": " if the values are the same set the result",
-                                                      "start": 1412,
-                                                      "end": 1456,
-                                                      "loc": {
-                                                        "start": {
-                                                          "line": 48,
-                                                          "column": 12
-                                                        },
-                                                        "end": {
-                                                          "line": 48,
-                                                          "column": 56
-                                                        }
-                                                      }
-                                                    },
-                                                    {
-                                                      "type": "CommentLine",
-                                                      "value": " to the key",
-                                                      "start": 1469,
-                                                      "end": 1482,
-                                                      "loc": {
-                                                        "start": {
-                                                          "line": 49,
-                                                          "column": 12
-                                                        },
-                                                        "end": {
-                                                          "line": 49,
-                                                          "column": 25
-                                                        }
-                                                      }
-                                                    }
-                                                  ]
-                                                }
-                                              ],
-                                              "directives": []
-                                            },
-                                            "alternate": null,
                                             "leadingComments": [
                                               {
                                                 "type": "CommentLine",
-                                                "value": " check if the object value is equal to",
-                                                "start": 1206,
-                                                "end": 1246,
+                                                "value": " set found to true since the key was found",
+                                                "start": 1178,
+                                                "end": 1222,
                                                 "loc": {
                                                   "start": {
                                                     "line": 42,
@@ -1580,23 +1229,142 @@
                                                   },
                                                   "end": {
                                                     "line": 42,
-                                                    "column": 50
+                                                    "column": 54
+                                                  }
+                                                }
+                                              }
+                                            ],
+                                            "trailingComments": [
+                                              {
+                                                "type": "CommentLine",
+                                                "value": " if the values are the same set the result",
+                                                "start": 1258,
+                                                "end": 1302,
+                                                "loc": {
+                                                  "start": {
+                                                    "line": 45,
+                                                    "column": 10
+                                                  },
+                                                  "end": {
+                                                    "line": 45,
+                                                    "column": 54
                                                   }
                                                 }
                                               },
                                               {
                                                 "type": "CommentLine",
-                                                "value": " the specified value",
-                                                "start": 1257,
-                                                "end": 1279,
+                                                "value": " to the key",
+                                                "start": 1313,
+                                                "end": 1326,
                                                 "loc": {
                                                   "start": {
-                                                    "line": 43,
+                                                    "line": 46,
                                                     "column": 10
                                                   },
                                                   "end": {
-                                                    "line": 43,
-                                                    "column": 32
+                                                    "line": 46,
+                                                    "column": 23
+                                                  }
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "type": "ExpressionStatement",
+                                            "start": 1337,
+                                            "end": 1350,
+                                            "loc": {
+                                              "start": {
+                                                "line": 47,
+                                                "column": 10
+                                              },
+                                              "end": {
+                                                "line": 47,
+                                                "column": 23
+                                              }
+                                            },
+                                            "expression": {
+                                              "type": "AssignmentExpression",
+                                              "start": 1337,
+                                              "end": 1349,
+                                              "loc": {
+                                                "start": {
+                                                  "line": 47,
+                                                  "column": 10
+                                                },
+                                                "end": {
+                                                  "line": 47,
+                                                  "column": 22
+                                                }
+                                              },
+                                              "operator": "=",
+                                              "left": {
+                                                "type": "Identifier",
+                                                "start": 1337,
+                                                "end": 1343,
+                                                "loc": {
+                                                  "start": {
+                                                    "line": 47,
+                                                    "column": 10
+                                                  },
+                                                  "end": {
+                                                    "line": 47,
+                                                    "column": 16
+                                                  },
+                                                  "identifierName": "result"
+                                                },
+                                                "name": "result",
+                                                "leadingComments": null
+                                              },
+                                              "right": {
+                                                "type": "Identifier",
+                                                "start": 1346,
+                                                "end": 1349,
+                                                "loc": {
+                                                  "start": {
+                                                    "line": 47,
+                                                    "column": 19
+                                                  },
+                                                  "end": {
+                                                    "line": 47,
+                                                    "column": 22
+                                                  },
+                                                  "identifierName": "key"
+                                                },
+                                                "name": "key"
+                                              },
+                                              "leadingComments": null
+                                            },
+                                            "leadingComments": [
+                                              {
+                                                "type": "CommentLine",
+                                                "value": " if the values are the same set the result",
+                                                "start": 1258,
+                                                "end": 1302,
+                                                "loc": {
+                                                  "start": {
+                                                    "line": 45,
+                                                    "column": 10
+                                                  },
+                                                  "end": {
+                                                    "line": 45,
+                                                    "column": 54
+                                                  }
+                                                }
+                                              },
+                                              {
+                                                "type": "CommentLine",
+                                                "value": " to the key",
+                                                "start": 1313,
+                                                "end": 1326,
+                                                "loc": {
+                                                  "start": {
+                                                    "line": 46,
+                                                    "column": 10
+                                                  },
+                                                  "end": {
+                                                    "line": 46,
+                                                    "column": 23
                                                   }
                                                 }
                                               }
@@ -1609,9 +1377,9 @@
                                       "leadingComments": [
                                         {
                                           "type": "CommentLine",
-                                          "value": " follow is false or follow is true but the",
+                                          "value": " check if the object value is equal to",
                                           "start": 1062,
-                                          "end": 1106,
+                                          "end": 1102,
                                           "loc": {
                                             "start": {
                                               "line": 39,
@@ -1619,15 +1387,15 @@
                                             },
                                             "end": {
                                               "line": 39,
-                                              "column": 52
+                                              "column": 48
                                             }
                                           }
                                         },
                                         {
                                           "type": "CommentLine",
-                                          "value": " object value isn't an object",
-                                          "start": 1115,
-                                          "end": 1146,
+                                          "value": " the specified value",
+                                          "start": 1111,
+                                          "end": 1133,
                                           "loc": {
                                             "start": {
                                               "line": 40,
@@ -1635,7 +1403,7 @@
                                             },
                                             "end": {
                                               "line": 40,
-                                              "column": 39
+                                              "column": 30
                                             }
                                           }
                                         }
@@ -1670,15 +1438,15 @@
                         },
                         {
                           "type": "Identifier",
-                          "start": 1546,
-                          "end": 1552,
+                          "start": 1376,
+                          "end": 1382,
                           "loc": {
                             "start": {
-                              "line": 54,
+                              "line": 50,
                               "column": 7
                             },
                             "end": {
-                              "line": 54,
+                              "line": 50,
                               "column": 13
                             },
                             "identifierName": "follow"
@@ -1758,15 +1526,15 @@
                       {
                         "type": "CommentLine",
                         "value": " return the result if it was found else return",
-                        "start": 1560,
-                        "end": 1608,
+                        "start": 1390,
+                        "end": 1438,
                         "loc": {
                           "start": {
-                            "line": 56,
+                            "line": 52,
                             "column": 4
                           },
                           "end": {
-                            "line": 56,
+                            "line": 52,
                             "column": 52
                           }
                         }
@@ -1774,15 +1542,15 @@
                       {
                         "type": "CommentLine",
                         "value": " undefined",
-                        "start": 1613,
-                        "end": 1625,
+                        "start": 1443,
+                        "end": 1455,
                         "loc": {
                           "start": {
-                            "line": 57,
+                            "line": 53,
                             "column": 4
                           },
                           "end": {
-                            "line": 57,
+                            "line": 53,
                             "column": 16
                           }
                         }
@@ -1791,43 +1559,43 @@
                   },
                   {
                     "type": "ReturnStatement",
-                    "start": 1630,
-                    "end": 1676,
+                    "start": 1460,
+                    "end": 1506,
                     "loc": {
                       "start": {
-                        "line": 58,
+                        "line": 54,
                         "column": 4
                       },
                       "end": {
-                        "line": 60,
+                        "line": 56,
                         "column": 18
                       }
                     },
                     "argument": {
                       "type": "ConditionalExpression",
-                      "start": 1637,
-                      "end": 1675,
+                      "start": 1467,
+                      "end": 1505,
                       "loc": {
                         "start": {
-                          "line": 58,
+                          "line": 54,
                           "column": 11
                         },
                         "end": {
-                          "line": 60,
+                          "line": 56,
                           "column": 17
                         }
                       },
                       "test": {
                         "type": "Identifier",
-                        "start": 1637,
-                        "end": 1642,
+                        "start": 1467,
+                        "end": 1472,
                         "loc": {
                           "start": {
-                            "line": 58,
+                            "line": 54,
                             "column": 11
                           },
                           "end": {
-                            "line": 58,
+                            "line": 54,
                             "column": 16
                           },
                           "identifierName": "found"
@@ -1837,15 +1605,15 @@
                       },
                       "consequent": {
                         "type": "Identifier",
-                        "start": 1651,
-                        "end": 1657,
+                        "start": 1481,
+                        "end": 1487,
                         "loc": {
                           "start": {
-                            "line": 59,
+                            "line": 55,
                             "column": 8
                           },
                           "end": {
-                            "line": 59,
+                            "line": 55,
                             "column": 14
                           },
                           "identifierName": "result"
@@ -1854,15 +1622,15 @@
                       },
                       "alternate": {
                         "type": "Identifier",
-                        "start": 1666,
-                        "end": 1675,
+                        "start": 1496,
+                        "end": 1505,
                         "loc": {
                           "start": {
-                            "line": 60,
+                            "line": 56,
                             "column": 8
                           },
                           "end": {
-                            "line": 60,
+                            "line": 56,
                             "column": 17
                           },
                           "identifierName": "undefined"
@@ -1875,15 +1643,15 @@
                       {
                         "type": "CommentLine",
                         "value": " return the result if it was found else return",
-                        "start": 1560,
-                        "end": 1608,
+                        "start": 1390,
+                        "end": 1438,
                         "loc": {
                           "start": {
-                            "line": 56,
+                            "line": 52,
                             "column": 4
                           },
                           "end": {
-                            "line": 56,
+                            "line": 52,
                             "column": 52
                           }
                         }
@@ -1891,15 +1659,15 @@
                       {
                         "type": "CommentLine",
                         "value": " undefined",
-                        "start": 1613,
-                        "end": 1625,
+                        "start": 1443,
+                        "end": 1455,
                         "loc": {
                           "start": {
-                            "line": 57,
+                            "line": 53,
                             "column": 4
                           },
                           "end": {
-                            "line": 57,
+                            "line": 53,
                             "column": 16
                           }
                         }
@@ -1933,15 +1701,15 @@
                 {
                   "type": "CommentLine",
                   "value": " if the object isn't an object or is empty return",
-                  "start": 1684,
-                  "end": 1735,
+                  "start": 1514,
+                  "end": 1565,
                   "loc": {
                     "start": {
-                      "line": 63,
+                      "line": 59,
                       "column": 2
                     },
                     "end": {
-                      "line": 63,
+                      "line": 59,
                       "column": 53
                     }
                   }
@@ -1949,15 +1717,15 @@
                 {
                   "type": "CommentLine",
                   "value": " false because the object can't be checked",
-                  "start": 1738,
-                  "end": 1782,
+                  "start": 1568,
+                  "end": 1612,
                   "loc": {
                     "start": {
-                      "line": 64,
+                      "line": 60,
                       "column": 2
                     },
                     "end": {
-                      "line": 64,
+                      "line": 60,
                       "column": 46
                     }
                   }
@@ -1966,29 +1734,29 @@
             },
             {
               "type": "ReturnStatement",
-              "start": 1785,
-              "end": 1802,
+              "start": 1615,
+              "end": 1632,
               "loc": {
                 "start": {
-                  "line": 65,
+                  "line": 61,
                   "column": 2
                 },
                 "end": {
-                  "line": 65,
+                  "line": 61,
                   "column": 19
                 }
               },
               "argument": {
                 "type": "Identifier",
-                "start": 1792,
-                "end": 1801,
+                "start": 1622,
+                "end": 1631,
                 "loc": {
                   "start": {
-                    "line": 65,
+                    "line": 61,
                     "column": 9
                   },
                   "end": {
-                    "line": 65,
+                    "line": 61,
                     "column": 18
                   },
                   "identifierName": "undefined"
@@ -2000,15 +1768,15 @@
                 {
                   "type": "CommentLine",
                   "value": " if the object isn't an object or is empty return",
-                  "start": 1684,
-                  "end": 1735,
+                  "start": 1514,
+                  "end": 1565,
                   "loc": {
                     "start": {
-                      "line": 63,
+                      "line": 59,
                       "column": 2
                     },
                     "end": {
-                      "line": 63,
+                      "line": 59,
                       "column": 53
                     }
                   }
@@ -2016,15 +1784,15 @@
                 {
                   "type": "CommentLine",
                   "value": " false because the object can't be checked",
-                  "start": 1738,
-                  "end": 1782,
+                  "start": 1568,
+                  "end": 1612,
                   "loc": {
                     "start": {
-                      "line": 64,
+                      "line": 60,
                       "column": 2
                     },
                     "end": {
-                      "line": 64,
+                      "line": 60,
                       "column": 46
                     }
                   }
@@ -2040,29 +1808,29 @@
       },
       {
         "type": "Identifier",
-        "start": 1806,
-        "end": 1827,
+        "start": 1636,
+        "end": 1657,
         "loc": {
           "start": {
-            "line": 68,
+            "line": 64,
             "column": 0
           },
           "end": {
-            "line": 68,
+            "line": 64,
             "column": 21
           }
         },
         "declaration": {
           "type": "Identifier",
-          "start": 1821,
-          "end": 1826,
+          "start": 1651,
+          "end": 1656,
           "loc": {
             "start": {
-              "line": 68,
+              "line": 64,
               "column": 15
             },
             "end": {
-              "line": 68,
+              "line": 64,
               "column": 20
             },
             "identifierName": "keyOf"
@@ -2075,29 +1843,29 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 1806,
-        "end": 1827,
+        "start": 1636,
+        "end": 1657,
         "loc": {
           "start": {
-            "line": 68,
+            "line": 64,
             "column": 0
           },
           "end": {
-            "line": 68,
+            "line": 64,
             "column": 21
           }
         },
         "declaration": {
           "type": "FunctionDeclaration",
           "start": 471,
-          "end": 1804,
+          "end": 1634,
           "loc": {
             "start": {
               "line": 22,
               "column": 0
             },
             "end": {
-              "line": 66,
+              "line": 62,
               "column": 1
             }
           },
@@ -2209,14 +1977,14 @@
           "body": {
             "type": "BlockStatement",
             "start": 517,
-            "end": 1804,
+            "end": 1634,
             "loc": {
               "start": {
                 "line": 22,
                 "column": 46
               },
               "end": {
-                "line": 66,
+                "line": 62,
                 "column": 1
               }
             },
@@ -2224,14 +1992,14 @@
               {
                 "type": "IfStatement",
                 "start": 570,
-                "end": 1680,
+                "end": 1510,
                 "loc": {
                   "start": {
                     "line": 24,
                     "column": 2
                   },
                   "end": {
-                    "line": 61,
+                    "line": 57,
                     "column": 3
                   }
                 },
@@ -2379,14 +2147,14 @@
                 "consequent": {
                   "type": "BlockStatement",
                   "start": 604,
-                  "end": 1680,
+                  "end": 1510,
                   "loc": {
                     "start": {
                       "line": 24,
                       "column": 36
                     },
                     "end": {
-                      "line": 61,
+                      "line": 57,
                       "column": 3
                     }
                   },
@@ -2686,28 +2454,28 @@
                     {
                       "type": "ExpressionStatement",
                       "start": 957,
-                      "end": 1554,
+                      "end": 1384,
                       "loc": {
                         "start": {
                           "line": 36,
                           "column": 4
                         },
                         "end": {
-                          "line": 54,
+                          "line": 50,
                           "column": 15
                         }
                       },
                       "expression": {
                         "type": "CallExpression",
                         "start": 957,
-                        "end": 1553,
+                        "end": 1383,
                         "loc": {
                           "start": {
                             "line": 36,
                             "column": 4
                           },
                           "end": {
-                            "line": 54,
+                            "line": 50,
                             "column": 14
                           }
                         },
@@ -2750,14 +2518,14 @@
                           {
                             "type": "ArrowFunctionExpression",
                             "start": 970,
-                            "end": 1544,
+                            "end": 1374,
                             "loc": {
                               "start": {
                                 "line": 36,
                                 "column": 17
                               },
                               "end": {
-                                "line": 54,
+                                "line": 50,
                                 "column": 5
                               }
                             },
@@ -2804,14 +2572,14 @@
                             "body": {
                               "type": "BlockStatement",
                               "start": 989,
-                              "end": 1544,
+                              "end": 1374,
                               "loc": {
                                 "start": {
                                   "line": 36,
                                   "column": 36
                                 },
                                 "end": {
-                                  "line": 54,
+                                  "line": 50,
                                   "column": 5
                                 }
                               },
@@ -2819,14 +2587,14 @@
                                 {
                                   "type": "IfStatement",
                                   "start": 1040,
-                                  "end": 1538,
+                                  "end": 1368,
                                   "loc": {
                                     "start": {
                                       "line": 38,
                                       "column": 6
                                     },
                                     "end": {
-                                      "line": 53,
+                                      "line": 49,
                                       "column": 7
                                     }
                                   },
@@ -2872,36 +2640,36 @@
                                   "consequent": {
                                     "type": "BlockStatement",
                                     "start": 1052,
-                                    "end": 1538,
+                                    "end": 1368,
                                     "loc": {
                                       "start": {
                                         "line": 38,
                                         "column": 18
                                       },
                                       "end": {
-                                        "line": 53,
+                                        "line": 49,
                                         "column": 7
                                       }
                                     },
                                     "body": [
                                       {
                                         "type": "IfStatement",
-                                        "start": 1155,
-                                        "end": 1530,
+                                        "start": 1142,
+                                        "end": 1360,
                                         "loc": {
                                           "start": {
                                             "line": 41,
                                             "column": 8
                                           },
                                           "end": {
-                                            "line": 52,
+                                            "line": 48,
                                             "column": 9
                                           }
                                         },
                                         "test": {
-                                          "type": "LogicalExpression",
-                                          "start": 1159,
-                                          "end": 1192,
+                                          "type": "BinaryExpression",
+                                          "start": 1146,
+                                          "end": 1164,
                                           "loc": {
                                             "start": {
                                               "line": 41,
@@ -2909,13 +2677,13 @@
                                             },
                                             "end": {
                                               "line": 41,
-                                              "column": 45
+                                              "column": 30
                                             }
                                           },
                                           "left": {
-                                            "type": "UnaryExpression",
-                                            "start": 1159,
-                                            "end": 1166,
+                                            "type": "Identifier",
+                                            "start": 1146,
+                                            "end": 1154,
                                             "loc": {
                                               "start": {
                                                 "line": 41,
@@ -2923,470 +2691,119 @@
                                               },
                                               "end": {
                                                 "line": 41,
-                                                "column": 19
-                                              }
-                                            },
-                                            "operator": "!",
-                                            "prefix": true,
-                                            "argument": {
-                                              "type": "Identifier",
-                                              "start": 1160,
-                                              "end": 1166,
-                                              "loc": {
-                                                "start": {
-                                                  "line": 41,
-                                                  "column": 13
-                                                },
-                                                "end": {
-                                                  "line": 41,
-                                                  "column": 19
-                                                },
-                                                "identifierName": "follow"
+                                                "column": 20
                                               },
-                                              "name": "follow",
-                                              "leadingComments": null
+                                              "identifierName": "objValue"
                                             },
-                                            "extra": {
-                                              "parenthesizedArgument": false
-                                            },
+                                            "name": "objValue",
                                             "leadingComments": null
                                           },
-                                          "operator": "||",
+                                          "operator": "===",
                                           "right": {
-                                            "type": "LogicalExpression",
-                                            "start": 1171,
-                                            "end": 1191,
+                                            "type": "Identifier",
+                                            "start": 1159,
+                                            "end": 1164,
                                             "loc": {
                                               "start": {
                                                 "line": 41,
-                                                "column": 24
+                                                "column": 25
                                               },
                                               "end": {
                                                 "line": 41,
-                                                "column": 44
-                                              }
-                                            },
-                                            "left": {
-                                              "type": "Identifier",
-                                              "start": 1171,
-                                              "end": 1177,
-                                              "loc": {
-                                                "start": {
-                                                  "line": 41,
-                                                  "column": 24
-                                                },
-                                                "end": {
-                                                  "line": 41,
-                                                  "column": 30
-                                                },
-                                                "identifierName": "follow"
+                                                "column": 30
                                               },
-                                              "name": "follow"
+                                              "identifierName": "value"
                                             },
-                                            "operator": "&&",
-                                            "right": {
-                                              "type": "UnaryExpression",
-                                              "start": 1181,
-                                              "end": 1191,
-                                              "loc": {
-                                                "start": {
-                                                  "line": 41,
-                                                  "column": 34
-                                                },
-                                                "end": {
-                                                  "line": 41,
-                                                  "column": 44
-                                                }
-                                              },
-                                              "operator": "!",
-                                              "prefix": true,
-                                              "argument": {
-                                                "type": "CallExpression",
-                                                "start": 1182,
-                                                "end": 1191,
-                                                "loc": {
-                                                  "start": {
-                                                    "line": 41,
-                                                    "column": 35
-                                                  },
-                                                  "end": {
-                                                    "line": 41,
-                                                    "column": 44
-                                                  }
-                                                },
-                                                "callee": {
-                                                  "type": "Identifier",
-                                                  "start": 1182,
-                                                  "end": 1184,
-                                                  "loc": {
-                                                    "start": {
-                                                      "line": 41,
-                                                      "column": 35
-                                                    },
-                                                    "end": {
-                                                      "line": 41,
-                                                      "column": 37
-                                                    },
-                                                    "identifierName": "is"
-                                                  },
-                                                  "name": "is"
-                                                },
-                                                "arguments": [
-                                                  {
-                                                    "type": "Identifier",
-                                                    "start": 1185,
-                                                    "end": 1190,
-                                                    "loc": {
-                                                      "start": {
-                                                        "line": 41,
-                                                        "column": 38
-                                                      },
-                                                      "end": {
-                                                        "line": 41,
-                                                        "column": 43
-                                                      },
-                                                      "identifierName": "value"
-                                                    },
-                                                    "name": "value"
-                                                  }
-                                                ]
-                                              },
-                                              "extra": {
-                                                "parenthesizedArgument": false
-                                              }
-                                            },
-                                            "extra": {
-                                              "parenthesized": true,
-                                              "parenStart": 1170
-                                            }
+                                            "name": "value"
                                           },
                                           "leadingComments": null
                                         },
                                         "consequent": {
                                           "type": "BlockStatement",
-                                          "start": 1194,
-                                          "end": 1530,
+                                          "start": 1166,
+                                          "end": 1360,
                                           "loc": {
                                             "start": {
                                               "line": 41,
-                                              "column": 47
+                                              "column": 32
                                             },
                                             "end": {
-                                              "line": 52,
+                                              "line": 48,
                                               "column": 9
                                             }
                                           },
                                           "body": [
                                             {
-                                              "type": "IfStatement",
-                                              "start": 1290,
-                                              "end": 1520,
+                                              "type": "ExpressionStatement",
+                                              "start": 1233,
+                                              "end": 1246,
                                               "loc": {
                                                 "start": {
-                                                  "line": 44,
+                                                  "line": 43,
                                                   "column": 10
                                                 },
                                                 "end": {
-                                                  "line": 51,
-                                                  "column": 11
+                                                  "line": 43,
+                                                  "column": 23
                                                 }
                                               },
-                                              "test": {
-                                                "type": "BinaryExpression",
-                                                "start": 1294,
-                                                "end": 1312,
+                                              "expression": {
+                                                "type": "AssignmentExpression",
+                                                "start": 1233,
+                                                "end": 1245,
                                                 "loc": {
                                                   "start": {
-                                                    "line": 44,
-                                                    "column": 14
+                                                    "line": 43,
+                                                    "column": 10
                                                   },
                                                   "end": {
-                                                    "line": 44,
-                                                    "column": 32
+                                                    "line": 43,
+                                                    "column": 22
                                                   }
                                                 },
+                                                "operator": "=",
                                                 "left": {
                                                   "type": "Identifier",
-                                                  "start": 1294,
-                                                  "end": 1302,
+                                                  "start": 1233,
+                                                  "end": 1238,
                                                   "loc": {
                                                     "start": {
-                                                      "line": 44,
-                                                      "column": 14
+                                                      "line": 43,
+                                                      "column": 10
                                                     },
                                                     "end": {
-                                                      "line": 44,
-                                                      "column": 22
+                                                      "line": 43,
+                                                      "column": 15
                                                     },
-                                                    "identifierName": "objValue"
+                                                    "identifierName": "found"
                                                   },
-                                                  "name": "objValue",
+                                                  "name": "found",
                                                   "leadingComments": null
                                                 },
-                                                "operator": "===",
                                                 "right": {
-                                                  "type": "Identifier",
-                                                  "start": 1307,
-                                                  "end": 1312,
+                                                  "type": "BooleanLiteral",
+                                                  "start": 1241,
+                                                  "end": 1245,
                                                   "loc": {
                                                     "start": {
-                                                      "line": 44,
-                                                      "column": 27
+                                                      "line": 43,
+                                                      "column": 18
                                                     },
                                                     "end": {
-                                                      "line": 44,
-                                                      "column": 32
-                                                    },
-                                                    "identifierName": "value"
+                                                      "line": 43,
+                                                      "column": 22
+                                                    }
                                                   },
-                                                  "name": "value"
+                                                  "value": true
                                                 },
                                                 "leadingComments": null
                                               },
-                                              "consequent": {
-                                                "type": "BlockStatement",
-                                                "start": 1314,
-                                                "end": 1520,
-                                                "loc": {
-                                                  "start": {
-                                                    "line": 44,
-                                                    "column": 34
-                                                  },
-                                                  "end": {
-                                                    "line": 51,
-                                                    "column": 11
-                                                  }
-                                                },
-                                                "body": [
-                                                  {
-                                                    "type": "ExpressionStatement",
-                                                    "start": 1385,
-                                                    "end": 1398,
-                                                    "loc": {
-                                                      "start": {
-                                                        "line": 46,
-                                                        "column": 12
-                                                      },
-                                                      "end": {
-                                                        "line": 46,
-                                                        "column": 25
-                                                      }
-                                                    },
-                                                    "expression": {
-                                                      "type": "AssignmentExpression",
-                                                      "start": 1385,
-                                                      "end": 1397,
-                                                      "loc": {
-                                                        "start": {
-                                                          "line": 46,
-                                                          "column": 12
-                                                        },
-                                                        "end": {
-                                                          "line": 46,
-                                                          "column": 24
-                                                        }
-                                                      },
-                                                      "operator": "=",
-                                                      "left": {
-                                                        "type": "Identifier",
-                                                        "start": 1385,
-                                                        "end": 1390,
-                                                        "loc": {
-                                                          "start": {
-                                                            "line": 46,
-                                                            "column": 12
-                                                          },
-                                                          "end": {
-                                                            "line": 46,
-                                                            "column": 17
-                                                          },
-                                                          "identifierName": "found"
-                                                        },
-                                                        "name": "found",
-                                                        "leadingComments": null
-                                                      },
-                                                      "right": {
-                                                        "type": "BooleanLiteral",
-                                                        "start": 1393,
-                                                        "end": 1397,
-                                                        "loc": {
-                                                          "start": {
-                                                            "line": 46,
-                                                            "column": 20
-                                                          },
-                                                          "end": {
-                                                            "line": 46,
-                                                            "column": 24
-                                                          }
-                                                        },
-                                                        "value": true
-                                                      },
-                                                      "leadingComments": null
-                                                    },
-                                                    "leadingComments": [
-                                                      {
-                                                        "type": "CommentLine",
-                                                        "value": " set found to true since the key was found",
-                                                        "start": 1328,
-                                                        "end": 1372,
-                                                        "loc": {
-                                                          "start": {
-                                                            "line": 45,
-                                                            "column": 12
-                                                          },
-                                                          "end": {
-                                                            "line": 45,
-                                                            "column": 56
-                                                          }
-                                                        }
-                                                      }
-                                                    ],
-                                                    "trailingComments": [
-                                                      {
-                                                        "type": "CommentLine",
-                                                        "value": " if the values are the same set the result",
-                                                        "start": 1412,
-                                                        "end": 1456,
-                                                        "loc": {
-                                                          "start": {
-                                                            "line": 48,
-                                                            "column": 12
-                                                          },
-                                                          "end": {
-                                                            "line": 48,
-                                                            "column": 56
-                                                          }
-                                                        }
-                                                      },
-                                                      {
-                                                        "type": "CommentLine",
-                                                        "value": " to the key",
-                                                        "start": 1469,
-                                                        "end": 1482,
-                                                        "loc": {
-                                                          "start": {
-                                                            "line": 49,
-                                                            "column": 12
-                                                          },
-                                                          "end": {
-                                                            "line": 49,
-                                                            "column": 25
-                                                          }
-                                                        }
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
-                                                    "type": "ExpressionStatement",
-                                                    "start": 1495,
-                                                    "end": 1508,
-                                                    "loc": {
-                                                      "start": {
-                                                        "line": 50,
-                                                        "column": 12
-                                                      },
-                                                      "end": {
-                                                        "line": 50,
-                                                        "column": 25
-                                                      }
-                                                    },
-                                                    "expression": {
-                                                      "type": "AssignmentExpression",
-                                                      "start": 1495,
-                                                      "end": 1507,
-                                                      "loc": {
-                                                        "start": {
-                                                          "line": 50,
-                                                          "column": 12
-                                                        },
-                                                        "end": {
-                                                          "line": 50,
-                                                          "column": 24
-                                                        }
-                                                      },
-                                                      "operator": "=",
-                                                      "left": {
-                                                        "type": "Identifier",
-                                                        "start": 1495,
-                                                        "end": 1501,
-                                                        "loc": {
-                                                          "start": {
-                                                            "line": 50,
-                                                            "column": 12
-                                                          },
-                                                          "end": {
-                                                            "line": 50,
-                                                            "column": 18
-                                                          },
-                                                          "identifierName": "result"
-                                                        },
-                                                        "name": "result",
-                                                        "leadingComments": null
-                                                      },
-                                                      "right": {
-                                                        "type": "Identifier",
-                                                        "start": 1504,
-                                                        "end": 1507,
-                                                        "loc": {
-                                                          "start": {
-                                                            "line": 50,
-                                                            "column": 21
-                                                          },
-                                                          "end": {
-                                                            "line": 50,
-                                                            "column": 24
-                                                          },
-                                                          "identifierName": "key"
-                                                        },
-                                                        "name": "key"
-                                                      },
-                                                      "leadingComments": null
-                                                    },
-                                                    "leadingComments": [
-                                                      {
-                                                        "type": "CommentLine",
-                                                        "value": " if the values are the same set the result",
-                                                        "start": 1412,
-                                                        "end": 1456,
-                                                        "loc": {
-                                                          "start": {
-                                                            "line": 48,
-                                                            "column": 12
-                                                          },
-                                                          "end": {
-                                                            "line": 48,
-                                                            "column": 56
-                                                          }
-                                                        }
-                                                      },
-                                                      {
-                                                        "type": "CommentLine",
-                                                        "value": " to the key",
-                                                        "start": 1469,
-                                                        "end": 1482,
-                                                        "loc": {
-                                                          "start": {
-                                                            "line": 49,
-                                                            "column": 12
-                                                          },
-                                                          "end": {
-                                                            "line": 49,
-                                                            "column": 25
-                                                          }
-                                                        }
-                                                      }
-                                                    ]
-                                                  }
-                                                ],
-                                                "directives": []
-                                              },
-                                              "alternate": null,
                                               "leadingComments": [
                                                 {
                                                   "type": "CommentLine",
-                                                  "value": " check if the object value is equal to",
-                                                  "start": 1206,
-                                                  "end": 1246,
+                                                  "value": " set found to true since the key was found",
+                                                  "start": 1178,
+                                                  "end": 1222,
                                                   "loc": {
                                                     "start": {
                                                       "line": 42,
@@ -3394,23 +2811,142 @@
                                                     },
                                                     "end": {
                                                       "line": 42,
-                                                      "column": 50
+                                                      "column": 54
+                                                    }
+                                                  }
+                                                }
+                                              ],
+                                              "trailingComments": [
+                                                {
+                                                  "type": "CommentLine",
+                                                  "value": " if the values are the same set the result",
+                                                  "start": 1258,
+                                                  "end": 1302,
+                                                  "loc": {
+                                                    "start": {
+                                                      "line": 45,
+                                                      "column": 10
+                                                    },
+                                                    "end": {
+                                                      "line": 45,
+                                                      "column": 54
                                                     }
                                                   }
                                                 },
                                                 {
                                                   "type": "CommentLine",
-                                                  "value": " the specified value",
-                                                  "start": 1257,
-                                                  "end": 1279,
+                                                  "value": " to the key",
+                                                  "start": 1313,
+                                                  "end": 1326,
                                                   "loc": {
                                                     "start": {
-                                                      "line": 43,
+                                                      "line": 46,
                                                       "column": 10
                                                     },
                                                     "end": {
-                                                      "line": 43,
-                                                      "column": 32
+                                                      "line": 46,
+                                                      "column": 23
+                                                    }
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "ExpressionStatement",
+                                              "start": 1337,
+                                              "end": 1350,
+                                              "loc": {
+                                                "start": {
+                                                  "line": 47,
+                                                  "column": 10
+                                                },
+                                                "end": {
+                                                  "line": 47,
+                                                  "column": 23
+                                                }
+                                              },
+                                              "expression": {
+                                                "type": "AssignmentExpression",
+                                                "start": 1337,
+                                                "end": 1349,
+                                                "loc": {
+                                                  "start": {
+                                                    "line": 47,
+                                                    "column": 10
+                                                  },
+                                                  "end": {
+                                                    "line": 47,
+                                                    "column": 22
+                                                  }
+                                                },
+                                                "operator": "=",
+                                                "left": {
+                                                  "type": "Identifier",
+                                                  "start": 1337,
+                                                  "end": 1343,
+                                                  "loc": {
+                                                    "start": {
+                                                      "line": 47,
+                                                      "column": 10
+                                                    },
+                                                    "end": {
+                                                      "line": 47,
+                                                      "column": 16
+                                                    },
+                                                    "identifierName": "result"
+                                                  },
+                                                  "name": "result",
+                                                  "leadingComments": null
+                                                },
+                                                "right": {
+                                                  "type": "Identifier",
+                                                  "start": 1346,
+                                                  "end": 1349,
+                                                  "loc": {
+                                                    "start": {
+                                                      "line": 47,
+                                                      "column": 19
+                                                    },
+                                                    "end": {
+                                                      "line": 47,
+                                                      "column": 22
+                                                    },
+                                                    "identifierName": "key"
+                                                  },
+                                                  "name": "key"
+                                                },
+                                                "leadingComments": null
+                                              },
+                                              "leadingComments": [
+                                                {
+                                                  "type": "CommentLine",
+                                                  "value": " if the values are the same set the result",
+                                                  "start": 1258,
+                                                  "end": 1302,
+                                                  "loc": {
+                                                    "start": {
+                                                      "line": 45,
+                                                      "column": 10
+                                                    },
+                                                    "end": {
+                                                      "line": 45,
+                                                      "column": 54
+                                                    }
+                                                  }
+                                                },
+                                                {
+                                                  "type": "CommentLine",
+                                                  "value": " to the key",
+                                                  "start": 1313,
+                                                  "end": 1326,
+                                                  "loc": {
+                                                    "start": {
+                                                      "line": 46,
+                                                      "column": 10
+                                                    },
+                                                    "end": {
+                                                      "line": 46,
+                                                      "column": 23
                                                     }
                                                   }
                                                 }
@@ -3423,9 +2959,9 @@
                                         "leadingComments": [
                                           {
                                             "type": "CommentLine",
-                                            "value": " follow is false or follow is true but the",
+                                            "value": " check if the object value is equal to",
                                             "start": 1062,
-                                            "end": 1106,
+                                            "end": 1102,
                                             "loc": {
                                               "start": {
                                                 "line": 39,
@@ -3433,15 +2969,15 @@
                                               },
                                               "end": {
                                                 "line": 39,
-                                                "column": 52
+                                                "column": 48
                                               }
                                             }
                                           },
                                           {
                                             "type": "CommentLine",
-                                            "value": " object value isn't an object",
-                                            "start": 1115,
-                                            "end": 1146,
+                                            "value": " the specified value",
+                                            "start": 1111,
+                                            "end": 1133,
                                             "loc": {
                                               "start": {
                                                 "line": 40,
@@ -3449,7 +2985,7 @@
                                               },
                                               "end": {
                                                 "line": 40,
-                                                "column": 39
+                                                "column": 30
                                               }
                                             }
                                           }
@@ -3484,15 +3020,15 @@
                           },
                           {
                             "type": "Identifier",
-                            "start": 1546,
-                            "end": 1552,
+                            "start": 1376,
+                            "end": 1382,
                             "loc": {
                               "start": {
-                                "line": 54,
+                                "line": 50,
                                 "column": 7
                               },
                               "end": {
-                                "line": 54,
+                                "line": 50,
                                 "column": 13
                               },
                               "identifierName": "follow"
@@ -3572,15 +3108,15 @@
                         {
                           "type": "CommentLine",
                           "value": " return the result if it was found else return",
-                          "start": 1560,
-                          "end": 1608,
+                          "start": 1390,
+                          "end": 1438,
                           "loc": {
                             "start": {
-                              "line": 56,
+                              "line": 52,
                               "column": 4
                             },
                             "end": {
-                              "line": 56,
+                              "line": 52,
                               "column": 52
                             }
                           }
@@ -3588,15 +3124,15 @@
                         {
                           "type": "CommentLine",
                           "value": " undefined",
-                          "start": 1613,
-                          "end": 1625,
+                          "start": 1443,
+                          "end": 1455,
                           "loc": {
                             "start": {
-                              "line": 57,
+                              "line": 53,
                               "column": 4
                             },
                             "end": {
-                              "line": 57,
+                              "line": 53,
                               "column": 16
                             }
                           }
@@ -3605,43 +3141,43 @@
                     },
                     {
                       "type": "ReturnStatement",
-                      "start": 1630,
-                      "end": 1676,
+                      "start": 1460,
+                      "end": 1506,
                       "loc": {
                         "start": {
-                          "line": 58,
+                          "line": 54,
                           "column": 4
                         },
                         "end": {
-                          "line": 60,
+                          "line": 56,
                           "column": 18
                         }
                       },
                       "argument": {
                         "type": "ConditionalExpression",
-                        "start": 1637,
-                        "end": 1675,
+                        "start": 1467,
+                        "end": 1505,
                         "loc": {
                           "start": {
-                            "line": 58,
+                            "line": 54,
                             "column": 11
                           },
                           "end": {
-                            "line": 60,
+                            "line": 56,
                             "column": 17
                           }
                         },
                         "test": {
                           "type": "Identifier",
-                          "start": 1637,
-                          "end": 1642,
+                          "start": 1467,
+                          "end": 1472,
                           "loc": {
                             "start": {
-                              "line": 58,
+                              "line": 54,
                               "column": 11
                             },
                             "end": {
-                              "line": 58,
+                              "line": 54,
                               "column": 16
                             },
                             "identifierName": "found"
@@ -3651,15 +3187,15 @@
                         },
                         "consequent": {
                           "type": "Identifier",
-                          "start": 1651,
-                          "end": 1657,
+                          "start": 1481,
+                          "end": 1487,
                           "loc": {
                             "start": {
-                              "line": 59,
+                              "line": 55,
                               "column": 8
                             },
                             "end": {
-                              "line": 59,
+                              "line": 55,
                               "column": 14
                             },
                             "identifierName": "result"
@@ -3668,15 +3204,15 @@
                         },
                         "alternate": {
                           "type": "Identifier",
-                          "start": 1666,
-                          "end": 1675,
+                          "start": 1496,
+                          "end": 1505,
                           "loc": {
                             "start": {
-                              "line": 60,
+                              "line": 56,
                               "column": 8
                             },
                             "end": {
-                              "line": 60,
+                              "line": 56,
                               "column": 17
                             },
                             "identifierName": "undefined"
@@ -3689,15 +3225,15 @@
                         {
                           "type": "CommentLine",
                           "value": " return the result if it was found else return",
-                          "start": 1560,
-                          "end": 1608,
+                          "start": 1390,
+                          "end": 1438,
                           "loc": {
                             "start": {
-                              "line": 56,
+                              "line": 52,
                               "column": 4
                             },
                             "end": {
-                              "line": 56,
+                              "line": 52,
                               "column": 52
                             }
                           }
@@ -3705,15 +3241,15 @@
                         {
                           "type": "CommentLine",
                           "value": " undefined",
-                          "start": 1613,
-                          "end": 1625,
+                          "start": 1443,
+                          "end": 1455,
                           "loc": {
                             "start": {
-                              "line": 57,
+                              "line": 53,
                               "column": 4
                             },
                             "end": {
-                              "line": 57,
+                              "line": 53,
                               "column": 16
                             }
                           }
@@ -3747,15 +3283,15 @@
                   {
                     "type": "CommentLine",
                     "value": " if the object isn't an object or is empty return",
-                    "start": 1684,
-                    "end": 1735,
+                    "start": 1514,
+                    "end": 1565,
                     "loc": {
                       "start": {
-                        "line": 63,
+                        "line": 59,
                         "column": 2
                       },
                       "end": {
-                        "line": 63,
+                        "line": 59,
                         "column": 53
                       }
                     }
@@ -3763,15 +3299,15 @@
                   {
                     "type": "CommentLine",
                     "value": " false because the object can't be checked",
-                    "start": 1738,
-                    "end": 1782,
+                    "start": 1568,
+                    "end": 1612,
                     "loc": {
                       "start": {
-                        "line": 64,
+                        "line": 60,
                         "column": 2
                       },
                       "end": {
-                        "line": 64,
+                        "line": 60,
                         "column": 46
                       }
                     }
@@ -3780,29 +3316,29 @@
               },
               {
                 "type": "ReturnStatement",
-                "start": 1785,
-                "end": 1802,
+                "start": 1615,
+                "end": 1632,
                 "loc": {
                   "start": {
-                    "line": 65,
+                    "line": 61,
                     "column": 2
                   },
                   "end": {
-                    "line": 65,
+                    "line": 61,
                     "column": 19
                   }
                 },
                 "argument": {
                   "type": "Identifier",
-                  "start": 1792,
-                  "end": 1801,
+                  "start": 1622,
+                  "end": 1631,
                   "loc": {
                     "start": {
-                      "line": 65,
+                      "line": 61,
                       "column": 9
                     },
                     "end": {
-                      "line": 65,
+                      "line": 61,
                       "column": 18
                     },
                     "identifierName": "undefined"
@@ -3814,15 +3350,15 @@
                   {
                     "type": "CommentLine",
                     "value": " if the object isn't an object or is empty return",
-                    "start": 1684,
-                    "end": 1735,
+                    "start": 1514,
+                    "end": 1565,
                     "loc": {
                       "start": {
-                        "line": 63,
+                        "line": 59,
                         "column": 2
                       },
                       "end": {
-                        "line": 63,
+                        "line": 59,
                         "column": 53
                       }
                     }
@@ -3830,15 +3366,15 @@
                   {
                     "type": "CommentLine",
                     "value": " false because the object can't be checked",
-                    "start": 1738,
-                    "end": 1782,
+                    "start": 1568,
+                    "end": 1612,
                     "loc": {
                       "start": {
-                        "line": 64,
+                        "line": 60,
                         "column": 2
                       },
                       "end": {
-                        "line": 64,
+                        "line": 60,
                         "column": 46
                       }
                     }
@@ -4067,128 +3603,96 @@
     },
     {
       "type": "CommentLine",
-      "value": " follow is false or follow is true but the",
-      "start": 1062,
-      "end": 1106,
-      "loc": {
-        "start": {
-          "line": 39,
-          "column": 8
-        },
-        "end": {
-          "line": 39,
-          "column": 52
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " object value isn't an object",
-      "start": 1115,
-      "end": 1146,
-      "loc": {
-        "start": {
-          "line": 40,
-          "column": 8
-        },
-        "end": {
-          "line": 40,
-          "column": 39
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
       "value": " check if the object value is equal to",
-      "start": 1206,
-      "end": 1246,
+      "start": 1062,
+      "end": 1102,
       "loc": {
         "start": {
-          "line": 42,
-          "column": 10
+          "line": 39,
+          "column": 8
         },
         "end": {
-          "line": 42,
-          "column": 50
+          "line": 39,
+          "column": 48
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " the specified value",
-      "start": 1257,
-      "end": 1279,
+      "start": 1111,
+      "end": 1133,
       "loc": {
         "start": {
-          "line": 43,
-          "column": 10
+          "line": 40,
+          "column": 8
         },
         "end": {
-          "line": 43,
-          "column": 32
+          "line": 40,
+          "column": 30
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " set found to true since the key was found",
-      "start": 1328,
-      "end": 1372,
+      "start": 1178,
+      "end": 1222,
       "loc": {
         "start": {
-          "line": 45,
-          "column": 12
+          "line": 42,
+          "column": 10
         },
         "end": {
-          "line": 45,
-          "column": 56
+          "line": 42,
+          "column": 54
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " if the values are the same set the result",
-      "start": 1412,
-      "end": 1456,
+      "start": 1258,
+      "end": 1302,
       "loc": {
         "start": {
-          "line": 48,
-          "column": 12
+          "line": 45,
+          "column": 10
         },
         "end": {
-          "line": 48,
-          "column": 56
+          "line": 45,
+          "column": 54
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " to the key",
-      "start": 1469,
-      "end": 1482,
+      "start": 1313,
+      "end": 1326,
       "loc": {
         "start": {
-          "line": 49,
-          "column": 12
+          "line": 46,
+          "column": 10
         },
         "end": {
-          "line": 49,
-          "column": 25
+          "line": 46,
+          "column": 23
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " return the result if it was found else return",
-      "start": 1560,
-      "end": 1608,
+      "start": 1390,
+      "end": 1438,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 52,
           "column": 4
         },
         "end": {
-          "line": 56,
+          "line": 52,
           "column": 52
         }
       }
@@ -4196,15 +3700,15 @@
     {
       "type": "CommentLine",
       "value": " undefined",
-      "start": 1613,
-      "end": 1625,
+      "start": 1443,
+      "end": 1455,
       "loc": {
         "start": {
-          "line": 57,
+          "line": 53,
           "column": 4
         },
         "end": {
-          "line": 57,
+          "line": 53,
           "column": 16
         }
       }
@@ -4212,15 +3716,15 @@
     {
       "type": "CommentLine",
       "value": " if the object isn't an object or is empty return",
-      "start": 1684,
-      "end": 1735,
+      "start": 1514,
+      "end": 1565,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 59,
           "column": 2
         },
         "end": {
-          "line": 63,
+          "line": 59,
           "column": 53
         }
       }
@@ -4228,15 +3732,15 @@
     {
       "type": "CommentLine",
       "value": " false because the object can't be checked",
-      "start": 1738,
-      "end": 1782,
+      "start": 1568,
+      "end": 1612,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 60,
           "column": 2
         },
         "end": {
-          "line": 64,
+          "line": 60,
           "column": 46
         }
       }
@@ -6217,9 +5721,9 @@
     },
     {
       "type": "CommentLine",
-      "value": " follow is false or follow is true but the",
+      "value": " check if the object value is equal to",
       "start": 1062,
-      "end": 1106,
+      "end": 1102,
       "loc": {
         "start": {
           "line": 39,
@@ -6227,15 +5731,15 @@
         },
         "end": {
           "line": 39,
-          "column": 52
+          "column": 48
         }
       }
     },
     {
       "type": "CommentLine",
-      "value": " object value isn't an object",
-      "start": 1115,
-      "end": 1146,
+      "value": " the specified value",
+      "start": 1111,
+      "end": 1133,
       "loc": {
         "start": {
           "line": 40,
@@ -6243,7 +5747,7 @@
         },
         "end": {
           "line": 40,
-          "column": 39
+          "column": 30
         }
       }
     },
@@ -6262,8 +5766,8 @@
         "updateContext": null
       },
       "value": "if",
-      "start": 1155,
-      "end": 1157,
+      "start": 1142,
+      "end": 1144,
       "loc": {
         "start": {
           "line": 41,
@@ -6287,8 +5791,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1158,
-      "end": 1159,
+      "start": 1145,
+      "end": 1146,
       "loc": {
         "start": {
           "line": 41,
@@ -6297,453 +5801,6 @@
         "end": {
           "line": 41,
           "column": 12
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "prefix",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": true,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "!",
-      "start": 1159,
-      "end": 1160,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 12
-        },
-        "end": {
-          "line": 41,
-          "column": 13
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "follow",
-      "start": 1160,
-      "end": 1166,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 13
-        },
-        "end": {
-          "line": 41,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "||",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": 1,
-        "updateContext": null
-      },
-      "value": "||",
-      "start": 1167,
-      "end": 1169,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 20
-        },
-        "end": {
-          "line": 41,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1170,
-      "end": 1171,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 23
-        },
-        "end": {
-          "line": 41,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "follow",
-      "start": 1171,
-      "end": 1177,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 24
-        },
-        "end": {
-          "line": 41,
-          "column": 30
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "&&",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": 2,
-        "updateContext": null
-      },
-      "value": "&&",
-      "start": 1178,
-      "end": 1180,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 31
-        },
-        "end": {
-          "line": 41,
-          "column": 33
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "prefix",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": true,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "!",
-      "start": 1181,
-      "end": 1182,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 34
-        },
-        "end": {
-          "line": 41,
-          "column": 35
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "is",
-      "start": 1182,
-      "end": 1184,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 35
-        },
-        "end": {
-          "line": 41,
-          "column": 37
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1184,
-      "end": 1185,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 37
-        },
-        "end": {
-          "line": 41,
-          "column": 38
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "value",
-      "start": 1185,
-      "end": 1190,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 38
-        },
-        "end": {
-          "line": 41,
-          "column": 43
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1190,
-      "end": 1191,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 43
-        },
-        "end": {
-          "line": 41,
-          "column": 44
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1191,
-      "end": 1192,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 44
-        },
-        "end": {
-          "line": 41,
-          "column": 45
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1192,
-      "end": 1193,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 45
-        },
-        "end": {
-          "line": 41,
-          "column": 46
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1194,
-      "end": 1195,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 47
-        },
-        "end": {
-          "line": 41,
-          "column": 48
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " check if the object value is equal to",
-      "start": 1206,
-      "end": 1246,
-      "loc": {
-        "start": {
-          "line": 42,
-          "column": 10
-        },
-        "end": {
-          "line": 42,
-          "column": 50
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " the specified value",
-      "start": 1257,
-      "end": 1279,
-      "loc": {
-        "start": {
-          "line": 43,
-          "column": 10
-        },
-        "end": {
-          "line": 43,
-          "column": 32
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "if",
-        "keyword": "if",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "if",
-      "start": 1290,
-      "end": 1292,
-      "loc": {
-        "start": {
-          "line": 44,
-          "column": 10
-        },
-        "end": {
-          "line": 44,
-          "column": 12
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1293,
-      "end": 1294,
-      "loc": {
-        "start": {
-          "line": 44,
-          "column": 13
-        },
-        "end": {
-          "line": 44,
-          "column": 14
         }
       }
     },
@@ -6760,16 +5817,16 @@
         "binop": null
       },
       "value": "objValue",
-      "start": 1294,
-      "end": 1302,
+      "start": 1146,
+      "end": 1154,
       "loc": {
         "start": {
-          "line": 44,
-          "column": 14
+          "line": 41,
+          "column": 12
         },
         "end": {
-          "line": 44,
-          "column": 22
+          "line": 41,
+          "column": 20
         }
       }
     },
@@ -6787,16 +5844,16 @@
         "updateContext": null
       },
       "value": "===",
-      "start": 1303,
-      "end": 1306,
+      "start": 1155,
+      "end": 1158,
       "loc": {
         "start": {
-          "line": 44,
-          "column": 23
+          "line": 41,
+          "column": 21
         },
         "end": {
-          "line": 44,
-          "column": 26
+          "line": 41,
+          "column": 24
         }
       }
     },
@@ -6813,16 +5870,16 @@
         "binop": null
       },
       "value": "value",
-      "start": 1307,
-      "end": 1312,
+      "start": 1159,
+      "end": 1164,
       "loc": {
         "start": {
-          "line": 44,
-          "column": 27
+          "line": 41,
+          "column": 25
         },
         "end": {
-          "line": 44,
-          "column": 32
+          "line": 41,
+          "column": 30
         }
       }
     },
@@ -6838,16 +5895,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1312,
-      "end": 1313,
+      "start": 1164,
+      "end": 1165,
       "loc": {
         "start": {
-          "line": 44,
-          "column": 32
+          "line": 41,
+          "column": 30
         },
         "end": {
-          "line": 44,
-          "column": 33
+          "line": 41,
+          "column": 31
         }
       }
     },
@@ -6863,32 +5920,32 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1314,
-      "end": 1315,
+      "start": 1166,
+      "end": 1167,
       "loc": {
         "start": {
-          "line": 44,
-          "column": 34
+          "line": 41,
+          "column": 32
         },
         "end": {
-          "line": 44,
-          "column": 35
+          "line": 41,
+          "column": 33
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " set found to true since the key was found",
-      "start": 1328,
-      "end": 1372,
+      "start": 1178,
+      "end": 1222,
       "loc": {
         "start": {
-          "line": 45,
-          "column": 12
+          "line": 42,
+          "column": 10
         },
         "end": {
-          "line": 45,
-          "column": 56
+          "line": 42,
+          "column": 54
         }
       }
     },
@@ -6905,16 +5962,16 @@
         "binop": null
       },
       "value": "found",
-      "start": 1385,
-      "end": 1390,
+      "start": 1233,
+      "end": 1238,
       "loc": {
         "start": {
-          "line": 46,
-          "column": 12
+          "line": 43,
+          "column": 10
         },
         "end": {
-          "line": 46,
-          "column": 17
+          "line": 43,
+          "column": 15
         }
       }
     },
@@ -6932,16 +5989,16 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1391,
-      "end": 1392,
+      "start": 1239,
+      "end": 1240,
       "loc": {
         "start": {
-          "line": 46,
-          "column": 18
+          "line": 43,
+          "column": 16
         },
         "end": {
-          "line": 46,
-          "column": 19
+          "line": 43,
+          "column": 17
         }
       }
     },
@@ -6960,16 +6017,16 @@
         "updateContext": null
       },
       "value": "true",
-      "start": 1393,
-      "end": 1397,
+      "start": 1241,
+      "end": 1245,
       "loc": {
         "start": {
-          "line": 46,
-          "column": 20
+          "line": 43,
+          "column": 18
         },
         "end": {
-          "line": 46,
-          "column": 24
+          "line": 43,
+          "column": 22
         }
       }
     },
@@ -6986,48 +6043,48 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1397,
-      "end": 1398,
+      "start": 1245,
+      "end": 1246,
       "loc": {
         "start": {
-          "line": 46,
-          "column": 24
+          "line": 43,
+          "column": 22
         },
         "end": {
-          "line": 46,
-          "column": 25
+          "line": 43,
+          "column": 23
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " if the values are the same set the result",
-      "start": 1412,
-      "end": 1456,
+      "start": 1258,
+      "end": 1302,
       "loc": {
         "start": {
-          "line": 48,
-          "column": 12
+          "line": 45,
+          "column": 10
         },
         "end": {
-          "line": 48,
-          "column": 56
+          "line": 45,
+          "column": 54
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " to the key",
-      "start": 1469,
-      "end": 1482,
+      "start": 1313,
+      "end": 1326,
       "loc": {
         "start": {
-          "line": 49,
-          "column": 12
+          "line": 46,
+          "column": 10
         },
         "end": {
-          "line": 49,
-          "column": 25
+          "line": 46,
+          "column": 23
         }
       }
     },
@@ -7044,16 +6101,16 @@
         "binop": null
       },
       "value": "result",
-      "start": 1495,
-      "end": 1501,
+      "start": 1337,
+      "end": 1343,
       "loc": {
         "start": {
-          "line": 50,
-          "column": 12
+          "line": 47,
+          "column": 10
         },
         "end": {
-          "line": 50,
-          "column": 18
+          "line": 47,
+          "column": 16
         }
       }
     },
@@ -7071,16 +6128,16 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1502,
-      "end": 1503,
+      "start": 1344,
+      "end": 1345,
       "loc": {
         "start": {
-          "line": 50,
-          "column": 19
+          "line": 47,
+          "column": 17
         },
         "end": {
-          "line": 50,
-          "column": 20
+          "line": 47,
+          "column": 18
         }
       }
     },
@@ -7097,16 +6154,16 @@
         "binop": null
       },
       "value": "key",
-      "start": 1504,
-      "end": 1507,
+      "start": 1346,
+      "end": 1349,
       "loc": {
         "start": {
-          "line": 50,
-          "column": 21
+          "line": 47,
+          "column": 19
         },
         "end": {
-          "line": 50,
-          "column": 24
+          "line": 47,
+          "column": 22
         }
       }
     },
@@ -7123,16 +6180,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1507,
-      "end": 1508,
+      "start": 1349,
+      "end": 1350,
       "loc": {
         "start": {
-          "line": 50,
-          "column": 24
+          "line": 47,
+          "column": 22
         },
         "end": {
-          "line": 50,
-          "column": 25
+          "line": 47,
+          "column": 23
         }
       }
     },
@@ -7148,40 +6205,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1519,
-      "end": 1520,
+      "start": 1359,
+      "end": 1360,
       "loc": {
         "start": {
-          "line": 51,
-          "column": 10
-        },
-        "end": {
-          "line": 51,
-          "column": 11
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1529,
-      "end": 1530,
-      "loc": {
-        "start": {
-          "line": 52,
+          "line": 48,
           "column": 8
         },
         "end": {
-          "line": 52,
+          "line": 48,
           "column": 9
         }
       }
@@ -7198,15 +6230,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1537,
-      "end": 1538,
+      "start": 1367,
+      "end": 1368,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 49,
           "column": 6
         },
         "end": {
-          "line": 53,
+          "line": 49,
           "column": 7
         }
       }
@@ -7223,15 +6255,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1543,
-      "end": 1544,
+      "start": 1373,
+      "end": 1374,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 50,
           "column": 4
         },
         "end": {
-          "line": 54,
+          "line": 50,
           "column": 5
         }
       }
@@ -7249,15 +6281,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1544,
-      "end": 1545,
+      "start": 1374,
+      "end": 1375,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 50,
           "column": 5
         },
         "end": {
-          "line": 54,
+          "line": 50,
           "column": 6
         }
       }
@@ -7275,15 +6307,15 @@
         "binop": null
       },
       "value": "follow",
-      "start": 1546,
-      "end": 1552,
+      "start": 1376,
+      "end": 1382,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 50,
           "column": 7
         },
         "end": {
-          "line": 54,
+          "line": 50,
           "column": 13
         }
       }
@@ -7300,15 +6332,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1552,
-      "end": 1553,
+      "start": 1382,
+      "end": 1383,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 50,
           "column": 13
         },
         "end": {
-          "line": 54,
+          "line": 50,
           "column": 14
         }
       }
@@ -7326,15 +6358,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1553,
-      "end": 1554,
+      "start": 1383,
+      "end": 1384,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 50,
           "column": 14
         },
         "end": {
-          "line": 54,
+          "line": 50,
           "column": 15
         }
       }
@@ -7342,15 +6374,15 @@
     {
       "type": "CommentLine",
       "value": " return the result if it was found else return",
-      "start": 1560,
-      "end": 1608,
+      "start": 1390,
+      "end": 1438,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 52,
           "column": 4
         },
         "end": {
-          "line": 56,
+          "line": 52,
           "column": 52
         }
       }
@@ -7358,15 +6390,15 @@
     {
       "type": "CommentLine",
       "value": " undefined",
-      "start": 1613,
-      "end": 1625,
+      "start": 1443,
+      "end": 1455,
       "loc": {
         "start": {
-          "line": 57,
+          "line": 53,
           "column": 4
         },
         "end": {
-          "line": 57,
+          "line": 53,
           "column": 16
         }
       }
@@ -7386,15 +6418,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1630,
-      "end": 1636,
+      "start": 1460,
+      "end": 1466,
       "loc": {
         "start": {
-          "line": 58,
+          "line": 54,
           "column": 4
         },
         "end": {
-          "line": 58,
+          "line": 54,
           "column": 10
         }
       }
@@ -7412,15 +6444,15 @@
         "binop": null
       },
       "value": "found",
-      "start": 1637,
-      "end": 1642,
+      "start": 1467,
+      "end": 1472,
       "loc": {
         "start": {
-          "line": 58,
+          "line": 54,
           "column": 11
         },
         "end": {
-          "line": 58,
+          "line": 54,
           "column": 16
         }
       }
@@ -7438,15 +6470,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1649,
-      "end": 1650,
+      "start": 1479,
+      "end": 1480,
       "loc": {
         "start": {
-          "line": 59,
+          "line": 55,
           "column": 6
         },
         "end": {
-          "line": 59,
+          "line": 55,
           "column": 7
         }
       }
@@ -7464,15 +6496,15 @@
         "binop": null
       },
       "value": "result",
-      "start": 1651,
-      "end": 1657,
+      "start": 1481,
+      "end": 1487,
       "loc": {
         "start": {
-          "line": 59,
+          "line": 55,
           "column": 8
         },
         "end": {
-          "line": 59,
+          "line": 55,
           "column": 14
         }
       }
@@ -7490,15 +6522,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1664,
-      "end": 1665,
+      "start": 1494,
+      "end": 1495,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 56,
           "column": 6
         },
         "end": {
-          "line": 60,
+          "line": 56,
           "column": 7
         }
       }
@@ -7516,15 +6548,15 @@
         "binop": null
       },
       "value": "undefined",
-      "start": 1666,
-      "end": 1675,
+      "start": 1496,
+      "end": 1505,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 56,
           "column": 8
         },
         "end": {
-          "line": 60,
+          "line": 56,
           "column": 17
         }
       }
@@ -7542,15 +6574,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1675,
-      "end": 1676,
+      "start": 1505,
+      "end": 1506,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 56,
           "column": 17
         },
         "end": {
-          "line": 60,
+          "line": 56,
           "column": 18
         }
       }
@@ -7567,15 +6599,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1679,
-      "end": 1680,
+      "start": 1509,
+      "end": 1510,
       "loc": {
         "start": {
-          "line": 61,
+          "line": 57,
           "column": 2
         },
         "end": {
-          "line": 61,
+          "line": 57,
           "column": 3
         }
       }
@@ -7583,15 +6615,15 @@
     {
       "type": "CommentLine",
       "value": " if the object isn't an object or is empty return",
-      "start": 1684,
-      "end": 1735,
+      "start": 1514,
+      "end": 1565,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 59,
           "column": 2
         },
         "end": {
-          "line": 63,
+          "line": 59,
           "column": 53
         }
       }
@@ -7599,15 +6631,15 @@
     {
       "type": "CommentLine",
       "value": " false because the object can't be checked",
-      "start": 1738,
-      "end": 1782,
+      "start": 1568,
+      "end": 1612,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 60,
           "column": 2
         },
         "end": {
-          "line": 64,
+          "line": 60,
           "column": 46
         }
       }
@@ -7627,15 +6659,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1785,
-      "end": 1791,
+      "start": 1615,
+      "end": 1621,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 61,
           "column": 2
         },
         "end": {
-          "line": 65,
+          "line": 61,
           "column": 8
         }
       }
@@ -7653,15 +6685,15 @@
         "binop": null
       },
       "value": "undefined",
-      "start": 1792,
-      "end": 1801,
+      "start": 1622,
+      "end": 1631,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 61,
           "column": 9
         },
         "end": {
-          "line": 65,
+          "line": 61,
           "column": 18
         }
       }
@@ -7679,15 +6711,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1801,
-      "end": 1802,
+      "start": 1631,
+      "end": 1632,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 61,
           "column": 18
         },
         "end": {
-          "line": 65,
+          "line": 61,
           "column": 19
         }
       }
@@ -7704,15 +6736,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1803,
-      "end": 1804,
+      "start": 1633,
+      "end": 1634,
       "loc": {
         "start": {
-          "line": 66,
+          "line": 62,
           "column": 0
         },
         "end": {
-          "line": 66,
+          "line": 62,
           "column": 1
         }
       }
@@ -7732,15 +6764,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 1806,
-      "end": 1812,
+      "start": 1636,
+      "end": 1642,
       "loc": {
         "start": {
-          "line": 68,
+          "line": 64,
           "column": 0
         },
         "end": {
-          "line": 68,
+          "line": 64,
           "column": 6
         }
       }
@@ -7760,15 +6792,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 1813,
-      "end": 1820,
+      "start": 1643,
+      "end": 1650,
       "loc": {
         "start": {
-          "line": 68,
+          "line": 64,
           "column": 7
         },
         "end": {
-          "line": 68,
+          "line": 64,
           "column": 14
         }
       }
@@ -7786,15 +6818,15 @@
         "binop": null
       },
       "value": "keyOf",
-      "start": 1821,
-      "end": 1826,
+      "start": 1651,
+      "end": 1656,
       "loc": {
         "start": {
-          "line": 68,
+          "line": 64,
           "column": 15
         },
         "end": {
-          "line": 68,
+          "line": 64,
           "column": 20
         }
       }
@@ -7812,15 +6844,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1826,
-      "end": 1827,
+      "start": 1656,
+      "end": 1657,
       "loc": {
         "start": {
-          "line": 68,
+          "line": 64,
           "column": 20
         },
         "end": {
-          "line": 68,
+          "line": 64,
           "column": 21
         }
       }
@@ -7838,15 +6870,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1828,
-      "end": 1828,
+      "start": 1658,
+      "end": 1658,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 65,
           "column": 0
         },
         "end": {
-          "line": 69,
+          "line": 65,
           "column": 0
         }
       }

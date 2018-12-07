@@ -47,7 +47,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-keyOf">keyOf</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-keys">keys</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-map">map</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-merge">merge</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPathParts">getPathParts</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-set">set</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-size">size</a></span></span></li>
@@ -92,18 +91,8 @@ function get(object, path, defaultValue = undefined) {
 
     // for each path parts from the parsed path
     getPathParts(path).forEach((key) =&gt; {
-      // if the current value is an object and it isn&apos;t empty
-      if (is(currentValue) &amp;&amp; !empty(currentValue)) {
-        // set the currentValue as the value from the key
-        currentValue = currentValue[key];
-      }
+      currentValue = currentValue[key];
     });
-
-    // if the currentValue is undefined after getting the new
-    // value from the paths return the default value
-    if (currentValue === undefined) {
-      return defaultValue;
-    }
 
     // if it isn&apos;t undefined return the value
     return currentValue;

@@ -47,7 +47,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-keyOf">keyOf</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-keys">keys</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-map">map</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-merge">merge</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPathParts">getPathParts</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-set">set</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-size">size</a></span></span></li>
@@ -63,9 +62,8 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// o
 import is from &apos;./is&apos;;
 import empty from &apos;./empty&apos;;
-import keys from &apos;./keys&apos;;
-import get from &apos;./get&apos;;
 import set from &apos;./set&apos;;
+import each from &apos;./each&apos;;
 
 /**
  * Sort an object via the iterator evaluation
@@ -90,51 +88,22 @@ import set from &apos;./set&apos;;
 function sort(object, iterator, follow = false) {
   // check if the object is an object and isn&apos;t empty
   if (is(object) &amp;&amp; !empty(object) &amp;&amp; typeof iterator === &apos;function&apos;) {
-    // get all the keys and pass following so keys
-    // can work out whether to follow
-    const objKeys = keys(object, follow);
-
-    // create an empty array so we can add all the sort objects
-    const sortingValues = [];
-
-    // for each key
-    objKeys.forEach((key) =&gt; {
-      // get the value of the key
-      const value = get(object, key);
-
-      // if following and the value is an object skip it
-      if (follow &amp;&amp; is(value)) {
-        return;
-      }
-
-      // add the key and value as an object to the
-      // sorting values array
-      sortingValues.push({
-        key,
-        value,
-      });
-    });
-
-    // sort the sorting values array using the
-    // specified iterator
-    const sorted = sortingValues.sort(iterator);
-
-    // create an empty object for the result
+    // create empty object for result
     let result = {};
 
-    // go through all the sorted values and
-    // build the object from them in the sorted
-    // order
-    sorted.forEach((sortObj) =&gt; {
-      // get the key and value
-      const {
-        key,
-        value,
-      } = sortObj;
-
-      // set the key/value on the result object
-      result = set(result, key, value);
-    });
+    // for each over the object keys and values
+    // follow is passed into each therefore the
+    // each function works out whether to follow
+    // the objects
+    each(object, (key, value) =&gt; {
+      // run the iterator function on the key and
+      // value and if it evaluates to true set
+      // the result object
+      if (iterator(key, value) === true) {
+        // set the key/value on the result object
+        result = set(result, key, value);
+      }
+    }, follow);
 
     // return the result
     return result;

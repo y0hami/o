@@ -1,7 +1,7 @@
 {
   "coverage": "100%",
-  "expectCount": 26,
-  "actualCount": 26,
+  "expectCount": 25,
+  "actualCount": 25,
   "files": {
     "src/clean.js": {
       "expectCount": 1,
@@ -89,11 +89,6 @@
       "undocumentLines": []
     },
     "src/map.js": {
-      "expectCount": 1,
-      "actualCount": 1,
-      "undocumentLines": []
-    },
-    "src/merge.js": {
       "expectCount": 1,
       "actualCount": 1,
       "undocumentLines": []

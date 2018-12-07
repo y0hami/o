@@ -47,7 +47,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-keyOf">keyOf</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-keys">keys</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-map">map</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-merge">merge</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPathParts">getPathParts</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-set">set</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-size">size</a></span></span></li>
@@ -95,20 +94,11 @@ function find(object, iterator, follow) {
     each(object, (key, value) =&gt; {
       // if the value hasn&apos;t already been found
       if (!found) {
-        // if its not following objects or its
-        // following but the value isn&apos;t an object
-        // this will skip any value which is an object
-        // when following allow us to run the iterator
-        // on the key/values within the objects which
-        // generates the filter effect throughout the
-        // whole object
-        if (!follow || (follow &amp;&amp; !is(value))) {
-          // check if the iterator is false if it
-          // is false then delete that key from the object
-          if (iterator(key, value) === true) {
-            found = true;
-            result = key;
-          }
+        // check if the iterator is false if it
+        // is false then delete that key from the object
+        if (iterator(key, value) === true) {
+          found = true;
+          result = key;
         }
       }
     }, follow);

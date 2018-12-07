@@ -47,7 +47,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-keyOf">keyOf</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-keys">keys</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-map">map</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-merge">merge</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPathParts">getPathParts</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-set">set</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-size">size</a></span></span></li>
@@ -98,19 +97,15 @@ function keyOf(object, value, follow = false) {
     each(object, (key, objValue) =&gt; {
       // if the result isn&apos;t already found
       if (!found) {
-        // follow is false or follow is true but the
-        // object value isn&apos;t an object
-        if (!follow || (follow &amp;&amp; !is(value))) {
-          // check if the object value is equal to
-          // the specified value
-          if (objValue === value) {
-            // set found to true since the key was found
-            found = true;
+        // check if the object value is equal to
+        // the specified value
+        if (objValue === value) {
+          // set found to true since the key was found
+          found = true;
 
-            // if the values are the same set the result
-            // to the key
-            result = key;
-          }
+          // if the values are the same set the result
+          // to the key
+          result = key;
         }
       }
     }, follow);

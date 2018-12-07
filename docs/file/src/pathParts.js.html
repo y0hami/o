@@ -47,7 +47,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-keyOf">keyOf</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-keys">keys</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-map">map</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-merge">merge</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPathParts">getPathParts</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-set">set</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-size">size</a></span></span></li>
@@ -69,7 +68,7 @@
  */
 function getPathParts(path) {
   // split the path specified into an array on `.`
-  const pathParts = path.split(&apos;.&apos;);
+  const pathParts = String(path).split(&apos;.&apos;);
 
   // create an empty array which will be the result
   const parts = [];
@@ -89,8 +88,8 @@ function getPathParts(path) {
     // into `test.test`. This is done so users can escape
     // dots from the dot notation
     while (parsedPart[parsedPart.length - 1] === &apos;\\&apos;
-    &amp;&amp; pathParts[index + 1] !== undefined
-    &amp;&amp; pathParts[index + 1] !== null) {
+          &amp;&amp; pathParts[index + 1] !== undefined
+          &amp;&amp; pathParts[index + 1] !== null) {
       // remove `\` and append the `.`
       parsedPart = `${parsedPart.slice(0, -1)}.`;
       // increase the index so next iteration it will skip

@@ -47,7 +47,6 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-keyOf">keyOf</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-keys">keys</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-map">map</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-merge">merge</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getPathParts">getPathParts</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-set">set</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-size">size</a></span></span></li>
@@ -97,17 +96,7 @@ function has(object, ...paths) {
 
       // for each part in the path
       parts.forEach((key) =&gt; {
-        // check if the currentValue is an object
-        if (is(currentValue) &amp;&amp; !empty(currentValue)) {
-          // if it is set the currentValue to the corresponding key from
-          // that object
-          currentValue = currentValue[key];
-        }
-        // if the currentValue isn&apos;t an object then the value will stay
-        // as the last currentValue this should leave the last value as
-        // any value which is fetch from the object path. If the value
-        // fetched turns out to be undefined we can then tell the path
-        // doesn&apos;t exist in the next step
+        currentValue = currentValue[key];
       });
 
       // check if the currentValue is undefined meaning that the path

@@ -114,12 +114,6 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
-    "o/src/merge.js~merge",
-    "function/index.html#static-function-merge",
-    "<span>merge</span> <span class=\"search-result-import-path\">o/src/merge.js</span>",
-    "function"
-  ],
-  [
     "o/src/set.js~set",
     "function/index.html#static-function-set",
     "<span>set</span> <span class=\"search-result-import-path\">o/src/set.js</span>",
