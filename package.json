@@ -14,7 +14,9 @@
     "test:watch": "jest --coverage --verbose --runInBand --no-cache --watch",
     "test:eslint": "eslint src",
     "test": "npm-run-all test:eslint test:jest",
-    "docs:build": "esdoc -c .esdoc.json",
+    "docs:clean": "rm -rf docs",
+    "docs:esdoc": "esdoc -c .esdoc.json",
+    "docs": "npm-run-all docs:clean docs:esdoc",
     "release": "standard-version"
   },
   "repository": {
