@@ -7,7 +7,7 @@
  */
 function getPathParts(path) {
   // split the path specified into an array on `.`
-  const pathParts = path.split('.');
+  const pathParts = String(path).split('.');
 
   // create an empty array which will be the result
   const parts = [];
@@ -27,8 +27,8 @@ function getPathParts(path) {
     // into `test.test`. This is done so users can escape
     // dots from the dot notation
     while (parsedPart[parsedPart.length - 1] === '\\'
-    && pathParts[index + 1] !== undefined
-    && pathParts[index + 1] !== null) {
+          && pathParts[index + 1] !== undefined
+          && pathParts[index + 1] !== null) {
       // remove `\` and append the `.`
       parsedPart = `${parsedPart.slice(0, -1)}.`;
       // increase the index so next iteration it will skip
