@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "common object helper functions",
   "main": "dist/o.js",
+  "module": "src/index.js",
   "scripts": {
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "clean": "rm -rf ./dist",
