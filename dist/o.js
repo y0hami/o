@@ -209,7 +209,7 @@
    */
   function getPathParts(path) {
     // split the path specified into an array on `.`
-    var pathParts = path.split('.'); // create an empty array which will be the result
+    var pathParts = String(path).split('.'); // create an empty array which will be the result
 
     var parts = []; // create an index variable so we can skip indexes if
     // need be when parsing the paths
@@ -518,20 +518,11 @@
       each(object, function (key, value) {
         // if the value hasn't already been found
         if (!found) {
-          // if its not following objects or its
-          // following but the value isn't an object
-          // this will skip any value which is an object
-          // when following allow us to run the iterator
-          // on the key/values within the objects which
-          // generates the filter effect throughout the
-          // whole object
-          if (!follow || follow && !is(value)) {
-            // check if the iterator is false if it
-            // is false then delete that key from the object
-            if (iterator(key, value) === true) {
-              found = true;
-              result = key;
-            }
+          // check if the iterator is false if it
+          // is false then delete that key from the object
+          if (iterator(key, value) === true) {
+            found = true;
+            result = key;
           }
         }
       }, follow); // return the result unless the value wasn't found
@@ -629,17 +620,7 @@
         var currentValue = object; // for each part in the path
 
         parts.forEach(function (key) {
-          // check if the currentValue is an object
-          if (is(currentValue) && !empty(currentValue)) {
-            // if it is set the currentValue to the corresponding key from
-            // that object
-            currentValue = currentValue[key];
-          } // if the currentValue isn't an object then the value will stay
-          // as the last currentValue this should leave the last value as
-          // any value which is fetch from the object path. If the value
-          // fetched turns out to be undefined we can then tell the path
-          // doesn't exist in the next step
-
+          currentValue = currentValue[key];
         }); // check if the currentValue is undefined meaning that the path
         // doesn't exist
 
@@ -687,18 +668,8 @@
       var currentValue = object; // for each path parts from the parsed path
 
       getPathParts(path).forEach(function (key) {
-        // if the current value is an object and it isn't empty
-        if (is(currentValue) && !empty(currentValue)) {
-          // set the currentValue as the value from the key
-          currentValue = currentValue[key];
-        }
-      }); // if the currentValue is undefined after getting the new
-      // value from the paths return the default value
-
-      if (currentValue === undefined) {
-        return defaultValue;
-      } // if it isn't undefined return the value
-
+        currentValue = currentValue[key];
+      }); // if it isn't undefined return the value
 
       return currentValue;
     } // if the object isn't an object or it is empty or
@@ -742,16 +713,12 @@
       each(object, function (key, objValue) {
         // if the result isn't already true
         if (!result) {
-          // follow is false or follow is true but the
-          // object value isn't an object
-          if (!follow || follow && !is(value)) {
-            // check if the object value is equal to
-            // the specified value
-            if (objValue === value) {
-              // if they are the same set the result
-              // to true
-              result = true;
-            }
+          // check if the object value is equal to
+          // the specified value
+          if (objValue === value) {
+            // if they are the same set the result
+            // to true
+            result = true;
           }
         }
       }, follow); // return the result
@@ -896,18 +863,14 @@
       each(object, function (key, objValue) {
         // if the result isn't already found
         if (!found) {
-          // follow is false or follow is true but the
-          // object value isn't an object
-          if (!follow || follow && !is(value)) {
-            // check if the object value is equal to
-            // the specified value
-            if (objValue === value) {
-              // set found to true since the key was found
-              found = true; // if the values are the same set the result
-              // to the key
+          // check if the object value is equal to
+          // the specified value
+          if (objValue === value) {
+            // set found to true since the key was found
+            found = true; // if the values are the same set the result
+            // to the key
 
-              result = key;
-            }
+            result = key;
           }
         }
       }, follow); // return the result if it was found else return
@@ -1172,34 +1135,6 @@
   });
 
   // npm
-  /**
-   * Merge all sources into the target with the most right source
-   * having the most priority
-   *
-   * Uses circle-assign
-   * @see https://www.npmjs.com/package/circle-assign
-   *
-   * * @example
-   * const a = { a: 1 };
-   * const b = { b: 2, c: 3 };
-   * merge(a, b); // => { a: 1, b: 2, c: 3 }
-   *
-   * @since 1.0.0
-   * @version 1.0.0
-   *
-   * @param {object} target The target object
-   * @param {...object} sources The sources
-   *
-   * @returns {object} The merged object
-   */
-
-  function merge(target) {
-    for (var _len = arguments.length, sources = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      sources[_key - 1] = arguments[_key];
-    }
-
-    return circleAssign.apply(null, [target].concat(sources));
-  }
 
   // o
   /**
@@ -1319,42 +1254,21 @@
 
     // check if the object is an object and isn't empty
     if (is(object) && !empty(object) && typeof iterator === 'function') {
-      // get all the keys and pass following so keys
-      // can work out whether to follow
-      var objKeys = keys(object, follow); // create an empty array so we can add all the sort objects
+      // create empty object for result
+      var result = {}; // for each over the object keys and values
+      // follow is passed into each therefore the
+      // each function works out whether to follow
+      // the objects
 
-      var sortingValues = []; // for each key
-
-      objKeys.forEach(function (key) {
-        // get the value of the key
-        var value = get(object, key); // if following and the value is an object skip it
-
-        if (follow && is(value)) {
-          return;
-        } // add the key and value as an object to the
-        // sorting values array
-
-
-        sortingValues.push({
-          key: key,
-          value: value
-        });
-      }); // sort the sorting values array using the
-      // specified iterator
-
-      var sorted = sortingValues.sort(iterator); // create an empty object for the result
-
-      var result = {}; // go through all the sorted values and
-      // build the object from them in the sorted
-      // order
-
-      sorted.forEach(function (sortObj) {
-        // get the key and value
-        var key = sortObj.key,
-            value = sortObj.value; // set the key/value on the result object
-
-        result = set$1(result, key, value);
-      }); // return the result
+      each(object, function (key, value) {
+        // run the iterator function on the key and
+        // value and if it evaluates to true set
+        // the result object
+        if (iterator(key, value) === true) {
+          // set the key/value on the result object
+          result = set$1(result, key, value);
+        }
+      }, follow); // return the result
 
       return result;
     } // if the object isn't an object or is empty return
@@ -1427,7 +1341,7 @@
   exports.keyOf = keyOf;
   exports.keys = keys;
   exports.map = map;
-  exports.merge = merge;
+  exports.merge = circleAssign;
   exports.set = set$1;
   exports.size = size;
   exports.slice = slice;
