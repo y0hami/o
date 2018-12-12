@@ -5,11 +5,13 @@ All notable changes to this project will be documented in this file. See [standa
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/hammy2899/o/compare/v1.0.0...v1.0.1) (2018-12-12)
 
+### Features
 
+* add `module` field to package.json for bundlers
+* update dependencies
 
 <a name="1.0.0"></a>
 # 1.0.0 (2018-12-07)
-
 
 ### Bug Fixes
 
