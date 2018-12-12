@@ -1,6 +1,6 @@
 {
   "name": "o",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "common object helper functions",
   "main": "dist/o.js",
   "module": "src/index.js",
