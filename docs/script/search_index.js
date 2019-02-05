@@ -12,6 +12,12 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "o/src/deepequal.js~deepequal",
+    "function/index.html#static-function-deepEqual",
+    "<span>deepEqual</span> <span class=\"search-result-import-path\">o/src/deepEqual.js</span>",
+    "function"
+  ],
+  [
     "o/src/deflate.js~deflate",
     "function/index.html#static-function-deflate",
     "<span>deflate</span> <span class=\"search-result-import-path\">o/src/deflate.js</span>",
@@ -33,6 +39,12 @@ window.esdocSearchIndex = [
     "o/src/empty.js~empty",
     "function/index.html#static-function-empty",
     "<span>empty</span> <span class=\"search-result-import-path\">o/src/empty.js</span>",
+    "function"
+  ],
+  [
+    "o/src/equal.js~equal",
+    "function/index.html#static-function-equal",
+    "<span>equal</span> <span class=\"search-result-import-path\">o/src/equal.js</span>",
     "function"
   ],
   [
@@ -444,6 +456,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "src/deepequal.js",
+    "file/src/deepEqual.js.html",
+    "src/deepEqual.js",
+    "file"
+  ],
+  [
     "src/deflate.js",
     "file/src/deflate.js.html",
     "src/deflate.js",
@@ -465,6 +483,12 @@ window.esdocSearchIndex = [
     "src/empty.js",
     "file/src/empty.js.html",
     "src/empty.js",
+    "file"
+  ],
+  [
+    "src/equal.js",
+    "file/src/equal.js.html",
+    "src/equal.js",
     "file"
   ],
   [

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/clone.js | o</title>
+  <title data-ice="title">src/equal.js | o</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -60,51 +60,97 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/clone.js</h1>
+<div class="content" data-ice="content"><h1 data-ice="title">src/equal.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// o
 import is from &apos;./is&apos;;
-import empty from &apos;./empty&apos;;
 
 /**
- * Clone the specified object
+ * Check whether all the objects are equal (only 1 layer deep, use equalDeep for full comparison)
  *
  * @example
  * const a = { a: 1 };
- * const b = clone(a); // =&gt; { a: 1 }
- * b.a = 2;
- * console.log(a); // =&gt; { a: 1 }
- * console.log(b); // =&gt; { a: 2 }
+ * const b = { a: 1 };
+ * equal(a, b); // =&gt; true
  *
- * @since 1.0.0
- * @version 1.0.0
+ * const a = { a: 1 };
+ * const b = { a: 2 };
+ * equal(a, b); // =&gt; false
  *
- * @param {object} object The object to clone
+ * @since 1.1.2
+ * @version 1.1.2
  *
- * @returns {object} The cloned object
+ * @param {object} object The object to compare with
+ * @param {...object} compareWith The objects to compare with the original
+ *
+ * @returns {boolean} Whether all the objects are equal
  */
-function clone(object) {
-  // check if the object is an object and isn&apos;t empty
-  if (is(object) &amp;&amp; !empty(object)) {
-    // create a new object for the result
-    const result = {};
+function equal(object, ...compareWith) {
+  // check if object is an object
+  if (is(object)) {
+    // get an array of the object keys
+    const objectKeys = Object.keys(object);
 
-    // for each key in the specified object add it
-    // to the new result with the value from the
-    // original object
-    Object.keys(object).forEach((key) =&gt; {
-      result[key] = object[key];
-    });
+    // use reduce to compare all the objects with the original object
+    return compareWith.reduce((isEqual, currentObject) =&gt; {
+      // if isEqual already is false just skip
+      if (!isEqual) return false;
 
-    // return the result object
-    return result;
+      // if the current object to compare isn&apos;t an object return false because it
+      // won&apos;t ever equal the original object
+      if (!is(currentObject)) return false;
+
+      // get an array of keys for the current object
+      const currentKeys = Object.keys(currentObject);
+
+      // check if the current object has the same amount of keys as the original and
+      // if it doesn&apos;t return false because that means it won&apos;t ever equal the original
+      if (currentKeys.length !== objectKeys.length) return false;
+
+      // check if the current object has the same keys as the original
+      if (!objectKeys.every(key =&gt; currentKeys.includes(key))) return false;
+
+      // create a new function to check if values are the same (used later)
+      const valueIsEqual = (value, compareValue) =&gt; {
+        // check if any of the values are objects
+        if (is(value) || is(compareValue)) {
+          // if both are objects return true since this isn&apos;t a deepEqual else
+          // false because they are different values
+          return is(value) &amp;&amp; is(compareValue);
+        }
+
+        // check if any of the values are arrays
+        if (Array.isArray(value) || Array.isArray(compareValue)) {
+          // if both are arrays return true and false because they are different values
+          return Array.isArray(value) &amp;&amp; Array.isArray(compareValue);
+        }
+
+        // check if any of the values are functions
+        if (typeof value === &apos;function&apos; || typeof compareValue === &apos;function&apos;) {
+          // check if both are functions
+          if (typeof value === &apos;function&apos; &amp;&amp; typeof compareValue === &apos;function&apos;) {
+            // if both are functions check if both functions are the same
+            return value.toString() === compareValue.toString();
+          }
+          // if only one of them is a function return false since they are different
+          return false;
+        }
+
+        // if the types aren&apos;t special do a generic check
+        return value === compareValue;
+      };
+
+      // return true if every value in the object is equal to the current
+      return objectKeys.every(
+        key =&gt; valueIsEqual(object[key], currentObject[key]),
+      );
+    }, true);
   }
 
-  // if the object isn&apos;t an object or is empty return
-  // an empty object this will keep the return immutable
-  return {};
+  // if the object isn&apos;t an object return false
+  return false;
 }
 
-export default clone;
+export default equal;
 </code></pre>
 
 </div>

@@ -70,4 +70,15 @@ describe('has', () => {
 
     expect(got).toBe(false);
   });
+
+  test('should return false path equals undefined', () => {
+    const a = {
+      a: {
+        b: undefined,
+      },
+    };
+    const got = has(a, 'a.b.c');
+
+    expect(got).toBe(false);
+  });
 });

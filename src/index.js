@@ -1,11 +1,13 @@
 // methods
 import clean from './clean';
 import clone from './clone';
+import deepEqual from './deepEqual';
 import deflate from './deflate';
 import del from './del';
 import each from './each';
 import empty from './empty';
 import every from './every';
+import equal from './equal';
 import filter from './filter';
 import find from './find';
 import flip from './flip';
@@ -28,10 +30,12 @@ import values from './values';
 export {
   clean,
   clone,
+  deepEqual,
   deflate,
   del,
   each,
   empty,
+  equal,
   every,
   filter,
   find,
