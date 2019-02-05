@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/clone.js | o</title>
+  <title data-ice="title">src/deepEqual.js | o</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -60,51 +60,53 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">src/clone.js</h1>
+<div class="content" data-ice="content"><h1 data-ice="title">src/deepEqual.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// o
 import is from &apos;./is&apos;;
-import empty from &apos;./empty&apos;;
+import equal from &apos;./equal&apos;;
+import deflate from &apos;./deflate&apos;;
 
 /**
- * Clone the specified object
+ * Check whether all the objects deeply equal each other
  *
  * @example
- * const a = { a: 1 };
- * const b = clone(a); // =&gt; { a: 1 }
- * b.a = 2;
- * console.log(a); // =&gt; { a: 1 }
- * console.log(b); // =&gt; { a: 2 }
+ * const a = { a: { b: 1 } };
+ * const b = { a: { b: 1 } };
+ * deepEqual(a, b); // =&gt; true
  *
- * @since 1.0.0
- * @version 1.0.0
+ * const a = { a: { b: 1 } };
+ * const b = { a: { b: 2 } };
+ * deepEqual(a, b); // =&gt; false
  *
- * @param {object} object The object to clone
+ * @since 1.1.2
+ * @version 1.1.2
  *
- * @returns {object} The cloned object
+ * @param {object} object The object to compare with
+ * @param {...object} compareWith The objects to compare with the original
+ *
+ * @returns {boolean} Whether all the objects deeply equal each other
  */
-function clone(object) {
-  // check if the object is an object and isn&apos;t empty
-  if (is(object) &amp;&amp; !empty(object)) {
-    // create a new object for the result
-    const result = {};
+function deepEqual(object, ...compareWith) {
+  // check if object is an object
+  if (is(object)) {
+    // deflate the original object (easier then looping through the inner objects)
+    const ogObject = deflate(object);
 
-    // for each key in the specified object add it
-    // to the new result with the value from the
-    // original object
-    Object.keys(object).forEach((key) =&gt; {
-      result[key] = object[key];
-    });
+    // use reduce to compare all the objects with the original object
+    return compareWith.reduce((isEqual, currentObject) =&gt; {
+      // if isEqual already is false just skip
+      if (!isEqual) return false;
 
-    // return the result object
-    return result;
+      // deflate the current object (easier then looping through the inner objects)
+      return equal(ogObject, deflate(currentObject));
+    }, true);
   }
 
-  // if the object isn&apos;t an object or is empty return
-  // an empty object this will keep the return immutable
-  return {};
+  // if the object isn&apos;t an object return false
+  return false;
 }
 
-export default clone;
+export default deepEqual;
 </code></pre>
 
 </div>
