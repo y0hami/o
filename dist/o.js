@@ -133,8 +133,7 @@
         Object.keys(obj).forEach(function (key) {
           // build an array of the new path with the
           // current path and the new key
-          var newPath = _toConsumableArray(currentPath).concat([key]); // get the value of the current key
-
+          var newPath = [].concat(_toConsumableArray(currentPath), [key]); // get the value of the current key
 
           var value = obj[key]; // if the value is an array and isn't empty
 
@@ -344,6 +343,139 @@
 
 
     return {};
+  }
+
+  // o
+  /**
+   * Check whether all the objects are equal (only 1 layer deep, use equalDeep for full comparison)
+   *
+   * @example
+   * const a = { a: 1 };
+   * const b = { a: 1 };
+   * equal(a, b); // => true
+   *
+   * const a = { a: 1 };
+   * const b = { a: 2 };
+   * equal(a, b); // => false
+   *
+   * @since 1.1.2
+   * @version 1.1.2
+   *
+   * @param {object} object The object to compare with
+   * @param {...object} compareWith The objects to compare with the original
+   *
+   * @returns {boolean} Whether all the objects are equal
+   */
+
+  function equal(object) {
+    // check if object is an object
+    if (is(object)) {
+      // get an array of the object keys
+      var objectKeys = Object.keys(object); // use reduce to compare all the objects with the original object
+
+      for (var _len = arguments.length, compareWith = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        compareWith[_key - 1] = arguments[_key];
+      }
+
+      return compareWith.reduce(function (isEqual, currentObject) {
+        // if isEqual already is false just skip
+        if (!isEqual) return false; // if the current object to compare isn't an object return false because it
+        // won't ever equal the original object
+
+        if (!is(currentObject)) return false; // get an array of keys for the current object
+
+        var currentKeys = Object.keys(currentObject); // check if the current object has the same amount of keys as the original and
+        // if it doesn't return false because that means it won't ever equal the original
+
+        if (currentKeys.length !== objectKeys.length) return false; // check if the current object has the same keys as the original
+
+        if (!objectKeys.every(function (key) {
+          return currentKeys.includes(key);
+        })) return false; // create a new function to check if values are the same (used later)
+
+        var valueIsEqual = function valueIsEqual(value, compareValue) {
+          // check if any of the values are objects
+          if (is(value) || is(compareValue)) {
+            // if both are objects return true since this isn't a deepEqual else
+            // false because they are different values
+            return is(value) && is(compareValue);
+          } // check if any of the values are arrays
+
+
+          if (Array.isArray(value) || Array.isArray(compareValue)) {
+            // if both are arrays return true and false because they are different values
+            return Array.isArray(value) && Array.isArray(compareValue);
+          } // check if any of the values are functions
+
+
+          if (typeof value === 'function' || typeof compareValue === 'function') {
+            // check if both are functions
+            if (typeof value === 'function' && typeof compareValue === 'function') {
+              // if both are functions check if both functions are the same
+              return value.toString() === compareValue.toString();
+            } // if only one of them is a function return false since they are different
+
+
+            return false;
+          } // if the types aren't special do a generic check
+
+
+          return value === compareValue;
+        }; // return true if every value in the object is equal to the current
+
+
+        return objectKeys.every(function (key) {
+          return valueIsEqual(object[key], currentObject[key]);
+        });
+      }, true);
+    } // if the object isn't an object return false
+
+
+    return false;
+  }
+
+  // o
+  /**
+   * Check whether all the objects deeply equal each other
+   *
+   * @example
+   * const a = { a: { b: 1 } };
+   * const b = { a: { b: 1 } };
+   * deepEqual(a, b); // => true
+   *
+   * const a = { a: { b: 1 } };
+   * const b = { a: { b: 2 } };
+   * deepEqual(a, b); // => false
+   *
+   * @since 1.1.2
+   * @version 1.1.2
+   *
+   * @param {object} object The object to compare with
+   * @param {...object} compareWith The objects to compare with the original
+   *
+   * @returns {boolean} Whether all the objects deeply equal each other
+   */
+
+  function deepEqual(object) {
+    // check if object is an object
+    if (is(object)) {
+      // deflate the original object (easier then looping through the inner objects)
+      var ogObject = deflate(object); // use reduce to compare all the objects with the original object
+
+      for (var _len = arguments.length, compareWith = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        compareWith[_key - 1] = arguments[_key];
+      }
+
+      return compareWith.reduce(function (isEqual, currentObject) {
+        // if isEqual already is false just skip
+        if (!isEqual) return false; // deflate the current object (easier then looping through the inner objects)
+
+        return equal(ogObject, deflate(currentObject));
+      }, true);
+    } // if the object isn't an object return false
+
+
+    return false;
   }
 
   // o
@@ -620,7 +752,11 @@
         var currentValue = object; // for each part in the path
 
         parts.forEach(function (key) {
-          currentValue = currentValue[key];
+          if (is(currentValue) && !empty(currentValue)) {
+            currentValue = currentValue[key];
+          } else {
+            currentValue = undefined;
+          }
         }); // check if the currentValue is undefined meaning that the path
         // doesn't exist
 
@@ -1325,10 +1461,12 @@
 
   exports.clean = clean;
   exports.clone = clone;
+  exports.deepEqual = deepEqual;
   exports.deflate = deflate;
   exports.del = del;
   exports.each = each;
   exports.empty = empty;
+  exports.equal = equal;
   exports.every = every;
   exports.filter = filter;
   exports.find = find;
