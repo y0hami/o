@@ -35,7 +35,11 @@ function has(object, ...paths) {
 
       // for each part in the path
       parts.forEach((key) => {
-        currentValue = currentValue[key];
+        if (is(currentValue) && !empty(currentValue)) {
+          currentValue = currentValue[key];
+        } else {
+          currentValue = undefined;
+        }
       });
 
       // check if the currentValue is undefined meaning that the path
