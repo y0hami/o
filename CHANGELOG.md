@@ -2,17 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-# [1.2.0](https://github.com/hammy2899/o/compare/v1.0.0...v1.2.0) (2019-02-17)
+# [1.2.0](https://github.com/hammy2899/o/compare/v1.0.1...v1.2.0) (2019-02-17)
 
 
-### Bug Fixes
+### Build
 
-* **has:** bug causing cannot read property error ([784d4d8](https://github.com/hammy2899/o/commit/784d4d8)), closes [#37](https://github.com/hammy2899/o/issues/37)
-
-
-### Features
-
-* **equal, deepEqual:** add equal and deepEqual ([3bf68a9](https://github.com/hammy2899/o/commit/3bf68a9))
+* **deps:** update dependencies
 
 
 
