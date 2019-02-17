@@ -1,4 +1,4 @@
-![o Logo](logo.png)
+![o Logo](https://unpkg.com/o@1.1.3/logo.png)
 
 # o
 common object helper functions which can be used in [NodeJS](https://nodejs.org/en/) and the browser (supports ES6).
