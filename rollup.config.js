@@ -1,24 +1,40 @@
+// npm
 import commonjs from 'rollup-plugin-commonjs';
-import nodeResolve from 'rollup-plugin-node-resolve';
+import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 
+// package.json
+import pkg from './package.json';
+
+const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+const name = 'o';
+
 export default {
-  input: 'src/index.js',
-  output: {
-    file: 'dist/o.js',
-    format: 'umd',
-    sourceMap: 'inline',
-    name: 'o',
-  },
+  input: './src/index.ts',
   plugins: [
-    nodeResolve({
-      jsnext: true,
-      main: true,
+    resolve({
+      extensions,
     }),
-    commonjs({
-      include: 'node_modules/**',
-      sourceMap: false,
+    commonjs(),
+    babel({
+      extensions,
+      include: ['src/**/*'],
     }),
-    babel(),
+  ],
+  output: [
+    {
+      file: pkg.main,
+      format: 'cjs',
+    },
+    {
+      file: pkg.module,
+      format: 'es',
+    },
+    {
+      file: pkg.browser,
+      format: 'iife',
+      name,
+      globals: {},
+    },
   ],
 };
