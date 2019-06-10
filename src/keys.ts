@@ -1,7 +1,12 @@
 // o
-import { valid } from './util';
+import { valid, defaults } from './util';
 import clone from './clone';
 import deflate from './deflate';
+
+// default options
+export const DefaultOptions: KeysOptions = {
+  follow: false,
+};
 
 /**
  * Get the keys of the specified object (different to Object.keys
@@ -15,15 +20,20 @@ import deflate from './deflate';
  * keys(a, true); // => [ 'a', 'b.c', 'b.d.e' ]
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-function keys(obj: OObject, follow: boolean = false): string[] {
+function keys(obj: OObject, options: KeysOptions = DefaultOptions): string[] {
+  // extract options
+  const {
+    follow,
+  } = (defaults(DefaultOptions, options) as KeysOptions);
+
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
-  if (typeof follow !== 'boolean') throw new Error('The argument `follow` is not a boolean');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
 
   // clone the object so we can deflate it if we need to
   let cloned = clone(obj);

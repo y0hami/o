@@ -15,23 +15,23 @@ import is from './is';
  * const e = { a: 1, b: { c: 2 } };
  * const f = { a: 1, b: { c: 3 } };
  *
- * console.log(equal(a, b)); // => true
- * console.log(equal(c, d)); // => false
- * console.log(equal(e, f)); // => true
+ * equal(a, b); // => true
+ * equal(c, d); // => false
+ * equal(e, f); // => true
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
 function equal(obj: OObject, ...compareWith: OObject[]): boolean {
   // check if the arg specified is an object
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
 
   // check if all the compare values are objects
   if (!compareWith.every(object => is(object))) {
-    throw new Error('The arguments `compareWith` are not objects');
+    throw new TypeError(`Expected Object[], got ${typeof compareWith} ${compareWith}`);
   }
 
   // get the keys of the specified object

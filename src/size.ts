@@ -11,14 +11,14 @@ import { valid } from './util';
  * size(a); // => 2
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
 function size(obj: OObject): number {
   // check if the arg specified is an object
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
 
   // get the object keys and return the length
   return Object.keys(obj).length;

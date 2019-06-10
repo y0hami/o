@@ -1,10 +1,11 @@
 // o
-import { valid } from './util';
+import { valid, defaults } from './util';
 import each from './each';
 
-export interface OFindCallback {
-  (key: string, value: any, index: number): boolean;
-}
+// default options
+export const DefaultOptions: FindOptions = {
+  follow: false,
+};
 
 /**
  * Find the key matching the callback evaluation
@@ -19,19 +20,26 @@ export interface OFindCallback {
  *
  * find(a, (key, value) => {
  *   return value === 2;
- * }, true); // => 'b.c'
+ * }, {
+ *   follow: true,
+ * }); // => 'b.c'
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-function find(obj: OObject, cb: OFindCallback, follow: boolean = false): string | undefined {
+function find(obj: OObject, cb: FindCallback, options: FindOptions = DefaultOptions): string | undefined {
+  // extract options
+  const {
+    follow,
+  } = (defaults(DefaultOptions, options) as FindOptions);
+
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
-  if (typeof cb !== 'function') throw new Error('The argument `cb` is not a function');
-  if (typeof follow !== 'boolean') throw new Error('The argument `follow` is not a boolean');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (typeof cb !== 'function') throw new TypeError(`Expected Function, got ${typeof cb} ${cb}`);
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
 
   // create a variable to track whether the key is found
   let found = false;
@@ -56,7 +64,9 @@ function find(obj: OObject, cb: OFindCallback, follow: boolean = false): string 
         result = key;
       }
     }
-  }, follow);
+  }, {
+    follow,
+  });
 
   // if the key was not found set the result as undefined
   if (!found) result = undefined;

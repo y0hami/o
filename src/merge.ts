@@ -22,18 +22,18 @@ import is from './is';
  * merge(a, b, c); // => { a: 1, b: 5 }
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
 function merge(target: OObject, ...sources: OObject[]): OObject {
   // check if the arg specified is an object
-  if (!valid(target)) throw new Error('The argument `target` is not an object');
+  if (!valid(target)) throw new TypeError(`Expected Object, got ${typeof target} ${target}`);
 
   // check if all the compare values are objects
   if (!sources.every(object => is(object))) {
-    throw new Error('The arguments `sources` are not objects');
+    throw new TypeError(`Expected Object[], got ${typeof sources} ${sources}`);
   }
 
   return circleAssign(target, ...sources);

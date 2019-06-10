@@ -1,11 +1,12 @@
 // o
-import { valid } from './util';
+import { valid, defaults } from './util';
 import each from './each';
 import set from './set';
 
-export interface OMapCallback {
-  (key: string, value: any, index: number): any;
-}
+// default options
+export const DefaultOptions: MapOptions = {
+  follow: false,
+};
 
 /**
  * Loop over the object and return a new object with the values
@@ -26,19 +27,25 @@ export interface OMapCallback {
  *
  * map(b, (key, value) => {
  *   return value * 2;
- * }, true); // => { a: 2, b: { c: 4 } }
+ * }, {
+ *   follow: true,
+ * }); // => { a: 2, b: { c: 4 } }
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-function map(obj: OObject, cb: OMapCallback, follow: boolean = false): OObject {
+function map(obj: OObject, cb: MapCallback, options: MapOptions = DefaultOptions): OObject {
+  const {
+    follow,
+  } = (defaults(DefaultOptions, options) as MapOptions);
+
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
-  if (typeof cb !== 'function') throw new Error('The argument `cb` is not a function');
-  if (typeof follow !== 'boolean') throw new Error('The argument `follow` is not a boolean');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (typeof cb !== 'function') throw new TypeError(`Expected Function, got ${typeof cb} ${cb}`);
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
 
   // create a result object so we can add the new values to it
   let result: OObject = {};
@@ -51,7 +58,9 @@ function map(obj: OObject, cb: OMapCallback, follow: boolean = false): OObject {
     // set the result as the result object with the new key appended
     // with the value of the evaluated callback
     result = set(result, key, cb(key, value, index));
-  }, follow);
+  }, {
+    follow,
+  });
 
   // return the result
   return result;

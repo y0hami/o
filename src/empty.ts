@@ -20,7 +20,7 @@ import { valid } from './util';
  */
 function empty(obj: OObject): boolean {
   // check if the arg specified is an object
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
 
   // check if the object has at least 1 key
   return !(Object.keys(obj).length > 0);

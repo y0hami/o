@@ -1,10 +1,11 @@
 // o
-import { valid } from './util';
+import { valid, defaults } from './util';
 import each from './each';
 
-export interface OSomeCallback {
-  (key: string, value: any, index: number): boolean;
-}
+// default options
+export const DefaultOptions: SomeOptions = {
+  follow: false,
+};
 
 /**
  * Check if some items in the object evaluates to true
@@ -19,23 +20,32 @@ export interface OSomeCallback {
  *
  * some(a, (key, value) => {
  *   return value === 1;
- * }, true); // => true
+ * }, {
+ *   follow: true,
+ * }); // => true
  *
  * some(a, (key, value) => {
  *   return value === 2;
- * }, true); // => false
+ * }, {
+ *   follow: true,
+ * }); // => false
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-function some(obj: OObject, cb: OSomeCallback, follow: boolean = false): boolean {
+function some(obj: OObject, cb: SomeCallback, options: SomeOptions = DefaultOptions): boolean {
+  // extract options
+  const {
+    follow,
+  } = (defaults(DefaultOptions, options) as SomeOptions);
+
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
-  if (typeof cb !== 'function') throw new Error('The argument `cb` is not a function');
-  if (typeof follow !== 'boolean') throw new Error('The argument `follow` is not a boolean');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (typeof cb !== 'function') throw new TypeError(`Expected Function, got ${typeof cb} ${cb}`);
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
 
   // set result to false so we can change it to true if
   // any of the callbacks evaluate to true
@@ -51,7 +61,9 @@ function some(obj: OObject, cb: OSomeCallback, follow: boolean = false): boolean
       // set the result as true
       result = true;
     }
-  }, follow);
+  }, {
+    follow,
+  });
 
   // return the result
   return result;

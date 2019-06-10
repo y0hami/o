@@ -11,19 +11,17 @@ import { valid, dotNotation } from './util';
  * ```
  * const a = { a: 1, b: { c: 2 } };
  *
- * const b = deflate(a);
- *
- * console.log(b); // => { a: 1, 'b.c': 2 }
+ * deflate(a); // => { a: 1, 'b.c': 2 }
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
 function deflate(obj: OObject): OObject {
   // check if the arg specified is an object
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
 
   // if the object is empty just return an empty object
   if (empty(obj)) return {};

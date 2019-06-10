@@ -1,7 +1,12 @@
 // o
-import { valid } from './util';
+import { valid, defaults } from './util';
 import keys from './keys';
 import get from './get';
+
+// default options
+export const DefaultOptions: ValuesOptions = {
+  follow: false,
+};
 
 /**
  * Get an array of the object values
@@ -12,22 +17,31 @@ import get from './get';
  * const b = { a: 1, b: { c: 2, d: 3 } };
  *
  * values(a); // => [ 1, 2, 3, 4, 5 ]
- * values(b, true); // => [ 1, 2, 3 ]
+ * values(b, {
+ *   follow: true,
+ * }); // => [ 1, 2, 3 ]
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-function values(obj: OObject, follow: boolean = false): any[] {
+function values(obj: OObject, options: ValuesOptions = DefaultOptions): any[] {
+  // extract options
+  const {
+    follow,
+  } = (defaults(DefaultOptions, options) as ValuesOptions);
+
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
 
   // get the object keys and pass follow so it handles the deep object
   // for us and then map the keys array and return the corresponding value
   // for the current key
-  return keys(obj, follow)
+  return keys(obj, {
+    follow,
+  })
     .map(key => get(obj, key));
 }
 

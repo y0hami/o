@@ -16,16 +16,17 @@ import empty from './empty';
  * console.log(a.a, b.a); // => 1  2
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
 function clone(obj: OObject): OObject {
   // check if the arg specified is an object
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
 
   // if the object is empty just return a new object
+  // istanbul ignore next
   if (empty(obj)) return {};
 
   // create a new empty object

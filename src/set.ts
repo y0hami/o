@@ -10,20 +10,18 @@ import is from './is';
  * ```
  * const a = { a: 1 };
  *
- * set(a, 'b.c', 2);
- *
- * console.log(a); // => { a: 1, b: { c: 2 } }
+ * set(a, 'b.c', 2); // => { a: 1, b: { c: 2 } }
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
 function set(obj: OObject, path: string, value: any): OObject {
   // check if the arg specified is an object
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
-  if (typeof path !== 'string') throw new Error('The argument `path` is not a string');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (typeof path !== 'string') throw new TypeError(`Expected String, got ${typeof path} ${path}`);
 
   let cloned = clone(obj);
   const result = cloned;

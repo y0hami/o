@@ -10,8 +10,8 @@ import is from './is';
  * ```
  * const a = { a: 1, b: { c: 2 } };
  *
- * console.log(has(a, 'b.c'); // => true
- * console.log(has(a, 'b.d'); // => false
+ * has(a, 'b.c'); // => true
+ * has(a, 'b.d'); // => false
  * ```
  *
  * @throws Error
@@ -21,9 +21,9 @@ import is from './is';
  */
 function has(obj: OObject, ...paths: string[]): boolean {
   // check if the arg specified is an object
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
   if (!paths.every(path => typeof path === 'string')) {
-    throw new Error('The argument `paths` is not a string');
+    throw new TypeError(`Expected String[], got ${typeof paths} ${paths}`);
   }
 
   // if the object is empty just return false because it doesn't have anything

@@ -1,11 +1,12 @@
 // o
-import { valid } from './util';
+import { valid, defaults } from './util';
 import empty from './empty';
 import deflate from './deflate';
 
-export interface OEachCallback {
-  (key: string, value: any, index: number): void;
-}
+// default options
+export const DefaultOptions: EachOptions = {
+  follow: false,
+};
 
 /**
  * Foreach over an objects keys
@@ -24,19 +25,26 @@ export interface OEachCallback {
  *   console.log(key, value);
  *   // => a  1
  *   // => b.c  2
- * }, true);
+ * }, {
+ *   follow: true,
+ * });
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-function each(obj: OObject, cb: OEachCallback, follow: boolean = false): void {
+function each(obj: OObject, cb: EachCallback, options: EachOptions = DefaultOptions): void {
+  // extract options
+  const {
+    follow,
+  } = (defaults(DefaultOptions, options) as EachOptions);
+
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
-  if (typeof cb !== 'function') throw new Error('The argument `cb` is not a function');
-  if (typeof follow !== 'boolean') throw new Error('The argument `follow` is not a boolean');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (typeof cb !== 'function') throw new TypeError(`Expected Function, got ${typeof cb} ${cb}`);
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
 
   // if the object is empty just return false because it doesn't have anything
   if (empty(obj)) return;

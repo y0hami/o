@@ -9,20 +9,18 @@ import clone from './clone';
  * ```
  * const a = { a: 1, b: { c: 2 } };
  *
- * const b = del(a, 'b.c');
- *
- * console.log(b); // => { a: 1, b: {} }
+ * del(a, 'b.c'); // => { a: 1, b: {} }
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
 function del(obj: OObject, path: string): OObject {
   // check if the arg specified is an object
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
-  if (typeof path !== 'string') throw new Error('The argument `path` is not a string');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (typeof path !== 'string') throw new TypeError(`Expected String, got ${typeof path} ${path}`);
 
   // clone the original object so we can manipulate it
   let cloned = clone(obj);

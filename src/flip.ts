@@ -1,7 +1,13 @@
 // o
-import { valid } from './util';
+import { valid, defaults } from './util';
 import each from './each';
 import is from './is';
+
+// default options
+export const DefaultOptions: FlipOptions = {
+  follow: false,
+  useToString: false,
+};
 
 /**
  * Flip an objects keys fro values and values for keys
@@ -13,20 +19,30 @@ import is from './is';
  * const c = { a: 1, b: { c: 2 } };
  *
  * flip(a); // => { '1': 'a', '2': 'b', '3': 'c' }
- * flip(b, true); // => { '1': 'a', '2': 'b.c' }
- * flip(b, false, true); // => { '1': 'a', '{"c":2}': 'b' }
+ * flip(b, {
+ *   follow: true,
+ * }); // => { '1': 'a', '2': 'b.c' }
+ * flip(b, {
+ *   useToString: true,
+ * }); // => { '1': 'a', '{"c":2}': 'b' }
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-function flip(obj: OObject, follow: boolean = false, useToString: boolean = false): OObject {
+function flip(obj: OObject, options: FlipOptions = DefaultOptions): OObject {
+  // extract options
+  const {
+    follow,
+    useToString,
+  } = (defaults(DefaultOptions, options) as FlipOptions);
+
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
-  if (typeof follow !== 'boolean') throw new Error('The argument `follow` is not a boolean');
-  if (typeof useToString !== 'boolean') throw new Error('The argument `useToString` is not a boolean');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
+  if (typeof useToString !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof useToString} ${useToString}`);
 
   // create an empty object for the result
   const result: OObject = {};
@@ -53,7 +69,9 @@ function flip(obj: OObject, follow: boolean = false, useToString: boolean = fals
         result[String(value).toString()] = key;
       }
     }
-  }, follow);
+  }, {
+    follow,
+  });
 
   // return the result
   return result;

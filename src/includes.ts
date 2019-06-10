@@ -1,6 +1,11 @@
 // o
-import { valid } from './util';
+import { valid, defaults } from './util';
 import each from './each';
+
+// default options
+export const DefaultOptions: IncludesOptions = {
+  follow: false,
+};
 
 /**
  * Check if an object includes the specified value
@@ -12,18 +17,25 @@ import each from './each';
  *
  * includes(a, 1); // => true
  * includes(b, 2); // => false
- * includes(b, 2, true); // => true
+ * includes(b, 2, {
+ *   follow: true,
+ * }); // => true
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-function includes(obj: OObject, value: any, follow: boolean = false): boolean {
+function includes(obj: OObject, value: any, options: IncludesOptions = DefaultOptions): boolean {
+  // extract options
+  const {
+    follow,
+  } = (defaults(DefaultOptions, options) as IncludesOptions);
+
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
-  if (typeof follow !== 'boolean') throw new Error('The argument `follow` is not a boolean');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
 
   // create the result variable which is defaulted to false
   let result = false;
@@ -38,7 +50,9 @@ function includes(obj: OObject, value: any, follow: boolean = false): boolean {
       // if the two values equal set the result as true
       if (objValue === value) result = true;
     }
-  }, follow);
+  }, {
+    follow,
+  });
 
   // return the result
   return result;

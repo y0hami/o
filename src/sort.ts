@@ -1,17 +1,13 @@
 // o
-import { valid } from './util';
+import { valid, defaults } from './util';
 import keys from './keys';
 import get from './get';
 import set from './set';
 
-export interface OSortElement {
-  key: string;
-  value: any;
-}
-
-export interface OSortCallback {
-  (firstEl: OSortElement, secondEl: OSortElement): number;
-}
+// default options
+export const DefaultOptions: SortOptions = {
+  follow: false,
+};
 
 /**
  * Sort an object via the callback evaluation
@@ -31,19 +27,26 @@ export interface OSortCallback {
  *  if (a.value < b.value) return -1;
  *  if (a.value > b.value) return 1;
  *  return 0;
- * }, true); // => { d: { e: 1 }, a: 3, c: 5, b: 7, f: 9 }
+ * }, {
+ *   follow: true,
+ * }); // => { d: { e: 1 }, a: 3, c: 5, b: 7, f: 9 }
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-function sort(obj: OObject, cb: OSortCallback, follow: boolean = false): OObject {
+function sort(obj: OObject, cb: SortCallback, options: SortOptions = DefaultOptions): OObject {
+  // extract options
+  const {
+    follow,
+  } = (defaults(DefaultOptions, options) as SortOptions);
+
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new Error('The argument `obj` is not an object');
-  if (typeof cb !== 'function') throw new Error('The argument `cb` is not a function');
-  if (typeof follow !== 'boolean') throw new Error('The argument `follow` is not a boolean');
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (typeof cb !== 'function') throw new TypeError(`Expected Function, got ${typeof cb} ${cb}`);
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
 
   // create a new object so we can add the key/values on in the
   // correct order
@@ -51,18 +54,20 @@ function sort(obj: OObject, cb: OSortCallback, follow: boolean = false): OObject
 
   // get the keys from the object and pass follow to the keys function
   // then we don't need to handle deep objects
-  const sortedKeys = keys(obj, follow)
+  const sortedKeys = keys(obj, {
+    follow,
+  })
     .sort((firstKey, secondKey) => {
       // get the value from the object for the corresponding key
       const firstValue = get(obj, firstKey);
       const secondValue = get(obj, secondKey);
 
       // create the element objects
-      const firstEl: OSortElement = {
+      const firstEl: SortElement = {
         key: firstKey,
         value: firstValue,
       };
-      const secondEl: OSortElement = {
+      const secondEl: SortElement = {
         key: secondKey,
         value: secondValue,
       };

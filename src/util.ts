@@ -1,5 +1,6 @@
 // o
 import is from './is';
+import merge from './merge';
 
 /**
  * Parse the specified dot notation into an iterable string array.
@@ -52,4 +53,11 @@ export const dotNotation = {
 export function valid(...args: any[]): boolean {
   return args
     .every(obj => is(obj));
+}
+
+/**
+ * Merge the default options with the specified options
+ */
+export function defaults(defaultOpts: object, specifiedOpts: object): object {
+  return merge(defaultOpts, specifiedOpts);
 }
