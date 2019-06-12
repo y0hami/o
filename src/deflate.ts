@@ -24,6 +24,7 @@ function deflate(obj: OObject): OObject {
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
 
   // if the object is empty just return an empty object
+  // istanbul ignore next
   if (empty(obj)) return {};
 
   // create a new object for the result
