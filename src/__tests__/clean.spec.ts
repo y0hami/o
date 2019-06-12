@@ -40,18 +40,13 @@ describe('clean', () => {
       .toHaveLength(1);
   });
 
-  test('should throw TypeError if obj argument is invalid', () => {
-    const obj: unknown = 'testing';
-
-    expect(() => clean(obj as OObject))
-      .toThrow(new TypeError('Expected Object, got string testing'));
-  });
-
   test('should throw TypeError if follow argument is invalid', () => {
-    const obj = {};
+    const invalidObj: unknown = 'testing';
     const follow: unknown = 'testing';
 
-    expect(() => clean(obj, {
+    expect(() => clean(invalidObj as OObject))
+      .toThrow(new TypeError('Expected Object, got string testing'));
+    expect(() => clean({}, {
       follow: (follow as boolean),
     }))
       .toThrow(new TypeError('Expected Boolean, got string testing'));
