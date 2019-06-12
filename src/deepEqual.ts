@@ -16,9 +16,9 @@ import deflate from './deflate';
  * const e = { a: 1, b: { c: 2 } };
  * const f = { a: 1, b: { c: 3 } };
  *
- * equal(a, b); // => true
- * equal(c, d); // => false
- * equal(e, f); // => false
+ * deepEqual(a, b); // => true
+ * deepEqual(c, d); // => false
+ * deepEqual(e, f); // => false
  * ```
  *
  * @throws TypeError
