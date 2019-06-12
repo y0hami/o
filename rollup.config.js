@@ -6,8 +6,7 @@ import babel from 'rollup-plugin-babel';
 // package.json
 import pkg from './package.json';
 
-const extensions = ['.js', '.jsx', '.ts', '.tsx'];
-const name = 'o';
+const extensions = ['.js', '.ts'];
 
 export default {
   input: './src/index.ts',
@@ -21,20 +20,11 @@ export default {
       include: ['src/**/*'],
     }),
   ],
-  output: [
-    {
-      file: pkg.main,
-      format: 'cjs',
-    },
-    {
-      file: pkg.module,
-      format: 'es',
-    },
-    {
-      file: pkg.browser,
-      format: 'iife',
-      name,
-      globals: {},
-    },
-  ],
+  output: {
+    file: 'dist/o.js',
+    format: 'umd',
+    sourceMap: true,
+    banner: `/* o - v${pkg.version}\n *\n * Released under MIT license\n * https://github.com/hammy2899/o\n */\n`,
+    name: 'o',
+  },
 };
