@@ -31,7 +31,11 @@ export const DefaultOptions: FilterOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function filter(obj: OObject, cb: FilterCallback, options: FilterOptions = DefaultOptions): OObject {
+function filter(
+  obj: OObject,
+  cb: FilterCallback,
+  options: FilterOptions = DefaultOptions,
+): OObject {
   // extract options
   const {
     follow,

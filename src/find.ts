@@ -30,7 +30,11 @@ export const DefaultOptions: FindOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function find(obj: OObject, cb: FindCallback, options: FindOptions = DefaultOptions): string | undefined {
+function find(
+  obj: OObject,
+  cb: FindCallback,
+  options: FindOptions = DefaultOptions,
+): string | undefined {
   // extract options
   const {
     follow,

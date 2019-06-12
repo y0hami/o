@@ -25,7 +25,11 @@ export const DefaultOptions: KeyOfOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function keyOf(obj: OObject, value: any, options: KeyOfOptions = DefaultOptions): string | undefined {
+function keyOf(
+  obj: OObject,
+  value: any,
+  options: KeyOfOptions = DefaultOptions,
+): string | undefined {
   // extract options
   const {
     follow,

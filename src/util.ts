@@ -1,6 +1,8 @@
+// npm
+import circleAssign from 'circle-assign';
+
 // o
 import is from './is';
-import merge from './merge';
 
 /**
  * Parse the specified dot notation into an iterable string array.
@@ -59,5 +61,5 @@ export function valid(...args: any[]): boolean {
  * Merge the default options with the specified options
  */
 export function defaults(defaultOpts: object, specifiedOpts: object): object {
-  return merge(defaultOpts, specifiedOpts);
+  return circleAssign(defaultOpts, specifiedOpts);
 }
