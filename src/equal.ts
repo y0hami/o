@@ -43,9 +43,6 @@ function equal(obj: OObject, ...compareWith: OObject[]): boolean {
     // get the keys for the current object
     const currentKeys = Object.keys(currentObject);
 
-    // if the current object isn't an object return false
-    if (!is(currentObject)) return false;
-
     // if the current object and the original don't have the same amount of keys
     // then return false because on is missing or it has extras
     if (currentKeys.length !== keys.length) return false;
@@ -80,6 +77,7 @@ function equal(obj: OObject, ...compareWith: OObject[]): boolean {
 
         // return false if the functions do not match or if only
         // one of the values is a function
+        // istanbul ignore next
         return false;
       }
 
