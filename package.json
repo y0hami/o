@@ -22,10 +22,10 @@
     "package-lock.json",
     "yarn.lock"
   ],
-  "main": "dist/o.cjs.js",
-  "module": "dist/o.esm.js",
-  "browser": "dist/o.iife.js",
-  "types": "dist/types.d.ts",
+  "main": "dist/o.js",
+  "module": "dist/o.js",
+  "browser": "dist/o.min.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hammy2899/o.git"
