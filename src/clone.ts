@@ -1,5 +1,6 @@
 // o
 import { valid } from './util';
+import is from './is';
 import empty from './empty';
 
 /**
@@ -34,9 +35,19 @@ function clone(obj: OObject): OObject {
 
   // for each key in the object
   Object.keys(obj).forEach((key: string) => {
-    // add the value from the original object to the same
-    // key in the new object
-    result[key] = obj[key];
+    // get the value at the current key
+    const val: any = obj[key];
+
+    // if the value is an object
+    if (is(val)) {
+      // set the value on the result object as
+      // the cloned value object
+      result[key] = clone(val);
+    } else {
+      // add the value from the original object to the same
+      // key in the new object
+      result[key] = obj[key];
+    }
   });
 
   // return the new object
