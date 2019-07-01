@@ -11,10 +11,5 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "declarationDir": "dist"
-  },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "src/__tests__"
-  ]
+  }
 }

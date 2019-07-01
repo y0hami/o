@@ -34,7 +34,7 @@
     "start": "rollup -c -w",
     "build:clean": "rm -rf ./dist",
     "build:js": "rollup -c",
-    "build:types": "tsc --emitDeclarationOnly",
+    "build:types": "tsc --p tsconfig.build.json --emitDeclarationOnly",
     "build": "npm-run-all build:clean build:js build:types",
     "test": "jest",
     "test:watch": "npm test -- --watch",
