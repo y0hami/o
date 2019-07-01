@@ -62,7 +62,7 @@ describe('filter', () => {
 
     expect(() => filter(invalidObj as OObject, jest.fn()))
       .toThrow(new TypeError('Expected Object, got string testing'));
-    expect(() => filter({}, invalidCallback as EveryCallback))
+    expect(() => filter({}, invalidCallback as FilterCallback))
       .toThrow(new TypeError('Expected Function, got string testing'));
     expect(() => filter({}, jest.fn(), {
       follow: invalidFollow as boolean,
