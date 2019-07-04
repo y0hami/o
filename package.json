@@ -39,7 +39,7 @@
     "test:watch": "npm test -- --watch",
     "lint": "eslint --ext .ts src",
     "docs:clean": "rm -rf ./docs",
-    "docs:typedoc": "",
+    "docs:typedoc": "typedoc",
     "docs:cname": "echo o.hammy2899.dev >> docs/CNAME",
     "docs": "npm-run-all docs:clean docs:typedoc docs:cname",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
@@ -72,6 +72,7 @@
     "rollup-plugin-uglify": "^6.0.2",
     "standard-version": "^5.0.0",
     "ts-jest": "^24.0.2",
+    "typedoc": "^0.14.2",
     "typescript": "^3.4.5"
   },
   "jest": {
