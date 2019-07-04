@@ -32,7 +32,7 @@ function merge(target: OObject, ...sources: OObject[]): OObject {
   if (!valid(target)) throw new TypeError(`Expected Object, got ${typeof target} ${target}`);
 
   // check if all the compare values are objects
-  if (!sources.every(object => is(object))) {
+  if (!valid.apply(null, [...sources])) {
     throw new TypeError(`Expected Object[], got ${typeof sources} ${sources}`);
   }
 

@@ -30,7 +30,7 @@ function equal(obj: OObject, ...compareWith: OObject[]): boolean {
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
 
   // check if all the compare values are objects
-  if (!compareWith.every(object => is(object))) {
+  if (!valid.apply(null, [...compareWith])) {
     throw new TypeError(`Expected Object[], got ${typeof compareWith} ${compareWith}`);
   }
 

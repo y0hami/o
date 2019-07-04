@@ -53,8 +53,7 @@ export const dotNotation = {
  * Check if all args specified are objects
  */
 export function valid(...args: any[]): boolean {
-  return args
-    .every(obj => is(obj));
+  return is.apply(null, [...args]);
 }
 
 /**
