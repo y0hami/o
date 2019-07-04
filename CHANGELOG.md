@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.0.0](https://github.com/hammy2899/o/compare/v1.2.0...v2.0.0) (2019-07-04)
+
+
+### Bug Fixes
+
+* **clone:** correct clone reference issue ([cc26f32](https://github.com/hammy2899/o/commit/cc26f32))
+
+
+### Features
+
+* refactor options param logic ([55676e7](https://github.com/hammy2899/o/commit/55676e7))
+
+
+
 ## [1.2.1](https://github.com/hammy2899/o/compare/v1.2.0...v1.2.1) (2019-02-17)
 
 
