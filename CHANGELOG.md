@@ -4,15 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 # [2.0.0](https://github.com/hammy2899/o/compare/v1.2.0...v2.0.0) (2019-07-04)
 
-
-### Bug Fixes
-
-* **clone:** correct clone reference issue ([cc26f32](https://github.com/hammy2899/o/commit/cc26f32))
-
-
-### Features
-
-* refactor options param logic ([55676e7](https://github.com/hammy2899/o/commit/55676e7))
+Rewrite the library in typescript and improve performance of some functions.
+Also introduced a new build system which has better outputted files with source maps.
 
 
 
