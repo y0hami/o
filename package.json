@@ -36,7 +36,7 @@
     "build:types": "tsc --p tsconfig.build.json --emitDeclarationOnly",
     "build": "npm-run-all build:clean build:js build:types",
     "test": "jest",
-    "test:watch": "npm test -- --watch",
+    "test:watch": "yarn test --watch",
     "lint": "eslint --ext .ts src",
     "docs:clean": "rm -rf ./docs",
     "docs:typedoc": "typedoc",
