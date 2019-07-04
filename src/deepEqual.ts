@@ -1,6 +1,5 @@
 // o
 import { valid } from './util';
-import is from './is';
 import equal from './equal';
 import deflate from './deflate';
 
