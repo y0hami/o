@@ -30,6 +30,7 @@ export default [
     output: {
       file: 'dist/o.js',
       format,
+      exports: 'named',
       sourcemap: true,
       banner,
       name,
@@ -46,6 +47,7 @@ export default [
     output: {
       file: 'dist/o.min.js',
       format,
+      exports: 'named',
       sourcemap: true,
       banner,
       name,
