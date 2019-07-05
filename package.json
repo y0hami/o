@@ -24,7 +24,7 @@
   "main": "dist/o.js",
   "module": "dist/o.js",
   "browser": "dist/o.min.js",
-  "types": "src/types.d.ts",
+  "types": "dist/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hammy2899/o.git"
