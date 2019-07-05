@@ -1,6 +1,6 @@
 {
   "name": "o",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "common object helper functions",
   "keywords": [
     "object",
@@ -43,7 +43,8 @@
     "docs:cname": "echo o.hammy2899.dev >> docs/CNAME",
     "docs": "npm-run-all docs:clean docs:typedoc docs:cname",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "release": "standard-version"
+    "release:standard-version": "standard-version",
+    "release": "npm-run-all test lint build docs release:standard-version"
   },
   "dependencies": {
     "circle-assign": "^2.0.0"
