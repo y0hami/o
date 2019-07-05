@@ -6,12 +6,10 @@
  * ```
  * const a = { a: 1, b: { c: 2 } };
  *
- * const b = deflate(a);
- *
- * console.log(b); // => { a: 1, 'b.c': 2 }
+ * deflate(a); // => { a: 1, 'b.c': 2 }
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0

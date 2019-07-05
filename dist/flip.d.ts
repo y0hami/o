@@ -1,3 +1,4 @@
+export declare const DefaultOptions: FlipOptions;
 /**
  * Flip an objects keys fro values and values for keys
  *
@@ -8,14 +9,18 @@
  * const c = { a: 1, b: { c: 2 } };
  *
  * flip(a); // => { '1': 'a', '2': 'b', '3': 'c' }
- * flip(b, true); // => { '1': 'a', '2': 'b.c' }
- * flip(b, false, true); // => { '1': 'a', '{"c":2}': 'b' }
+ * flip(b, {
+ *   follow: true,
+ * }); // => { '1': 'a', '2': 'b.c' }
+ * flip(b, {
+ *   useToString: true,
+ * }); // => { '1': 'a', '{"c":2}': 'b' }
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-declare function flip(obj: OObject, follow?: boolean, useToString?: boolean): OObject;
+declare function flip(obj: OObject, options?: FlipOptions): OObject;
 export default flip;

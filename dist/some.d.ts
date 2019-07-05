@@ -1,6 +1,4 @@
-export interface OSomeCallback {
-    (key: string, value: any, index: number): boolean;
-}
+export declare const DefaultOptions: SomeOptions;
 /**
  * Check if some items in the object evaluates to true
  *
@@ -14,17 +12,21 @@ export interface OSomeCallback {
  *
  * some(a, (key, value) => {
  *   return value === 1;
- * }, true); // => true
+ * }, {
+ *   follow: true,
+ * }); // => true
  *
  * some(a, (key, value) => {
  *   return value === 2;
- * }, true); // => false
+ * }, {
+ *   follow: true,
+ * }); // => false
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-declare function some(obj: OObject, cb: OSomeCallback, follow?: boolean): boolean;
+declare function some(obj: OObject, cb: SomeCallback, options?: SomeOptions): boolean;
 export default some;

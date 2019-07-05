@@ -1,6 +1,4 @@
-export interface OEveryCallback {
-    (key: string, value: any, index: number): boolean;
-}
+export declare const DefaultOptions: EveryOptions;
 /**
  * Check if every item in the object evaluates to true
  *
@@ -14,13 +12,15 @@ export interface OEveryCallback {
  *
  * every(a, (key, value) => {
  *   return value === 1;
- * }, true); // => true
+ * }, {
+ *   follow: true,
+ * }); // => true
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-declare function every(obj: OObject, cb: OEveryCallback, follow?: boolean): boolean;
+declare function every(obj: OObject, cb: EveryCallback, options?: EveryOptions): boolean;
 export default every;

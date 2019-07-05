@@ -1,6 +1,4 @@
-export interface OMapCallback {
-    (key: string, value: any, index: number): any;
-}
+export declare const DefaultOptions: MapOptions;
 /**
  * Loop over the object and return a new object with the values
  * computed using the callback
@@ -20,13 +18,15 @@ export interface OMapCallback {
  *
  * map(b, (key, value) => {
  *   return value * 2;
- * }, true); // => { a: 2, b: { c: 4 } }
+ * }, {
+ *   follow: true,
+ * }); // => { a: 2, b: { c: 4 } }
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-declare function map(obj: OObject, cb: OMapCallback, follow?: boolean): OObject;
+declare function map(obj: OObject, cb: MapCallback, options?: MapOptions): OObject;
 export default map;

@@ -1,3 +1,4 @@
+export declare const DefaultOptions: KeysOptions;
 /**
  * Get the keys of the specified object (different to Object.keys
  * because Object.keys can't follow deep objects)
@@ -10,10 +11,10 @@
  * keys(a, true); // => [ 'a', 'b.c', 'b.d.e' ]
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-declare function keys(obj: OObject, follow?: boolean): string[];
+declare function keys(obj: OObject, options?: KeysOptions): string[];
 export default keys;

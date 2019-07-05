@@ -5,12 +5,10 @@
  * ```
  * const a = { a: 1, b: { c: 2 } };
  *
- * const val = get(a, 'b.c');
- *
- * console.log(val); // => 2
+ * get(a, 'b.c'); // => 2
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0

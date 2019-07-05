@@ -1,3 +1,4 @@
+export declare const DefaultOptions: ValuesOptions;
 /**
  * Get an array of the object values
  *
@@ -7,13 +8,15 @@
  * const b = { a: 1, b: { c: 2, d: 3 } };
  *
  * values(a); // => [ 1, 2, 3, 4, 5 ]
- * values(b); // => [ 1, 2, 3 ]
+ * values(b, {
+ *   follow: true,
+ * }); // => [ 1, 2, 3 ]
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-declare function values(obj: OObject, follow?: boolean): any[];
+declare function values(obj: OObject, options?: ValuesOptions): any[];
 export default values;

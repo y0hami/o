@@ -1,3 +1,4 @@
+export declare const DefaultOptions: IncludesOptions;
 /**
  * Check if an object includes the specified value
  *
@@ -8,13 +9,15 @@
  *
  * includes(a, 1); // => true
  * includes(b, 2); // => false
- * includes(b, 2, true); // => true
+ * includes(b, 2, {
+ *   follow: true,
+ * }); // => true
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-declare function includes(obj: OObject, value: any, follow?: boolean): boolean;
+declare function includes(obj: OObject, value: any, options?: IncludesOptions): boolean;
 export default includes;

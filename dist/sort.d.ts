@@ -1,10 +1,4 @@
-export interface OSortElement {
-    key: string;
-    value: any;
-}
-export interface OSortCallback {
-    (firstEl: OSortElement, secondEl: OSortElement): number;
-}
+export declare const DefaultOptions: SortOptions;
 /**
  * Sort an object via the callback evaluation
  *
@@ -23,13 +17,15 @@ export interface OSortCallback {
  *  if (a.value < b.value) return -1;
  *  if (a.value > b.value) return 1;
  *  return 0;
- * }, true); // => { d: { e: 1 }, a: 3, c: 5, b: 7, f: 9 }
+ * }, {
+ *   follow: true,
+ * }); // => { d: { e: 1 }, a: 3, c: 5, b: 7, f: 9 }
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-declare function sort(obj: OObject, cb: OSortCallback, follow?: boolean): OObject;
+declare function sort(obj: OObject, cb: SortCallback, options?: SortOptions): OObject;
 export default sort;

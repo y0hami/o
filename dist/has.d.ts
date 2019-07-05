@@ -5,8 +5,8 @@
  * ```
  * const a = { a: 1, b: { c: 2 } };
  *
- * console.log(has(a, 'b.c'); // => true
- * console.log(has(a, 'b.d'); // => false
+ * has(a, 'b.c'); // => true
+ * has(a, 'b.d'); // => false
  * ```
  *
  * @throws Error

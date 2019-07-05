@@ -1,6 +1,4 @@
-export interface OEachCallback {
-    (key: string, value: any, index: number): void;
-}
+export declare const DefaultOptions: EachOptions;
 /**
  * Foreach over an objects keys
  *
@@ -18,13 +16,15 @@ export interface OEachCallback {
  *   console.log(key, value);
  *   // => a  1
  *   // => b.c  2
- * }, true);
+ * }, {
+ *   follow: true,
+ * });
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-declare function each(obj: OObject, cb: OEachCallback, follow?: boolean): void;
+declare function each(obj: OObject, cb: EachCallback, options?: EachOptions): void;
 export default each;

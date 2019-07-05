@@ -1,3 +1,4 @@
+export declare const DefaultOptions: SliceOptions;
 /**
  * Get a portion of the specified object
  *
@@ -9,10 +10,10 @@
  * slice(a, 1, 3); // => { b: 2, c: 3 }
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-declare function slice(obj: OObject, start: number, end?: number, follow?: boolean): OObject;
+declare function slice(obj: OObject, start: number, end?: number, options?: SliceOptions): OObject;
 export default slice;

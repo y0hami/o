@@ -1,6 +1,4 @@
-export interface OFindCallback {
-    (key: string, value: any, index: number): boolean;
-}
+export declare const DefaultOptions: FindOptions;
 /**
  * Find the key matching the callback evaluation
  *
@@ -14,13 +12,15 @@ export interface OFindCallback {
  *
  * find(a, (key, value) => {
  *   return value === 2;
- * }, true); // => 'b.c'
+ * }, {
+ *   follow: true,
+ * }); // => 'b.c'
  * ```
  *
- * @throws Error
+ * @throws TypeError
  *
  * @since 1.0.0
  * @version 2.0.0
  */
-declare function find(obj: OObject, cb: OFindCallback, follow?: boolean): string | undefined;
+declare function find(obj: OObject, cb: FindCallback, options?: FindOptions): string | undefined;
 export default find;
