@@ -41,7 +41,7 @@ const { is, empty } = require('o');
 
 ##### ES6
 ```javascript
-import from './o.min.js';
+import './o.min.js';
 ```
 
 ##### CDN/Script
