@@ -41,7 +41,8 @@
     "docs:clean": "rm -rf ./docs",
     "docs:typedoc": "typedoc",
     "docs:cname": "echo o.hammy2899.dev >> docs/CNAME",
-    "docs": "npm-run-all docs:clean docs:typedoc docs:cname",
+    "docs:nojekyll": "touch docs/.nojekyll",
+    "docs": "npm-run-all docs:clean docs:typedoc docs:cname docs:nojekyll",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "release:standard-version": "standard-version",
     "release": "npm-run-all test lint build docs release:standard-version"
