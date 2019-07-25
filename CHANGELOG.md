@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.1](https://github.com/hammy2899/o/compare/v2.0.0...v2.0.1) (2019-07-25)
+
+### Bug Fixes
+
+* Fixed an issue with typings
+
+
 # [2.0.0](https://github.com/hammy2899/o/compare/v1.2.0...v2.0.0) (2019-07-04)
 
 Rewrite the library in typescript and improve performance of some functions.
