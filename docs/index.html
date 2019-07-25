@@ -65,7 +65,7 @@
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
 				<p><img src="https://unpkg.com/o@1.1.3/logo.png" alt="o Logo"></p>
-				<h1 id="o">o</h1>
+				<h1 id="o"><a href="https://github.com/hammy2899/o">o</a></h1>
 				<p>common object helper functions written in TypeScript which can be used in <a href="https://nodejs.org/en/">NodeJS</a> and the browser (supports ES6).</p>
 				<p><a href="https://travis-ci.org/hammy2899/o"><img src="https://travis-ci.org/hammy2899/o.svg?branch=master" alt="Build Status"></a>
 					<a href="https://coveralls.io/github/hammy2899/o?branch=master"><img src="https://coveralls.io/repos/github/hammy2899/o/badge.svg?branch=master" alt="Coverage Status"></a>
@@ -78,7 +78,7 @@
 				<pre><code class="language-bash">$ yarn add o</code></pre>
 				<h3 id="usage">Usage</h3>
 				<h4 id="typescript">TypeScript</h4>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> o <span class="hljs-keyword">from</span> <span class="hljs-string">'o'</span>;
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> o <span class="hljs-keyword">from</span> <span class="hljs-string">'o'</span>;
 <span class="hljs-comment">// or require specific functions</span>
 <span class="hljs-keyword">import</span> { is, empty } <span class="hljs-keyword">from</span> <span class="hljs-string">'o'</span>;</code></pre>
 				<h4 id="nodejs">NodeJS</h4>
@@ -87,7 +87,16 @@
 <span class="hljs-keyword">const</span> { is, empty } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'o'</span>);</code></pre>
 				<h4 id="browser">Browser</h4>
 				<h5 id="es6">ES6</h5>
-				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'./o.min.js'</span>;</code></pre>
+				<pre><code class="language-html"><span class="hljs-comment">&lt;!-- Script tag --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>
+  <span class="hljs-attr">type</span>=<span class="hljs-string">"module"</span>
+  <span class="hljs-attr">src</span>=<span class="hljs-string">"./o.min.js"</span>
+/&gt;</span><span class="handlebars"><span class="xml">
+
+<span class="hljs-comment">&lt;!-- Import syntax --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span>&gt;</span><span class="actionscript">
+  <span class="hljs-meta"><span class="hljs-meta-keyword">import</span> './o.min.js';</span>
+</span></span></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 				<h5 id="cdn-script">CDN/Script</h5>
 				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>
   <span class="hljs-attr">type</span>=<span class="hljs-string">"application/javascript"</span>
@@ -206,6 +215,9 @@ has(a, <span class="hljs-string">'c.d'</span>); <span class="hljs-comment">// =&
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_sort_.html">"sort"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_types_.html">"types"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_util_.html">"util"</a>
