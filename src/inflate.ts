@@ -2,6 +2,7 @@
 import { valid } from './util';
 import empty from './empty';
 import set from './set';
+import { OObject } from './types';
 
 /**
  * Inflate the specified object into a multi level object

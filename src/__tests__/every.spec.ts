@@ -1,4 +1,5 @@
 import every from '../every';
+import { OObject, EveryCallback } from '../types';
 
 describe('every', () => {
   test('should run for all keys', () => {

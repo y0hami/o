@@ -1,4 +1,5 @@
 import { dotNotation, valid, defaults } from '../util';
+import { OObject } from '../types';
 
 describe('util', () => {
   describe('dot notation', () => {

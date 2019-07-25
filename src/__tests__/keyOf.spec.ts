@@ -1,4 +1,5 @@
 import keyOf from '../keyOf';
+import { OObject } from '../types';
 
 describe('keyOf', () => {
   test('should return the key of the first value matched', () => {

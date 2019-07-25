@@ -1,4 +1,5 @@
 import merge from '../merge';
+import { OObject } from '../types';
 
 describe('merge', () => {
   test('should return a new object not a reference', () => {

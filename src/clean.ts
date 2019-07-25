@@ -4,6 +4,7 @@ import empty from './empty';
 import clone from './clone';
 import deflate from './deflate';
 import del from './del';
+import { CleanOptions, OObject } from './types';
 
 // default options
 export const DefaultOptions: CleanOptions = {

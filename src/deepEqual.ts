@@ -2,6 +2,7 @@
 import { valid } from './util';
 import equal from './equal';
 import deflate from './deflate';
+import { OObject } from './types';
 
 /**
  * Check whether all objects deeply equal each other

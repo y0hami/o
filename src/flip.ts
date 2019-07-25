@@ -2,6 +2,7 @@
 import { valid, defaults } from './util';
 import each from './each';
 import is from './is';
+import { FlipOptions, OObject } from './types';
 
 // default options
 export const DefaultOptions: FlipOptions = {

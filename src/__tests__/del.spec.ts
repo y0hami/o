@@ -1,4 +1,5 @@
 import del from '../del';
+import { OObject } from '../types';
 
 describe('del', () => {
   test('should delete the specified path from an object', () => {

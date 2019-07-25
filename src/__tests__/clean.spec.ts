@@ -1,4 +1,5 @@
 import clean from '../clean';
+import { OObject } from '../types';
 
 describe('clean', () => {
   test('should remove all null values', () => {

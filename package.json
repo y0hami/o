@@ -11,7 +11,7 @@
     "url": "https://github.com/hammy2899/o/issues"
   },
   "license": "MIT",
-  "author": "Sean Hamilton <sean@hamistudios.com>",
+  "author": "Sean Hamilton <sean@hamistudios.com> (https://github.com/hammy2899)",
   "files": [
     "CHANGELOG.md",
     "LICENSE.md",
@@ -24,17 +24,16 @@
   "main": "dist/o.js",
   "module": "dist/o.js",
   "browser": "dist/o.min.js",
-  "types": "dist/",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hammy2899/o.git"
   },
   "scripts": {
-    "start": "rollup -c -w",
-    "build:clean": "rm -rf ./dist",
+    "build:clean": "rm -rf ./build ./dist",
+    "build:ts": "tsc --p tsconfig.build.json",
     "build:js": "rollup -c",
-    "build:types": "tsc --p tsconfig.build.json --emitDeclarationOnly",
-    "build": "npm-run-all build:clean build:js build:types",
+    "build": "npm-run-all build:clean build:ts build:js",
     "test": "jest",
     "test:watch": "yarn test --watch",
     "lint": "eslint --ext .ts src",

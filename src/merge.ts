@@ -3,6 +3,7 @@ import circleAssign from 'circle-assign';
 
 // o
 import { valid } from './util';
+import { OObject } from './types';
 
 /**
  * Merge all sources into the target object with the most right

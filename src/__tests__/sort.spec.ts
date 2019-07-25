@@ -1,4 +1,5 @@
 import sort from '../sort';
+import { OObject, SortCallback } from '../types';
 
 describe('sort', () => {
   test('should return a new object not a reference', () => {

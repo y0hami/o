@@ -1,4 +1,5 @@
 import map from '../map';
+import { OObject, MapCallback } from '../types';
 
 describe('map', () => {
   test('should run the callback on all keys in the object', () => {

@@ -1,4 +1,5 @@
 import size from '../size';
+import { OObject } from '../types';
 
 describe('size', () => {
   test('should return a number', () => {

@@ -1,4 +1,5 @@
 import has from '../has';
+import { OObject } from '../types';
 
 describe('has', () => {
   test('return true if the object has the path', () => {

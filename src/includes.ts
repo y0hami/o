@@ -1,6 +1,7 @@
 // o
 import { valid, defaults } from './util';
 import each from './each';
+import { IncludesOptions, OObject } from './types';
 
 // default options
 export const DefaultOptions: IncludesOptions = {

@@ -1,5 +1,6 @@
 // o
 import { valid } from './util';
+import { OObject } from './types';
 
 /**
  * Get the size of the specified object.

@@ -1,4 +1,5 @@
 import deepEqual from '../deepEqual';
+import { OObject } from '../types';
 
 describe('deepEqual', () => {
   const objA = {

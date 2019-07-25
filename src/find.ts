@@ -1,6 +1,7 @@
 // o
 import { valid, defaults } from './util';
 import each from './each';
+import { FindOptions, OObject, FindCallback } from './types';
 
 // default options
 export const DefaultOptions: FindOptions = {

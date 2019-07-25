@@ -2,6 +2,7 @@
 import { valid, dotNotation } from './util';
 import clone from './clone';
 import is from './is';
+import { OObject } from './types';
 
 /**
  * Set the value to the path on the specified object

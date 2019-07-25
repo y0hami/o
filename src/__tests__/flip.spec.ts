@@ -1,4 +1,5 @@
 import flip from '../flip';
+import { OObject } from '../types';
 
 describe('flip', () => {
   test('should flip keys and values of an object', () => {

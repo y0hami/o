@@ -1,4 +1,5 @@
 import empty from '../empty';
+import { OObject } from '../types';
 
 describe('empty', () => {
   test('should check if an object is empty', () => {

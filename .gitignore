@@ -1,6 +1,18 @@
+# project files
 node_modules
+build
+
+# logs & cache files
+*.log*
+.eslintcache
+coverage
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.cache
+.settings
+.project
+*.sublime-project
 .idea
 .vscode
-coverage
-*.log
-

@@ -2,6 +2,7 @@
 import { valid, dotNotation } from './util';
 import empty from './empty';
 import has from './has';
+import { OObject } from './types';
 
 /**
  * Get the value from the path in the specified object

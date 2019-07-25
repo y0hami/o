@@ -1,4 +1,5 @@
 import each from '../each';
+import { OObject, EachCallback } from '../types';
 
 describe('each', () => {
   const obj = {

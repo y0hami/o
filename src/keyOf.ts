@@ -1,6 +1,7 @@
 // o
 import { valid, defaults } from './util';
 import find from './find';
+import { KeyOfOptions, OObject } from './types';
 
 // default options
 export const DefaultOptions: KeyOfOptions = {

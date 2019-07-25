@@ -1,4 +1,5 @@
 import get from '../get';
+import { OObject } from '../types';
 
 describe('get', () => {
   test('should get the value relative to the path specified', () => {

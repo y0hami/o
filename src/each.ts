@@ -2,6 +2,7 @@
 import { valid, defaults } from './util';
 import empty from './empty';
 import deflate from './deflate';
+import { EachOptions, OObject, EachCallback } from './types';
 
 // default options
 export const DefaultOptions: EachOptions = {

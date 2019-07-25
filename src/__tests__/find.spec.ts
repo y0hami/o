@@ -1,4 +1,5 @@
 import find from '../find';
+import { OObject, FindCallback } from '../types';
 
 describe('find', () => {
   test('should return the first key which matches the callback evaluation', () => {

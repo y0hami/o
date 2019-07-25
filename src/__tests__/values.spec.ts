@@ -1,4 +1,5 @@
 import values from '../values';
+import { OObject } from '../types';
 
 describe('values', () => {
   test('should return an array of the objects values', () => {

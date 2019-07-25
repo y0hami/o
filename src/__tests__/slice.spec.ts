@@ -1,4 +1,5 @@
 import slice from '../slice';
+import { OObject } from '../types';
 
 describe('slice', () => {
   test('should return a new object not a reference', () => {

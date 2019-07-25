@@ -1,4 +1,5 @@
 import clone from '../clone';
+import { OObject } from '../types';
 
 describe('clone', () => {
   test('should return an exact copy of the object', () => {

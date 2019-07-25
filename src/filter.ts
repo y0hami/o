@@ -3,6 +3,7 @@ import { valid, defaults } from './util';
 import clone from './clone';
 import each from './each';
 import del from './del';
+import { FilterOptions, OObject, FilterCallback } from './types';
 
 export const DefaultOptions: FilterOptions = {
   follow: false,

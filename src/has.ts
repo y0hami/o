@@ -2,6 +2,7 @@
 import { valid, dotNotation } from './util';
 import empty from './empty';
 import is from './is';
+import { OObject } from './types';
 
 /**
  * Check if an object has the specified path (using dot notation)

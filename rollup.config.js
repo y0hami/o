@@ -7,8 +7,8 @@ import { terser } from 'rollup-plugin-terser';
 // package.json
 import pkg from './package.json';
 
-const input = './src/index.ts';
-const extensions = ['.js', '.ts'];
+const input = './build/index.js';
+const extensions = ['.js'];
 const plugins = [
   resolve({
     extensions,

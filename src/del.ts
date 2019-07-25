@@ -1,6 +1,7 @@
 // o
 import { valid, dotNotation } from './util';
 import clone from './clone';
+import { OObject } from './types';
 
 /**
  * Delete the specified path from the object

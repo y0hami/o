@@ -2,6 +2,7 @@
 import { valid, defaults } from './util';
 import clone from './clone';
 import deflate from './deflate';
+import { KeysOptions, OObject } from './types';
 
 // default options
 export const DefaultOptions: KeysOptions = {

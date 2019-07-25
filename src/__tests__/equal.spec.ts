@@ -1,4 +1,5 @@
 import equal from '../equal';
+import { OObject } from '../types';
 
 describe('equal', () => {
   const objA = {

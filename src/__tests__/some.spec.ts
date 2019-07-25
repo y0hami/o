@@ -1,4 +1,5 @@
 import some from '../some';
+import { OObject, SomeCallback } from '../types';
 
 describe('some', () => {
   test('should evaluate all key/values', () => {

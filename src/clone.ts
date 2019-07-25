@@ -2,6 +2,7 @@
 import { valid } from './util';
 import is from './is';
 import empty from './empty';
+import { OObject } from './types';
 
 /**
  * Clone the specified object.

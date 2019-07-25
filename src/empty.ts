@@ -1,5 +1,6 @@
 // o
 import { valid } from './util';
+import { OObject } from './types';
 
 /**
  * Check if the specified object is empty.

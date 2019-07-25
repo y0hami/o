@@ -1,4 +1,5 @@
 import inflate from '../inflate';
+import { OObject } from '../types';
 
 describe('inflate', () => {
   test('should inflate object using dot notation in keys', () => {

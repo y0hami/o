@@ -1,4 +1,5 @@
 import keys from '../keys';
+import { OObject } from '../types';
 
 describe('keys', () => {
   test('should return an array of the objects keys', () => {

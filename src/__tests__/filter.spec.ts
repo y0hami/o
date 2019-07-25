@@ -1,4 +1,5 @@
 import filter from '../filter';
+import { OObject, FilterCallback } from '../types';
 
 describe('filter', () => {
   test('should only return key/values which the callback evaluates as true', () => {

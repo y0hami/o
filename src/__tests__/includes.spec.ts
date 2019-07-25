@@ -1,4 +1,5 @@
 import includes from '../includes';
+import { OObject } from '../types';
 
 describe('includes', () => {
   test('should return true or false whether or not the object has the specified value', () => {

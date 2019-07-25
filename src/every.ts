@@ -1,6 +1,7 @@
 // o
 import { valid, defaults } from './util';
 import each from './each';
+import { EveryOptions, OObject, EveryCallback } from './types';
 
 // default options
 export const DefaultOptions: EveryOptions = {

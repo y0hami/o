@@ -1,6 +1,7 @@
 // o
 import { valid } from './util';
 import is from './is';
+import { OObject } from './types';
 
 /**
  * Check whether all the objects are equal

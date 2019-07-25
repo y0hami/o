@@ -2,6 +2,7 @@
 import { valid, defaults } from './util';
 import each from './each';
 import set from './set';
+import { MapOptions, OObject, MapCallback } from './types';
 
 // default options
 export const DefaultOptions: MapOptions = {

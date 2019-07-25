@@ -2,6 +2,7 @@
 import empty from './empty';
 import is from './is';
 import { valid, dotNotation } from './util';
+import { OObject } from './types';
 
 /**
  * Deflate the specified object into a one deep object

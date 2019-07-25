@@ -1,4 +1,5 @@
 import set from '../set';
+import { OObject } from '../types';
 
 describe('set', () => {
   test('should return a new object not a reference', () => {

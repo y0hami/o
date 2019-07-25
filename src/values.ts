@@ -2,6 +2,7 @@
 import { valid, defaults } from './util';
 import keys from './keys';
 import get from './get';
+import { ValuesOptions, OObject } from './types';
 
 // default options
 export const DefaultOptions: ValuesOptions = {

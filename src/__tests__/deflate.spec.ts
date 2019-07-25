@@ -1,4 +1,5 @@
 import deflate from '../deflate';
+import { OObject } from '../types';
 
 describe('deflate', () => {
   test('should deflate objects to equal 1 depth', () => {

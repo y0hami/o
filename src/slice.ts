@@ -3,6 +3,7 @@ import { valid, defaults } from './util';
 import keys from './keys';
 import set from './set';
 import get from './get';
+import { SliceOptions, OObject } from './types';
 
 // default options
 export const DefaultOptions: SliceOptions = {
