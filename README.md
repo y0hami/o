@@ -1,6 +1,6 @@
 ![o Logo](https://unpkg.com/o@1.1.3/logo.png)
 
-# o
+# [o](https://github.com/hammy2899/o)
 common object helper functions written in TypeScript which can be used in [NodeJS](https://nodejs.org/en/) and the browser (supports ES6).
 
 [![Build Status](https://travis-ci.org/hammy2899/o.svg?branch=master)](https://travis-ci.org/hammy2899/o)
