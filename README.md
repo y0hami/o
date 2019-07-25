@@ -25,7 +25,7 @@ $ yarn add o
 
 #### TypeScript
 ```typescript
-import * as o from 'o';
+import o from 'o';
 // or require specific functions
 import { is, empty } from 'o';
 ```
@@ -40,8 +40,17 @@ const { is, empty } = require('o');
 #### Browser
 
 ##### ES6
-```javascript
-import './o.min.js';
+```html
+<!-- Script tag -->
+<script
+  type="module"
+  src="./o.min.js"
+/>
+
+<!-- Import syntax -->
+<script type="text/javascript">
+  import './o.min.js';
+</script>
 ```
 
 ##### CDN/Script
