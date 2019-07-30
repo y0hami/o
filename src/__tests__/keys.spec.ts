@@ -31,7 +31,7 @@ describe('keys', () => {
     })[1]).toBe('b.c');
   });
 
-  test('', () => {
+  test('should throw TypeError for invalid arguments', () => {
     const invalidObj: unknown = 'testing';
     const invalidFollow: unknown = 'testing';
 

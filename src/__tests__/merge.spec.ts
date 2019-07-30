@@ -34,7 +34,7 @@ describe('merge', () => {
     expect(resultB.b).toBe(3);
   });
 
-  test('', () => {
+  test('should throw TypeError for invalid arguments', () => {
     const invalidObj: unknown = 'testing';
 
     expect(() => merge(invalidObj as OObject, {}))

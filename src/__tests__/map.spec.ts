@@ -65,7 +65,7 @@ describe('map', () => {
     expect(resultB.b.d).toBe(6);
   });
 
-  test('', () => {
+  test('should throw TypeError for invalid arguments', () => {
     const invalidObj: unknown = 'testing';
     const invalidCallback: unknown = 'testing';
     const invalidFollow: unknown = 'testing';
