@@ -46,9 +46,6 @@
     "release:standard-version": "standard-version",
     "release": "npm-run-all test lint build docs release:standard-version"
   },
-  "dependencies": {
-    "circle-assign": "^2.0.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
