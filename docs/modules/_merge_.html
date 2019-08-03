@@ -91,7 +91,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hammy2899/o/blob/0a14e90/src/merge.ts#L30">merge.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/hammy2899/o/blob/7e01be0/src/merge.ts#L28">merge.ts:28</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -99,18 +99,14 @@
 									<p>Merge all sources into the target object with the most right
 									source having the highest priority</p>
 								</div>
-								<p>Uses circle-assign</p>
 								<dl class="tsd-comment-tags">
-									<dt>see</dt>
-									<dd><p><a href="https://www.npmjs.com/package/circle-assign">https://www.npmjs.com/package/circle-assign</a></p>
-									</dd>
 									<dt>example</dt>
-									<dd><pre><code><span class="hljs-keyword">const</span> a = { a: <span class="hljs-number">1</span> };
-<span class="hljs-keyword">const</span> b = { b: <span class="hljs-number">2</span> };
-<span class="hljs-keyword">const</span> c = { b: <span class="hljs-number">5</span> };
+									<dd><pre><code><span class="hljs-string">const</span> <span class="hljs-string">a</span> <span class="hljs-string">=</span> <span class="hljs-string">{</span> <span class="hljs-attr">a:</span> <span class="hljs-number">1</span><span class="hljs-string">,</span> <span class="hljs-attr">b:</span> <span class="hljs-string">{</span> <span class="hljs-attr">c:</span> <span class="hljs-number">2</span> <span class="hljs-string">}</span> <span class="hljs-string">};</span>
+<span class="hljs-string">const</span> <span class="hljs-string">b</span> <span class="hljs-string">=</span> <span class="hljs-string">{</span> <span class="hljs-attr">b:</span> <span class="hljs-string">{</span> <span class="hljs-attr">d:</span> <span class="hljs-number">3</span> <span class="hljs-string">}</span> <span class="hljs-string">};</span>
+<span class="hljs-string">const</span> <span class="hljs-string">c</span> <span class="hljs-string">=</span> <span class="hljs-string">{</span> <span class="hljs-attr">b:</span> <span class="hljs-string">{</span> <span class="hljs-attr">c:</span> <span class="hljs-number">3</span> <span class="hljs-string">}</span> <span class="hljs-string">};</span>
 
-merge(a, b); <span class="hljs-comment">// =&gt; { a: 1, b: 2 }</span>
-merge(a, b, c); <span class="hljs-comment">// =&gt; { a: 1, b: 5 }</span></code></pre></dd>
+<span class="hljs-string">merge(a,</span> <span class="hljs-string">b);</span> <span class="hljs-string">//</span> <span class="hljs-string">=&gt;</span> <span class="hljs-string">{</span> <span class="hljs-attr">a:</span> <span class="hljs-number">1</span><span class="hljs-string">,</span> <span class="hljs-attr">b:</span> <span class="hljs-string">{</span> <span class="hljs-attr">c:</span> <span class="hljs-number">2</span><span class="hljs-string">,</span> <span class="hljs-attr">d:</span> <span class="hljs-number">3</span> <span class="hljs-string">}</span> <span class="hljs-string">}</span>
+<span class="hljs-string">merge(a,</span> <span class="hljs-string">b,</span> <span class="hljs-string">c);</span> <span class="hljs-string">//</span> <span class="hljs-string">=&gt;</span> <span class="hljs-string">{</span> <span class="hljs-attr">a:</span> <span class="hljs-number">1</span><span class="hljs-string">,</span> <span class="hljs-attr">b:</span> <span class="hljs-string">{</span> <span class="hljs-attr">c:</span> <span class="hljs-number">3</span><span class="hljs-string">,</span> <span class="hljs-attr">d:</span> <span class="hljs-number">3</span> <span class="hljs-string">}</span> <span class="hljs-string">}</span></code></pre></dd>
 									<dt>throws</dt>
 									<dd><p>TypeError</p>
 									</dd>
@@ -118,7 +114,7 @@ merge(a, b, c); <span class="hljs-comment">// =&gt; { a: 1, b: 5 }</span></code>
 									<dd><p>1.0.0</p>
 									</dd>
 									<dt>version</dt>
-									<dd><p>2.0.0</p>
+									<dd><p>2.1.1</p>
 									</dd>
 								</dl>
 							</div>

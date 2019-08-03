@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;size&quot; | o</title>
+	<title>&quot;shallowMerge&quot; | o</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_size_.html">&quot;size&quot;</a>
+					<a href="_shallowmerge_.html">&quot;shallowMerge&quot;</a>
 				</li>
 			</ul>
-			<h1>External module &quot;size&quot;</h1>
+			<h1>External module &quot;shallowMerge&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +73,7 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_size_.html#size" class="tsd-kind-icon">size</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_shallowmerge_.html#shallowmerge" class="tsd-kind-icon">shallow<wbr>Merge</a></li>
 							</ul>
 						</section>
 					</div>
@@ -82,45 +82,52 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="size" class="tsd-anchor"></a>
-					<h3>size</h3>
+					<a name="shallowmerge" class="tsd-anchor"></a>
+					<h3>shallow<wbr>Merge</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><a href="../interfaces/_types_.oobject.html" class="tsd-signature-type">OObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">shallow<wbr>Merge<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><a href="../interfaces/_types_.oobject.html" class="tsd-signature-type">OObject</a>, <span class="tsd-signature-symbol">...</span>sources<span class="tsd-signature-symbol">: </span><a href="../interfaces/_types_.oobject.html" class="tsd-signature-type">OObject</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_types_.oobject.html" class="tsd-signature-type">OObject</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hammy2899/o/blob/7e01be0/src/size.ts#L20">size.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/hammy2899/o/blob/7e01be0/src/shallowMerge.ts#L25">shallowMerge.ts:25</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Get the size of the specified object.</p>
+									<p>Merge two or more objects into one with the most right having
+									the highest priority</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><pre><code><span class="hljs-keyword">const</span> a = { a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span> };
+									<dd><pre><code>const a = { a: <span class="hljs-number">1</span> };
+const b = { b: <span class="hljs-number">2</span> };
+const c = { b: <span class="hljs-number">5</span> };
 
-size(a); <span class="hljs-comment">// =&gt; 2</span></code></pre></dd>
+shallow<span class="hljs-constructor">Merge(<span class="hljs-params">a</span>, <span class="hljs-params">b</span>)</span>; <span class="hljs-comment">// =&gt; { a: 1, b: 2 }</span>
+shallow<span class="hljs-constructor">Merge(<span class="hljs-params">a</span>, <span class="hljs-params">b</span>, <span class="hljs-params">c</span>)</span>; <span class="hljs-comment">// =&gt; { a: 1, b: 5 }</span></code></pre></dd>
 									<dt>throws</dt>
 									<dd><p>TypeError</p>
 									</dd>
 									<dt>since</dt>
-									<dd><p>1.0.0</p>
+									<dd><p>2.1.0</p>
 									</dd>
 									<dt>version</dt>
-									<dd><p>2.0.0</p>
+									<dd><p>2.1.1</p>
 									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>obj: <a href="../interfaces/_types_.oobject.html" class="tsd-signature-type">OObject</a></h5>
+									<h5>target: <a href="../interfaces/_types_.oobject.html" class="tsd-signature-type">OObject</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>sources: <a href="../interfaces/_types_.oobject.html" class="tsd-signature-type">OObject</a><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_types_.oobject.html" class="tsd-signature-type">OObject</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -133,14 +140,14 @@ size(a); <span class="hljs-comment">// =&gt; 2</span></code></pre></dd>
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_size_.html">"size"</a>
+						<a href="_shallowmerge_.html">"shallow<wbr>Merge"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_size_.html#size" class="tsd-kind-icon">size</a>
+						<a href="_shallowmerge_.html#shallowmerge" class="tsd-kind-icon">shallow<wbr>Merge</a>
 					</li>
 				</ul>
 			</nav>
