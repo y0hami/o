@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.1.0](https://github.com/hammy2899/o/compare/v2.0.0...v2.2.0) (2019-08-03)
+
+
+### Features
+
+* remove circle-assign and add shallowMerge ([345a025](https://github.com/hammy2899/o/commit/345a025))
+* **merge:** rewrite without circle-assign ([9fc0a9f](https://github.com/hammy2899/o/commit/9fc0a9f))
+* **shallowMerge:** add new shallowMerge function ([6e698dd](https://github.com/hammy2899/o/commit/6e698dd))
+
+
+
 ## [2.0.1](https://github.com/hammy2899/o/compare/v2.0.0...v2.0.1) (2019-07-25)
 
 ### Bug Fixes
