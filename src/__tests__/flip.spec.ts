@@ -63,9 +63,11 @@ describe('flip', () => {
       .toThrow(new TypeError('Expected Object, got string testing'));
     expect(() => flip({}, {
       follow: invalidFollow as boolean,
+      useToString: false,
     }))
       .toThrow(new TypeError('Expected Boolean, got string testing'));
     expect(() => flip({}, {
+      follow: false,
       useToString: invalidUseToString as boolean,
     }))
       .toThrow(new TypeError('Expected Boolean, got string testing'));
