@@ -2,7 +2,7 @@ import * as o from '../index';
 
 describe('index', () => {
   test('should have 27 functions (+ default)', () => {
-    expect(Object.keys(o)).toHaveLength(28);
+    expect(Object.keys(o)).toHaveLength(29);
   });
 
   test('all key values should be functions', () => {

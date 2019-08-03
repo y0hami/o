@@ -34,6 +34,85 @@ describe('merge', () => {
     expect(resultB.b).toBe(3);
   });
 
+  test('should merge deep objects', () => {
+    const target = {
+      a: 1,
+      b: {
+        c: 2,
+      },
+    };
+    const source = {
+      b: {
+        c: 3,
+      },
+    };
+
+    const result = merge(target, source);
+
+    expect(result.a).toBe(1);
+    expect(result.b.c).toBe(3);
+  });
+
+  test('should merge deep objects', () => {
+    const target = {
+      a: 1,
+      b: {
+        c: {
+          d: 2,
+          e: 3,
+        },
+      },
+    };
+    const sourceA = {
+      b: {
+        c: {
+          d: 3,
+        },
+      },
+    };
+    const sourceB = {
+      b: {
+        f: 4,
+      },
+    };
+
+    const result = merge(target, sourceA, sourceB);
+
+    expect(result.a).toBe(1);
+    expect(result.b.c.d).toBe(3);
+    expect(result.b.c.e).toBe(3);
+  });
+
+  test('should override target values with source values respectively', () => {
+    const targetA = {
+      a: 1,
+      b: {
+        c: 2,
+      },
+    };
+    const sourceA = {
+      b: 2,
+    };
+
+    const targetB = {
+      a: 1,
+      b: 2,
+    };
+    const sourceB = {
+      b: {
+        c: 2,
+      },
+    };
+
+    const resultA = merge(targetA, sourceA);
+    const resultB = merge(targetB, sourceB);
+
+    expect(resultA.a).toBe(1);
+    expect(resultA.b).toBe(2);
+    expect(resultB.a).toBe(1);
+    expect(resultB.b.c).toBe(2);
+  });
+
   test('should throw TypeError for invalid arguments', () => {
     const invalidObj: unknown = 'testing';
 
