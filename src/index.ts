@@ -1,3 +1,8 @@
+// ------------------------------ //
+// export in alphabetical order   //
+//  ABCDEFGHIJKLMNOPQRSTUVWXYZ    //
+// ------------------------------ //
+
 // functions
 import clean from './clean';
 import clone from './clone';
@@ -21,6 +26,7 @@ import keys from './keys';
 import map from './map';
 import merge from './merge';
 import set from './set';
+import shallowMerge from './shallowMerge';
 import size from './size';
 import slice from './slice';
 import some from './some';
@@ -50,6 +56,7 @@ export {
   map,
   merge,
   set,
+  shallowMerge,
   size,
   slice,
   some,
@@ -80,6 +87,7 @@ export default {
   map,
   merge,
   set,
+  shallowMerge,
   size,
   slice,
   some,

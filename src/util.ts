@@ -1,6 +1,3 @@
-// npm
-import circleAssign from 'circle-assign';
-
 // o
 import is from './is';
 
@@ -60,5 +57,5 @@ export function valid(...args: any[]): boolean {
  * Merge the default options with the specified options
  */
 export function defaults(defaultOpts: object, specifiedOpts: object): object {
-  return circleAssign(defaultOpts, specifiedOpts);
+  return Object.assign(defaultOpts, specifiedOpts);
 }
