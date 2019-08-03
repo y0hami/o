@@ -4,7 +4,6 @@ import clone from './clone';
 import shallowMerge from './shallowMerge';
 import deflate from './deflate';
 import inflate from './inflate';
-import is from './is';
 import { OObject } from './types';
 
 /**
