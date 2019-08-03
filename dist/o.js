@@ -1,4 +1,4 @@
-/* o - v2.0.0
+/* o - v2.1.1
  *
  * Released under MIT license
  * https://github.com/hammy2899/o
@@ -19,133 +19,6 @@
 	function createCommonjsModule(fn, module) {
 		return module = { exports: {} }, fn(module, module.exports), module.exports;
 	}
-
-	var circleAssign = createCommonjsModule(function (module, exports) {
-	(function (global, factory) {
-	   module.exports = factory() ;
-	}(commonjsGlobal, (function () {
-	  /**
-	   * Check if a value is an object
-	   *
-	   * @param {*} o The value to check
-	   *
-	   * @returns {boolean} Whether or not it is an object
-	   */
-	  function isObj(o) {
-	    return o instanceof Object && o.constructor === Object;
-	  }
-	  /**
-	   * Merge the specified source object into the target object
-	   *
-	   * @param {Object} target The base target object
-	   * @param {Object} source The object to merge into the target
-	   *
-	   * @returns {Object} The merged object
-	   */
-
-
-	  function mergeObject(target, source) {
-	    // create a variable to hold the target object
-	    // so it can be changed if its not an object
-	    var targetObject = target;
-	    var sourceObject = source;
-
-	    if (!isObj(target)) {
-	      targetObject = {};
-	    }
-
-	    if (!isObj(source)) {
-	      sourceObject = {};
-	    } // get the object keys for the target and source objects
-
-
-	    var targetKeys = Object.keys(targetObject);
-	    var sourceKeys = Object.keys(sourceObject); // create a empty object for the result
-
-	    var result = {}; // go through all the target keys
-
-	    targetKeys.forEach(function (key) {
-	      // check if the source object contains the key
-	      if (sourceKeys.indexOf(key) !== -1) {
-	        // check if the target value is null if it is
-	        // set the result as the source value, this
-	        // should be fine because if the source value
-	        // is null it isn't overriding the target value
-	        // and if it isn't null it is overriding
-	        // as expected
-	        if (targetObject[key] === null) {
-	          result[key] = sourceObject[key];
-	        } else if (isObj(targetObject[key])) {
-	          // check if the source value is an object if
-	          // it is then we need to merge both objects and
-	          // set the result value to the merged object
-	          if (isObj(sourceObject[key])) {
-	            result[key] = mergeObject(targetObject[key], sourceObject[key]);
-	          } else {
-	            // if the source value isn't an object we can
-	            // simply override the value
-	            result[key] = sourceObject[key];
-	          }
-	        } else {
-	          // if the target value isn't an object we can
-	          // simply override the value
-	          result[key] = sourceObject[key];
-	        }
-	      } else {
-	        // if the source doesn't contain the key set the result
-	        // as the original from the target
-	        result[key] = targetObject[key];
-	      }
-	    }); // go through all the source keys
-
-	    sourceKeys.forEach(function (key) {
-	      // if the target doesn't contain the key
-	      // then the value is new and should be added
-	      // to the result object
-	      if (targetKeys.indexOf(key) === -1) {
-	        result[key] = sourceObject[key];
-	      }
-	    });
-	    return result;
-	  }
-
-	  // internals
-	  /**
-	   * Merge specified objects into one object with the most right
-	   * object having the most priority
-	   *
-	   * @param {Object} target The base object
-	   * @param {...Object} sources The object(s) to merge
-	   *
-	   * @returns {Object} The merged object(s) result
-	   */
-
-	  function merge(target) {
-	    var targetObject = target;
-
-	    if (!isObj(target)) {
-	      targetObject = {};
-	    } // for all the sources provided merge them with
-	    // the target object
-
-
-	    for (var _len = arguments.length, sources = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-	      sources[_key - 1] = arguments[_key];
-	    }
-
-	    sources.forEach(function (s) {
-	      // before merging check the source is an object
-	      if (isObj(s)) {
-	        targetObject = mergeObject(targetObject, s);
-	      }
-	    });
-	    return targetObject;
-	  }
-
-	  return merge;
-
-	})));
-	});
 
 	var is_1 = createCommonjsModule(function (module, exports) {
 	Object.defineProperty(exports, "__esModule", { value: true });
@@ -187,8 +60,6 @@
 	    return (mod && mod.__esModule) ? mod : { "default": mod };
 	};
 	Object.defineProperty(exports, "__esModule", { value: true });
-	// npm
-	var circle_assign_1 = __importDefault(circleAssign);
 	// o
 	var is_1$1 = __importDefault(is_1);
 	/**
@@ -243,7 +114,7 @@
 	 * Merge the default options with the specified options
 	 */
 	function defaults(defaultOpts, specifiedOpts) {
-	    return circle_assign_1.default(defaultOpts, specifiedOpts);
+	    return Object.assign(defaultOpts, specifiedOpts);
 	}
 	exports.defaults = defaults;
 	});
@@ -1533,21 +1404,17 @@
 	unwrapExports(map_1);
 	var map_2 = map_1.DefaultOptions;
 
-	var merge_1 = createCommonjsModule(function (module, exports) {
+	var shallowMerge_1 = createCommonjsModule(function (module, exports) {
 	var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
 	    return (mod && mod.__esModule) ? mod : { "default": mod };
 	};
 	Object.defineProperty(exports, "__esModule", { value: true });
-	// npm
-	var circle_assign_1 = __importDefault(circleAssign);
 	// o
 
+	var clone_1$1 = __importDefault(clone_1);
 	/**
-	 * Merge all sources into the target object with the most right
-	 * source having the highest priority
-	 *
-	 * Uses circle-assign
-	 * @see https://www.npmjs.com/package/circle-assign
+	 * Merge two or more objects into one with the most right having
+	 * the highest priority
 	 *
 	 * @example
 	 * ```
@@ -1555,14 +1422,88 @@
 	 * const b = { b: 2 };
 	 * const c = { b: 5 };
 	 *
-	 * merge(a, b); // => { a: 1, b: 2 }
-	 * merge(a, b, c); // => { a: 1, b: 5 }
+	 * shallowMerge(a, b); // => { a: 1, b: 2 }
+	 * shallowMerge(a, b, c); // => { a: 1, b: 5 }
+	 * ```
+	 *
+	 * @throws TypeError
+	 *
+	 * @since 2.1.0
+	 * @version 2.1.1
+	 */
+	function shallowMerge(target) {
+	    var sources = [];
+	    for (var _i = 1; _i < arguments.length; _i++) {
+	        sources[_i - 1] = arguments[_i];
+	    }
+	    // check if the arg specified is an object
+	    if (!util.valid(target))
+	        throw new TypeError("Expected Object, got " + typeof target + " " + target);
+	    // check if all the compare values are objects
+	    if (!util.valid.apply(null, sources.slice())) {
+	        throw new TypeError("Expected Object[], got " + typeof sources + " " + sources);
+	    }
+	    // clone the target object and make it the current result
+	    var result = clone_1$1.default(target);
+	    // foreach over the sources
+	    sources.forEach(function (sourceObject) {
+	        // get the result (target to start with) and source object keys
+	        var resultKeys = Object.keys(result);
+	        var sourceKeys = Object.keys(sourceObject);
+	        // foreach over the result (target to start with) keys
+	        resultKeys.forEach(function (key) {
+	            // if the source contains the target key
+	            if (sourceKeys.includes(key)) {
+	                // set the result key as the source value
+	                result[key] = sourceObject[key];
+	            }
+	        });
+	        // foreach over the source keys
+	        sourceKeys.forEach(function (key) {
+	            // if the result doesn't include the key
+	            if (!resultKeys.includes(key)) {
+	                // set the new key/value onto the result object
+	                result[key] = sourceObject[key];
+	            }
+	        });
+	    });
+	    // return the result
+	    return result;
+	}
+	exports.default = shallowMerge;
+	});
+
+	unwrapExports(shallowMerge_1);
+
+	var merge_1 = createCommonjsModule(function (module, exports) {
+	var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
+	    return (mod && mod.__esModule) ? mod : { "default": mod };
+	};
+	Object.defineProperty(exports, "__esModule", { value: true });
+	// o
+
+	var clone_1$1 = __importDefault(clone_1);
+	var shallowMerge_1$1 = __importDefault(shallowMerge_1);
+	var deflate_1$1 = __importDefault(deflate_1);
+	var inflate_1$1 = __importDefault(inflate_1);
+	/**
+	 * Merge all sources into the target object with the most right
+	 * source having the highest priority
+	 *
+	 * @example
+	 * ```
+	 * const a = { a: 1, b: { c: 2 } };
+	 * const b = { b: { d: 3 } };
+	 * const c = { b: { c: 3 } };
+	 *
+	 * merge(a, b); // => { a: 1, b: { c: 2, d: 3 } }
+	 * merge(a, b, c); // => { a: 1, b: { c: 3, d: 3 } }
 	 * ```
 	 *
 	 * @throws TypeError
 	 *
 	 * @since 1.0.0
-	 * @version 2.0.0
+	 * @version 2.1.1
 	 */
 	function merge(target) {
 	    var sources = [];
@@ -1576,7 +1517,12 @@
 	    if (!util.valid.apply(null, sources.slice())) {
 	        throw new TypeError("Expected Object[], got " + typeof sources + " " + sources);
 	    }
-	    return circle_assign_1.default.apply(void 0, [target].concat(sources));
+	    // clone the target and set it as the result
+	    var result = deflate_1$1.default(clone_1$1.default(target));
+	    // deflate all the sources
+	    var deflatedSources = sources.map(function (s) { return deflate_1$1.default(s); });
+	    // return the result
+	    return inflate_1$1.default(shallowMerge_1$1.default.apply(null, [result].concat(deflatedSources)));
 	}
 	exports.default = merge;
 	});
@@ -1903,6 +1849,10 @@
 	var values_2 = values_1.DefaultOptions;
 
 	var build = createCommonjsModule(function (module, exports) {
+	// ------------------------------ //
+	// export in alphabetical order   //
+	//  ABCDEFGHIJKLMNOPQRSTUVWXYZ    //
+	// ------------------------------ //
 	var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
 	    return (mod && mod.__esModule) ? mod : { "default": mod };
 	};
@@ -1952,6 +1902,8 @@
 	exports.merge = merge_1$1.default;
 	var set_1$1 = __importDefault(set_1);
 	exports.set = set_1$1.default;
+	var shallowMerge_1$1 = __importDefault(shallowMerge_1);
+	exports.shallowMerge = shallowMerge_1$1.default;
 	var size_1$1 = __importDefault(size_1);
 	exports.size = size_1$1.default;
 	var slice_1$1 = __importDefault(slice_1);
@@ -1985,6 +1937,7 @@
 	    map: map_1$1.default,
 	    merge: merge_1$1.default,
 	    set: set_1$1.default,
+	    shallowMerge: shallowMerge_1$1.default,
 	    size: size_1$1.default,
 	    slice: slice_1$1.default,
 	    some: some_1$1.default,
@@ -2016,11 +1969,12 @@
 	var build_20 = build.map;
 	var build_21 = build.merge;
 	var build_22 = build.set;
-	var build_23 = build.size;
-	var build_24 = build.slice;
-	var build_25 = build.some;
-	var build_26 = build.sort;
-	var build_27 = build.values;
+	var build_23 = build.shallowMerge;
+	var build_24 = build.size;
+	var build_25 = build.slice;
+	var build_26 = build.some;
+	var build_27 = build.sort;
+	var build_28 = build.values;
 
 	exports.clean = build_1;
 	exports.clone = build_2;
@@ -2045,11 +1999,12 @@
 	exports.map = build_20;
 	exports.merge = build_21;
 	exports.set = build_22;
-	exports.size = build_23;
-	exports.slice = build_24;
-	exports.some = build_25;
-	exports.sort = build_26;
-	exports.values = build_27;
+	exports.shallowMerge = build_23;
+	exports.size = build_24;
+	exports.slice = build_25;
+	exports.some = build_26;
+	exports.sort = build_27;
+	exports.values = build_28;
 
 	Object.defineProperty(exports, '__esModule', { value: true });
 
