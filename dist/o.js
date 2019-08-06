@@ -1,4 +1,4 @@
-/* o - v2.1.1
+/* o - v2.1.0
  *
  * Released under MIT license
  * https://github.com/hammy2899/o
