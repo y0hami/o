@@ -3,7 +3,6 @@
 # [o](https://github.com/hammy2899/o)
 common object helper functions written in TypeScript which can be used in [NodeJS](https://nodejs.org/en/) and the browser (supports ES6).
 
-[![Build Status](https://travis-ci.org/hammy2899/o.svg?branch=master)](https://travis-ci.org/hammy2899/o)
 [![Coverage Status](https://coveralls.io/repos/github/hammy2899/o/badge.svg?branch=master)](https://coveralls.io/github/hammy2899/o?branch=master)
 [![npm version](https://img.shields.io/npm/v/o.svg)](https://www.npmjs.com/package/o)
 [![license](https://img.shields.io/github/license/hammy2899/o.svg)](https://github.com/hammy2899/o/blob/master/LICENSE.md)
