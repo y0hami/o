@@ -18,7 +18,7 @@ jobs:
       run: yarn lint
     - name: run test
       run: yarn test
-    - name: update coveralls
+    - name: coveralls
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.github_token }}
