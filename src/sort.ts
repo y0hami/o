@@ -1,17 +1,17 @@
 // o
-import { valid, defaults } from './util';
-import keys from './keys';
-import get from './get';
-import set from './set';
+import { valid, defaults } from './util'
+import keys from './keys'
+import get from './get'
+import set from './set'
 import {
   SortOptions, OObject,
-  SortCallback, SortElement,
-} from './types';
+  SortCallback, SortElement
+} from './types'
 
 // default options
 export const DefaultOptions: SortOptions = {
-  follow: false,
-};
+  follow: false
+}
 
 /**
  * Sort an object via the callback evaluation
@@ -41,53 +41,53 @@ export const DefaultOptions: SortOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function sort(obj: OObject, cb: SortCallback, options: SortOptions = DefaultOptions): OObject {
+function sort (obj: OObject, cb: SortCallback, options: SortOptions = DefaultOptions): OObject {
   // extract options
   const {
-    follow,
-  } = (defaults(DefaultOptions, options) as SortOptions);
+    follow
+  } = (defaults(DefaultOptions, options) as SortOptions)
 
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
-  if (typeof cb !== 'function') throw new TypeError(`Expected Function, got ${typeof cb} ${cb}`);
-  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)
+  if (typeof cb !== 'function') throw new TypeError(`Expected Function, got ${typeof cb} ${cb}`)
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`)
 
   // create a new object so we can add the key/values on in the
   // correct order
-  let result: OObject = {};
+  let result: OObject = {}
 
   // get the keys from the object and pass follow to the keys function
   // then we don't need to handle deep objects
   const sortedKeys = keys(obj, {
-    follow,
+    follow
   })
-    .sort((firstKey, secondKey) => {
+    .sort((firstKey, secondKey): number => {
       // get the value from the object for the corresponding key
-      const firstValue = get(obj, firstKey);
-      const secondValue = get(obj, secondKey);
+      const firstValue = get(obj, firstKey)
+      const secondValue = get(obj, secondKey)
 
       // create the element objects
       const firstEl: SortElement = {
         key: firstKey,
-        value: firstValue,
-      };
+        value: firstValue
+      }
       const secondEl: SortElement = {
         key: secondKey,
-        value: secondValue,
-      };
+        value: secondValue
+      }
 
       // return the result from the callback using the elements
-      return cb(firstEl, secondEl);
-    });
+      return cb(firstEl, secondEl)
+    })
 
   // for each through the sorted keys
-  sortedKeys.forEach(key => {
+  sortedKeys.forEach((key): void => {
     // set the the value on the result object to the corresponding key
-    result = set(result, key, get(obj, key));
-  });
+    result = set(result, key, get(obj, key))
+  })
 
   // return the result
-  return result;
+  return result
 }
 
-export default sort;
+export default sort

@@ -1,41 +1,41 @@
 // o
-import is from './is';
+import is from './is'
 
 /**
  * Parse the specified dot notation into an iterable string array.
  */
-function fromDotNotation(path: string): string[] {
-  const pathParts = path.split('.');
-  const parts: string[] = [];
-  let index = 0;
+function fromDotNotation (path: string): string[] {
+  const pathParts = path.split('.')
+  const parts: string[] = []
+  let index = 0
 
   while (index < pathParts.length) {
-    let parsedPart = pathParts[index];
+    let parsedPart = pathParts[index]
 
-    while (parsedPart[parsedPart.length - 1] === '\\'
-        && pathParts[index + 1] !== undefined
-        && pathParts[index + 1] !== null) {
-      parsedPart = `${parsedPart.slice(0, -1)}.`;
-      index += 1;
-      parsedPart += pathParts[index];
+    while (parsedPart[parsedPart.length - 1] === '\\' &&
+        pathParts[index + 1] !== undefined &&
+        pathParts[index + 1] !== null) {
+      parsedPart = `${parsedPart.slice(0, -1)}.`
+      index += 1
+      parsedPart += pathParts[index]
     }
 
-    index += 1;
+    index += 1
 
-    parts.push(parsedPart);
+    parts.push(parsedPart)
   }
 
-  return parts;
+  return parts
 }
 
 /**
  * Build array of strings into dot notation path
  */
-function toDotNotation(paths: string[]): string {
+function toDotNotation (paths: string[]): string {
   return paths
-    .map(part => part
+    .map((part): string => part
       .replace('.', '\\.'))
-    .join('.');
+    .join('.')
 }
 
 /**
@@ -43,19 +43,19 @@ function toDotNotation(paths: string[]): string {
  */
 export const dotNotation = {
   from: fromDotNotation,
-  to: toDotNotation,
-};
+  to: toDotNotation
+}
 
 /**
  * Check if all args specified are objects
  */
-export function valid(...args: any[]): boolean {
-  return is.apply(null, [...args]);
+export function valid (...args: any[]): boolean {
+  return is.apply(null, args)
 }
 
 /**
  * Merge the default options with the specified options
  */
-export function defaults(defaultOpts: object, specifiedOpts: object): object {
-  return Object.assign(defaultOpts, specifiedOpts);
+export function defaults (defaultOpts: object, specifiedOpts: object): object {
+  return Object.assign(defaultOpts, specifiedOpts)
 }

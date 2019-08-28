@@ -16,11 +16,13 @@
  * @since 1.0.0
  * @version 2.0.0
  */
-function is(...args: any[]): boolean {
+function is (...args: any[]): boolean {
   // check if the value is an instance of Object
-  return args.every(obj => obj instanceof Object
-    // check if the value constructor is Object
-    && obj.constructor === Object);
+  return args.every((obj): boolean => {
+    return obj instanceof Object &&
+      // check if the value constructor is Object
+      obj.constructor === Object
+  })
 }
 
-export default is;
+export default is

@@ -1,93 +1,79 @@
 export interface OObject {
-  [key: string]: any;
+  [key: string]: any
 }
 
 export interface CleanOptions {
-  follow?: boolean;
+  follow?: boolean
 }
 
 export interface EachOptions {
-  follow?: boolean;
+  follow?: boolean
 }
 
-export interface EachCallback {
-  (key: string, value: any, index: number): void;
-}
+export type EachCallback = (key: string, value: any, index: number) => void
 
 export interface EveryOptions {
-  follow?: boolean;
+  follow?: boolean
 }
 
-export interface EveryCallback {
-  (key: string, value: any, index: number): boolean;
-}
+export type EveryCallback = (key: string, value: any, index: number) => boolean
 
 export interface FilterOptions {
-  follow?: boolean;
+  follow?: boolean
 }
 
-export interface FilterCallback {
-  (key: string, value: any, index: number): boolean;
-}
+export type FilterCallback = (key: string, value: any, index: number) => boolean
 
 export interface FindOptions {
-  follow?: boolean;
+  follow?: boolean
 }
 
-export interface FindCallback {
-  (key: string, value: any, index: number): boolean;
-}
+export type FindCallback = (key: string, value: any, index: number) => boolean
 
 export interface FlipOptions {
-  follow?: boolean;
-  useToString?: boolean;
+  follow?: boolean
+  useToString?: boolean
 }
 
 export interface IncludesOptions {
-  follow?: boolean;
+  follow?: boolean
 }
 
 export interface KeyOfOptions {
-  follow?: boolean;
+  follow?: boolean
 }
 
 export interface KeysOptions {
-  follow?: boolean;
+  follow?: boolean
 }
 
 export interface MapOptions {
-  follow?: boolean;
+  follow?: boolean
 }
 
-export interface MapCallback {
-  (key: string, value: any, index: number): any;
-}
+export type MapCallback = (key: string, value: any, index: number) => any
 
 export interface SliceOptions {
-  follow?: boolean;
+  follow?: boolean
 }
 
 export interface SomeOptions {
-  follow?: boolean;
+  follow?: boolean
 }
 
-export interface SomeCallback {
-  (key: string, value: any, index: number): boolean;
-}
+export type SomeCallback = (key: string, value: any, index: number) => boolean
 
 export interface SortOptions {
-  follow?: boolean;
+  follow?: boolean
 }
 
 export interface SortElement {
-  key: string;
-  value: any;
+  key: string
+  value: any
 }
 
-export interface SortCallback {
-  (firstEl: SortElement, secondEl: SortElement): number;
-}
+export type SortCallback = (firstEl: SortElement, secondEl: SortElement) => number;
 
 export interface ValuesOptions {
-  follow?: boolean;
+  follow?: boolean
 }

@@ -1,14 +1,14 @@
 // o
-import { valid, defaults } from './util';
-import each from './each';
-import is from './is';
-import { FlipOptions, OObject } from './types';
+import { valid, defaults } from './util'
+import each from './each'
+import is from './is'
+import { FlipOptions, OObject } from './types'
 
 // default options
 export const DefaultOptions: FlipOptions = {
   follow: false,
-  useToString: false,
-};
+  useToString: false
+}
 
 /**
  * Flip an objects keys fro values and values for keys
@@ -33,49 +33,49 @@ export const DefaultOptions: FlipOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function flip(obj: OObject, options: FlipOptions = DefaultOptions): OObject {
+function flip (obj: OObject, options: FlipOptions = DefaultOptions): OObject {
   // extract options
   const {
     follow,
-    useToString,
-  } = (defaults(DefaultOptions, options) as FlipOptions);
+    useToString
+  } = (defaults(DefaultOptions, options) as FlipOptions)
 
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
-  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
-  if (typeof useToString !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof useToString} ${useToString}`);
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`)
+  if (typeof useToString !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof useToString} ${useToString}`)
 
   // create an empty object for the result
-  const result: OObject = {};
+  const result: OObject = {}
 
   // for each over the object using the each function which makes it easier
   // for us to loop since we can just pass our own callback to evaluate the
   // the return value and we can pass follow directly to each and it will
   // handle the deep looping for us
-  each(obj, (key, value: any) => {
+  each(obj, (key, value: any): void => {
     // if the value is a string or number and can be used
     // as the key
     if (typeof value === 'string' || typeof value === 'number') {
       // add the value/key to the result object
-      result[value] = key;
+      result[value] = key
     } else if (typeof value !== 'string' && useToString) {
       // if the value is not a string but useToString is true
 
       // if the value is an object or array
       if (is(value) || Array.isArray(value)) {
         // cover it to json and use the json as the key
-        result[JSON.stringify(value)] = key;
+        result[JSON.stringify(value)] = key
       } else {
         // if it is anything else convert it to a string
-        result[String(value).toString()] = key;
+        result[String(value).toString()] = key
       }
     }
   }, {
-    follow,
-  });
+    follow
+  })
 
   // return the result
-  return result;
+  return result
 }
 
-export default flip;
+export default flip

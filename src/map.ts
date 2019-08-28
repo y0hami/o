@@ -1,13 +1,13 @@
 // o
-import { valid, defaults } from './util';
-import each from './each';
-import set from './set';
-import { MapOptions, OObject, MapCallback } from './types';
+import { valid, defaults } from './util'
+import each from './each'
+import set from './set'
+import { MapOptions, OObject, MapCallback } from './types'
 
 // default options
 export const DefaultOptions: MapOptions = {
-  follow: false,
-};
+  follow: false
+}
 
 /**
  * Loop over the object and return a new object with the values
@@ -38,33 +38,33 @@ export const DefaultOptions: MapOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function map(obj: OObject, cb: MapCallback, options: MapOptions = DefaultOptions): OObject {
+function map (obj: OObject, cb: MapCallback, options: MapOptions = DefaultOptions): OObject {
   const {
-    follow,
-  } = (defaults(DefaultOptions, options) as MapOptions);
+    follow
+  } = (defaults(DefaultOptions, options) as MapOptions)
 
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
-  if (typeof cb !== 'function') throw new TypeError(`Expected Function, got ${typeof cb} ${cb}`);
-  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)
+  if (typeof cb !== 'function') throw new TypeError(`Expected Function, got ${typeof cb} ${cb}`)
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`)
 
   // create a result object so we can add the new values to it
-  let result: OObject = {};
+  let result: OObject = {}
 
   // for each over the object using the each function which makes it easier
   // for us to loop since we can just pass our own callback to evaluate the
   // the return value and we can pass follow directly to each and it will
   // handle the deep looping for us
-  each(obj, (key, value, index) => {
+  each(obj, (key, value, index): void => {
     // set the result as the result object with the new key appended
     // with the value of the evaluated callback
-    result = set(result, key, cb(key, value, index));
+    result = set(result, key, cb(key, value, index))
   }, {
-    follow,
-  });
+    follow
+  })
 
   // return the result
-  return result;
+  return result
 }
 
-export default map;
+export default map

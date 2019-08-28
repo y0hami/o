@@ -1,12 +1,12 @@
 // o
-import { valid, defaults } from './util';
-import each from './each';
-import { IncludesOptions, OObject } from './types';
+import { valid, defaults } from './util'
+import each from './each'
+import { IncludesOptions, OObject } from './types'
 
 // default options
 export const DefaultOptions: IncludesOptions = {
-  follow: false,
-};
+  follow: false
+}
 
 /**
  * Check if an object includes the specified value
@@ -28,35 +28,35 @@ export const DefaultOptions: IncludesOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function includes(obj: OObject, value: any, options: IncludesOptions = DefaultOptions): boolean {
+function includes (obj: OObject, value: any, options: IncludesOptions = DefaultOptions): boolean {
   // extract options
   const {
-    follow,
-  } = (defaults(DefaultOptions, options) as IncludesOptions);
+    follow
+  } = (defaults(DefaultOptions, options) as IncludesOptions)
 
   // check if the args specified are the correct type
-  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
-  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`)
 
   // create the result variable which is defaulted to false
-  let result = false;
+  let result = false
 
   // for each over the object using the each function which makes it easier
   // for us to loop since we can just pass our own callback to evaluate the
   // the return value and we can pass follow directly to each and it will
   // handle the deep looping for us
-  each(obj, (key, objValue) => {
+  each(obj, (key, objValue): void => {
     // if the result is still false
     if (!result) {
       // if the two values equal set the result as true
-      if (objValue === value) result = true;
+      if (objValue === value) result = true
     }
   }, {
-    follow,
-  });
+    follow
+  })
 
   // return the result
-  return result;
+  return result
 }
 
-export default includes;
+export default includes

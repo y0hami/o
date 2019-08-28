@@ -1,10 +1,10 @@
 // o
-import { valid } from './util';
-import clone from './clone';
-import shallowMerge from './shallowMerge';
-import deflate from './deflate';
-import inflate from './inflate';
-import { OObject } from './types';
+import { valid } from './util'
+import clone from './clone'
+import shallowMerge from './shallowMerge'
+import deflate from './deflate'
+import inflate from './inflate'
+import { OObject } from './types'
 
 /**
  * Merge all sources into the target object with the most right
@@ -25,28 +25,30 @@ import { OObject } from './types';
  * @since 1.0.0
  * @version 2.1.1
  */
-function merge(target: OObject, ...sources: OObject[]): OObject {
+function merge (target: OObject, ...sources: OObject[]): OObject {
   // check if the arg specified is an object
-  if (!valid(target)) throw new TypeError(`Expected Object, got ${typeof target} ${target}`);
+  if (!valid(target)) throw new TypeError(`Expected Object, got ${typeof target} ${target}`)
 
   // check if all the compare values are objects
-  if (!valid.apply(null, [...sources])) {
-    throw new TypeError(`Expected Object[], got ${typeof sources} ${sources}`);
+  if (!valid.apply(null, sources)) {
+    throw new TypeError(`Expected Object[], got ${typeof sources} ${sources}`)
   }
 
   // clone the target and set it as the result
-  const result: OObject = deflate(clone(target));
+  const result: OObject = deflate(clone(target))
 
   // deflate all the sources
-  const deflatedSources = sources.map(s => deflate(s));
+  const deflatedSources = sources.map((s): OObject => deflate(s))
+
+  const shallowMergeArgs: [OObject, ...OObject[]] = [result, ...deflatedSources]
 
   // return the result
   return inflate(
     shallowMerge.apply(
       null,
-      [result, ...deflatedSources],
-    ),
-  );
+      shallowMergeArgs
+    )
+  )
 }
 
-export default merge;
+export default merge
