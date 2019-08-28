@@ -52,18 +52,21 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-typescript": "^7.3.3",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "@types/jest": "^24.0.13",
     "@typescript-eslint/eslint-plugin": "1.13.0",
     "@typescript-eslint/parser": "1.13.0",
+    "coveralls": "^3.0.2",
     "eslint": "6.0.1",
     "eslint-config-standard": "14.0.1",
     "eslint-config-standard-with-typescript": "8.0.0",
     "eslint-plugin-import": "2.18.0",
+    "eslint-plugin-jest": "^22.15.2",
     "eslint-plugin-node": "9.1.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.0.1",
-    "eslint-plugin-jest": "^22.15.2",
-    "coveralls": "^3.0.2",
+    "husky": "^3.0.4",
     "jest": "^24.8.0",
     "npm-run-all": "^4.1.5",
     "rollup": "^1.11.3",
@@ -87,5 +90,14 @@
       "js"
     ],
     "collectCoverage": true
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && yarn lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
