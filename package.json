@@ -42,7 +42,7 @@
     "docs:cname": "echo o.hammy2899.dev >> docs/CNAME",
     "docs:nojekyll": "touch docs/.nojekyll",
     "docs": "npm-run-all docs:clean docs:typedoc docs:cname docs:nojekyll",
-    "changelog": "auto-changelog",
+    "changelog": "auto-changelog -p",
     "release": "npm-run-all test lint build docs changelog"
   },
   "devDependencies": {
