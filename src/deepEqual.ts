@@ -1,8 +1,8 @@
 // o
-import { valid } from './util';
-import equal from './equal';
-import deflate from './deflate';
-import { OObject } from './types';
+import { valid } from './util'
+import equal from './equal'
+import deflate from './deflate'
+import { OObject } from './types'
 
 /**
  * Check whether all objects deeply equal each other
@@ -26,21 +26,21 @@ import { OObject } from './types';
  * @since 1.0.0
  * @version 2.0.0
  */
-function deepEqual(obj: OObject, ...compareWith: OObject[]): boolean {
+function deepEqual (obj: OObject, ...compareWith: OObject[]): boolean {
   // check if the arg specified is an object
-  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)
 
   // check if all the compare values are objects
-  if (!valid.apply(null, [...compareWith])) {
-    throw new TypeError(`Expected Object[], got ${typeof compareWith} ${compareWith}`);
+  if (!valid.apply(null, compareWith)) {
+    throw new TypeError(`Expected Object[], got ${typeof compareWith} ${compareWith}`)
   }
 
   // check if every object is equal to each other when deflated
   // if all objects are deflated we can simply use the equal function
   // to check if they equal at 1 layer
   return compareWith.every(
-    object => equal(deflate(obj), deflate(object)),
-  );
+    (object): boolean => equal(deflate(obj), deflate(object))
+  )
 }
 
-export default deepEqual;
+export default deepEqual

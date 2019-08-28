@@ -1,55 +1,55 @@
-import clean from '../clean';
-import { OObject } from '../types';
+import clean from '../clean'
+import { OObject } from '../types'
 
-describe('clean', () => {
-  test('should remove all null values', () => {
+describe('clean', (): void => {
+  test('should remove all null values', (): void => {
     const obj = {
       a: 'a',
       b: null,
       c: 'c',
-      d: null,
-    };
+      d: null
+    }
 
     expect(Object.keys(clean(obj)))
-      .toHaveLength(2);
-  });
+      .toHaveLength(2)
+  })
 
-  test('should remove all undefined values', () => {
+  test('should remove all undefined values', (): void => {
     const obj = {
       a: 'a',
       b: undefined,
       c: 'c',
-      d: undefined,
-    };
+      d: undefined
+    }
 
     expect(Object.keys(clean(obj)))
-      .toHaveLength(2);
-  });
+      .toHaveLength(2)
+  })
 
-  test('should clean objects deeply when follow is true', () => {
+  test('should clean objects deeply when follow is true', (): void => {
     const obj = {
       a: 'a',
       b: {
         c: undefined,
-        d: 'd',
-      },
-    };
+        d: 'd'
+      }
+    }
 
     expect(Object.keys(clean(obj, {
-      follow: true,
+      follow: true
     }).b))
-      .toHaveLength(1);
-  });
+      .toHaveLength(1)
+  })
 
-  test('should throw TypeError if follow argument is invalid', () => {
-    const invalidObj: unknown = 'testing';
-    const follow: unknown = 'testing';
+  test('should throw TypeError if follow argument is invalid', (): void => {
+    const invalidObj: unknown = 'testing'
+    const follow: unknown = 'testing'
 
-    expect(() => clean(invalidObj as OObject))
-      .toThrow(new TypeError('Expected Object, got string testing'));
-    expect(() => clean({}, {
-      follow: (follow as boolean),
+    expect((): OObject => clean(invalidObj as OObject))
+      .toThrow(new TypeError('Expected Object, got string testing'))
+    expect((): OObject => clean({}, {
+      follow: (follow as boolean)
     }))
-      .toThrow(new TypeError('Expected Boolean, got string testing'));
-  });
-});
+      .toThrow(new TypeError('Expected Boolean, got string testing'))
+  })
+})

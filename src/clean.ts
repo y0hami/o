@@ -1,15 +1,15 @@
 // o
-import { valid, defaults } from './util';
-import empty from './empty';
-import clone from './clone';
-import deflate from './deflate';
-import del from './del';
-import { CleanOptions, OObject } from './types';
+import { valid, defaults } from './util'
+import empty from './empty'
+import clone from './clone'
+import deflate from './deflate'
+import del from './del'
+import { CleanOptions, OObject } from './types'
 
 // default options
 export const DefaultOptions: CleanOptions = {
-  follow: false,
-};
+  follow: false
+}
 
 /**
  * Remove `null` and `undefined` values from the specified object
@@ -26,45 +26,45 @@ export const DefaultOptions: CleanOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function clean(obj: OObject, options: CleanOptions = DefaultOptions): OObject {
+function clean (obj: OObject, options: CleanOptions = DefaultOptions): OObject {
   // extract options
   const {
-    follow,
-  } = (defaults(DefaultOptions, options) as CleanOptions);
+    follow
+  } = (defaults(DefaultOptions, options) as CleanOptions)
 
   // check if the object specified is an object
-  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)
   // check if follow is a boolean
-  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`);
+  if (typeof follow !== 'boolean') throw new TypeError(`Expected Boolean, got ${typeof follow} ${follow}`)
 
   // if the object is empty just return a new object
   // istanbul ignore next
-  if (empty(obj)) return {};
+  if (empty(obj)) return {}
 
   // create the result object with a clone of the original
   // so we can manipulate it
-  let result = clone(obj);
+  let result = clone(obj)
 
   // deflate the object keys if follow is true
   // then we only need to loop over 1 layer of keys
   const keysObject = follow
     ? deflate(obj)
-    : obj;
+    : obj
 
   // for each key
-  Object.keys(keysObject).forEach(key => {
+  Object.keys(keysObject).forEach((key): void => {
     // get the key value
-    const value = keysObject[key];
+    const value = keysObject[key]
 
     // if the value is `undefined` or `null`
     if (value === undefined || value === null) {
       // delete the value from the result object
-      result = del(result, key);
+      result = del(result, key)
     }
-  });
+  })
 
   // return the result object
-  return result;
+  return result
 }
 
-export default clean;
+export default clean

@@ -1,6 +1,6 @@
 // o
-import { valid } from './util';
-import { OObject } from './types';
+import { valid } from './util'
+import { OObject } from './types'
 
 /**
  * Get the size of the specified object.
@@ -17,12 +17,12 @@ import { OObject } from './types';
  * @since 1.0.0
  * @version 2.0.0
  */
-function size(obj: OObject): number {
+function size (obj: OObject): number {
   // check if the arg specified is an object
-  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`);
+  if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)
 
   // get the object keys and return the length
-  return Object.keys(obj).length;
+  return Object.keys(obj).length
 }
 
-export default size;
+export default size

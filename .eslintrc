@@ -1,7 +1,13 @@
 {
-  "extends": "airbnb-typescript/base",
+  "extends": "standard-with-typescript",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "plugins": ["jest"],
   "env": {
     "jest/globals": true
+  },
+  "rules": {
+    "@typescript-eslint/promise-function-async": "off"
   }
 }
