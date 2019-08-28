@@ -26,7 +26,7 @@ import slice from './slice';
 import some from './some';
 import sort from './sort';
 import values from './values';
-export { clean, clone, deepEqual, deflate, del, each, empty, equal, every, filter, find, flip, get, has, includes, inflate, is, keyOf, keys, map, merge, set, shallowMerge, size, slice, some, sort, values, };
+export { clean, clone, deepEqual, deflate, del, each, empty, equal, every, filter, find, flip, get, has, includes, inflate, is, keyOf, keys, map, merge, set, shallowMerge, size, slice, some, sort, values };
 declare const _default: {
     clean: typeof clean;
     clone: typeof clone;

@@ -7,27 +7,19 @@ export interface CleanOptions {
 export interface EachOptions {
     follow?: boolean;
 }
-export interface EachCallback {
-    (key: string, value: any, index: number): void;
-}
+export declare type EachCallback = (key: string, value: any, index: number) => void;
 export interface EveryOptions {
     follow?: boolean;
 }
-export interface EveryCallback {
-    (key: string, value: any, index: number): boolean;
-}
+export declare type EveryCallback = (key: string, value: any, index: number) => boolean;
 export interface FilterOptions {
     follow?: boolean;
 }
-export interface FilterCallback {
-    (key: string, value: any, index: number): boolean;
-}
+export declare type FilterCallback = (key: string, value: any, index: number) => boolean;
 export interface FindOptions {
     follow?: boolean;
 }
-export interface FindCallback {
-    (key: string, value: any, index: number): boolean;
-}
+export declare type FindCallback = (key: string, value: any, index: number) => boolean;
 export interface FlipOptions {
     follow?: boolean;
     useToString?: boolean;
@@ -44,18 +36,14 @@ export interface KeysOptions {
 export interface MapOptions {
     follow?: boolean;
 }
-export interface MapCallback {
-    (key: string, value: any, index: number): any;
-}
+export declare type MapCallback = (key: string, value: any, index: number) => any;
 export interface SliceOptions {
     follow?: boolean;
 }
 export interface SomeOptions {
     follow?: boolean;
 }
-export interface SomeCallback {
-    (key: string, value: any, index: number): boolean;
-}
+export declare type SomeCallback = (key: string, value: any, index: number) => boolean;
 export interface SortOptions {
     follow?: boolean;
 }
@@ -63,9 +51,7 @@ export interface SortElement {
     key: string;
     value: any;
 }
-export interface SortCallback {
-    (firstEl: SortElement, secondEl: SortElement): number;
-}
+export declare type SortCallback = (firstEl: SortElement, secondEl: SortElement) => number;
 export interface ValuesOptions {
     follow?: boolean;
 }

@@ -1,4 +1,4 @@
-/* o - v2.1.0
+/* o - v2.1.1
  *
  * Released under MIT license
  * https://github.com/hammy2899/o
@@ -46,9 +46,11 @@
 	        args[_i] = arguments[_i];
 	    }
 	    // check if the value is an instance of Object
-	    return args.every(function (obj) { return obj instanceof Object
-	        // check if the value constructor is Object
-	        && obj.constructor === Object; });
+	    return args.every(function (obj) {
+	        return obj instanceof Object &&
+	            // check if the value constructor is Object
+	            obj.constructor === Object;
+	    });
 	}
 	exports.default = is;
 	});
@@ -71,9 +73,9 @@
 	    var index = 0;
 	    while (index < pathParts.length) {
 	        var parsedPart = pathParts[index];
-	        while (parsedPart[parsedPart.length - 1] === '\\'
-	            && pathParts[index + 1] !== undefined
-	            && pathParts[index + 1] !== null) {
+	        while (parsedPart[parsedPart.length - 1] === '\\' &&
+	            pathParts[index + 1] !== undefined &&
+	            pathParts[index + 1] !== null) {
 	            parsedPart = parsedPart.slice(0, -1) + ".";
 	            index += 1;
 	            parsedPart += pathParts[index];
@@ -97,7 +99,7 @@
 	 */
 	exports.dotNotation = {
 	    from: fromDotNotation,
-	    to: toDotNotation,
+	    to: toDotNotation
 	};
 	/**
 	 * Check if all args specified are objects
@@ -107,7 +109,7 @@
 	    for (var _i = 0; _i < arguments.length; _i++) {
 	        args[_i] = arguments[_i];
 	    }
-	    return is_1$1.default.apply(null, args.slice());
+	    return is_1$1.default.apply(null, args);
 	}
 	exports.valid = valid;
 	/**
@@ -351,7 +353,7 @@
 	var del_1$1 = __importDefault(del_1);
 	// default options
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Remove `null` and `undefined` values from the specified object
@@ -449,7 +451,7 @@
 	    if (!util.valid(obj))
 	        throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
 	    // check if all the compare values are objects
-	    if (!util.valid.apply(null, compareWith.slice())) {
+	    if (!util.valid.apply(null, compareWith)) {
 	        throw new TypeError("Expected Object[], got " + typeof compareWith + " " + compareWith);
 	    }
 	    // get the keys of the specified object
@@ -546,7 +548,7 @@
 	    if (!util.valid(obj))
 	        throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
 	    // check if all the compare values are objects
-	    if (!util.valid.apply(null, compareWith.slice())) {
+	    if (!util.valid.apply(null, compareWith)) {
 	        throw new TypeError("Expected Object[], got " + typeof compareWith + " " + compareWith);
 	    }
 	    // check if every object is equal to each other when deflated
@@ -570,7 +572,7 @@
 	var deflate_1$1 = __importDefault(deflate_1);
 	// default options
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Foreach over an objects keys
@@ -638,7 +640,7 @@
 	var each_1$1 = __importDefault(each_1);
 	// default options
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Check if every item in the object evaluates to true
@@ -688,7 +690,7 @@
 	            result = false;
 	        }
 	    }, {
-	        follow: follow,
+	        follow: follow
 	    });
 	    // return the result
 	    return result;
@@ -710,7 +712,7 @@
 	var each_1$1 = __importDefault(each_1);
 	var del_1$1 = __importDefault(del_1);
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Filter the object keys/values depending on the callback evaluation
@@ -760,7 +762,7 @@
 	            result = del_1$1.default(result, key);
 	        }
 	    }, {
-	        follow: follow,
+	        follow: follow
 	    });
 	    // return the result
 	    return result;
@@ -781,7 +783,7 @@
 	var each_1$1 = __importDefault(each_1);
 	// default options
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Find the key matching the callback evaluation
@@ -838,7 +840,7 @@
 	            }
 	        }
 	    }, {
-	        follow: follow,
+	        follow: follow
 	    });
 	    // if the key was not found set the result as undefined
 	    if (!found)
@@ -864,7 +866,7 @@
 	// default options
 	exports.DefaultOptions = {
 	    follow: false,
-	    useToString: false,
+	    useToString: false
 	};
 	/**
 	 * Flip an objects keys fro values and values for keys
@@ -926,7 +928,7 @@
 	            }
 	        }
 	    }, {
-	        follow: follow,
+	        follow: follow
 	    });
 	    // return the result
 	    return result;
@@ -1071,7 +1073,7 @@
 	var each_1$1 = __importDefault(each_1);
 	// default options
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Check if an object includes the specified value
@@ -1116,7 +1118,7 @@
 	                result = true;
 	        }
 	    }, {
-	        follow: follow,
+	        follow: follow
 	    });
 	    // return the result
 	    return result;
@@ -1234,7 +1236,7 @@
 	var find_1$1 = __importDefault(find_1);
 	// default options
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Get the key to the specified value in dot notation
@@ -1266,7 +1268,7 @@
 	    // this is just an alias of find so we simply just pass the params
 	    // to the find function and return its result
 	    return find_1$1.default(obj, function (key, objValue) { return objValue === value; }, {
-	        follow: follow,
+	        follow: follow
 	    });
 	}
 	exports.default = keyOf;
@@ -1286,7 +1288,7 @@
 	var deflate_1$1 = __importDefault(deflate_1);
 	// default options
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Get the keys of the specified object (different to Object.keys
@@ -1341,7 +1343,7 @@
 	var set_1$1 = __importDefault(set_1);
 	// default options
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Loop over the object and return a new object with the values
@@ -1393,7 +1395,7 @@
 	        // with the value of the evaluated callback
 	        result = set_1$1.default(result, key, cb(key, value, index));
 	    }, {
-	        follow: follow,
+	        follow: follow
 	    });
 	    // return the result
 	    return result;
@@ -1440,7 +1442,7 @@
 	    if (!util.valid(target))
 	        throw new TypeError("Expected Object, got " + typeof target + " " + target);
 	    // check if all the compare values are objects
-	    if (!util.valid.apply(null, sources.slice())) {
+	    if (!util.valid.apply(null, sources)) {
 	        throw new TypeError("Expected Object[], got " + typeof sources + " " + sources);
 	    }
 	    // clone the target object and make it the current result
@@ -1514,15 +1516,16 @@
 	    if (!util.valid(target))
 	        throw new TypeError("Expected Object, got " + typeof target + " " + target);
 	    // check if all the compare values are objects
-	    if (!util.valid.apply(null, sources.slice())) {
+	    if (!util.valid.apply(null, sources)) {
 	        throw new TypeError("Expected Object[], got " + typeof sources + " " + sources);
 	    }
 	    // clone the target and set it as the result
 	    var result = deflate_1$1.default(clone_1$1.default(target));
 	    // deflate all the sources
 	    var deflatedSources = sources.map(function (s) { return deflate_1$1.default(s); });
+	    var shallowMergeArgs = [result].concat(deflatedSources);
 	    // return the result
-	    return inflate_1$1.default(shallowMerge_1$1.default.apply(null, [result].concat(deflatedSources)));
+	    return inflate_1$1.default(shallowMerge_1$1.default.apply(null, shallowMergeArgs));
 	}
 	exports.default = merge;
 	});
@@ -1572,7 +1575,7 @@
 	var get_1$1 = __importDefault(get_1);
 	// default options
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Get a portion of the specified object
@@ -1607,7 +1610,7 @@
 	    // get the keys of the object and pass follow so the keys function
 	    // can handle the deep looping for us
 	    var objKeys = keys_1$1.default(obj, {
-	        follow: follow,
+	        follow: follow
 	    });
 	    // run the native slice function on the keys so its fast
 	    objKeys.slice(start, end)
@@ -1637,7 +1640,7 @@
 	var each_1$1 = __importDefault(each_1);
 	// default options
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Check if some items in the object evaluates to true
@@ -1693,7 +1696,7 @@
 	            result = true;
 	        }
 	    }, {
-	        follow: follow,
+	        follow: follow
 	    });
 	    // return the result
 	    return result;
@@ -1716,7 +1719,7 @@
 	var set_1$1 = __importDefault(set_1);
 	// default options
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Sort an object via the callback evaluation
@@ -1763,7 +1766,7 @@
 	    // get the keys from the object and pass follow to the keys function
 	    // then we don't need to handle deep objects
 	    var sortedKeys = keys_1$1.default(obj, {
-	        follow: follow,
+	        follow: follow
 	    })
 	        .sort(function (firstKey, secondKey) {
 	        // get the value from the object for the corresponding key
@@ -1772,11 +1775,11 @@
 	        // create the element objects
 	        var firstEl = {
 	            key: firstKey,
-	            value: firstValue,
+	            value: firstValue
 	        };
 	        var secondEl = {
 	            key: secondKey,
-	            value: secondValue,
+	            value: secondValue
 	        };
 	        // return the result from the callback using the elements
 	        return cb(firstEl, secondEl);
@@ -1806,7 +1809,7 @@
 	var get_1$1 = __importDefault(get_1);
 	// default options
 	exports.DefaultOptions = {
-	    follow: false,
+	    follow: false
 	};
 	/**
 	 * Get an array of the object values
@@ -1838,7 +1841,7 @@
 	    // for us and then map the keys array and return the corresponding value
 	    // for the current key
 	    return keys_1$1.default(obj, {
-	        follow: follow,
+	        follow: follow
 	    })
 	        .map(function (key) { return get_1$1.default(obj, key); });
 	}
@@ -1942,7 +1945,7 @@
 	    slice: slice_1$1.default,
 	    some: some_1$1.default,
 	    sort: sort_1$1.default,
-	    values: values_1$1.default,
+	    values: values_1$1.default
 	};
 	});
 
