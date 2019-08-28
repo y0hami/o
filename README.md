@@ -3,9 +3,12 @@
 # [o](https://github.com/hammy2899/o)
 common object helper functions written in TypeScript which can be used in [NodeJS](https://nodejs.org/en/) and the browser (supports ES6).
 
+
+[![GitHub Actions Status](https://github.com/hammy2899/o/workflows/CI/badge.svg)](https://github.com/hammy2899/o/actions)
 [![Coverage Status](https://coveralls.io/repos/github/hammy2899/o/badge.svg?branch=master)](https://coveralls.io/github/hammy2899/o?branch=master)
 [![npm version](https://img.shields.io/npm/v/o.svg)](https://www.npmjs.com/package/o)
 [![license](https://img.shields.io/github/license/hammy2899/o.svg)](https://github.com/hammy2899/o/blob/master/LICENSE.md)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
 ### Installation
@@ -91,5 +94,5 @@ You can view the [documentation here](https://o.hammy2899.dev), docs are generat
 ### Contributing
 
 All functions are documented with [TypeDoc](https://typedoc.org) and are fully commented explaining how they works. If you want to
-contribute feel free to open a PR. When you open a PR please set the base branch as [`develop`](https://github.com/hammy2899/o/tree/develop) and please make sure `yarn test` and `yarn lint` both pass
+contribute feel free to open a PR. When you open a PR please make sure `yarn test` and `yarn lint` both pass
 with no errors and if any tests fail or any linting issues are raised please fix them accordingly.
