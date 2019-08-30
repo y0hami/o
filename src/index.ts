@@ -20,11 +20,13 @@ import get from './get'
 import has from './has'
 import includes from './includes'
 import inflate from './inflate'
+import instance from './instance'
 import is from './is'
 import keyOf from './keyOf'
 import keys from './keys'
 import map from './map'
 import merge from './merge'
+import OInstance from './OInstance'
 import set from './set'
 import shallowMerge from './shallowMerge'
 import size from './size'
@@ -50,11 +52,13 @@ export {
   has,
   includes,
   inflate,
+  instance,
   is,
   keyOf,
   keys,
   map,
   merge,
+  OInstance,
   set,
   shallowMerge,
   size,
@@ -81,11 +85,13 @@ export default {
   has,
   includes,
   inflate,
+  instance,
   is,
   keyOf,
   keys,
   map,
   merge,
+  OInstance,
   set,
   shallowMerge,
   size,

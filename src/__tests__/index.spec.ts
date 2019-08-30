@@ -1,8 +1,8 @@
 import * as o from '../index'
 
 describe('index', (): void => {
-  test('should have 27 functions (+ default)', (): void => {
-    expect(Object.keys(o)).toHaveLength(29)
+  test('should have 31 functions (+ default)', (): void => {
+    expect(Object.keys(o)).toHaveLength(31)
   })
 
   test('all key values should be functions', (): void => {
