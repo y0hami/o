@@ -1,4 +1,4 @@
-/* o - v2.1.1
+/* o - v2.2.1
  *
  * Released under MIT license
  * https://github.com/hammy2899/o
@@ -222,6 +222,13 @@
 	unwrapExports(clone_1);
 
 	var deflate_1 = createCommonjsModule(function (module, exports) {
+	var __spreadArrays = (commonjsGlobal && commonjsGlobal.__spreadArrays) || function () {
+	    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+	    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+	        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+	            r[k] = a[j];
+	    return r;
+	};
 	var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
 	    return (mod && mod.__esModule) ? mod : { "default": mod };
 	};
@@ -260,7 +267,7 @@
 	    var deflateObj = function (object, currentPath) {
 	        Object.keys(object).forEach(function (key) {
 	            // build an array of the current path and the current key
-	            var newPath = currentPath.concat([key]);
+	            var newPath = __spreadArrays(currentPath, [key]);
 	            // get the value of the key path for the current object
 	            var value = object[key];
 	            // if the value is an object and isn't empty
@@ -1063,6 +1070,61 @@
 
 	unwrapExports(get_1);
 
+	var keys_1 = createCommonjsModule(function (module, exports) {
+	var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
+	    return (mod && mod.__esModule) ? mod : { "default": mod };
+	};
+	Object.defineProperty(exports, "__esModule", { value: true });
+	// o
+
+	var clone_1$1 = __importDefault(clone_1);
+	var deflate_1$1 = __importDefault(deflate_1);
+	// default options
+	exports.DefaultOptions = {
+	    follow: false
+	};
+	/**
+	 * Get the keys of the specified object (different to Object.keys
+	 * because Object.keys can't follow deep objects)
+	 *
+	 * @example
+	 * ```
+	 * const a = { a: 1, b: { c: 2, d: { e: 3 } } };
+	 *
+	 * keys(a); // => [ 'a', 'b' ]
+	 * keys(a, true); // => [ 'a', 'b.c', 'b.d.e' ]
+	 * ```
+	 *
+	 * @throws TypeError
+	 *
+	 * @since 1.0.0
+	 * @version 2.0.0
+	 */
+	function keys(obj, options) {
+	    if (options === void 0) { options = exports.DefaultOptions; }
+	    // extract options
+	    var follow = util.defaults(exports.DefaultOptions, options).follow;
+	    // check if the args specified are the correct type
+	    if (!util.valid(obj))
+	        throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
+	    if (typeof follow !== 'boolean')
+	        throw new TypeError("Expected Boolean, got " + typeof follow + " " + follow);
+	    // clone the object so we can deflate it if we need to
+	    var cloned = clone_1$1.default(obj);
+	    // if follow is true
+	    if (follow) {
+	        // set the cloned object as the object but deflated
+	        cloned = deflate_1$1.default(cloned);
+	    }
+	    // use the native Object.keys function so its fast and return the result
+	    return Object.keys(cloned);
+	}
+	exports.default = keys;
+	});
+
+	unwrapExports(keys_1);
+	var keys_2 = keys_1.DefaultOptions;
+
 	var includes_1 = createCommonjsModule(function (module, exports) {
 	var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
 	    return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -1277,61 +1339,6 @@
 	unwrapExports(keyOf_1);
 	var keyOf_2 = keyOf_1.DefaultOptions;
 
-	var keys_1 = createCommonjsModule(function (module, exports) {
-	var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
-	    return (mod && mod.__esModule) ? mod : { "default": mod };
-	};
-	Object.defineProperty(exports, "__esModule", { value: true });
-	// o
-
-	var clone_1$1 = __importDefault(clone_1);
-	var deflate_1$1 = __importDefault(deflate_1);
-	// default options
-	exports.DefaultOptions = {
-	    follow: false
-	};
-	/**
-	 * Get the keys of the specified object (different to Object.keys
-	 * because Object.keys can't follow deep objects)
-	 *
-	 * @example
-	 * ```
-	 * const a = { a: 1, b: { c: 2, d: { e: 3 } } };
-	 *
-	 * keys(a); // => [ 'a', 'b' ]
-	 * keys(a, true); // => [ 'a', 'b.c', 'b.d.e' ]
-	 * ```
-	 *
-	 * @throws TypeError
-	 *
-	 * @since 1.0.0
-	 * @version 2.0.0
-	 */
-	function keys(obj, options) {
-	    if (options === void 0) { options = exports.DefaultOptions; }
-	    // extract options
-	    var follow = util.defaults(exports.DefaultOptions, options).follow;
-	    // check if the args specified are the correct type
-	    if (!util.valid(obj))
-	        throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
-	    if (typeof follow !== 'boolean')
-	        throw new TypeError("Expected Boolean, got " + typeof follow + " " + follow);
-	    // clone the object so we can deflate it if we need to
-	    var cloned = clone_1$1.default(obj);
-	    // if follow is true
-	    if (follow) {
-	        // set the cloned object as the object but deflated
-	        cloned = deflate_1$1.default(cloned);
-	    }
-	    // use the native Object.keys function so its fast and return the result
-	    return Object.keys(cloned);
-	}
-	exports.default = keys;
-	});
-
-	unwrapExports(keys_1);
-	var keys_2 = keys_1.DefaultOptions;
-
 	var map_1 = createCommonjsModule(function (module, exports) {
 	var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
 	    return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -1478,6 +1485,13 @@
 	unwrapExports(shallowMerge_1);
 
 	var merge_1 = createCommonjsModule(function (module, exports) {
+	var __spreadArrays = (commonjsGlobal && commonjsGlobal.__spreadArrays) || function () {
+	    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+	    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+	        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+	            r[k] = a[j];
+	    return r;
+	};
 	var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
 	    return (mod && mod.__esModule) ? mod : { "default": mod };
 	};
@@ -1523,7 +1537,7 @@
 	    var result = deflate_1$1.default(clone_1$1.default(target));
 	    // deflate all the sources
 	    var deflatedSources = sources.map(function (s) { return deflate_1$1.default(s); });
-	    var shallowMergeArgs = [result].concat(deflatedSources);
+	    var shallowMergeArgs = __spreadArrays([result], deflatedSources);
 	    // return the result
 	    return inflate_1$1.default(shallowMerge_1$1.default.apply(null, shallowMergeArgs));
 	}
@@ -1851,6 +1865,505 @@
 	unwrapExports(values_1);
 	var values_2 = values_1.DefaultOptions;
 
+	var OChainable_1 = createCommonjsModule(function (module, exports) {
+	var __spreadArrays = (commonjsGlobal && commonjsGlobal.__spreadArrays) || function () {
+	    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+	    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+	        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+	            r[k] = a[j];
+	    return r;
+	};
+	var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
+	    return (mod && mod.__esModule) ? mod : { "default": mod };
+	};
+	Object.defineProperty(exports, "__esModule", { value: true });
+	var clone_1$1 = __importDefault(clone_1);
+	var clean_1$1 = __importDefault(clean_1);
+	var deepEqual_1$1 = __importDefault(deepEqual_1);
+	var deflate_1$1 = __importDefault(deflate_1);
+	var del_1$1 = __importDefault(del_1);
+	var each_1$1 = __importDefault(each_1);
+	var empty_1$1 = __importDefault(empty_1);
+	var equal_1$1 = __importDefault(equal_1);
+	var every_1$1 = __importDefault(every_1);
+	var filter_1$1 = __importDefault(filter_1);
+	var find_1$1 = __importDefault(find_1);
+	var flip_1$1 = __importDefault(flip_1);
+	var get_1$1 = __importDefault(get_1);
+	var has_1$1 = __importDefault(has_1);
+	var keys_1$1 = __importDefault(keys_1);
+	var includes_1$1 = __importDefault(includes_1);
+	var inflate_1$1 = __importDefault(inflate_1);
+	var keyOf_1$1 = __importDefault(keyOf_1);
+	var map_1$1 = __importDefault(map_1);
+	var merge_1$1 = __importDefault(merge_1);
+	var set_1$1 = __importDefault(set_1);
+	var shallowMerge_1$1 = __importDefault(shallowMerge_1);
+	var size_1$1 = __importDefault(size_1);
+	var slice_1$1 = __importDefault(slice_1);
+	var some_1$1 = __importDefault(some_1);
+	var sort_1$1 = __importDefault(sort_1);
+	var values_1$1 = __importDefault(values_1);
+
+	var OChainable = /** @class */ (function () {
+	    /**
+	     * Create a new OChainable
+	     *
+	     * @param {OObject} obj
+	     *
+	     * @throws TypeError
+	     *
+	     * @since 2.2.1
+	     * @version 2.2.1
+	     */
+	    function OChainable(obj) {
+	        // the number of times the object has been updated
+	        this.modificationCount = 0;
+	        // check if the args specified are the correct type
+	        if (!util.valid(obj))
+	            throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
+	        this.originalObject = clone_1$1.default(obj);
+	        this.currentObject = clone_1$1.default(obj);
+	    }
+	    /**
+	     * Set the current object value
+	     *
+	     * @param {OObject} obj The new object
+	     *
+	     * @since 2.2.1
+	     * @version 2.2.1
+	     */
+	    OChainable.prototype.updateCurrent = function (obj) {
+	        this.modificationCount = this.modificationCount + 1;
+	        this.currentObject = obj;
+	    };
+	    /**
+	     * Get the original object
+	     *
+	     * @since 2.2.1
+	     * @version 2.2.1
+	     */
+	    OChainable.prototype.original = function () {
+	        return this.originalObject;
+	    };
+	    /**
+	     * Get the current object as a JSON string
+	     *
+	     * @since 2.2.1
+	     * @version 2.2.1
+	     */
+	    OChainable.prototype.toJSON = function () {
+	        return JSON.stringify(this.currentObject);
+	    };
+	    /**
+	     * Get the current object as a pretty JSON string
+	     *
+	     * @since 2.2.1
+	     * @version 2.2.1
+	     */
+	    OChainable.prototype.toPrettyJSON = function () {
+	        return JSON.stringify(this.currentObject, null, 2);
+	    };
+	    /**
+	     * Get the original object as a JSON string
+	     *
+	     * @since 2.2.1
+	     * @version 2.2.1
+	     */
+	    OChainable.prototype.originalToJSON = function () {
+	        return JSON.stringify(this.originalObject);
+	    };
+	    /**
+	     * Get the original object as a pretty JSON string
+	     *
+	     * @since 2.2.1
+	     * @version 2.2.1
+	     */
+	    OChainable.prototype.originalToPrettyJSON = function () {
+	        return JSON.stringify(this.originalObject, null, 2);
+	    };
+	    /**
+	     * A clone of the current object
+	     *
+	     * @since 2.2.1
+	     * @version 2.2.1
+	     */
+	    OChainable.prototype.object = function () {
+	        return clone_1$1.default(this.currentObject);
+	    };
+	    /**
+	     * A reference of the current object
+	     * (will change if you continue to modify)
+	     *
+	     * @since 2.2.1
+	     * @version 2.2.1
+	     */
+	    OChainable.prototype.objectRef = function () {
+	        return this.currentObject;
+	    };
+	    /**
+	     * Check if the object has been modified
+	     *
+	     * @since 2.2.1
+	     * @version 2.2.1
+	     */
+	    OChainable.prototype.isModified = function () {
+	        return this.modificationCount > 0;
+	    };
+	    /**
+	     * Check if the object has been modified
+	     *
+	     * @since 2.2.1
+	     * @version 2.2.1
+	     */
+	    OChainable.prototype.totalModifications = function () {
+	        return this.modificationCount;
+	    };
+	    // rest of the methods are just the standard
+	    // functions from the library
+	    /**
+	     * Clean the object
+	     *
+	     * @see https://o.hammy2899.dev/modules/_clean_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.clean = function (options) {
+	        if (options === void 0) { options = {}; }
+	        this.updateCurrent(clean_1$1.default(this.currentObject, options));
+	        return this;
+	    };
+	    /**
+	     * Clone the object
+	     *
+	     * @see https://o.hammy2899.dev/modules/_clone_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.clone = function () {
+	        return clone_1$1.default(this.currentObject);
+	    };
+	    /**
+	     * Check if the object is deeply equal to the specified objects
+	     *
+	     * @see https://o.hammy2899.dev/modules/_deepequal_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.deepEqual = function () {
+	        var compareWith = [];
+	        for (var _i = 0; _i < arguments.length; _i++) {
+	            compareWith[_i] = arguments[_i];
+	        }
+	        return deepEqual_1$1.default
+	            .apply(null, __spreadArrays([this.currentObject], compareWith));
+	    };
+	    /**
+	     * Deflate the object
+	     *
+	     * @see https://o.hammy2899.dev/modules/_deflate_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.deflate = function () {
+	        this.updateCurrent(deflate_1$1.default(this.currentObject));
+	        return this;
+	    };
+	    /**
+	     * Delete a property from the object
+	     *
+	     * @see https://o.hammy2899.dev/modules/_del_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.del = function (path) {
+	        this.updateCurrent(del_1$1.default(this.currentObject, path));
+	        return this;
+	    };
+	    /**
+	     * Foreach over the objects keys and values
+	     *
+	     * @see https://o.hammy2899.dev/modules/_each_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.each = function (cb, options) {
+	        if (options === void 0) { options = {}; }
+	        each_1$1.default(this.currentObject, cb, options);
+	        return this;
+	    };
+	    /**
+	     * Check if the object is empty
+	     *
+	     * @see https://o.hammy2899.dev/modules/_empty_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.empty = function () {
+	        return empty_1$1.default(this.currentObject);
+	    };
+	    /**
+	     * Check if the object is equal to the specified objects
+	     *
+	     * @see https://o.hammy2899.dev/modules/_equal_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.equal = function () {
+	        var compareWith = [];
+	        for (var _i = 0; _i < arguments.length; _i++) {
+	            compareWith[_i] = arguments[_i];
+	        }
+	        return equal_1$1.default
+	            .apply(null, __spreadArrays([this.currentObject], compareWith));
+	    };
+	    /**
+	     * Loop over all object keys and values and check if all
+	     * evaluations are truthy
+	     *
+	     * @see https://o.hammy2899.dev/modules/_every_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.every = function (cb, options) {
+	        if (options === void 0) { options = {}; }
+	        return every_1$1.default(this.currentObject, cb, options);
+	    };
+	    /**
+	     * Filter the objects keys and values depending on the
+	     * callback evaluation
+	     *
+	     * @see https://o.hammy2899.dev/modules/_filter_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.filter = function (cb, options) {
+	        if (options === void 0) { options = {}; }
+	        this.updateCurrent(filter_1$1.default(this.currentObject, cb, options));
+	        return this;
+	    };
+	    /**
+	     * Find the key matching the callback evaluation
+	     *
+	     * @see https://o.hammy2899.dev/modules/_find_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.find = function (cb, options) {
+	        if (options === void 0) { options = {}; }
+	        return find_1$1.default(this.currentObject, cb, options);
+	    };
+	    /**
+	     * Flip the objects keys for values and values for keys
+	     *
+	     * @see https://o.hammy2899.dev/modules/_flip_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.flip = function (options) {
+	        if (options === void 0) { options = {}; }
+	        this.updateCurrent(flip_1$1.default(this.currentObject, options));
+	        return this;
+	    };
+	    /**
+	     * Get the value from the path in the object
+	     *
+	     * @see https://o.hammy2899.dev/modules/_get_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.get = function (path, defaultValue) {
+	        if (defaultValue === void 0) { defaultValue = undefined; }
+	        return get_1$1.default(this.currentObject, path, defaultValue);
+	    };
+	    /**
+	     * Check if the object has a value at the paths
+	     *
+	     * @see https://o.hammy2899.dev/modules/_has_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.has = function () {
+	        var paths = [];
+	        for (var _i = 0; _i < arguments.length; _i++) {
+	            paths[_i] = arguments[_i];
+	        }
+	        return has_1$1.default
+	            .apply(null, __spreadArrays([this.currentObject], paths));
+	    };
+	    /**
+	     * Check if the object includes a value
+	     *
+	     * @see https://o.hammy2899.dev/modules/_includes_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.includes = function (value, options) {
+	        if (options === void 0) { options = {}; }
+	        return includes_1$1.default(this.currentObject, value, options);
+	    };
+	    /**
+	     * Inflate the object
+	     *
+	     * @see https://o.hammy2899.dev/modules/_inflate_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.inflate = function () {
+	        this.updateCurrent(inflate_1$1.default(this.currentObject));
+	        return this;
+	    };
+	    /**
+	     * Get the key to the specified value
+	     *
+	     * @see https://o.hammy2899.dev/modules/_keyof_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.keyOf = function (value, options) {
+	        if (options === void 0) { options = {}; }
+	        return keyOf_1$1.default(this.currentObject, value, options);
+	    };
+	    /**
+	     * Check if the object has a value at the paths
+	     *
+	     * @see https://o.hammy2899.dev/modules/_keys_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.keys = function (options) {
+	        if (options === void 0) { options = {}; }
+	        return keys_1$1.default(this.currentObject, options);
+	    };
+	    /**
+	     * Loop over the object and compute new values using the callback
+	     *
+	     * @see https://o.hammy2899.dev/modules/_map_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.map = function (cb, options) {
+	        if (options === void 0) { options = {}; }
+	        this.updateCurrent(map_1$1.default(this.currentObject, cb, options));
+	        return this;
+	    };
+	    /**
+	     * Merge all sources into the object
+	     *
+	     * @see https://o.hammy2899.dev/modules/_merge_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.merge = function () {
+	        var sources = [];
+	        for (var _i = 0; _i < arguments.length; _i++) {
+	            sources[_i] = arguments[_i];
+	        }
+	        this.updateCurrent(merge_1$1.default
+	            .apply(null, __spreadArrays([this.currentObject], sources)));
+	        return this;
+	    };
+	    /**
+	     * Set the value to the path on the object
+	     *
+	     * @see https://o.hammy2899.dev/modules/_set_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.set = function (path, value) {
+	        this.updateCurrent(set_1$1.default(this.currentObject, path, value));
+	        return this;
+	    };
+	    /**
+	     * Merge sources with the object
+	     *
+	     * @see https://o.hammy2899.dev/modules/_shallowmerge_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.shallowMerge = function () {
+	        var sources = [];
+	        for (var _i = 0; _i < arguments.length; _i++) {
+	            sources[_i] = arguments[_i];
+	        }
+	        this.updateCurrent(shallowMerge_1$1.default
+	            .apply(null, __spreadArrays([this.currentObject], sources)));
+	        return this;
+	    };
+	    /**
+	     * Get the size of the object
+	     *
+	     * @see https://o.hammy2899.dev/modules/_size_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.size = function () {
+	        return size_1$1.default(this.currentObject);
+	    };
+	    /**
+	     * Get a portion of the object
+	     *
+	     * @see https://o.hammy2899.dev/modules/_slice_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.slice = function (start, end, options) {
+	        if (end === void 0) { end = size_1$1.default(this.currentObject); }
+	        if (options === void 0) { options = {}; }
+	        return slice_1$1.default(this.currentObject, start, end, options);
+	    };
+	    /**
+	     * Check if some items in the object evaluates to truthy
+	     *
+	     * @see https://o.hammy2899.dev/modules/_some_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.some = function (cb, options) {
+	        if (options === void 0) { options = {}; }
+	        return some_1$1.default(this.currentObject, cb, options);
+	    };
+	    /**
+	     * Sort the object with the callback evaluation
+	     *
+	     * @see https://o.hammy2899.dev/modules/_sort_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.sort = function (cb, options) {
+	        if (options === void 0) { options = {}; }
+	        this.updateCurrent(sort_1$1.default(this.currentObject, cb, options));
+	        return this;
+	    };
+	    /**
+	     * Get the values from the object
+	     *
+	     * @see https://o.hammy2899.dev/modules/_values_.html
+	     */
+	    /* istanbul ignore next */
+	    OChainable.prototype.values = function (options) {
+	        if (options === void 0) { options = {}; }
+	        return values_1$1.default(this.currentObject, options);
+	    };
+	    return OChainable;
+	}());
+	exports.default = OChainable;
+	});
+
+	unwrapExports(OChainable_1);
+
+	var chainer_1 = createCommonjsModule(function (module, exports) {
+	var __importDefault = (commonjsGlobal && commonjsGlobal.__importDefault) || function (mod) {
+	    return (mod && mod.__esModule) ? mod : { "default": mod };
+	};
+	Object.defineProperty(exports, "__esModule", { value: true });
+	// o
+	var OChainable_1$1 = __importDefault(OChainable_1);
+
+	/**
+	 * Create a new OChainable instance
+	 *
+	 * @example
+	 * ```
+	 * const a = { a: 1 }
+	 * const obj = chainer(a)
+	 *
+	 * obj
+	 *  .set('a', 2)
+	 *  .merge({ b: 3 })
+	 *  .toJSON()
+	 * ```
+	 *
+	 * @throws TypeError
+	 *
+	 * @since 2.2.1
+	 * @version 2.2.1
+	 */
+	function chainer(obj) {
+	    // check if the object specified is an object
+	    if (!util.valid(obj))
+	        throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
+	    return new OChainable_1$1.default(obj);
+	}
+	exports.default = chainer;
+	});
+
+	unwrapExports(chainer_1);
+
 	var build = createCommonjsModule(function (module, exports) {
 	// ------------------------------ //
 	// export in alphabetical order   //
@@ -1861,6 +2374,8 @@
 	};
 	Object.defineProperty(exports, "__esModule", { value: true });
 	// functions
+	var chainer_1$1 = __importDefault(chainer_1);
+	exports.chainer = chainer_1$1.default;
 	var clean_1$1 = __importDefault(clean_1);
 	exports.clean = clean_1$1.default;
 	var clone_1$1 = __importDefault(clone_1);
@@ -1903,6 +2418,8 @@
 	exports.map = map_1$1.default;
 	var merge_1$1 = __importDefault(merge_1);
 	exports.merge = merge_1$1.default;
+	var OChainable_1$1 = __importDefault(OChainable_1);
+	exports.OChainable = OChainable_1$1.default;
 	var set_1$1 = __importDefault(set_1);
 	exports.set = set_1$1.default;
 	var shallowMerge_1$1 = __importDefault(shallowMerge_1);
@@ -1918,6 +2435,7 @@
 	var values_1$1 = __importDefault(values_1);
 	exports.values = values_1$1.default;
 	exports.default = {
+	    chainer: chainer_1$1.default,
 	    clean: clean_1$1.default,
 	    clone: clone_1$1.default,
 	    deepEqual: deepEqual_1$1.default,
@@ -1939,6 +2457,7 @@
 	    keys: keys_1$1.default,
 	    map: map_1$1.default,
 	    merge: merge_1$1.default,
+	    OChainable: OChainable_1$1.default,
 	    set: set_1$1.default,
 	    shallowMerge: shallowMerge_1$1.default,
 	    size: size_1$1.default,
@@ -1950,64 +2469,68 @@
 	});
 
 	var index = unwrapExports(build);
-	var build_1 = build.clean;
-	var build_2 = build.clone;
-	var build_3 = build.deepEqual;
-	var build_4 = build.deflate;
-	var build_5 = build.del;
-	var build_6 = build.each;
-	var build_7 = build.empty;
-	var build_8 = build.every;
-	var build_9 = build.equal;
-	var build_10 = build.filter;
-	var build_11 = build.find;
-	var build_12 = build.flip;
-	var build_13 = build.get;
-	var build_14 = build.has;
-	var build_15 = build.includes;
-	var build_16 = build.inflate;
-	var build_17 = build.is;
-	var build_18 = build.keyOf;
-	var build_19 = build.keys;
-	var build_20 = build.map;
-	var build_21 = build.merge;
-	var build_22 = build.set;
-	var build_23 = build.shallowMerge;
-	var build_24 = build.size;
-	var build_25 = build.slice;
-	var build_26 = build.some;
-	var build_27 = build.sort;
-	var build_28 = build.values;
+	var build_1 = build.chainer;
+	var build_2 = build.clean;
+	var build_3 = build.clone;
+	var build_4 = build.deepEqual;
+	var build_5 = build.deflate;
+	var build_6 = build.del;
+	var build_7 = build.each;
+	var build_8 = build.empty;
+	var build_9 = build.every;
+	var build_10 = build.equal;
+	var build_11 = build.filter;
+	var build_12 = build.find;
+	var build_13 = build.flip;
+	var build_14 = build.get;
+	var build_15 = build.has;
+	var build_16 = build.includes;
+	var build_17 = build.inflate;
+	var build_18 = build.is;
+	var build_19 = build.keyOf;
+	var build_20 = build.keys;
+	var build_21 = build.map;
+	var build_22 = build.merge;
+	var build_23 = build.OChainable;
+	var build_24 = build.set;
+	var build_25 = build.shallowMerge;
+	var build_26 = build.size;
+	var build_27 = build.slice;
+	var build_28 = build.some;
+	var build_29 = build.sort;
+	var build_30 = build.values;
 
-	exports.clean = build_1;
-	exports.clone = build_2;
-	exports.deepEqual = build_3;
+	exports.OChainable = build_23;
+	exports.chainer = build_1;
+	exports.clean = build_2;
+	exports.clone = build_3;
+	exports.deepEqual = build_4;
 	exports.default = index;
-	exports.deflate = build_4;
-	exports.del = build_5;
-	exports.each = build_6;
-	exports.empty = build_7;
-	exports.equal = build_9;
-	exports.every = build_8;
-	exports.filter = build_10;
-	exports.find = build_11;
-	exports.flip = build_12;
-	exports.get = build_13;
-	exports.has = build_14;
-	exports.includes = build_15;
-	exports.inflate = build_16;
-	exports.is = build_17;
-	exports.keyOf = build_18;
-	exports.keys = build_19;
-	exports.map = build_20;
-	exports.merge = build_21;
-	exports.set = build_22;
-	exports.shallowMerge = build_23;
-	exports.size = build_24;
-	exports.slice = build_25;
-	exports.some = build_26;
-	exports.sort = build_27;
-	exports.values = build_28;
+	exports.deflate = build_5;
+	exports.del = build_6;
+	exports.each = build_7;
+	exports.empty = build_8;
+	exports.equal = build_10;
+	exports.every = build_9;
+	exports.filter = build_11;
+	exports.find = build_12;
+	exports.flip = build_13;
+	exports.get = build_14;
+	exports.has = build_15;
+	exports.includes = build_16;
+	exports.inflate = build_17;
+	exports.is = build_18;
+	exports.keyOf = build_19;
+	exports.keys = build_20;
+	exports.map = build_21;
+	exports.merge = build_22;
+	exports.set = build_24;
+	exports.shallowMerge = build_25;
+	exports.size = build_26;
+	exports.slice = build_27;
+	exports.some = build_28;
+	exports.sort = build_29;
+	exports.values = build_30;
 
 	Object.defineProperty(exports, '__esModule', { value: true });
 

@@ -1,3 +1,4 @@
+import chainer from './chainer';
 import clean from './clean';
 import clone from './clone';
 import deepEqual from './deepEqual';
@@ -19,6 +20,7 @@ import keyOf from './keyOf';
 import keys from './keys';
 import map from './map';
 import merge from './merge';
+import OChainable from './OChainable';
 import set from './set';
 import shallowMerge from './shallowMerge';
 import size from './size';
@@ -26,8 +28,9 @@ import slice from './slice';
 import some from './some';
 import sort from './sort';
 import values from './values';
-export { clean, clone, deepEqual, deflate, del, each, empty, equal, every, filter, find, flip, get, has, includes, inflate, is, keyOf, keys, map, merge, set, shallowMerge, size, slice, some, sort, values };
+export { chainer, clean, clone, deepEqual, deflate, del, each, empty, equal, every, filter, find, flip, get, has, includes, inflate, is, keyOf, keys, map, merge, OChainable, set, shallowMerge, size, slice, some, sort, values };
 declare const _default: {
+    chainer: typeof chainer;
     clean: typeof clean;
     clone: typeof clone;
     deepEqual: typeof deepEqual;
@@ -49,6 +52,7 @@ declare const _default: {
     keys: typeof keys;
     map: typeof map;
     merge: typeof merge;
+    OChainable: typeof OChainable;
     set: typeof set;
     shallowMerge: typeof shallowMerge;
     size: typeof size;
