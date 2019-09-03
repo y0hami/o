@@ -35,8 +35,9 @@ import slice from './slice'
 import some from './some'
 import sort from './sort'
 import values from './values'
+import { valid } from './util'
 
-export default class OInstance {
+export default class OChainable {
   // the original object used to create this instance
   private readonly originalObject: OObject;
 
@@ -46,7 +47,20 @@ export default class OInstance {
   // the number of times the object has been updated
   private modificationCount: number = 0;
 
+  /**
+   * Create a new OChainable
+   *
+   * @param {OObject} obj
+   *
+   * @throws TypeError
+   *
+   * @since 2.2.1
+   * @version 2.2.1
+   */
   public constructor (obj: OObject) {
+    // check if the args specified are the correct type
+    if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)
+
     this.originalObject = clone(obj)
     this.currentObject = clone(obj)
   }
@@ -59,7 +73,7 @@ export default class OInstance {
    * @since 2.2.1
    * @version 2.2.1
    */
-  private updateCurrent (obj: OObject): void {
+  protected updateCurrent (obj: OObject): void {
     this.modificationCount = this.modificationCount + 1
     this.currentObject = obj
   }
@@ -80,7 +94,7 @@ export default class OInstance {
    * @since 2.2.1
    * @version 2.2.1
    */
-  public json (): string {
+  public toJSON (): string {
     return JSON.stringify(this.currentObject)
   }
 
@@ -90,7 +104,7 @@ export default class OInstance {
    * @since 2.2.1
    * @version 2.2.1
    */
-  public prettyJson (): string {
+  public toPrettyJSON (): string {
     return JSON.stringify(this.currentObject, null, 2)
   }
 
@@ -100,7 +114,7 @@ export default class OInstance {
    * @since 2.2.1
    * @version 2.2.1
    */
-  public originalJson (): string {
+  public originalToJSON (): string {
     return JSON.stringify(this.originalObject)
   }
 
@@ -110,7 +124,7 @@ export default class OInstance {
    * @since 2.2.1
    * @version 2.2.1
    */
-  public originalPrettyJson (): string {
+  public originalToPrettyJSON (): string {
     return JSON.stringify(this.originalObject, null, 2)
   }
 
@@ -163,7 +177,8 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_clean_.html
    */
-  public clean (options: CleanOptions = {}): OInstance {
+  /* istanbul ignore next */
+  public clean (options: CleanOptions = {}): OChainable {
     this.updateCurrent(clean(this.currentObject, options))
     return this
   }
@@ -173,6 +188,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_clone_.html
    */
+  /* istanbul ignore next */
   public clone (): OObject {
     return clone(this.currentObject)
   }
@@ -182,6 +198,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_deepequal_.html
    */
+  /* istanbul ignore next */
   public deepEqual (...compareWith: OObject[]): boolean {
     return deepEqual
       .apply(
@@ -195,7 +212,8 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_deflate_.html
    */
-  public deflate (): OInstance {
+  /* istanbul ignore next */
+  public deflate (): OChainable {
     this.updateCurrent(deflate(this.currentObject))
     return this
   }
@@ -205,7 +223,8 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_del_.html
    */
-  public del (path: string): OInstance {
+  /* istanbul ignore next */
+  public del (path: string): OChainable {
     this.updateCurrent(del(this.currentObject, path))
     return this
   }
@@ -215,8 +234,10 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_each_.html
    */
-  public each (cb: EachCallback, options: EachOptions = {}): void {
+  /* istanbul ignore next */
+  public each (cb: EachCallback, options: EachOptions = {}): OChainable {
     each(this.currentObject, cb, options)
+    return this
   }
 
   /**
@@ -224,6 +245,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_empty_.html
    */
+  /* istanbul ignore next */
   public empty (): boolean {
     return empty(this.currentObject)
   }
@@ -233,6 +255,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_equal_.html
    */
+  /* istanbul ignore next */
   public equal (...compareWith: OObject[]): boolean {
     return equal
       .apply(
@@ -247,6 +270,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_every_.html
    */
+  /* istanbul ignore next */
   public every (cb: EveryCallback, options: EveryOptions = {}): boolean {
     return every(this.currentObject, cb, options)
   }
@@ -257,8 +281,9 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_filter_.html
    */
-  public filter (cb: FilterCallback, options: FilterOptions = {}): OInstance {
-    filter(this.currentObject, cb, options)
+  /* istanbul ignore next */
+  public filter (cb: FilterCallback, options: FilterOptions = {}): OChainable {
+    this.updateCurrent(filter(this.currentObject, cb, options))
     return this
   }
 
@@ -267,6 +292,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_find_.html
    */
+  /* istanbul ignore next */
   public find (cb: FindCallback, options: FindOptions = {}): string | undefined {
     return find(this.currentObject, cb, options)
   }
@@ -276,7 +302,8 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_flip_.html
    */
-  public flip (options: FlipOptions = {}): OInstance {
+  /* istanbul ignore next */
+  public flip (options: FlipOptions = {}): OChainable {
     this.updateCurrent(flip(this.currentObject, options))
     return this
   }
@@ -286,6 +313,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_get_.html
    */
+  /* istanbul ignore next */
   public get (path: string, defaultValue: any = undefined): any {
     return get(this.currentObject, path, defaultValue)
   }
@@ -295,6 +323,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_has_.html
    */
+  /* istanbul ignore next */
   public has (...paths: string[]): boolean {
     return has
       .apply(
@@ -308,6 +337,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_includes_.html
    */
+  /* istanbul ignore next */
   public includes (value: any, options: IncludesOptions = {}): boolean {
     return includes(this.currentObject, value, options)
   }
@@ -317,7 +347,8 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_inflate_.html
    */
-  public inflate (): OInstance {
+  /* istanbul ignore next */
+  public inflate (): OChainable {
     this.updateCurrent(inflate(this.currentObject))
     return this
   }
@@ -327,6 +358,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_keyof_.html
    */
+  /* istanbul ignore next */
   public keyOf (value: any, options: KeyOfOptions = {}): string | undefined {
     return keyOf(this.currentObject, value, options)
   }
@@ -336,6 +368,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_keys_.html
    */
+  /* istanbul ignore next */
   public keys (options: KeysOptions = {}): string[] {
     return keys(this.currentObject, options)
   }
@@ -345,7 +378,8 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_map_.html
    */
-  public map (cb: MapCallback, options: MapOptions = {}): OInstance {
+  /* istanbul ignore next */
+  public map (cb: MapCallback, options: MapOptions = {}): OChainable {
     this.updateCurrent(map(this.currentObject, cb, options))
     return this
   }
@@ -355,7 +389,8 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_merge_.html
    */
-  public merge (...sources: OObject[]): OInstance {
+  /* istanbul ignore next */
+  public merge (...sources: OObject[]): OChainable {
     this.updateCurrent(merge
       .apply(
         null,
@@ -369,7 +404,8 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_set_.html
    */
-  public set (path: string, value: any): OInstance {
+  /* istanbul ignore next */
+  public set (path: string, value: any): OChainable {
     this.updateCurrent(set(this.currentObject, path, value))
     return this
   }
@@ -379,7 +415,8 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_shallowmerge_.html
    */
-  public shallowMerge (...sources: OObject[]): OInstance {
+  /* istanbul ignore next */
+  public shallowMerge (...sources: OObject[]): OChainable {
     this.updateCurrent(shallowMerge
       .apply(
         null,
@@ -393,6 +430,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_size_.html
    */
+  /* istanbul ignore next */
   public size (): number {
     return size(this.currentObject)
   }
@@ -402,6 +440,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_slice_.html
    */
+  /* istanbul ignore next */
   public slice (
     start: number,
     end: number = size(this.currentObject),
@@ -411,10 +450,11 @@ export default class OInstance {
   }
 
   /**
-   * Check if some items in the object evalutes to truthy
+   * Check if some items in the object evaluates to truthy
    *
    * @see https://o.hammy2899.dev/modules/_some_.html
    */
+  /* istanbul ignore next */
   public some (cb: SomeCallback, options: SomeOptions = {}): boolean {
     return some(this.currentObject, cb, options)
   }
@@ -424,7 +464,8 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_sort_.html
    */
-  public sort (cb: SortCallback, options: SortOptions = {}): OInstance {
+  /* istanbul ignore next */
+  public sort (cb: SortCallback, options: SortOptions = {}): OChainable {
     this.updateCurrent(sort(this.currentObject, cb, options))
     return this
   }
@@ -434,6 +475,7 @@ export default class OInstance {
    *
    * @see https://o.hammy2899.dev/modules/_values_.html
    */
+  /* istanbul ignore next */
   public values (options: ValuesOptions = {}): any[] {
     return values(this.currentObject, options)
   }

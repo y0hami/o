@@ -4,6 +4,7 @@
 // ------------------------------ //
 
 // functions
+import chainer from './chainer'
 import clean from './clean'
 import clone from './clone'
 import deepEqual from './deepEqual'
@@ -20,13 +21,12 @@ import get from './get'
 import has from './has'
 import includes from './includes'
 import inflate from './inflate'
-import instance from './instance'
 import is from './is'
 import keyOf from './keyOf'
 import keys from './keys'
 import map from './map'
 import merge from './merge'
-import OInstance from './OInstance'
+import OChainable from './OChainable'
 import set from './set'
 import shallowMerge from './shallowMerge'
 import size from './size'
@@ -36,6 +36,7 @@ import sort from './sort'
 import values from './values'
 
 export {
+  chainer,
   clean,
   clone,
   deepEqual,
@@ -52,13 +53,12 @@ export {
   has,
   includes,
   inflate,
-  instance,
   is,
   keyOf,
   keys,
   map,
   merge,
-  OInstance,
+  OChainable,
   set,
   shallowMerge,
   size,
@@ -69,6 +69,7 @@ export {
 }
 
 export default {
+  chainer,
   clean,
   clone,
   deepEqual,
@@ -85,13 +86,12 @@ export default {
   has,
   includes,
   inflate,
-  instance,
   is,
   keyOf,
   keys,
   map,
   merge,
-  OInstance,
+  OChainable,
   set,
   shallowMerge,
   size,
