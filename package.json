@@ -13,12 +13,8 @@
   "license": "MIT",
   "author": "Sean Hamilton <sean@hamistudios.com> (https://github.com/hammy2899)",
   "files": [
-    "CHANGELOG.md",
-    "LICENSE.md",
-    "README.md",
     "dist/",
     "src/",
-    "package.json",
     "yarn.lock"
   ],
   "main": "dist/o.js",
