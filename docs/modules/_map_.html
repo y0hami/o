@@ -97,7 +97,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/hammy2899/o/blob/90ac39d/src/map.ts#L41">map.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/hammy2899/o/blob/d03b256/src/map.ts#L41">map.ts:41</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -107,22 +107,22 @@
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><pre><code><span class="hljs-keyword">const</span> a = { a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>, c: <span class="hljs-number">3</span> };
-<span class="hljs-keyword">const</span> b = { a: <span class="hljs-number">1</span>, b: { c: <span class="hljs-number">2</span> } };
+									<dd><pre><code><span class="hljs-string">const</span> <span class="hljs-string">a</span> <span class="hljs-string">=</span> <span class="hljs-string">{</span> <span class="hljs-attr">a:</span> <span class="hljs-number">1</span><span class="hljs-string">,</span> <span class="hljs-attr">b:</span> <span class="hljs-number">2</span><span class="hljs-string">,</span> <span class="hljs-attr">c:</span> <span class="hljs-number">3</span> <span class="hljs-string">};</span>
+<span class="hljs-string">const</span> <span class="hljs-string">b</span> <span class="hljs-string">=</span> <span class="hljs-string">{</span> <span class="hljs-attr">a:</span> <span class="hljs-number">1</span><span class="hljs-string">,</span> <span class="hljs-attr">b:</span> <span class="hljs-string">{</span> <span class="hljs-attr">c:</span> <span class="hljs-number">2</span> <span class="hljs-string">}</span> <span class="hljs-string">};</span>
 
-map(a, (key, value) =&gt; {
-  <span class="hljs-keyword">return</span> value * <span class="hljs-number">2</span>;
-}); <span class="hljs-comment">// =&gt; { a: 2, b: 4, c: 6 }</span>
+<span class="hljs-string">map(a,</span> <span class="hljs-string">(key,</span> <span class="hljs-string">value)</span> <span class="hljs-string">=&gt;</span> <span class="hljs-string">{</span>
+  <span class="hljs-string">return</span> <span class="hljs-string">value</span> <span class="hljs-string">*</span> <span class="hljs-number">2</span><span class="hljs-string">;</span>
+<span class="hljs-string">});</span> <span class="hljs-string">//</span> <span class="hljs-string">=&gt;</span> <span class="hljs-string">{</span> <span class="hljs-attr">a:</span> <span class="hljs-number">2</span><span class="hljs-string">,</span> <span class="hljs-attr">b:</span> <span class="hljs-number">4</span><span class="hljs-string">,</span> <span class="hljs-attr">c:</span> <span class="hljs-number">6</span> <span class="hljs-string">}</span>
 
-map(b, (key, value) =&gt; {
-  <span class="hljs-keyword">return</span> value * <span class="hljs-number">2</span>;
-}); <span class="hljs-comment">// =&gt; { a: 2, b: NaN }</span>
+<span class="hljs-string">map(b,</span> <span class="hljs-string">(key,</span> <span class="hljs-string">value)</span> <span class="hljs-string">=&gt;</span> <span class="hljs-string">{</span>
+  <span class="hljs-string">return</span> <span class="hljs-string">value</span> <span class="hljs-string">*</span> <span class="hljs-number">2</span><span class="hljs-string">;</span>
+<span class="hljs-string">});</span> <span class="hljs-string">//</span> <span class="hljs-string">=&gt;</span> <span class="hljs-string">{</span> <span class="hljs-attr">a:</span> <span class="hljs-number">2</span><span class="hljs-string">,</span> <span class="hljs-attr">b:</span> <span class="hljs-string">NaN</span> <span class="hljs-string">}</span>
 
-map(b, (key, value) =&gt; {
-  <span class="hljs-keyword">return</span> value * <span class="hljs-number">2</span>;
-}, {
-  follow: <span class="hljs-literal">true</span>,
-}); <span class="hljs-comment">// =&gt; { a: 2, b: { c: 4 } }</span></code></pre></dd>
+<span class="hljs-string">map(b,</span> <span class="hljs-string">(key,</span> <span class="hljs-string">value)</span> <span class="hljs-string">=&gt;</span> <span class="hljs-string">{</span>
+  <span class="hljs-string">return</span> <span class="hljs-string">value</span> <span class="hljs-string">*</span> <span class="hljs-number">2</span><span class="hljs-string">;</span>
+<span class="hljs-string">},</span> <span class="hljs-string">{</span>
+  <span class="hljs-attr">follow:</span> <span class="hljs-literal">true</span><span class="hljs-string">,</span>
+<span class="hljs-string">});</span> <span class="hljs-string">//</span> <span class="hljs-string">=&gt;</span> <span class="hljs-string">{</span> <span class="hljs-attr">a:</span> <span class="hljs-number">2</span><span class="hljs-string">,</span> <span class="hljs-attr">b:</span> <span class="hljs-string">{</span> <span class="hljs-attr">c:</span> <span class="hljs-number">4</span> <span class="hljs-string">}</span> <span class="hljs-string">}</span></code></pre></dd>
 									<dt>throws</dt>
 									<dd><p>TypeError</p>
 									</dd>
@@ -159,7 +159,7 @@ map(b, (key, value) =&gt; {
 					<div class="tsd-signature tsd-kind-icon">Default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/hammy2899/o/blob/90ac39d/src/map.ts#L8">map.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/hammy2899/o/blob/d03b256/src/map.ts#L8">map.ts:8</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -168,7 +168,7 @@ map(b, (key, value) =&gt; {
 						<div class="tsd-signature tsd-kind-icon">follow<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/hammy2899/o/blob/90ac39d/src/map.ts#L9">map.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/hammy2899/o/blob/d03b256/src/map.ts#L9">map.ts:9</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -182,7 +182,7 @@ map(b, (key, value) =&gt; {
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_map_.html">"map"</a>
+						<a href="_map_.html">&quot;map&quot;</a>
 					</li>
 				</ul>
 			</nav>
