@@ -1,5 +1,4 @@
 import { dotNotation, valid } from '../util'
-import { OObject } from '../types'
 
 describe('util', (): void => {
   describe('dot notation', (): void => {

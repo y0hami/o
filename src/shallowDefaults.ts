@@ -1,9 +1,8 @@
 // o
 import { valid } from './util'
 import shallowMerge from './shallowMerge'
-import { DefaultsFunction, OObject } from './types'
 import clone from './clone'
-import merge from './merge'
+import { DefaultsFunction, OObject } from './types'
 
 /**
  * Same as `defaults` however the function returned will do a
