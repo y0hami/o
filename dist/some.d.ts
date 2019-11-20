@@ -1,5 +1,4 @@
 import { SomeOptions, OObject, SomeCallback } from './types';
-export declare const DefaultOptions: SomeOptions;
 /**
  * Check if some items in the object evaluates to true
  *

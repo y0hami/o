@@ -1,5 +1,4 @@
 import { EachOptions, OObject, EachCallback } from './types';
-export declare const DefaultOptions: EachOptions;
 /**
  * Foreach over an objects keys
  *

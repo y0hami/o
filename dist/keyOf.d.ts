@@ -1,5 +1,4 @@
 import { KeyOfOptions, OObject } from './types';
-export declare const DefaultOptions: KeyOfOptions;
 /**
  * Get the key to the specified value in dot notation
  *

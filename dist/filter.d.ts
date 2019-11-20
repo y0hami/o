@@ -1,5 +1,4 @@
 import { FilterOptions, OObject, FilterCallback } from './types';
-export declare const DefaultOptions: FilterOptions;
 /**
  * Filter the object keys/values depending on the callback evaluation
  *

@@ -1,5 +1,4 @@
 import { FlipOptions, OObject } from './types';
-export declare const DefaultOptions: FlipOptions;
 /**
  * Flip an objects keys fro values and values for keys
  *

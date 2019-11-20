@@ -1,5 +1,4 @@
 import { ValuesOptions, OObject } from './types';
-export declare const DefaultOptions: ValuesOptions;
 /**
  * Get an array of the object values
  *

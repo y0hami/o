@@ -1,5 +1,4 @@
 import { MapOptions, OObject, MapCallback } from './types';
-export declare const DefaultOptions: MapOptions;
 /**
  * Loop over the object and return a new object with the values
  * computed using the callback

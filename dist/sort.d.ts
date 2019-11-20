@@ -1,5 +1,4 @@
 import { SortOptions, OObject, SortCallback } from './types';
-export declare const DefaultOptions: SortOptions;
 /**
  * Sort an object via the callback evaluation
  *

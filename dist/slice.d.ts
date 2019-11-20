@@ -1,5 +1,4 @@
 import { SliceOptions, OObject } from './types';
-export declare const DefaultOptions: SliceOptions;
 /**
  * Get a portion of the specified object
  *

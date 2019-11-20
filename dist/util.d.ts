@@ -17,8 +17,4 @@ export declare const dotNotation: {
  * Check if all args specified are objects
  */
 export declare function valid(...args: any[]): boolean;
-/**
- * Merge the default options with the specified options
- */
-export declare function defaults(defaultOpts: object, specifiedOpts: object): object;
 export {};

@@ -1,5 +1,4 @@
 import { EveryOptions, OObject, EveryCallback } from './types';
-export declare const DefaultOptions: EveryOptions;
 /**
  * Check if every item in the object evaluates to true
  *

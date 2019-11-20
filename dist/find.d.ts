@@ -1,5 +1,4 @@
 import { FindOptions, OObject, FindCallback } from './types';
-export declare const DefaultOptions: FindOptions;
 /**
  * Find the key matching the callback evaluation
  *

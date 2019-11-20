@@ -1,4 +1,4 @@
-/* o - v2.3.0
+/* o - v2.3.1
  *
  * Released under MIT license
  * https://github.com/hammy2899/o
@@ -112,12 +112,6 @@
         }
         return is.apply(null, args);
     }
-    /**
-     * Merge the default options with the specified options
-     */
-    function defaults(defaultOpts, specifiedOpts) {
-        return Object.assign(defaultOpts, specifiedOpts);
-    }
 
     // o
     /**
@@ -195,6 +189,66 @@
         return result;
     }
 
+    // o
+    /**
+     * Merge two or more objects into one with the most right having
+     * the highest priority
+     *
+     * @example
+     * ```
+     * const a = { a: 1 };
+     * const b = { b: 2 };
+     * const c = { b: 5 };
+     *
+     * shallowMerge(a, b); // => { a: 1, b: 2 }
+     * shallowMerge(a, b, c); // => { a: 1, b: 5 }
+     * ```
+     *
+     * @throws TypeError
+     *
+     * @since 2.1.0
+     * @version 2.1.1
+     */
+    function shallowMerge(target) {
+        var sources = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            sources[_i - 1] = arguments[_i];
+        }
+        // check if the arg specified is an object
+        if (!valid(target))
+            throw new TypeError("Expected Object, got " + typeof target + " " + target);
+        // check if all the compare values are objects
+        if (!valid.apply(null, sources)) {
+            throw new TypeError("Expected Object[], got " + typeof sources + " " + sources);
+        }
+        // clone the target object and make it the current result
+        var result = clone(target);
+        // foreach over the sources
+        sources.forEach(function (sourceObject) {
+            // get the result (target to start with) and source object keys
+            var resultKeys = Object.keys(result);
+            var sourceKeys = Object.keys(sourceObject);
+            // foreach over the result (target to start with) keys
+            resultKeys.forEach(function (key) {
+                // if the source contains the target key
+                if (sourceKeys.includes(key)) {
+                    // set the result key as the source value
+                    result[key] = sourceObject[key];
+                }
+            });
+            // foreach over the source keys
+            sourceKeys.forEach(function (key) {
+                // if the result doesn't include the key
+                if (!resultKeys.includes(key)) {
+                    // set the new key/value onto the result object
+                    result[key] = sourceObject[key];
+                }
+            });
+        });
+        // return the result
+        return result;
+    }
+
     /**
      * Deflate the specified object into a one deep object
      * (keys will be dot notation)
@@ -250,6 +304,155 @@
 
     // o
     /**
+     * Set the value to the path on the specified object
+     *
+     * @example
+     * ```
+     * const a = { a: 1 };
+     *
+     * set(a, 'b.c', 2); // => { a: 1, b: { c: 2 } }
+     * ```
+     *
+     * @throws TypeError
+     *
+     * @since 1.0.0
+     * @version 2.0.0
+     */
+    function set(obj, path, value) {
+        // check if the arg specified is an object
+        if (!valid(obj))
+            throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
+        if (typeof path !== 'string')
+            throw new TypeError("Expected String, got " + typeof path + " " + path);
+        var cloned = clone(obj);
+        var result = cloned;
+        var pathParts = dotNotation.from(path);
+        pathParts.forEach(function (part, index) {
+            if (!is(cloned[part])) {
+                cloned[part] = {};
+            }
+            if (index === pathParts.length - 1) {
+                cloned[part] = value;
+            }
+            cloned = cloned[part];
+        });
+        return result;
+    }
+
+    // o
+    /**
+     * Inflate the specified object into a multi level object
+     * (reverse of deflate)
+     *
+     * @example
+     * ```
+     * const a = { a: 1, 'b.c': 2 };
+     *
+     * inflate(a); // => { a: 1, b: { c: 2 } }
+     * ```
+     *
+     * @throws TypeError
+     *
+     * @since 1.0.0
+     * @version 2.0.0
+     */
+    function inflate(obj) {
+        // check if the arg specified is an object
+        if (!valid(obj))
+            throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
+        // if the object is empty just return an empty object
+        // istanbul ignore next
+        if (empty(obj))
+            return {};
+        // create a new object for the result
+        var result = {};
+        // for each "path" in the object
+        Object.keys(obj).forEach(function (keyPath) {
+            // set the value on the result object to the dot notation path
+            result = set(result, keyPath, obj[keyPath]);
+        });
+        // return the result
+        return result;
+    }
+
+    /**
+     * Merge all sources into the target object with the most right
+     * source having the highest priority
+     *
+     * @example
+     * ```
+     * const a = { a: 1, b: { c: 2 } };
+     * const b = { b: { d: 3 } };
+     * const c = { b: { c: 3 } };
+     *
+     * merge(a, b); // => { a: 1, b: { c: 2, d: 3 } }
+     * merge(a, b, c); // => { a: 1, b: { c: 3, d: 3 } }
+     * ```
+     *
+     * @throws TypeError
+     *
+     * @since 1.0.0
+     * @version 2.1.1
+     */
+    function merge(target) {
+        var sources = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            sources[_i - 1] = arguments[_i];
+        }
+        // check if the arg specified is an object
+        if (!valid(target))
+            throw new TypeError("Expected Object, got " + typeof target + " " + target);
+        // check if all the compare values are objects
+        if (!valid.apply(null, sources)) {
+            throw new TypeError("Expected Object[], got " + typeof sources + " " + sources);
+        }
+        // clone the target and set it as the result
+        var result = deflate(clone(target));
+        // deflate all the sources
+        var deflatedSources = sources.map(function (s) { return deflate(s); });
+        var shallowMergeArgs = __spreadArrays([result], deflatedSources);
+        // return the result
+        return inflate(shallowMerge.apply(null, shallowMergeArgs));
+    }
+
+    /**
+     * Returns a function which will merge all objects with the default object
+     * specified. This is useful for creating default options/settings.
+     *
+     * @example
+     * ```
+     * const getDefaults = defaults({ a: 1, b: { c: 2 } })
+     *
+     * getDefaults({ b: { c: 3, d: 4 } }) // => { a: 1, b: { c: 3, d: 4 } }
+     * ```
+     *
+     * @throws TypeError
+     *
+     * @since 2.3.0
+     * @version 2.3.0
+     */
+    function defaults(obj) {
+        // check if the object specified is an object
+        if (!valid(obj))
+            throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
+        // cloned
+        var cloned = clone(obj);
+        // create the defaults user function
+        var result = function () {
+            var objects = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                objects[_i] = arguments[_i];
+            }
+            return merge.apply(void 0, __spreadArrays([cloned], objects));
+        };
+        // add property of the default object
+        result.defaultObject = cloned;
+        // return the result
+        return result;
+    }
+
+    // o
+    /**
      * Delete the specified path from the object
      *
      * @example
@@ -292,9 +495,9 @@
 
     // o
     // default options
-    var DefaultOptions = {
+    var getDefaults = defaults({
         follow: false
-    };
+    });
     /**
      * Remove `null` and `undefined` values from the specified object
      *
@@ -311,9 +514,9 @@
      * @version 2.0.0
      */
     function clean(obj, options) {
-        if (options === void 0) { options = DefaultOptions; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var follow = defaults(DefaultOptions, options).follow;
+        var follow = getDefaults(options).follow;
         // check if the object specified is an object
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -475,9 +678,9 @@
 
     // o
     // default options
-    var DefaultOptions$1 = {
+    var getDefaults$1 = defaults({
         follow: false
-    };
+    });
     /**
      * Foreach over an objects keys
      *
@@ -506,9 +709,9 @@
      * @version 2.0.0
      */
     function each(obj, cb, options) {
-        if (options === void 0) { options = DefaultOptions$1; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var follow = defaults(DefaultOptions$1, options).follow;
+        var follow = getDefaults$1(options).follow;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -531,9 +734,9 @@
 
     // o
     // default options
-    var DefaultOptions$2 = {
+    var getDefaults$2 = defaults({
         follow: false
-    };
+    });
     /**
      * Check if every item in the object evaluates to true
      *
@@ -558,9 +761,9 @@
      * @version 2.0.0
      */
     function every(obj, cb, options) {
-        if (options === void 0) { options = DefaultOptions$2; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var follow = defaults(DefaultOptions$2, options).follow;
+        var follow = getDefaults$2(options).follow;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -589,9 +792,9 @@
     }
 
     // o
-    var DefaultOptions$3 = {
+    var getDefaults$3 = defaults({
         follow: false
-    };
+    });
     /**
      * Filter the object keys/values depending on the callback evaluation
      *
@@ -616,9 +819,9 @@
      * @version 2.0.0
      */
     function filter(obj, cb, options) {
-        if (options === void 0) { options = DefaultOptions$3; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var follow = defaults(DefaultOptions$3, options).follow;
+        var follow = getDefaults$3(options).follow;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -648,9 +851,9 @@
 
     // o
     // default options
-    var DefaultOptions$4 = {
+    var getDefaults$4 = defaults({
         follow: false
-    };
+    });
     /**
      * Find the key matching the callback evaluation
      *
@@ -675,9 +878,9 @@
      * @version 2.0.0
      */
     function find(obj, cb, options) {
-        if (options === void 0) { options = DefaultOptions$4; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var follow = defaults(DefaultOptions$4, options).follow;
+        var follow = getDefaults$4(options).follow;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -717,10 +920,10 @@
 
     // o
     // default options
-    var DefaultOptions$5 = {
+    var getDefaults$5 = defaults({
         follow: false,
         useToString: false
-    };
+    });
     /**
      * Flip an objects keys fro values and values for keys
      *
@@ -745,9 +948,9 @@
      * @version 2.0.0
      */
     function flip(obj, options) {
-        if (options === void 0) { options = DefaultOptions$5; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var _a = defaults(DefaultOptions$5, options), follow = _a.follow, useToString = _a.useToString;
+        var _a = getDefaults$5(options), follow = _a.follow, useToString = _a.useToString;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -889,9 +1092,9 @@
 
     // o
     // default options
-    var DefaultOptions$6 = {
+    var getDefaults$6 = defaults({
         follow: false
-    };
+    });
     /**
      * Get the keys of the specified object (different to Object.keys
      * because Object.keys can't follow deep objects)
@@ -910,9 +1113,9 @@
      * @version 2.0.0
      */
     function keys(obj, options) {
-        if (options === void 0) { options = DefaultOptions$6; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var follow = defaults(DefaultOptions$6, options).follow;
+        var follow = getDefaults$6(options).follow;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -931,9 +1134,9 @@
 
     // o
     // default options
-    var DefaultOptions$7 = {
+    var getDefaults$7 = defaults({
         follow: false
-    };
+    });
     /**
      * Check if an object includes the specified value
      *
@@ -955,9 +1158,9 @@
      * @version 2.0.0
      */
     function includes(obj, value, options) {
-        if (options === void 0) { options = DefaultOptions$7; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var follow = defaults(DefaultOptions$7, options).follow;
+        var follow = getDefaults$7(options).follow;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -984,83 +1187,10 @@
     }
 
     // o
-    /**
-     * Set the value to the path on the specified object
-     *
-     * @example
-     * ```
-     * const a = { a: 1 };
-     *
-     * set(a, 'b.c', 2); // => { a: 1, b: { c: 2 } }
-     * ```
-     *
-     * @throws TypeError
-     *
-     * @since 1.0.0
-     * @version 2.0.0
-     */
-    function set(obj, path, value) {
-        // check if the arg specified is an object
-        if (!valid(obj))
-            throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
-        if (typeof path !== 'string')
-            throw new TypeError("Expected String, got " + typeof path + " " + path);
-        var cloned = clone(obj);
-        var result = cloned;
-        var pathParts = dotNotation.from(path);
-        pathParts.forEach(function (part, index) {
-            if (!is(cloned[part])) {
-                cloned[part] = {};
-            }
-            if (index === pathParts.length - 1) {
-                cloned[part] = value;
-            }
-            cloned = cloned[part];
-        });
-        return result;
-    }
-
-    // o
-    /**
-     * Inflate the specified object into a multi level object
-     * (reverse of deflate)
-     *
-     * @example
-     * ```
-     * const a = { a: 1, 'b.c': 2 };
-     *
-     * inflate(a); // => { a: 1, b: { c: 2 } }
-     * ```
-     *
-     * @throws TypeError
-     *
-     * @since 1.0.0
-     * @version 2.0.0
-     */
-    function inflate(obj) {
-        // check if the arg specified is an object
-        if (!valid(obj))
-            throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
-        // if the object is empty just return an empty object
-        // istanbul ignore next
-        if (empty(obj))
-            return {};
-        // create a new object for the result
-        var result = {};
-        // for each "path" in the object
-        Object.keys(obj).forEach(function (keyPath) {
-            // set the value on the result object to the dot notation path
-            result = set(result, keyPath, obj[keyPath]);
-        });
-        // return the result
-        return result;
-    }
-
-    // o
     // default options
-    var DefaultOptions$8 = {
+    var getDefaults$8 = defaults({
         follow: false
-    };
+    });
     /**
      * Get the key to the specified value in dot notation
      *
@@ -1080,9 +1210,9 @@
      * @version 2.0.0
      */
     function keyOf(obj, value, options) {
-        if (options === void 0) { options = DefaultOptions$8; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var follow = defaults(DefaultOptions$8, options).follow;
+        var follow = getDefaults$8(options).follow;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -1097,9 +1227,9 @@
 
     // o
     // default options
-    var DefaultOptions$9 = {
+    var getDefaults$9 = defaults({
         follow: false
-    };
+    });
     /**
      * Loop over the object and return a new object with the values
      * computed using the callback
@@ -1130,8 +1260,8 @@
      * @version 2.0.0
      */
     function map(obj, cb, options) {
-        if (options === void 0) { options = DefaultOptions$9; }
-        var follow = defaults(DefaultOptions$9, options).follow;
+        if (options === void 0) { options = {}; }
+        var follow = getDefaults$9(options).follow;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -1154,106 +1284,6 @@
         });
         // return the result
         return result;
-    }
-
-    // o
-    /**
-     * Merge two or more objects into one with the most right having
-     * the highest priority
-     *
-     * @example
-     * ```
-     * const a = { a: 1 };
-     * const b = { b: 2 };
-     * const c = { b: 5 };
-     *
-     * shallowMerge(a, b); // => { a: 1, b: 2 }
-     * shallowMerge(a, b, c); // => { a: 1, b: 5 }
-     * ```
-     *
-     * @throws TypeError
-     *
-     * @since 2.1.0
-     * @version 2.1.1
-     */
-    function shallowMerge(target) {
-        var sources = [];
-        for (var _i = 1; _i < arguments.length; _i++) {
-            sources[_i - 1] = arguments[_i];
-        }
-        // check if the arg specified is an object
-        if (!valid(target))
-            throw new TypeError("Expected Object, got " + typeof target + " " + target);
-        // check if all the compare values are objects
-        if (!valid.apply(null, sources)) {
-            throw new TypeError("Expected Object[], got " + typeof sources + " " + sources);
-        }
-        // clone the target object and make it the current result
-        var result = clone(target);
-        // foreach over the sources
-        sources.forEach(function (sourceObject) {
-            // get the result (target to start with) and source object keys
-            var resultKeys = Object.keys(result);
-            var sourceKeys = Object.keys(sourceObject);
-            // foreach over the result (target to start with) keys
-            resultKeys.forEach(function (key) {
-                // if the source contains the target key
-                if (sourceKeys.includes(key)) {
-                    // set the result key as the source value
-                    result[key] = sourceObject[key];
-                }
-            });
-            // foreach over the source keys
-            sourceKeys.forEach(function (key) {
-                // if the result doesn't include the key
-                if (!resultKeys.includes(key)) {
-                    // set the new key/value onto the result object
-                    result[key] = sourceObject[key];
-                }
-            });
-        });
-        // return the result
-        return result;
-    }
-
-    /**
-     * Merge all sources into the target object with the most right
-     * source having the highest priority
-     *
-     * @example
-     * ```
-     * const a = { a: 1, b: { c: 2 } };
-     * const b = { b: { d: 3 } };
-     * const c = { b: { c: 3 } };
-     *
-     * merge(a, b); // => { a: 1, b: { c: 2, d: 3 } }
-     * merge(a, b, c); // => { a: 1, b: { c: 3, d: 3 } }
-     * ```
-     *
-     * @throws TypeError
-     *
-     * @since 1.0.0
-     * @version 2.1.1
-     */
-    function merge(target) {
-        var sources = [];
-        for (var _i = 1; _i < arguments.length; _i++) {
-            sources[_i - 1] = arguments[_i];
-        }
-        // check if the arg specified is an object
-        if (!valid(target))
-            throw new TypeError("Expected Object, got " + typeof target + " " + target);
-        // check if all the compare values are objects
-        if (!valid.apply(null, sources)) {
-            throw new TypeError("Expected Object[], got " + typeof sources + " " + sources);
-        }
-        // clone the target and set it as the result
-        var result = deflate(clone(target));
-        // deflate all the sources
-        var deflatedSources = sources.map(function (s) { return deflate(s); });
-        var shallowMergeArgs = __spreadArrays([result], deflatedSources);
-        // return the result
-        return inflate(shallowMerge.apply(null, shallowMergeArgs));
     }
 
     // o
@@ -1282,9 +1312,9 @@
 
     // o
     // default options
-    var DefaultOptions$a = {
+    var getDefaults$a = defaults({
         follow: false
-    };
+    });
     /**
      * Get a portion of the specified object
      *
@@ -1303,9 +1333,9 @@
      */
     function slice(obj, start, end, options) {
         if (end === void 0) { end = Object.keys(obj).length; }
-        if (options === void 0) { options = DefaultOptions$a; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var follow = defaults(DefaultOptions$a, options).follow;
+        var follow = getDefaults$a(options).follow;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -1335,9 +1365,9 @@
 
     // o
     // default options
-    var DefaultOptions$b = {
+    var getDefaults$b = defaults({
         follow: false
-    };
+    });
     /**
      * Check if some items in the object evaluates to true
      *
@@ -1368,9 +1398,9 @@
      * @version 2.0.0
      */
     function some(obj, cb, options) {
-        if (options === void 0) { options = DefaultOptions$b; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var follow = defaults(DefaultOptions$b, options).follow;
+        var follow = getDefaults$b(options).follow;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -1400,9 +1430,9 @@
 
     // o
     // default options
-    var DefaultOptions$c = {
+    var getDefaults$c = defaults({
         follow: false
-    };
+    });
     /**
      * Sort an object via the callback evaluation
      *
@@ -1432,9 +1462,9 @@
      * @version 2.0.0
      */
     function sort(obj, cb, options) {
-        if (options === void 0) { options = DefaultOptions$c; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var follow = defaults(DefaultOptions$c, options).follow;
+        var follow = getDefaults$c(options).follow;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
@@ -1477,9 +1507,9 @@
 
     // o
     // default options
-    var DefaultOptions$d = {
+    var getDefaults$d = defaults({
         follow: false
-    };
+    });
     /**
      * Get an array of the object values
      *
@@ -1500,9 +1530,9 @@
      * @version 2.0.0
      */
     function values(obj, options) {
-        if (options === void 0) { options = DefaultOptions$d; }
+        if (options === void 0) { options = {}; }
         // extract options
-        var follow = defaults(DefaultOptions$d, options).follow;
+        var follow = getDefaults$d(options).follow;
         // check if the args specified are the correct type
         if (!valid(obj))
             throw new TypeError("Expected Object, got " + typeof obj + " " + obj);

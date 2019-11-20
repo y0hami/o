@@ -4,7 +4,10 @@ export interface OObject {
 export interface CleanOptions {
     follow?: boolean;
 }
-export declare type DefaultsFunction = (...obj: OObject[]) => OObject;
+export interface DefaultsFunction {
+    (...obj: OObject[]): OObject;
+    defaultObject: OObject;
+}
 export interface EachOptions {
     follow?: boolean;
 }

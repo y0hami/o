@@ -1,5 +1,4 @@
 import { IncludesOptions, OObject } from './types';
-export declare const DefaultOptions: IncludesOptions;
 /**
  * Check if an object includes the specified value
  *

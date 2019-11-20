@@ -1,5 +1,4 @@
 import { KeysOptions, OObject } from './types';
-export declare const DefaultOptions: KeysOptions;
 /**
  * Get the keys of the specified object (different to Object.keys
  * because Object.keys can't follow deep objects)

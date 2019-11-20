@@ -1,5 +1,4 @@
 import { CleanOptions, OObject } from './types';
-export declare const DefaultOptions: CleanOptions;
 /**
  * Remove `null` and `undefined` values from the specified object
  *
