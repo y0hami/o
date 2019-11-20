@@ -6,6 +6,8 @@ export interface CleanOptions {
   follow?: boolean
 }
 
+export type DefaultsFunction = (...obj: OObject[]) => OObject
+
 export interface EachOptions {
   follow?: boolean
 }
