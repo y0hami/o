@@ -1,7 +1,7 @@
 import shallowDefaults from '../shallowDefaults'
 import { OObject } from '../types'
 
-describe('defaults', (): void => {
+describe('shallowDefaults', (): void => {
   test('should merge all objects', (): void => {
     const getDefaults = shallowDefaults({ a: 1 })
     const b = { b: 2 }
