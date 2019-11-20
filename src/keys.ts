@@ -1,13 +1,14 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import clone from './clone'
 import deflate from './deflate'
 import { KeysOptions, OObject } from './types'
 
 // default options
-export const DefaultOptions: KeysOptions = {
+const getDefaults = defaults({
   follow: false
-}
+})
 
 /**
  * Get the keys of the specified object (different to Object.keys
@@ -26,11 +27,11 @@ export const DefaultOptions: KeysOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function keys (obj: OObject, options: KeysOptions = DefaultOptions): string[] {
+function keys (obj: OObject, options: KeysOptions = {}): string[] {
   // extract options
   const {
     follow
-  } = (defaults(DefaultOptions, options) as KeysOptions)
+  } = getDefaults(options) as KeysOptions
 
   // check if the args specified are the correct type
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)

@@ -1,13 +1,14 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import keys from './keys'
 import get from './get'
 import { ValuesOptions, OObject } from './types'
 
 // default options
-export const DefaultOptions: ValuesOptions = {
+const getDefaults = defaults({
   follow: false
-}
+})
 
 /**
  * Get an array of the object values
@@ -28,11 +29,11 @@ export const DefaultOptions: ValuesOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function values (obj: OObject, options: ValuesOptions = DefaultOptions): any[] {
+function values (obj: OObject, options: ValuesOptions = {}): any[] {
   // extract options
   const {
     follow
-  } = (defaults(DefaultOptions, options) as ValuesOptions)
+  } = getDefaults(options) as ValuesOptions
 
   // check if the args specified are the correct type
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)

@@ -1,13 +1,14 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import clone from './clone'
 import each from './each'
 import del from './del'
 import { FilterOptions, OObject, FilterCallback } from './types'
 
-export const DefaultOptions: FilterOptions = {
+const getDefaults = defaults({
   follow: false
-}
+})
 
 /**
  * Filter the object keys/values depending on the callback evaluation
@@ -35,12 +36,12 @@ export const DefaultOptions: FilterOptions = {
 function filter (
   obj: OObject,
   cb: FilterCallback,
-  options: FilterOptions = DefaultOptions
+  options: FilterOptions = {}
 ): OObject {
   // extract options
   const {
     follow
-  } = (defaults(DefaultOptions, options) as FilterOptions)
+  } = getDefaults(options) as FilterOptions
 
   // check if the args specified are the correct type
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)

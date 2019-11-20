@@ -1,12 +1,13 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import each from './each'
 import { IncludesOptions, OObject } from './types'
 
 // default options
-export const DefaultOptions: IncludesOptions = {
+const getDefaults = defaults({
   follow: false
-}
+})
 
 /**
  * Check if an object includes the specified value
@@ -28,11 +29,11 @@ export const DefaultOptions: IncludesOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function includes (obj: OObject, value: any, options: IncludesOptions = DefaultOptions): boolean {
+function includes (obj: OObject, value: any, options: IncludesOptions = {}): boolean {
   // extract options
   const {
     follow
-  } = (defaults(DefaultOptions, options) as IncludesOptions)
+  } = getDefaults(options) as IncludesOptions
 
   // check if the args specified are the correct type
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)

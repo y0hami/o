@@ -52,10 +52,3 @@ export const dotNotation = {
 export function valid (...args: any[]): boolean {
   return is.apply(null, args)
 }
-
-/**
- * Merge the default options with the specified options
- */
-export function defaults (defaultOpts: object, specifiedOpts: object): object {
-  return Object.assign(defaultOpts, specifiedOpts)
-}

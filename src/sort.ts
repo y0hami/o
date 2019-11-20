@@ -1,5 +1,6 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import keys from './keys'
 import get from './get'
 import set from './set'
@@ -9,9 +10,9 @@ import {
 } from './types'
 
 // default options
-export const DefaultOptions: SortOptions = {
+const getDefaults = defaults({
   follow: false
-}
+})
 
 /**
  * Sort an object via the callback evaluation
@@ -41,11 +42,11 @@ export const DefaultOptions: SortOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function sort (obj: OObject, cb: SortCallback, options: SortOptions = DefaultOptions): OObject {
+function sort (obj: OObject, cb: SortCallback, options: SortOptions = {}): OObject {
   // extract options
   const {
     follow
-  } = (defaults(DefaultOptions, options) as SortOptions)
+  } = getDefaults(options) as SortOptions
 
   // check if the args specified are the correct type
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)

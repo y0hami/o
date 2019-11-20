@@ -1,12 +1,13 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import each from './each'
 import { SomeOptions, OObject, SomeCallback } from './types'
 
 // default options
-export const DefaultOptions: SomeOptions = {
+const getDefaults = defaults({
   follow: false
-}
+})
 
 /**
  * Check if some items in the object evaluates to true
@@ -37,11 +38,11 @@ export const DefaultOptions: SomeOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function some (obj: OObject, cb: SomeCallback, options: SomeOptions = DefaultOptions): boolean {
+function some (obj: OObject, cb: SomeCallback, options: SomeOptions = {}): boolean {
   // extract options
   const {
     follow
-  } = (defaults(DefaultOptions, options) as SomeOptions)
+  } = getDefaults(options) as SomeOptions
 
   // check if the args specified are the correct type
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)

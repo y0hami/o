@@ -1,5 +1,6 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import empty from './empty'
 import clone from './clone'
 import deflate from './deflate'
@@ -7,9 +8,9 @@ import del from './del'
 import { CleanOptions, OObject } from './types'
 
 // default options
-export const DefaultOptions: CleanOptions = {
+const getDefaults = defaults({
   follow: false
-}
+})
 
 /**
  * Remove `null` and `undefined` values from the specified object
@@ -26,11 +27,11 @@ export const DefaultOptions: CleanOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function clean (obj: OObject, options: CleanOptions = DefaultOptions): OObject {
+function clean (obj: OObject, options: CleanOptions = {}): OObject {
   // extract options
   const {
     follow
-  } = (defaults(DefaultOptions, options) as CleanOptions)
+  } = getDefaults(options) as CleanOptions
 
   // check if the object specified is an object
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)

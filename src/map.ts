@@ -1,13 +1,14 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import each from './each'
 import set from './set'
 import { MapOptions, OObject, MapCallback } from './types'
 
 // default options
-export const DefaultOptions: MapOptions = {
+const getDefaults = defaults({
   follow: false
-}
+})
 
 /**
  * Loop over the object and return a new object with the values
@@ -38,10 +39,10 @@ export const DefaultOptions: MapOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function map (obj: OObject, cb: MapCallback, options: MapOptions = DefaultOptions): OObject {
+function map (obj: OObject, cb: MapCallback, options: MapOptions = {}): OObject {
   const {
     follow
-  } = (defaults(DefaultOptions, options) as MapOptions)
+  } = getDefaults(options) as MapOptions
 
   // check if the args specified are the correct type
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)

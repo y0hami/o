@@ -1,12 +1,13 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import each from './each'
 import { FindOptions, OObject, FindCallback } from './types'
 
 // default options
-export const DefaultOptions: FindOptions = {
+const getDefaults = defaults({
   follow: false
-}
+})
 
 /**
  * Find the key matching the callback evaluation
@@ -34,12 +35,12 @@ export const DefaultOptions: FindOptions = {
 function find (
   obj: OObject,
   cb: FindCallback,
-  options: FindOptions = DefaultOptions
+  options: FindOptions = {}
 ): string | undefined {
   // extract options
   const {
     follow
-  } = (defaults(DefaultOptions, options) as FindOptions)
+  } = getDefaults(options) as FindOptions
 
   // check if the args specified are the correct type
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)

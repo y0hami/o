@@ -1,13 +1,14 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import empty from './empty'
 import deflate from './deflate'
 import { EachOptions, OObject, EachCallback } from './types'
 
 // default options
-export const DefaultOptions: EachOptions = {
+const getDefaults = defaults({
   follow: false
-}
+})
 
 /**
  * Foreach over an objects keys
@@ -36,11 +37,11 @@ export const DefaultOptions: EachOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function each (obj: OObject, cb: EachCallback, options: EachOptions = DefaultOptions): void {
+function each (obj: OObject, cb: EachCallback, options: EachOptions = {}): void {
   // extract options
   const {
     follow
-  } = (defaults(DefaultOptions, options) as EachOptions)
+  } = getDefaults(options) as EachOptions
 
   // check if the args specified are the correct type
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)

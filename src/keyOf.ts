@@ -1,12 +1,13 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import find from './find'
 import { KeyOfOptions, OObject } from './types'
 
 // default options
-export const DefaultOptions: KeyOfOptions = {
+const getDefaults = defaults({
   follow: false
-}
+})
 
 /**
  * Get the key to the specified value in dot notation
@@ -29,12 +30,12 @@ export const DefaultOptions: KeyOfOptions = {
 function keyOf (
   obj: OObject,
   value: any,
-  options: KeyOfOptions = DefaultOptions
+  options: KeyOfOptions = {}
 ): string | undefined {
   // extract options
   const {
     follow
-  } = (defaults(DefaultOptions, options) as KeyOfOptions)
+  } = getDefaults(options) as KeyOfOptions
 
   // check if the args specified are the correct type
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)

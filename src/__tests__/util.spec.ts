@@ -1,4 +1,4 @@
-import { dotNotation, valid, defaults } from '../util'
+import { dotNotation, valid } from '../util'
 import { OObject } from '../types'
 
 describe('util', (): void => {
@@ -59,23 +59,6 @@ describe('util', (): void => {
       expect(valid({}, 'testing')).toBe(false)
       expect(valid({}, 1)).toBe(false)
       expect(valid({}, {}, false)).toBe(false)
-    })
-  })
-
-  describe('defaults', (): void => {
-    test('should merge the two objects', (): void => {
-      const objA = {
-        a: 1
-      }
-      const objB = {
-        a: 2,
-        b: 2
-      }
-
-      const result: OObject = defaults(objA, objB)
-
-      expect(Object.keys(result)).toHaveLength(2)
-      expect(parseInt(result.a) + parseInt(result.b)).toBe(4)
     })
   })
 })

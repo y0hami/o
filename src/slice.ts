@@ -1,14 +1,15 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import keys from './keys'
 import set from './set'
 import get from './get'
 import { SliceOptions, OObject } from './types'
 
 // default options
-export const DefaultOptions: SliceOptions = {
+const getDefaults = defaults({
   follow: false
-}
+})
 
 /**
  * Get a portion of the specified object
@@ -30,12 +31,12 @@ function slice (
   obj: OObject,
   start: number,
   end: number = Object.keys(obj).length,
-  options: SliceOptions = DefaultOptions
+  options: SliceOptions = {}
 ): OObject {
   // extract options
   const {
     follow
-  } = (defaults(DefaultOptions, options) as SliceOptions)
+  } = getDefaults(options) as SliceOptions
 
   // check if the args specified are the correct type
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)

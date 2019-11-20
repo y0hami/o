@@ -1,14 +1,15 @@
 // o
-import { valid, defaults } from './util'
+import { valid } from './util'
+import defaults from './defaults'
 import each from './each'
 import is from './is'
 import { FlipOptions, OObject } from './types'
 
 // default options
-export const DefaultOptions: FlipOptions = {
+const getDefaults = defaults({
   follow: false,
   useToString: false
-}
+})
 
 /**
  * Flip an objects keys fro values and values for keys
@@ -33,12 +34,12 @@ export const DefaultOptions: FlipOptions = {
  * @since 1.0.0
  * @version 2.0.0
  */
-function flip (obj: OObject, options: FlipOptions = DefaultOptions): OObject {
+function flip (obj: OObject, options: FlipOptions = {}): OObject {
   // extract options
   const {
     follow,
     useToString
-  } = (defaults(DefaultOptions, options) as FlipOptions)
+  } = getDefaults(options) as FlipOptions
 
   // check if the args specified are the correct type
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)
