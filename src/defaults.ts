@@ -1,6 +1,7 @@
 // o
 import { valid } from './util'
 import merge from './merge'
+import clone from './clone'
 import { DefaultsFunction, OObject } from './types'
 
 /**
@@ -23,8 +24,19 @@ function defaults (obj: OObject): DefaultsFunction {
   // check if the object specified is an object
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)
 
-  // return the defaults user function
-  return (...objects) => merge(obj, ...objects)
+  // cloned
+  const cloned = clone(obj)
+
+  // create the defaults user function
+  const result: DefaultsFunction = function (...objects): OObject {
+    return merge(cloned, ...objects)
+  }
+
+  // add property of the default object
+  result.defaultObject = cloned
+
+  // return the result
+  return result
 }
 
 export default defaults

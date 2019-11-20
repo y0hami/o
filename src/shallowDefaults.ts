@@ -2,6 +2,8 @@
 import { valid } from './util'
 import shallowMerge from './shallowMerge'
 import { DefaultsFunction, OObject } from './types'
+import clone from './clone'
+import merge from './merge'
 
 /**
  * Same as `defaults` however the function returned will do a
@@ -23,8 +25,19 @@ function shallowDefaults (obj: OObject): DefaultsFunction {
   // check if the object specified is an object
   if (!valid(obj)) throw new TypeError(`Expected Object, got ${typeof obj} ${obj}`)
 
-  // return the defaults user function
-  return (...objects) => shallowMerge(obj, ...objects)
+  // cloned
+  const cloned = clone(obj)
+
+  // create the defaults user function
+  const result: DefaultsFunction = function (...objects): OObject {
+    return shallowMerge(cloned, ...objects)
+  }
+
+  // add property of the default object
+  result.defaultObject = cloned
+
+  // return the result
+  return result
 }
 
 export default shallowDefaults
