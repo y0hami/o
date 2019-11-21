@@ -1,4 +1,4 @@
-/* o - v2.3.1
+/* o - v2.3.2
  *
  * Released under MIT license
  * https://github.com/hammy2899/o
@@ -1989,12 +1989,49 @@
         return new OChainable(obj);
     }
 
+    /**
+     * Same as `defaults` however the function returned will do a
+     * shallow merge instead of a deep merge.
+     *
+     * @example
+     * ```
+     * const getDefaults = shallowDefaults({ a: 1, b: { c: 2, d: 3 } })
+     *
+     * getDefaults({ a: 2, b: { c: 3 } }) // => { a: 2, b: { c: 3 } }
+     * ```
+     *
+     * @throws TypeError
+     *
+     * @since 2.3.0
+     * @version 2.3.0
+     */
+    function shallowDefaults(obj) {
+        // check if the object specified is an object
+        if (!valid(obj))
+            throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
+        // cloned
+        var cloned = clone(obj);
+        // create the defaults user function
+        var result = function () {
+            var objects = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                objects[_i] = arguments[_i];
+            }
+            return shallowMerge.apply(void 0, __spreadArrays([cloned], objects));
+        };
+        // add property of the default object
+        result.defaultObject = cloned;
+        // return the result
+        return result;
+    }
+
     // ------------------------------ //
     var index = {
         chainer: chainer,
         clean: clean,
         clone: clone,
         deepEqual: deepEqual,
+        defaults: defaults,
         deflate: deflate,
         del: del,
         each: each,
@@ -2015,6 +2052,7 @@
         merge: merge,
         OChainable: OChainable,
         set: set,
+        shallowDefaults: shallowDefaults,
         shallowMerge: shallowMerge,
         size: size,
         slice: slice,
@@ -2029,6 +2067,7 @@
     exports.clone = clone;
     exports.deepEqual = deepEqual;
     exports.default = index;
+    exports.defaults = defaults;
     exports.deflate = deflate;
     exports.del = del;
     exports.each = each;
@@ -2048,6 +2087,7 @@
     exports.map = map;
     exports.merge = merge;
     exports.set = set;
+    exports.shallowDefaults = shallowDefaults;
     exports.shallowMerge = shallowMerge;
     exports.size = size;
     exports.slice = slice;

@@ -1,4 +1,4 @@
-/* o - v2.3.1
+/* o - v2.3.2
  *
  * Released under MIT license
  * https://github.com/hammy2899/o
@@ -1983,12 +1983,49 @@ function chainer(obj) {
     return new OChainable(obj);
 }
 
+/**
+ * Same as `defaults` however the function returned will do a
+ * shallow merge instead of a deep merge.
+ *
+ * @example
+ * ```
+ * const getDefaults = shallowDefaults({ a: 1, b: { c: 2, d: 3 } })
+ *
+ * getDefaults({ a: 2, b: { c: 3 } }) // => { a: 2, b: { c: 3 } }
+ * ```
+ *
+ * @throws TypeError
+ *
+ * @since 2.3.0
+ * @version 2.3.0
+ */
+function shallowDefaults(obj) {
+    // check if the object specified is an object
+    if (!valid(obj))
+        throw new TypeError("Expected Object, got " + typeof obj + " " + obj);
+    // cloned
+    var cloned = clone(obj);
+    // create the defaults user function
+    var result = function () {
+        var objects = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            objects[_i] = arguments[_i];
+        }
+        return shallowMerge.apply(void 0, __spreadArrays([cloned], objects));
+    };
+    // add property of the default object
+    result.defaultObject = cloned;
+    // return the result
+    return result;
+}
+
 // ------------------------------ //
 var index = {
     chainer: chainer,
     clean: clean,
     clone: clone,
     deepEqual: deepEqual,
+    defaults: defaults,
     deflate: deflate,
     del: del,
     each: each,
@@ -2009,6 +2046,7 @@ var index = {
     merge: merge,
     OChainable: OChainable,
     set: set,
+    shallowDefaults: shallowDefaults,
     shallowMerge: shallowMerge,
     size: size,
     slice: slice,
@@ -2018,5 +2056,5 @@ var index = {
 };
 
 export default index;
-export { OChainable, chainer, clean, clone, deepEqual, deflate, del, each, empty, equal, every, filter, find, flip, get, has, includes, inflate, is, keyOf, keys, map, merge, set, shallowMerge, size, slice, some, sort, values };
+export { OChainable, chainer, clean, clone, deepEqual, defaults, deflate, del, each, empty, equal, every, filter, find, flip, get, has, includes, inflate, is, keyOf, keys, map, merge, set, shallowDefaults, shallowMerge, size, slice, some, sort, values };
 //# sourceMappingURL=o.mjs.map
