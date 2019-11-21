@@ -8,6 +8,7 @@ import chainer from './chainer'
 import clean from './clean'
 import clone from './clone'
 import deepEqual from './deepEqual'
+import defaults from './defaults'
 import deflate from './deflate'
 import del from './del'
 import each from './each'
@@ -28,6 +29,7 @@ import map from './map'
 import merge from './merge'
 import OChainable from './OChainable'
 import set from './set'
+import shallowDefaults from './shallowDefaults'
 import shallowMerge from './shallowMerge'
 import size from './size'
 import slice from './slice'
@@ -40,6 +42,7 @@ export {
   clean,
   clone,
   deepEqual,
+  defaults,
   deflate,
   del,
   each,
@@ -60,6 +63,7 @@ export {
   merge,
   OChainable,
   set,
+  shallowDefaults,
   shallowMerge,
   size,
   slice,
@@ -73,6 +77,7 @@ export default {
   clean,
   clone,
   deepEqual,
+  defaults,
   deflate,
   del,
   each,
@@ -93,6 +98,7 @@ export default {
   merge,
   OChainable,
   set,
+  shallowDefaults,
   shallowMerge,
   size,
   slice,
