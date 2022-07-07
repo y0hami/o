@@ -1,11 +1,16 @@
 # project files
 node_modules
 build
+dist
+lab.[jt]s
+packages/**/LICENSE
+packages/**/README.md
 
 # logs & cache files
 *.log*
 .eslintcache
 coverage
+.husky
 
 # OS and editors
 .DS_Store

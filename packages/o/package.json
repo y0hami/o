@@ -1,0 +1,61 @@
+{
+  "name": "o",
+  "version": "3.0.0",
+  "description": "common object helper functions",
+  "keywords": [
+    "o",
+    "object",
+    "helper",
+    "util",
+    "modules"
+  ],
+  "homepage": "https://o.hammy2899.dev",
+  "bugs": {
+    "url": "https://github.com/hammy2899/o/issues"
+  },
+  "license": "MIT",
+  "author": "Sean Hamilton <sean@hami.me>",
+  "main": "dist/index.cjs",
+  "browser": "dist/index.min.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hammy2899/o.git",
+    "directory": "packages/o"
+  },
+  "dependencies": {
+    "o.is": "1.0.0",
+    "o.clone": "1.0.0",
+    "o.clean": "1.0.0",
+    "o.dot": "1.0.0",
+    "o.deflate": "1.0.0",
+    "o.deepentries": "1.0.0",
+    "o.inflate": "1.0.0",
+    "o.deepfromentries": "1.0.0",
+    "o.deepkeys": "1.0.0",
+    "o.deepvalues": "1.0.0",
+    "o.del": "1.0.0",
+    "o.each": "1.0.0",
+    "o.empty": "1.0.0",
+    "o.equal": "1.0.0",
+    "o.every": "1.0.0",
+    "o.filter": "1.0.0",
+    "o.find": "1.0.0",
+    "o.get": "1.0.0",
+    "o.has": "1.0.0",
+    "o.includes": "1.0.0",
+    "o.keyof": "1.0.0",
+    "o.map": "1.0.0",
+    "o.shallowmerge": "1.0.0",
+    "o.merge": "1.0.0",
+    "o.set": "1.0.0",
+    "o.size": "1.0.0",
+    "o.slice": "1.0.0",
+    "o.some": "1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  },
+  "o": {}
+}

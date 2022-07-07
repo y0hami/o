@@ -1,0 +1,39 @@
+{
+  "name": "o.merge",
+  "version": "1.0.0",
+  "description": "The o.merge method exported as a module",
+  "keywords": [
+    "o-module",
+    "object",
+    "module",
+    "merge",
+    "assign",
+    "deepMerge",
+    "deep"
+  ],
+  "homepage": "https://o.hammy2899.dev",
+  "bugs": {
+    "url": "https://github.com/hammy2899/o/issues"
+  },
+  "license": "MIT",
+  "author": "Sean Hamilton <sean@hami.me>",
+  "main": "dist/index.cjs",
+  "browser": "dist/index.min.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hammy2899/o.git",
+    "directory": "packages/merge"
+  },
+  "dependencies": {
+    "o.is": "1.0.0",
+    "o.utils": "1.0.0",
+    "o.shallowmerge": "1.0.0",
+    "o.deflate": "1.0.0",
+    "o.inflate": "1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
+}

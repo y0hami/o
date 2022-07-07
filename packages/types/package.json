@@ -1,0 +1,29 @@
+{
+  "name": "o.types",
+  "version": "1.0.0",
+  "description": "Useful types for objects",
+  "keywords": [
+    "o-module",
+    "module",
+    "object",
+    "types"
+  ],
+  "homepage": "https://o.hammy2899.dev",
+  "bugs": {
+    "url": "https://github.com/hammy2899/o/issues"
+  },
+  "license": "MIT",
+  "author": "Sean Hamilton <sean@hami.me>",
+  "types": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hammy2899/o.git",
+    "directory": "packages/types"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  },
+  "o": {
+    "build": false
+  }
+}

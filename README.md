@@ -1,6 +1,6 @@
-![o Logo](https://unpkg.com/o@1.1.3/logo.png)
+<img src="./assets/lockup_light.svg#gh-dark-mode-only" alt="ojs logo" height="80" />
+<img src="./assets/lockup_dark.svg#gh-light-mode-only" alt="ojs logo" height="80" />
 
-# [o](https://github.com/hammy2899/o)
 common object helper functions written in TypeScript which can be used in [NodeJS](https://nodejs.org/en/) and the browser (supports ES6).
 
 

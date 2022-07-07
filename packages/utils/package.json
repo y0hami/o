@@ -1,0 +1,31 @@
+{
+  "name": "o.utils",
+  "version": "1.0.0",
+  "description": "The utility methods used internally in o functions",
+  "keywords": [
+    "o-module",
+    "module"
+  ],
+  "homepage": "https://o.hammy2899.dev",
+  "bugs": {
+    "url": "https://github.com/hammy2899/o/issues"
+  },
+  "license": "MIT",
+  "author": "Sean Hamilton <sean@hami.me>",
+  "main": "dist/index.cjs",
+  "browser": "dist/index.min.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hammy2899/o.git",
+    "directory": "packages/types"
+  },
+  "dependencies": {
+    "o.is": "1.0.0",
+    "o.types": "1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  }
+}

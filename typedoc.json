@@ -1,8 +1,0 @@
-{
-  "mode": "modules",
-  "out": "docs",
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ]
-}
