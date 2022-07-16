@@ -1,5 +1,5 @@
-import { ArgumentTypeError, GenericObject } from 'o.utils'
-import is from 'o.is'
+import { ArgumentTypeError, GenericObject } from '../../utils/src'
+import is from '../../is/src'
 
 /**
  * Get an array of the object values.

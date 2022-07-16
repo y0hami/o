@@ -1,6 +1,6 @@
-import { GenericObject, ArgumentTypeError } from 'o.utils'
-import is from 'o.is'
-import clone from 'o.clone'
+import { GenericObject, ArgumentTypeError } from '../../utils/src'
+import is from '../../is/src'
+import clone from '../../clone/src'
 
 export type CleanObject<T> = Omit<T, {
   [Key in keyof T]: T[Key] extends undefined | null

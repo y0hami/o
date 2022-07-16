@@ -1,4 +1,4 @@
-import is from 'o.is'
+import is from '../../is/src'
 import { isAsync } from './IsAsync'
 
 const typeName = (type: any): string => {

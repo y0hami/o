@@ -1,8 +1,8 @@
-import { GenericObject, ArgumentTypeError, isAsync } from 'o.utils'
-import is from 'o.is'
-import clone from 'o.clone'
-import { deepEachAsync } from 'o.each'
-import del from 'o.del'
+import { GenericObject, ArgumentTypeError, isAsync } from '../../utils/src'
+import is from '../../is/src'
+import clone from '../../clone/src'
+import { deepEachAsync } from '../../each/src'
+import del from '../../del/src'
 import { AsyncFilterCallback } from './types'
 
 /**

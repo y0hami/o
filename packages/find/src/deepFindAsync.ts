@@ -1,6 +1,6 @@
-import { GenericObject, ArgumentTypeError, isAsync } from 'o.utils'
-import is from 'o.is'
-import { deepEachAsync } from 'o.each'
+import { GenericObject, ArgumentTypeError, isAsync } from '../../utils/src'
+import is from '../../is/src'
+import { deepEachAsync } from '../../each/src'
 import { AsyncFindCallback, FindResult } from './types'
 
 /**

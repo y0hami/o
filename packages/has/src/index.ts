@@ -1,6 +1,6 @@
-import { ArgumentTypeError, GenericObject } from 'o.utils'
-import is from 'o.is'
-import { has as hasProp } from 'o.dot'
+import { ArgumentTypeError, GenericObject } from '../../utils/src'
+import is from '../../is/src'
+import { has as hasProp } from '../../dot/src'
 
 /**
  * Check if an object has the specified path.

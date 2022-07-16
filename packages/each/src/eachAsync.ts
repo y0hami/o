@@ -1,5 +1,5 @@
-import { GenericObject, ArgumentTypeError, sequentialPromises, isAsync } from 'o.utils'
-import is from 'o.is'
+import { GenericObject, ArgumentTypeError, sequentialPromises, isAsync } from '../../utils/src'
+import is from '../../is/src'
 import { AsyncEachCallback } from './types'
 
 /**

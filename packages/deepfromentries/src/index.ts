@@ -1,6 +1,6 @@
-import { ArgumentTypeError, GenericObject } from 'o.utils'
-import inflate from 'o.inflate'
-import { Entry } from 'o.deepentries'
+import { ArgumentTypeError, GenericObject } from '../../utils/src'
+import inflate from '../../inflate/src'
+import { Entry } from '../../deepentries/src'
 
 /**
  * Get an array of entries like Object.entries but includes deep objects.
@@ -19,4 +19,8 @@ export default function deepFromEntries <Result extends GenericObject> (entries:
   if (entries.length === 0) throw new ArgumentTypeError('Entry[]', entries)
 
   return inflate(Object.fromEntries(entries))
+}
+
+export type {
+  Entry
 }

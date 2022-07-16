@@ -1,5 +1,4 @@
-import { Entry } from 'o.deepentries'
-import deepFromEntries from '../packages/deepfromentries/src'
+import deepFromEntries, { Entry } from '../packages/deepfromentries/src'
 
 describe('deepFromEntries', () => {
   test('should return array of entries for deep object', () => {

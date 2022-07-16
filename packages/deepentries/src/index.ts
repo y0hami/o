@@ -1,6 +1,6 @@
-import { ArgumentTypeError, GenericObject, ObjectKey } from 'o.utils'
-import is from 'o.is'
-import deflate from 'o.deflate'
+import { ArgumentTypeError, GenericObject, ObjectKey } from '../../utils/src'
+import is from '../../is/src'
+import deflate from '../../deflate/src'
 
 export type Entry = [ObjectKey, any]
 

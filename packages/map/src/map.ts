@@ -1,5 +1,5 @@
-import { GenericObject, ArgumentTypeError, isAsync } from 'o.utils'
-import is from 'o.is'
+import { GenericObject, ArgumentTypeError, isAsync } from '../../utils/src'
+import is from '../../is/src'
 import { MapCallback } from './types'
 
 /**

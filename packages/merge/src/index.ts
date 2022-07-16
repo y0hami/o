@@ -1,9 +1,9 @@
-import { GenericObject, IsObject, ArgumentTypeError } from 'o.utils'
-import is from 'o.is'
-import shallowMerge from 'o.shallowmerge'
-import deflate from 'o.deflate'
-import inflate from 'o.inflate'
-import clone from 'o.clone'
+import { GenericObject, IsObject, ArgumentTypeError } from '../../utils/src'
+import is from '../../is/src'
+import shallowMerge from '../../shallowmerge/src'
+import deflate from '../../deflate/src'
+import inflate from '../../inflate/src'
+import clone from '../../clone/src'
 
 type DeepMerge<T, S> = {
   [Key in keyof T]: Key extends keyof S

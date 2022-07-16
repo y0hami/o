@@ -27,12 +27,6 @@
     "url": "git+https://github.com/hammy2899/o.git",
     "directory": "packages/map"
   },
-  "dependencies": {
-    "o.is": "1.0.0",
-    "o.utils": "1.0.0",
-    "o.dot": "1.0.0",
-    "o.deflate": "1.0.0"
-  },
   "devDependencies": {
     "typescript": "^4.3.5"
   },

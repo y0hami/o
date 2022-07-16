@@ -1,7 +1,7 @@
-import { ArgumentTypeError, GenericObject } from 'o.utils'
-import is from 'o.is'
-import { set as setProp } from 'o.dot'
-import clone from 'o.clone'
+import { ArgumentTypeError, GenericObject } from '../../utils/src'
+import is from '../../is/src'
+import { set as setProp } from '../../dot/src'
+import clone from '../../clone/src'
 
 /**
  * Set the value at the path in the specified object

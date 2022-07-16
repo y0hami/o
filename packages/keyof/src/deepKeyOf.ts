@@ -1,6 +1,6 @@
-import { GenericObject, ArgumentTypeError } from 'o.utils'
-import is from 'o.is'
-import { deepFind } from 'o.find'
+import { GenericObject, ArgumentTypeError } from '../../utils/src'
+import is from '../../is/src'
+import { deepFind } from '../../find/src'
 
 /**
  * Get the key to the specified value.

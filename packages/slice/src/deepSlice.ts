@@ -1,8 +1,8 @@
-import { GenericObject, ArgumentTypeError } from 'o.utils'
-import is from 'o.is'
-import deflate from 'o.deflate'
-import set from 'o.set'
-import get from 'o.get'
+import { GenericObject, ArgumentTypeError } from '../../utils/src'
+import is from '../../is/src'
+import deflate from '../../deflate/src'
+import set from '../../set/src'
+import get from '../../get/src'
 
 /**
  * Slice an object like Array.slice.

@@ -26,12 +26,6 @@
     "url": "git+https://github.com/hammy2899/o.git",
     "directory": "packages/deflate"
   },
-  "dependencies": {
-    "o.dot": "1.0.0",
-    "o.is": "1.0.0",
-    "o.clean": "1.0.0",
-    "o.utils": "1.0.0"
-  },
   "devDependencies": {
     "typescript": "^4.3.5"
   }

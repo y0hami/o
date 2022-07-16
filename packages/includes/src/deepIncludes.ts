@@ -1,6 +1,6 @@
-import { GenericObject, ArgumentTypeError } from 'o.utils'
-import is from 'o.is'
-import { deepEach } from 'o.each'
+import { GenericObject, ArgumentTypeError } from '../../utils/src'
+import is from '../../is/src'
+import { deepEach } from '../../each/src'
 
 /**
  * Check if an object contains a value.

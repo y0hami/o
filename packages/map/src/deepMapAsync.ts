@@ -1,6 +1,6 @@
-import { GenericObject, ArgumentTypeError, isAsync, sequentialPromises } from 'o.utils'
-import is from 'o.is'
-import deflate from 'o.deflate'
+import { GenericObject, ArgumentTypeError, isAsync, sequentialPromises } from '../../utils/src'
+import is from '../../is/src'
+import deflate from '../../deflate/src'
 import { AsyncMapCallback } from './types'
 
 /**

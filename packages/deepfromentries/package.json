@@ -26,11 +26,6 @@
     "url": "git+https://github.com/hammy2899/o.git",
     "directory": "packages/deepfromentries"
   },
-  "dependencies": {
-    "o.utils": "1.0.0",
-    "o.inflate": "1.0.0",
-    "o.deepentries": "1.0.0"
-  },
   "devDependencies": {
     "typescript": "^4.3.5"
   },

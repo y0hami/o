@@ -1,6 +1,6 @@
-import { ArgumentTypeError, GenericObject } from 'o.utils'
-import is from 'o.is'
-import { get as getProp } from 'o.dot'
+import { ArgumentTypeError, GenericObject } from '../../utils/src'
+import is from '../../is/src'
+import { get as getProp } from '../../dot/src'
 
 /**
  * Get the value from the path in the specified object

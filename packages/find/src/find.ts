@@ -1,6 +1,6 @@
-import { GenericObject, ArgumentTypeError, isAsync } from 'o.utils'
-import is from 'o.is'
-import each from 'o.each'
+import { GenericObject, ArgumentTypeError, isAsync } from '../../utils/src'
+import is from '../../is/src'
+import each from '../../each/src'
 import { FindCallback, FindResult } from './types'
 
 /**

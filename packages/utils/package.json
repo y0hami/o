@@ -21,10 +21,6 @@
     "url": "git+https://github.com/hammy2899/o.git",
     "directory": "packages/types"
   },
-  "dependencies": {
-    "o.is": "1.0.0",
-    "o.types": "1.0.0"
-  },
   "devDependencies": {
     "typescript": "^4.7.2"
   }

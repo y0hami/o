@@ -1,7 +1,7 @@
-import { GenericObject, ArgumentTypeError } from 'o.utils'
-import is from 'o.is'
-import clean from 'o.clean'
-import * as dot from 'o.dot'
+import { GenericObject, ArgumentTypeError } from '../../utils/src'
+import is from '../../is/src'
+import clean from '../../clean/src'
+import * as dot from '../../dot/src'
 
 // https://stackoverflow.com/questions/66614528/flatten-object-with-custom-keys-in-typescript
 type DeflatedObject<T extends GenericObject> = object extends T ? object : {

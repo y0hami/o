@@ -24,12 +24,6 @@
     "url": "git+https://github.com/hammy2899/o.git",
     "directory": "packages/del"
   },
-  "dependencies": {
-    "o.utils": "1.0.0",
-    "o.dot": "1.0.0",
-    "o.clone": "1.0.0",
-    "o.is": "1.0.0"
-  },
   "devDependencies": {
     "typescript": "^4.3.5"
   }

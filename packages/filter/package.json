@@ -27,13 +27,6 @@
     "url": "git+https://github.com/hammy2899/o.git",
     "directory": "packages/filter"
   },
-  "dependencies": {
-    "o.is": "1.0.0",
-    "o.utils": "1.0.0",
-    "o.clone": "1.0.0",
-    "o.each": "1.0.0",
-    "o.del": "1.0.0"
-  },
   "devDependencies": {
     "typescript": "^4.3.5"
   },

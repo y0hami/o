@@ -1,6 +1,6 @@
-import { GenericObject, ArgumentTypeError } from 'o.utils'
-import is from 'o.is'
-import deflate from 'o.deflate'
+import { GenericObject, ArgumentTypeError } from '../../utils/src'
+import is from '../../is/src'
+import deflate from '../../deflate/src'
 
 /**
  * Get the size of an object.

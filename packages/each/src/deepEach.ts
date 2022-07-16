@@ -1,6 +1,6 @@
-import { GenericObject, ArgumentTypeError, isAsync } from 'o.utils'
-import is from 'o.is'
-import deflate from 'o.deflate'
+import { GenericObject, ArgumentTypeError, isAsync } from '../../utils/src'
+import is from '../../is/src'
+import deflate from '../../deflate/src'
 import { EachCallback } from './types'
 import { each } from './each'
 

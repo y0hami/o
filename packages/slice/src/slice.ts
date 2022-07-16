@@ -1,6 +1,6 @@
-import { GenericObject, ArgumentTypeError } from 'o.utils'
-import is from 'o.is'
-import set from 'o.set'
+import { GenericObject, ArgumentTypeError } from '../../utils/src'
+import is from '../../is/src'
+import set from '../../set/src'
 
 /**
  * Slice an object like Array.slice.

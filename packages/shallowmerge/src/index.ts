@@ -1,6 +1,6 @@
-import { GenericObject, ArgumentTypeError } from 'o.utils'
-import is from 'o.is'
-import clone from 'o.clone'
+import { GenericObject, ArgumentTypeError } from '../../utils/src'
+import is from '../../is/src'
+import clone from '../../clone/src'
 
 type ShallowMerged<T, S> = {
   [Key in keyof Omit<T, keyof S>]: T[Key]

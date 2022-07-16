@@ -1,7 +1,7 @@
-import { ArgumentTypeError, GenericObject } from 'o.utils'
-import is from 'o.is'
-import { del as delProp } from 'o.dot'
-import clone from 'o.clone'
+import { ArgumentTypeError, GenericObject } from '../../utils/src'
+import is from '../../is/src'
+import { del as delProp } from '../../dot/src'
+import clone from '../../clone/src'
 
 /**
  * Delete the value at the specified path from the object.

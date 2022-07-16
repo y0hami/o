@@ -1,6 +1,6 @@
-import { GenericObject, ArgumentTypeError } from 'o.utils'
-import is from 'o.is'
-import * as dot from 'o.dot'
+import { GenericObject, ArgumentTypeError } from '../../utils/src'
+import is from '../../is/src'
+import * as dot from '../../dot/src'
 
 /**
  * Inflate the specified object into a deep object.

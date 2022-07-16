@@ -1,4 +1,4 @@
-import { ArgumentTypeError } from 'o.utils'
+import { ArgumentTypeError } from '../../utils/src'
 
 /**
  * Convert a dot notation string to an array of keys

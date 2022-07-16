@@ -1,5 +1,5 @@
-import { GenericObject, ArgumentTypeError } from 'o.utils'
-import is from 'o.is'
+import { GenericObject, ArgumentTypeError } from '../../utils/src'
+import is from '../../is/src'
 
 /**
  * Check if all provided objects are equal.
