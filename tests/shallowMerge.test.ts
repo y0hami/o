@@ -1,4 +1,4 @@
-import shallowMerge from '../packages/shallowMerge/src'
+import shallowMerge from '../packages/shallowmerge/src'
 
 describe('shallowMerge', (): void => {
   test('should return a new object not a reference', (): void => {
