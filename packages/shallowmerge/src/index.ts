@@ -2,7 +2,7 @@ import { GenericObject, ArgumentTypeError } from '../../utils/src'
 import is from '../../is/src'
 import clone from '../../clone/src'
 
-type ShallowMerged<T, S> = {
+export type ShallowMerged<T, S> = {
   [Key in keyof Omit<T, keyof S>]: T[Key]
 } & {
   [Key in keyof S]: S[Key]

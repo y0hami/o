@@ -31,7 +31,10 @@
     "typescript": "^4.3.5"
   },
   "o": {
-    "default": true,
-    "exports": ["find", "findAsync", "deepFind", "deepFindAsync"]
+    "exports": {
+      "default": true,
+      "methods": ["find", "findAsync", "deepFind", "deepFindAsync"],
+      "types": ["FindCallback", "AsyncFindCallback", "FoundResult", "NotFoundResult", "FindResult"]
+    }
   }
 }

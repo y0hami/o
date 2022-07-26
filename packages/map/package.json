@@ -31,7 +31,10 @@
     "typescript": "^4.3.5"
   },
   "o": {
-    "default": true,
-    "exports": ["map", "mapAsync", "deepMap", "deepMapAsync"]
+    "exports": {
+      "default": true,
+      "methods": ["map", "mapAsync", "deepMap", "deepMapAsync"],
+      "types": ["MapCallback", "AsyncMapCallback"]
+    }
   }
 }

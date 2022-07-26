@@ -23,6 +23,7 @@
   "devDependencies": {
     "typescript": "^4.7.2"
   },
+  "private": true,
   "o": {
     "build": false
   }

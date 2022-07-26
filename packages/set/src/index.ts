@@ -1,6 +1,6 @@
+import { tokenize } from 'dot-notation-tokenizer'
 import { ArgumentTypeError, GenericObject } from '../../utils/src'
 import is from '../../is/src'
-import { set as setProp } from '../../dot/src'
 import clone from '../../clone/src'
 
 /**
@@ -21,8 +21,25 @@ export default function set <T extends GenericObject, Result extends T> (object:
   // Check if arguments are correct types
   if (!is(object)) throw new ArgumentTypeError('Object', object)
   if (typeof path !== 'string') throw new ArgumentTypeError('String', path)
+  if (path === '') throw new ArgumentTypeError('non empty String', path)
 
   const cloned = clone(object)
-  setProp(cloned, path, value)
+  const tokens = tokenize(path)
+  let currentValue: any = cloned
+
+  tokens.forEach((token, index) => {
+    const key = token.value
+
+    if (index === tokens.length - 1) {
+      currentValue[key] = value
+    } else if (!is(currentValue[key])) {
+      currentValue[key] = tokens[index + 1].kind === 'ARRAY_INDEX'
+        ? []
+        : {}
+    }
+
+    currentValue = currentValue[key]
+  })
+
   return cloned
 }

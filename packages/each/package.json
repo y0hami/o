@@ -32,7 +32,10 @@
     "typescript": "^4.3.5"
   },
   "o": {
-    "default": true,
-    "exports": ["each", "eachAsync", "deepEach", "deepEachAsync"]
+    "exports": {
+      "default": true,
+      "methods": ["each", "eachAsync", "deepEach", "deepEachAsync"],
+      "types": ["EachCallback", "AsyncEachCallback"]
+    }
   }
 }

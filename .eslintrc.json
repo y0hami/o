@@ -4,10 +4,5 @@
   ],
   "parserOptions": {
     "project": "./configs/tsconfigs/tsconfig.eslint.json"
-  },
-  "ignorePatterns": ["node_modules", "dist"],
-  "plugins": ["jest"],
-  "env": {
-    "jest/globals": true
   }
 }

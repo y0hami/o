@@ -5,7 +5,7 @@ import deflate from '../../deflate/src'
 import inflate from '../../inflate/src'
 import clone from '../../clone/src'
 
-type DeepMerge<T, S> = {
+export type DeepMerge<T, S> = {
   [Key in keyof T]: Key extends keyof S
     ? (IsObject<T[Key]> & IsObject<S[Key]>) extends true
         ? DeepMerge<T[Key], S[Key]>

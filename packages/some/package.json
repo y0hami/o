@@ -29,7 +29,10 @@
     "typescript": "^4.3.5"
   },
   "o": {
-    "default": true,
-    "exports": ["some", "someAsync", "deepSome", "deepSomeAsync"]
+    "exports": {
+      "default": true,
+      "methods": ["some", "someAsync", "deepSome", "deepSomeAsync"],
+      "types": ["SomeCallback", "AsyncSomeCallback"]
+    }
   }
 }

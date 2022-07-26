@@ -1,3 +1,4 @@
+import { escapeProperty } from 'dot-notation-tokenizer'
 import { GenericObject, ArgumentTypeError } from '../../utils/src'
 import is from '../../is/src'
 import set from '../../set/src'
@@ -30,7 +31,7 @@ export function slice <T extends GenericObject, Result extends Partial<T>> (obje
   let result: any = {}
 
   keys.forEach(key => {
-    result = set(result, key.replace(/\./g, '\\.'), object[key])
+    result = set(result, escapeProperty(key), object[key])
   })
 
   return result

@@ -28,7 +28,9 @@
     "typescript": "^4.3.5"
   },
   "o": {
-    "default": true,
-    "exports": ["size", "deepSize"]
+    "exports": {
+      "default": true,
+      "methods": ["size", "deepSize"]
+    }
   }
 }

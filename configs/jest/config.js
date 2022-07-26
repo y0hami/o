@@ -19,5 +19,5 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: ['./packages/**/*.ts'],
   coverageReporters: ['json', 'lcov', 'text'],
-  coveragePathIgnorePatterns: ['dist', 'node_modules']
+  coveragePathIgnorePatterns: ['dist', 'node_modules', 'packages/o']
 }

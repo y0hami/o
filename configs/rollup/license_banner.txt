@@ -1,6 +1,6 @@
-<%= pkg.name %>
+<%= data.pkg.name %>
 Generated: <%= moment().format('YYYY-MM-DD') %>
-Version: v<%= pkg.version %>
+Version: v<%= data.pkg.version %>
 
 Released under MIT license
 https://github.com/hammy2899/o

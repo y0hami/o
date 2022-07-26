@@ -1,5 +1,5 @@
 {
-  "name": "o",
+  "name": "o-monorepo",
   "version": "3.0.0",
   "description": "common object helper functions",
   "keywords": [
@@ -20,18 +20,21 @@
   },
   "scripts": {
     "build:pack:clean": "rimraf packages/*/LICENSE packages/*/README.md",
+    "build:generate": "node ./scripts/create_o.js",
     "build:pack:setup": "node ./scripts/pack/pack.js",
     "build:pack": "npm-run-all build:pack:clean build:pack:setup",
     "build:rollup:clean": "rimraf packages/*/dist",
     "build:rollup": "node --max-old-space-size=8192 ./node_modules/rollup/dist/bin/rollup -c ./configs/rollup/config.js",
     "build:clean": "npm-run-all build:pack:clean build:rollup:clean",
-    "build": "npm-run-all build:clean build:rollup build:pack",
+    "build": "npm-run-all build:clean build:generate build:rollup build:pack",
     "test": "jest --config ./configs/jest/config.js",
     "test:watch": "jest --config ./configs/jest.config.js --watch",
     "lint": "eslint --ext .ts packages/**/src/*",
     "changelog": "auto-changelog --config ./configs/auto-changelog",
     "release": "npm-run-all test lint build changelog",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "dev": "ts-node-dev --respawn lab.ts",
+    "benchmark": ""
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
@@ -45,18 +48,19 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^17.0.36",
-    "@typescript-eslint/eslint-plugin": "^4.0.1",
-    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
     "auto-changelog": "^2.4.0",
     "babel-jest": "^28.1.1",
     "esbuild": "^0.14.43",
-    "eslint": "^7.12.1",
-    "eslint-config-hami": "^1.1.4",
-    "eslint-config-standard-with-typescript": "^21.0.1",
-    "eslint-plugin-import": "^2.25.4",
+    "eslint": "^8.20.0",
+    "eslint-config-hami": "^1.2.3",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.4.6",
+    "eslint-plugin-n": "^15.2.4",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.2.0",
+    "eslint-plugin-promise": "^6.0.0",
     "fs-extra": "^10.1.0",
     "husky": "^8.0.1",
     "jest": "^27.0.6",
@@ -67,8 +71,8 @@
     "rollup-plugin-license": "^2.8.1",
     "rollup-plugin-ts": "^3.0.2",
     "ts-jest": "^27.0.4",
-    "ts-node": "^10.8.0",
-    "typescript": "^4.7.2"
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
   },
   "private": true,
   "workspaces": [

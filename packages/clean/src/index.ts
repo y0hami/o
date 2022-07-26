@@ -2,15 +2,15 @@ import { GenericObject, ArgumentTypeError } from '../../utils/src'
 import is from '../../is/src'
 import clone from '../../clone/src'
 
-export type CleanObject<T> = Omit<T, {
+export type Clean<T> = Omit<T, {
   [Key in keyof T]: T[Key] extends undefined | null
     ? Key
     : never
 }[keyof T]>
 
-export type DeepCleanObject<T> = CleanObject<{
+export type CleanObject<T> = Clean<{
   [Key in keyof T]: T[Key] extends GenericObject
-    ? CleanObject<T[Key]>
+    ? Clean<T[Key]>
     : Key
 }>
 
@@ -25,7 +25,7 @@ export type DeepCleanObject<T> = CleanObject<{
  * @since 1.0.0
  * @version 3.0.0
  */
-export default function clean <T extends GenericObject> (object: T): DeepCleanObject<T> {
+export default function clean <T extends GenericObject> (object: T): CleanObject<T> {
   if (!is(object)) throw new ArgumentTypeError('Object', object)
 
   const result: any = clone(object)

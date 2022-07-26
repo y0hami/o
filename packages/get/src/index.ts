@@ -1,6 +1,8 @@
+import { tokenize } from 'dot-notation-tokenizer'
 import { ArgumentTypeError, GenericObject } from '../../utils/src'
 import is from '../../is/src'
-import { get as getProp } from '../../dot/src'
+import empty from '../../empty/src'
+import clone from '../../clone/src'
 
 /**
  * Get the value from the path in the specified object
@@ -20,6 +22,26 @@ export default function get <T extends GenericObject, Result extends any> (objec
   // Check if arguments are correct types
   if (!is(object)) throw new ArgumentTypeError('Object', object)
   if (typeof path !== 'string') throw new ArgumentTypeError('String', path)
+  if (path === '') throw new ArgumentTypeError('non empty String', path)
 
-  return getProp(object, path, defaultValue)
+  if (empty(object)) return defaultValue
+
+  const tokens = tokenize(path)
+  let currentValue: any = clone(object)
+
+  tokens.forEach(token => {
+    if (currentValue === undefined) return
+
+    if (token.kind === 'PROPERTY') {
+      currentValue = currentValue[token.value] ?? undefined
+    } else if (token.kind === 'ARRAY_INDEX') {
+      if (Array.isArray(currentValue)) {
+        currentValue = currentValue[token.value]
+      } else {
+        currentValue = undefined
+      }
+    }
+  })
+
+  return currentValue ?? defaultValue
 }

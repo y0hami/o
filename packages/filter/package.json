@@ -31,7 +31,10 @@
     "typescript": "^4.3.5"
   },
   "o": {
-    "default": true,
-    "exports": ["filter", "filterAsync", "deepFilter", "deepFilterAsync"]
+    "exports": {
+      "default": true,
+      "methods": ["filter", "filterAsync", "deepFilter", "deepFilterAsync"],
+      "types": ["FilterCallback", "AsyncFilterCallback"]
+    }
   }
 }

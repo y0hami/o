@@ -11,25 +11,40 @@ packages.forEach(pkg => {
   const pkgJson = JSON.parse(fs.readFileSync(path.resolve(PACKAGE_DIR, 'package.json')))
   const pkgName = pkgJson.name
   const plainName = pkgJson.o?.name ?? pkgName.replace('o.', '')
-  const packageExports = pkgJson.o?.exports !== undefined
-    ? [`{ ${pkgJson.o?.exports.join(', ')} }`, `* as ${plainName}`]
-    : [plainName]
-
-  if (pkgJson.o?.default === true) {
-    packageExports.push(plainName)
-  }
+  const packageDefaultExport = pkgJson.o?.exports?.default === true ?? false
+  const packageMethods = pkgJson.o?.exports?.methods ?? []
+  const packageTypes = pkgJson.o?.exports?.types ?? []
 
   fs.copyFileSync(LICENSE_PATH, path.resolve(PACKAGE_DIR, 'LICENSE'))
 
-  const usage = `
-  ${packageExports
-    .map(exp => `import ${exp} from '${pkgName}'`)
-    .join('\n')}
-  `.trim()
+  const imports = []
+  if (packageDefaultExport) {
+    imports.push(plainName)
+  }
+  if (packageMethods.length > 0) {
+    imports.push(`{ ${packageMethods.join(', ')} }`)
+  }
 
+  let usage = `
+### Usage
+
+\`\`\`typescript`
+
+  imports
+    .forEach(exp => {
+      usage += `\nimport ${exp} from '${pkgName}'`
+    })
+
+  if (packageTypes.length > 0) {
+    usage += `\nimport type { ${packageTypes.join(', ')} } from '${pkgName}'`
+  }
+
+  usage += '\n```'
+
+  const includeUsage = pkgJson.o?.readme?.usage !== false
   const README = fs.readFileSync(README_TEMPLATE)
     .toString()
-    .replaceAll('{usage}', usage)
+    .replaceAll('{usage}', includeUsage ? usage : '')
     .replaceAll('{package}', pkgName)
     .replaceAll('{name}', plainName)
 

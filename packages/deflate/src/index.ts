@@ -1,7 +1,7 @@
+import { tokensFromPropertyKeys, notationFromTokens } from 'dot-notation-tokenizer'
 import { GenericObject, ArgumentTypeError } from '../../utils/src'
 import is from '../../is/src'
 import clean from '../../clean/src'
-import * as dot from '../../dot/src'
 
 // https://stackoverflow.com/questions/66614528/flatten-object-with-custom-keys-in-typescript
 type DeflatedObject<T extends GenericObject> = object extends T ? object : {
@@ -26,8 +26,6 @@ type DeflatedObject<T extends GenericObject> = object extends T ? object : {
  * Deflate the specified object into a one key deep object.
  * Like Array.flat but for objects. Deep object keys will be
  * converted to dot notation.
- *
- * @see {@link o.dot}
  *
  * @param object - The object to deflate
  * @returns The deflated object
@@ -54,7 +52,8 @@ export default function deflate <T extends GenericObject, DeflatedResult extends
         if (Object.keys(value).length > 0) burst(value, currentPath)
       } else {
         // Set the value onto the result object with the key as dot notation
-        result[dot.to(currentPath)] = value
+        const tokens = tokensFromPropertyKeys(currentPath)
+        result[notationFromTokens(tokens)] = value
       }
     })
   }

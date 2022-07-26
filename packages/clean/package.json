@@ -25,5 +25,11 @@
   },
   "devDependencies": {
     "typescript": "^4.3.5"
+  },
+  "o": {
+    "exports": {
+      "default": true,
+      "types": ["CleanObject"]
+    }
   }
 }

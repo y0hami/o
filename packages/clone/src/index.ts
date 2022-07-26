@@ -27,8 +27,11 @@ export default function clone <T extends GenericObject> (object: T): T {
   // Loop over keys and clone all objects
   Object.keys(result).forEach(key => {
     const value = result[key]
+
     if (is(value)) {
       result[key] = clone(value)
+    } else if (Array.isArray(value)) {
+      result[key] = [...value]
     }
   })
 

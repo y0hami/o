@@ -29,6 +29,10 @@
     "typescript": "^4.3.5"
   },
   "o": {
-    "name": "shallowMerge"
+    "name": "shallowMerge",
+    "exports": {
+      "default": true,
+      "types": ["ShallowMerged"]
+    }
   }
 }

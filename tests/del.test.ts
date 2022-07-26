@@ -10,6 +10,7 @@ describe('del', (): void => {
     const newObj = del(obj, 'a')
 
     expect(Object.keys(newObj)).toHaveLength(1)
+    expect(Object.keys(newObj)).toEqual(['b'])
   })
 
   test('should use dot notation for deletion path', (): void => {
@@ -23,6 +24,7 @@ describe('del', (): void => {
     const newObj = del(obj, 'b.c')
 
     expect(Object.keys(newObj)).toHaveLength(2)
+    expect(Object.keys(newObj)).toEqual(['a', 'b'])
     expect(Object.keys(newObj.b as any)).toHaveLength(0)
   })
 
@@ -37,6 +39,19 @@ describe('del', (): void => {
     newObj.b = 1
 
     expect(obj.b).toBe(2)
+  })
+
+  test('should fail if the path is invalid', (): void => {
+    const obj = {
+      a: [1, 2],
+      b: {
+        c: 3
+      },
+      c: 2
+    }
+
+    expect(del(obj, 'a.b[0]').a).toStrictEqual(obj.a)
+    expect(del(obj, 'b[0].c')).toStrictEqual(obj)
   })
 
   test('should throw error for invalid arguments', () => {

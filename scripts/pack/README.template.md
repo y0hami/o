@@ -11,12 +11,7 @@ $ yarn add {package}
 
 $ npm i {package}
 ```
-
-### Usage
-
-```javascript
 {usage}
-```
 
 ### Documentation
 

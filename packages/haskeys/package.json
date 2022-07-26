@@ -1,13 +1,13 @@
 {
-  "name": "o.dot",
+  "name": "o.haskeys",
   "version": "1.0.0",
-  "description": "The o.dot method exported as a module",
+  "description": "The o.hasKeys method exported as a module",
   "keywords": [
     "o-module",
     "module",
     "object",
-    "dot",
-    "dot-notation"
+    "has",
+    "keys"
   ],
   "homepage": "https://o.hammy2899.dev",
   "bugs": {
@@ -22,16 +22,14 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hammy2899/o.git",
-    "directory": "packages/dot"
-  },
-  "dependencies": {
-    "dot-prop": "^7.2.0"
+    "directory": "packages/haskeys"
   },
   "devDependencies": {
     "typescript": "^4.3.5"
   },
   "o": {
-    "default": true,
-    "exports": ["from", "to"]
+    "exports": {
+      "default": true
+    }
   }
 }

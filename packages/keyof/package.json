@@ -28,8 +28,10 @@
     "typescript": "^4.3.5"
   },
   "o": {
-    "default": true,
-    "exports": ["keyOf", "deepKeyOf"],
-    "name": "keyOf"
+    "name": "keyOf",
+    "exports": {
+      "default": true,
+      "methods": ["keyOf", "deepKeyOf"]
+    }
   }
 }

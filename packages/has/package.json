@@ -23,7 +23,15 @@
     "url": "git+https://github.com/hammy2899/o.git",
     "directory": "packages/has"
   },
+  "dependencies": {
+    "dot-notation-tokenizer": "^1.0.0"
+  },
   "devDependencies": {
     "typescript": "^4.3.5"
+  },
+  "o": {
+    "exports": {
+      "default": true
+    }
   }
 }
